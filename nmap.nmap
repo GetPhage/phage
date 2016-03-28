@@ -1,0 +1,1241 @@
+# Nmap 7.11 scan initiated Sat Mar 26 07:06:28 2016 as: nmap -oA nmap -v -A 10.0.1.0/24
+Nmap scan report for 10.0.1.0 [host down]
+Nmap scan report for 10.0.1.2 [host down]
+Nmap scan report for 10.0.1.3 [host down]
+Nmap scan report for 10.0.1.4 [host down]
+Nmap scan report for 10.0.1.5 [host down]
+Nmap scan report for 10.0.1.6 [host down]
+Nmap scan report for 10.0.1.7 [host down]
+Nmap scan report for 10.0.1.8 [host down]
+Nmap scan report for 10.0.1.9 [host down]
+Nmap scan report for 10.0.1.10 [host down]
+Nmap scan report for 10.0.1.11 [host down]
+Nmap scan report for 10.0.1.12 [host down]
+Nmap scan report for 10.0.1.13 [host down]
+Nmap scan report for 10.0.1.14 [host down]
+Nmap scan report for 10.0.1.15 [host down]
+Nmap scan report for 10.0.1.16 [host down]
+Nmap scan report for 10.0.1.17 [host down]
+Nmap scan report for 10.0.1.18 [host down]
+Nmap scan report for 10.0.1.19 [host down]
+Nmap scan report for 10.0.1.21 [host down]
+Nmap scan report for 10.0.1.22 [host down]
+Nmap scan report for 10.0.1.23 [host down]
+Nmap scan report for 10.0.1.25 [host down]
+Nmap scan report for 10.0.1.26 [host down]
+Nmap scan report for 10.0.1.28 [host down]
+Nmap scan report for 10.0.1.29 [host down]
+Nmap scan report for 10.0.1.30 [host down]
+Nmap scan report for 10.0.1.31 [host down]
+Nmap scan report for 10.0.1.32 [host down]
+Nmap scan report for 10.0.1.33 [host down]
+Nmap scan report for 10.0.1.34 [host down]
+Nmap scan report for 10.0.1.35 [host down]
+Nmap scan report for 10.0.1.36 [host down]
+Nmap scan report for 10.0.1.37 [host down]
+Nmap scan report for 10.0.1.38 [host down]
+Nmap scan report for 10.0.1.42 [host down]
+Nmap scan report for 10.0.1.44 [host down]
+Nmap scan report for 10.0.1.45 [host down]
+Nmap scan report for 10.0.1.49 [host down]
+Nmap scan report for 10.0.1.50 [host down]
+Nmap scan report for 10.0.1.52 [host down]
+Nmap scan report for 10.0.1.53 [host down]
+Nmap scan report for 10.0.1.55 [host down]
+Nmap scan report for 10.0.1.56 [host down]
+Nmap scan report for 10.0.1.57 [host down]
+Nmap scan report for 10.0.1.58 [host down]
+Nmap scan report for 10.0.1.59 [host down]
+Nmap scan report for 10.0.1.60 [host down]
+Nmap scan report for 10.0.1.61 [host down]
+Nmap scan report for 10.0.1.62 [host down]
+Nmap scan report for 10.0.1.63 [host down]
+Nmap scan report for 10.0.1.64 [host down]
+Nmap scan report for 10.0.1.65 [host down]
+Nmap scan report for 10.0.1.66 [host down]
+Nmap scan report for 10.0.1.67 [host down]
+Nmap scan report for 10.0.1.68 [host down]
+Nmap scan report for 10.0.1.69 [host down]
+Nmap scan report for 10.0.1.70 [host down]
+Nmap scan report for 10.0.1.71 [host down]
+Nmap scan report for 10.0.1.72 [host down]
+Nmap scan report for 10.0.1.73 [host down]
+Nmap scan report for 10.0.1.74 [host down]
+Nmap scan report for 10.0.1.75 [host down]
+Nmap scan report for 10.0.1.76 [host down]
+Nmap scan report for 10.0.1.77 [host down]
+Nmap scan report for 10.0.1.78 [host down]
+Nmap scan report for 10.0.1.79 [host down]
+Nmap scan report for 10.0.1.80 [host down]
+Nmap scan report for 10.0.1.81 [host down]
+Nmap scan report for 10.0.1.82 [host down]
+Nmap scan report for 10.0.1.83 [host down]
+Nmap scan report for 10.0.1.84 [host down]
+Nmap scan report for 10.0.1.85 [host down]
+Nmap scan report for 10.0.1.86 [host down]
+Nmap scan report for 10.0.1.87 [host down]
+Nmap scan report for 10.0.1.88 [host down]
+Nmap scan report for 10.0.1.89 [host down]
+Nmap scan report for 10.0.1.90 [host down]
+Nmap scan report for 10.0.1.93 [host down]
+Nmap scan report for 10.0.1.94 [host down]
+Nmap scan report for 10.0.1.95 [host down]
+Nmap scan report for 10.0.1.97 [host down]
+Nmap scan report for 10.0.1.98 [host down]
+Nmap scan report for 10.0.1.99 [host down]
+Nmap scan report for 10.0.1.100 [host down]
+Nmap scan report for 10.0.1.101 [host down]
+Nmap scan report for 10.0.1.102 [host down]
+Nmap scan report for 10.0.1.104 [host down]
+Nmap scan report for 10.0.1.105 [host down]
+Nmap scan report for 10.0.1.106 [host down]
+Nmap scan report for 10.0.1.107 [host down]
+Nmap scan report for 10.0.1.108 [host down]
+Nmap scan report for 10.0.1.109 [host down]
+Nmap scan report for 10.0.1.110 [host down]
+Nmap scan report for 10.0.1.111 [host down]
+Nmap scan report for 10.0.1.112 [host down]
+Nmap scan report for 10.0.1.118 [host down]
+Nmap scan report for 10.0.1.120 [host down]
+Nmap scan report for 10.0.1.121 [host down]
+Nmap scan report for 10.0.1.124 [host down]
+Nmap scan report for 10.0.1.125 [host down]
+Nmap scan report for 10.0.1.128 [host down]
+Nmap scan report for 10.0.1.131 [host down]
+Nmap scan report for 10.0.1.143 [host down]
+Nmap scan report for 10.0.1.152 [host down]
+Nmap scan report for 10.0.1.156 [host down]
+Nmap scan report for 10.0.1.159 [host down]
+Nmap scan report for 10.0.1.161 [host down]
+Nmap scan report for 10.0.1.162 [host down]
+Nmap scan report for 10.0.1.163 [host down]
+Nmap scan report for 10.0.1.165 [host down]
+Nmap scan report for 10.0.1.166 [host down]
+Nmap scan report for 10.0.1.167 [host down]
+Nmap scan report for 10.0.1.168 [host down]
+Nmap scan report for 10.0.1.169 [host down]
+Nmap scan report for 10.0.1.170 [host down]
+Nmap scan report for 10.0.1.171 [host down]
+Nmap scan report for 10.0.1.172 [host down]
+Nmap scan report for 10.0.1.173 [host down]
+Nmap scan report for 10.0.1.174 [host down]
+Nmap scan report for 10.0.1.175 [host down]
+Nmap scan report for 10.0.1.176 [host down]
+Nmap scan report for 10.0.1.177 [host down]
+Nmap scan report for 10.0.1.178 [host down]
+Nmap scan report for 10.0.1.179 [host down]
+Nmap scan report for 10.0.1.180 [host down]
+Nmap scan report for 10.0.1.181 [host down]
+Nmap scan report for 10.0.1.182 [host down]
+Nmap scan report for 10.0.1.183 [host down]
+Nmap scan report for 10.0.1.184 [host down]
+Nmap scan report for 10.0.1.185 [host down]
+Nmap scan report for 10.0.1.186 [host down]
+Nmap scan report for 10.0.1.187 [host down]
+Nmap scan report for 10.0.1.188 [host down]
+Nmap scan report for 10.0.1.189 [host down]
+Nmap scan report for 10.0.1.190 [host down]
+Nmap scan report for 10.0.1.191 [host down]
+Nmap scan report for 10.0.1.192 [host down]
+Nmap scan report for 10.0.1.193 [host down]
+Nmap scan report for 10.0.1.194 [host down]
+Nmap scan report for 10.0.1.195 [host down]
+Nmap scan report for 10.0.1.196 [host down]
+Nmap scan report for 10.0.1.197 [host down]
+Nmap scan report for 10.0.1.198 [host down]
+Nmap scan report for 10.0.1.199 [host down]
+Nmap scan report for 10.0.1.200 [host down]
+Nmap scan report for 10.0.1.201 [host down]
+Nmap scan report for 10.0.1.202 [host down]
+Nmap scan report for 10.0.1.203 [host down]
+Nmap scan report for 10.0.1.204 [host down]
+Nmap scan report for 10.0.1.205 [host down]
+Nmap scan report for 10.0.1.206 [host down]
+Nmap scan report for 10.0.1.207 [host down]
+Nmap scan report for 10.0.1.208 [host down]
+Nmap scan report for 10.0.1.209 [host down]
+Nmap scan report for 10.0.1.210 [host down]
+Nmap scan report for 10.0.1.211 [host down]
+Nmap scan report for 10.0.1.212 [host down]
+Nmap scan report for 10.0.1.213 [host down]
+Nmap scan report for 10.0.1.214 [host down]
+Nmap scan report for 10.0.1.215 [host down]
+Nmap scan report for 10.0.1.216 [host down]
+Nmap scan report for 10.0.1.217 [host down]
+Nmap scan report for 10.0.1.218 [host down]
+Nmap scan report for 10.0.1.219 [host down]
+Nmap scan report for 10.0.1.220 [host down]
+Nmap scan report for 10.0.1.221 [host down]
+Nmap scan report for 10.0.1.222 [host down]
+Nmap scan report for 10.0.1.223 [host down]
+Nmap scan report for 10.0.1.224 [host down]
+Nmap scan report for 10.0.1.225 [host down]
+Nmap scan report for 10.0.1.226 [host down]
+Nmap scan report for 10.0.1.227 [host down]
+Nmap scan report for 10.0.1.228 [host down]
+Nmap scan report for 10.0.1.229 [host down]
+Nmap scan report for 10.0.1.230 [host down]
+Nmap scan report for 10.0.1.231 [host down]
+Nmap scan report for 10.0.1.232 [host down]
+Nmap scan report for 10.0.1.233 [host down]
+Nmap scan report for 10.0.1.234 [host down]
+Nmap scan report for 10.0.1.235 [host down]
+Nmap scan report for 10.0.1.236 [host down]
+Nmap scan report for 10.0.1.237 [host down]
+Nmap scan report for 10.0.1.238 [host down]
+Nmap scan report for 10.0.1.239 [host down]
+Nmap scan report for 10.0.1.240 [host down]
+Nmap scan report for 10.0.1.241 [host down]
+Nmap scan report for 10.0.1.242 [host down]
+Nmap scan report for 10.0.1.243 [host down]
+Nmap scan report for 10.0.1.244 [host down]
+Nmap scan report for 10.0.1.245 [host down]
+Nmap scan report for 10.0.1.246 [host down]
+Nmap scan report for 10.0.1.247 [host down]
+Nmap scan report for 10.0.1.248 [host down]
+Nmap scan report for 10.0.1.249 [host down]
+Nmap scan report for 10.0.1.250 [host down]
+Nmap scan report for 10.0.1.251 [host down]
+Nmap scan report for 10.0.1.252 [host down]
+Nmap scan report for 10.0.1.253 [host down]
+Nmap scan report for 10.0.1.254 [host down]
+Nmap scan report for 10.0.1.255 [host down]
+Nmap scan report for 10.0.1.1
+Host is up (0.0029s latency).
+Not shown: 996 closed ports
+PORT    STATE SERVICE  VERSION
+22/tcp  open  ssh      OpenSSH 6.0p1 Debian 4+deb7u2 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 b1:01:f6:82:55:3d:d8:14:18:4d:15:b2:2e:a5:4e:73 (DSA)
+|_  2048 4a:01:f3:4c:0c:40:2d:06:24:07:af:62:52:b6:7f:24 (RSA)
+53/tcp  open  domain   dnsmasq 2.62
+| dns-nsid: 
+|_  bind.version: dnsmasq-2.62
+80/tcp  open  http     lighttpd
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Server
+|_http-title: Did not follow redirect to https://10.0.1.1/
+443/tcp open  ssl/http lighttpd
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Server
+|_ssl-cert: ERROR: Script execution failed (use -d to debug)
+|_ssl-date: 2016-03-26T14:12:40+00:00; 0s from scanner time.
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Nmap scan report for 10.0.1.20
+Host is up (0.0094s latency).
+Not shown: 988 closed ports
+PORT     STATE SERVICE       VERSION
+22/tcp   open  ssh           OpenSSH 6.9 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 ab:19:8f:a4:a9:66:85:fc:d9:cb:f4:58:73:ca:9e:b6 (DSA)
+|   2048 3e:8f:9b:1f:7a:95:0e:49:64:fe:6b:09:f6:73:f1:29 (RSA)
+|_  256 40:23:47:05:fe:d1:b3:62:65:da:fd:ac:b6:40:82:82 (ECDSA)
+88/tcp   open  tcpwrapped
+111/tcp  open  rpcbind       2-4 (RPC #100000)
+| rpcinfo: 
+|   program version   port/proto  service
+|   100000  2,3,4        111/tcp  rpcbind
+|   100000  2,3,4        111/udp  rpcbind
+|   100003  2,3         2049/tcp  nfs
+|   100003  2,3         2049/udp  nfs
+|   100005  1,3          940/udp  mountd
+|   100005  1,3         1023/tcp  mountd
+|   100011  1,2          790/udp  rquotad
+|   100011  1,2          999/tcp  rquotad
+|   100021  0,1,3,4      874/udp  nlockmgr
+|   100021  0,1,3,4     1017/tcp  nlockmgr
+|   100024  1            838/udp  status
+|_  100024  1           1021/tcp  status
+445/tcp  open  microsoft-ds?
+548/tcp  open  afp           Apple AFP (name: John.s iMac; protocol 3.4; Mac OS X 10.9 - 10.11; iMac15,1)
+| afp-serverinfo: 
+|   Server Flags: 
+|     Flags hex: 0x9ff3
+|     Super Client: true
+|     UUIDs: true
+|     UTF8 Server Name: true
+|     Open Directory: true
+|     Reconnect: true
+|     Server Notifications: true
+|     TCP/IP: true
+|     Server Signature: true
+|     Server Messages: false
+|     Password Saving Prohibited: false
+|     Password Changing: true
+|     Copy File: true
+|   Server Name: John\xD5s iMac
+|   Machine Type: iMac15,1
+|   AFP Versions: AFP3.4, AFP3.3, AFP3.2, AFP3.1, AFPX03
+|   UAMs: DHCAST128, DHX2, Recon1, Client Krb v2, GSS
+|   Server Signature: 9ceb3fcc19f45972a236e14e82b12b13
+|   Directory Names: 
+|     afpserver/johns-imac.local@LOCAL
+|_  UTF8 Server Name: John\xE2\x80\x99s iMac
+999/tcp  open  rquotad       1-2 (RPC #100011)
+1021/tcp open  status        1 (RPC #100024)
+1023/tcp open  mountd        1-3 (RPC #100005)
+2049/tcp open  nfs           2-3 (RPC #100003)
+3689/tcp open  daap          Apple iTunes DAAP 12.3.3.17
+5000/tcp open  rtsp
+|_rtsp-methods: ANNOUNCE, SETUP, RECORD, FLUSH, OPTIONS, GET_PARAMETER, SET_PARAMETER, TEARDOWN
+5900/tcp open  vnc           Apple remote desktop vnc
+| vnc-info: 
+|   Protocol version: 3.889
+|   Security types: 
+|     Mac OS X security type (30)
+|_    Mac OS X security type (35)
+4 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port999-TCP:V=7.11%I=7%D=3/26%Time=56F697FB%P=x86_64-apple-darwin15.4.0
+SF:%r(RPCCheck,1C,"\x80\0\0\x18r\xfe\x1d\x13\0\0\0\x01\0\0\0\0\0\0\0\0\0\0
+SF:\0\0\0\0\0\x03");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port1021-TCP:V=7.11%I=7%D=3/26%Time=56F697F6%P=x86_64-apple-darwin15.4.
+SF:0%r(RPCCheck,1C,"\x80\0\0\x18r\xfe\x1d\x13\0\0\0\x01\0\0\0\0\0\0\0\0\0\
+SF:0\0\0\0\0\0\x03");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port1023-TCP:V=7.11%I=7%D=3/26%Time=56F697F6%P=x86_64-apple-darwin15.4.
+SF:0%r(RPCCheck,1C,"\x80\0\0\x18r\xfe\x1d\x13\0\0\0\x01\0\0\0\0\0\0\0\0\0\
+SF:0\0\0\0\0\0\x03");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port5000-TCP:V=7.11%I=7%D=3/26%Time=56F697E7%P=x86_64-apple-darwin15.4.
+SF:0%r(GetRequest,3E,"RTSP/1\.0\x20454\x20Session\x20Not\x20Found\r\nCSeq:
+SF:\x200\r\nContent-Length:\x200\r\n\r\n")%r(RTSPRequest,88,"RTSP/1\.0\x20
+SF:200\x20OK\r\nCSeq:\x200\r\nPublic:\x20ANNOUNCE,\x20SETUP,\x20RECORD,\x2
+SF:0FLUSH,\x20OPTIONS,\x20GET_PARAMETER,\x20SET_PARAMETER,\x20TEARDOWN\r\n
+SF:Content-Length:\x200\r\n\r\n")%r(HTTPOptions,88,"RTSP/1\.0\x20200\x20OK
+SF:\r\nCSeq:\x200\r\nPublic:\x20ANNOUNCE,\x20SETUP,\x20RECORD,\x20FLUSH,\x
+SF:20OPTIONS,\x20GET_PARAMETER,\x20SET_PARAMETER,\x20TEARDOWN\r\nContent-L
+SF:ength:\x200\r\n\r\n")%r(FourOhFourRequest,3E,"RTSP/1\.0\x20454\x20Sessi
+SF:on\x20Not\x20Found\r\nCSeq:\x200\r\nContent-Length:\x200\r\n\r\n")%r(SI
+SF:POptions,89,"RTSP/1\.0\x20200\x20OK\r\nCSeq:\x2042\r\nPublic:\x20ANNOUN
+SF:CE,\x20SETUP,\x20RECORD,\x20FLUSH,\x20OPTIONS,\x20GET_PARAMETER,\x20SET
+SF:_PARAMETER,\x20TEARDOWN\r\nContent-Length:\x200\r\n\r\n");
+Service Info: OSs: Mac OS X, OS X; CPE: cpe:/o:apple:mac_os_x:10.9, cpe:/o:apple:mac_os_x
+
+Host script results:
+| nbstat: NetBIOS name: JOHNS-IMAC, NetBIOS user: <unknown>, NetBIOS MAC: ac:87:a3:04:51:95 (Apple)
+| Names:
+|   JOHNS-IMAC<00>       Flags: <unique><active>
+|   JOHNS-IMAC<20>       Flags: <unique><active>
+|_  WORKGROUP<00>        Flags: <group><active>
+
+Nmap scan report for 10.0.1.24
+Host is up (0.0070s latency).
+Not shown: 991 closed ports
+PORT     STATE SERVICE    VERSION
+80/tcp   open  soap       gSOAP 2.7
+| http-methods: 
+|_  Supported Methods: GET HEAD POST
+| http-server-header: 
+|   Virata-EmWeb/R6_2_1
+|_  gSOAP/2.7
+|_http-title: Did not follow redirect to https://10.0.1.24/hp/device/
+81/tcp   open  tcpwrapped
+82/tcp   open  tcpwrapped
+83/tcp   open  tcpwrapped
+443/tcp  open  ssl/soap   gSOAP 2.7
+| http-methods: 
+|_  Supported Methods: HEAD
+| http-server-header: 
+|   Virata-EmWeb/R6_2_1
+|_  gSOAP/2.7
+| ssl-cert: Subject: commonName=NPIFEF242/organizationName=Hewlett-Packard Co.
+| Issuer: commonName=NPIFEF242/organizationName=Hewlett-Packard Co.
+| Public Key type: rsa
+| Public Key bits: 1024
+| Signature Algorithm: md5WithRSAEncryption
+| Not valid before: 2012-07-31T23:00:00
+| Not valid after:  2022-07-31T23:00:00
+| MD5:   b8df f3fb a139 c2d3 80c0 0c18 910e 04b0
+|_SHA-1: bb42 54ba 3c65 1d24 5808 6918 3a32 8d1c 3085 4db2
+515/tcp  open  printer
+631/tcp  open  soap       gSOAP 2.7
+| http-methods: 
+|_  Supported Methods: GET HEAD POST
+| http-server-header: 
+|   Virata-EmWeb/R6_2_1
+|_  gSOAP/2.7
+|_http-title: Did not follow redirect to https://10.0.1.24/hp/device/
+8080/tcp open  soap       gSOAP 2.7
+| http-methods: 
+|_  Supported Methods: GET HEAD POST
+| http-server-header: 
+|   Virata-EmWeb/R6_2_1
+|_  gSOAP/2.7
+|_http-title: Did not follow redirect to https://10.0.1.24/hp/device/
+9100/tcp open  jetdirect?
+
+Nmap scan report for 10.0.1.27
+Host is up (0.0092s latency).
+Not shown: 997 closed ports
+PORT    STATE SERVICE VERSION
+22/tcp  open  ssh     OpenSSH 6.7p1 Debian 5+deb8u1 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 9f:61:cf:c9:8e:de:ea:f7:6f:bb:82:cb:66:3b:24:80 (DSA)
+|   2048 a6:8c:f1:0b:dd:fa:dc:89:af:9b:6b:1a:10:1f:dd:72 (RSA)
+|_  256 59:93:1f:0b:d7:e3:df:97:38:c0:15:93:bf:01:5d:10 (ECDSA)
+80/tcp  open  http    Apache httpd 2.4.10
+| http-methods: 
+|_  Supported Methods: OPTIONS GET HEAD POST
+|_http-server-header: Apache/2.4.10 (Debian)
+|_http-title: Index of /
+111/tcp open  rpcbind 2-4 (RPC #100000)
+| rpcinfo: 
+|   program version   port/proto  service
+|   100000  2,3,4        111/tcp  rpcbind
+|_  100000  2,3,4        111/udp  rpcbind
+Service Info: Host: shuttle.romkey.com; OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Nmap scan report for 10.0.1.39
+Host is up (0.0021s latency).
+Not shown: 995 closed ports
+PORT      STATE SERVICE           VERSION
+139/tcp   open  netbios-ssn?
+445/tcp   open  microsoft-ds
+548/tcp   open  afp               Apple Airport Extreme/Time Capsule AFP (name: back-house; protocol 3.2 WAP)
+| afp-serverinfo: 
+|   Server Flags: 
+|     Flags hex: 0x8ffb
+|     Super Client: true
+|     UUIDs: true
+|     UTF8 Server Name: true
+|     Open Directory: true
+|     Reconnect: true
+|     Server Notifications: true
+|     TCP/IP: true
+|     Server Signature: true
+|     Server Messages: true
+|     Password Saving Prohibited: false
+|     Password Changing: true
+|     Copy File: true
+|   Server Name: back-house
+|   Machine Type: AirPort7,120
+|   AFP Versions: AFP3.3, AFP3.2, AFP3.1
+|   UAMs: DHCAST128, DHX2, SRP
+|   Server Signature: 4338364b56454b46464a31520069672d
+|   Network Addresses: 
+|     10.0.1.39:548
+|     [fe80:000b:0000:0000:8a1f:a1ff:fe2a:ac1f]:548
+|     [fe80:000c:0000:0000:8835:15ff:fe33:a110]:548
+|     10.0.1.39
+|_  UTF8 Server Name: The House
+5009/tcp  open  airport-admin     Apple AirPort or Time Capsule admin
+10000/tcp open  snet-sensor-mgmt?
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port445-TCP:V=7.11%I=7%D=3/26%Time=56F697E3%P=x86_64-apple-darwin15.4.0
+SF:%r(SMBProgNeg,51,"\0\0\0M\xffSMBr\0\0\0\0\x88\x01@\0\0\0\0\0\0\0\0\0\0\
+SF:0\0\0\0@\x06\0\0\x01\0\x11\x07\0\x03\n\0\x01\0\xec\xfa\0\0\0\0\x01\0\0\
+SF:0\0\0\|\x20\0\0`\x95\xf7\xf9h\x87\xd1\x01\xf0\0\x08\x08\0\x0cUj\[\xf8\x
+SF:d167");
+Service Info: CPE: cpe:/h:apple:airport_extreme
+
+Host script results:
+| nbstat: NetBIOS name: BACK-HOUSE, NetBIOS user: <unknown>, NetBIOS MAC: 88:1f:a1:2a:ac:1f (Apple)
+| Names:
+|   BACK-HOUSE<00>       Flags: <unique><active><permanent>
+|   WORKGROUP<00>        Flags: <group><active><permanent>
+|_  BACK-HOUSE<20>       Flags: <unique><active><permanent>
+
+Nmap scan report for 10.0.1.40
+Host is up (0.0069s latency).
+All 1000 scanned ports on 10.0.1.40 are closed
+
+Nmap scan report for 10.0.1.41
+Host is up (0.015s latency).
+All 1000 scanned ports on 10.0.1.41 are closed
+
+Nmap scan report for 10.0.1.43
+Host is up (0.0066s latency).
+Not shown: 998 closed ports
+PORT      STATE SERVICE VERSION
+53/tcp    open  domain  dnsmasq 2.52
+| dns-nsid: 
+|_  bind.version: dnsmasq-2.52
+49153/tcp open  upnp    Belkin Wemo upnpd (UPnP 1.0)
+Service Info: Device: power-misc
+
+Nmap scan report for 10.0.1.46
+Host is up (0.0047s latency).
+Not shown: 999 closed ports
+PORT      STATE SERVICE      VERSION
+62078/tcp open  iphone-sync?
+
+Nmap scan report for 10.0.1.47
+Host is up (0.0097s latency).
+Not shown: 998 closed ports
+PORT      STATE SERVICE VERSION
+53/tcp    open  domain  dnsmasq 2.52
+| dns-nsid: 
+|_  bind.version: dnsmasq-2.52
+49153/tcp open  upnp    Belkin Wemo upnpd (UPnP 1.0)
+Service Info: Device: power-misc
+
+Nmap scan report for 10.0.1.48
+Host is up (0.0011s latency).
+Not shown: 991 closed ports
+PORT     STATE SERVICE    VERSION
+111/tcp  open  rpcbind    2-4 (RPC #100000)
+| rpcinfo: 
+|   program version   port/proto  service
+|   100000  2,3,4        111/tcp  rpcbind
+|   100000  2,3,4        111/udp  rpcbind
+|   100003  2,3         2049/tcp  nfs
+|   100003  2,3         2049/udp  nfs
+|   100005  1,3          929/udp  mountd
+|   100005  1,3         1023/tcp  mountd
+|   100011  1,2          681/udp  rquotad
+|   100011  1,2          997/tcp  rquotad
+|   100021  0,1,3,4      818/udp  nlockmgr
+|   100021  0,1,3,4     1015/tcp  nlockmgr
+|   100024  1            926/udp  status
+|_  100024  1           1019/tcp  status
+1023/tcp open  mountd     1-3 (RPC #100005)
+2049/tcp open  nfs        2-3 (RPC #100003)
+3000/tcp open  tcpwrapped
+3128/tcp open  http-proxy Squid http proxy 3.3.8
+| http-open-proxy: Potentially OPEN proxy.
+|_Methods supported: GET HEAD
+|_http-server-header: squid/3.3.8
+|_http-title: ERROR: The requested URL could not be retrieved
+3306/tcp open  tcpwrapped
+|_mysql-info: ERROR: Script execution failed (use -d to debug)
+3689/tcp open  daap       Apple iTunes DAAP 12.3.3.17
+8080/tcp open  http       nginx 1.4.6 (Ubuntu)
+|_http-server-header: nginx/1.4.6 (Ubuntu)
+|_http-title: 502 Bad Gateway
+8081/tcp open  tcpwrapped
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port1023-TCP:V=7.11%I=7%D=3/26%Time=56F697FD%P=x86_64-apple-darwin15.4.
+SF:0%r(RPCCheck,1C,"\x80\0\0\x18r\xfe\x1d\x13\0\0\0\x01\0\0\0\0\0\0\0\0\0\
+SF:0\0\0\0\0\0\x03");
+Service Info: OSs: OS X, Linux; CPE: cpe:/o:linux:linux_kernel
+
+Nmap scan report for 10.0.1.51
+Host is up (0.0076s latency).
+Not shown: 998 closed ports
+PORT      STATE SERVICE VERSION
+53/tcp    open  domain  dnsmasq 2.52
+| dns-nsid: 
+|_  bind.version: dnsmasq-2.52
+49153/tcp open  upnp    Belkin Wemo upnpd (UPnP 1.0)
+Service Info: Device: power-misc
+
+Nmap scan report for 10.0.1.54
+Host is up (0.0094s latency).
+Not shown: 997 closed ports
+PORT     STATE SERVICE    VERSION
+80/tcp   open  http       nginx
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: nginx
+|_http-title: Did not follow redirect to http://10.0.1.54:10000/contentshare/WebApp/index.html
+8008/tcp open  http       Google Chromecast httpd
+|_http-title: Site doesn't have a title (text/html).
+8009/tcp open  ssl/ajp13?
+|_ajp-methods: Failed to get a valid response for the OPTION request
+|_ssl-cert: ERROR: Script execution failed (use -d to debug)
+|_ssl-date: TLS randomness does not represent time
+Service Info: Device: media device
+
+Nmap scan report for 10.0.1.91
+Host is up (0.024s latency).
+Not shown: 998 closed ports
+PORT     STATE    SERVICE    VERSION
+22/tcp   open     ssh        OpenSSH 6.9 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 fd:1c:a5:0f:0c:33:b7:bb:38:2f:bb:94:95:d1:50:8a (DSA)
+|   2048 d8:34:81:fc:f8:e3:40:20:76:03:73:a4:ba:82:19:5b (RSA)
+|_  256 1f:d1:c6:75:a5:76:12:33:fe:fd:db:2d:05:91:3d:f7 (ECDSA)
+2399/tcp filtered fmpro-fdal
+
+Nmap scan report for 10.0.1.92
+Host is up (0.0074s latency).
+Not shown: 999 closed ports
+PORT      STATE SERVICE      VERSION
+62078/tcp open  iphone-sync?
+
+Nmap scan report for 10.0.1.96
+Host is up (0.053s latency).
+All 1000 scanned ports on 10.0.1.96 are closed
+
+Nmap scan report for 10.0.1.103
+Host is up (0.0065s latency).
+Not shown: 995 filtered ports
+PORT     STATE  SERVICE    VERSION
+80/tcp   open   http       TiVo To Go httpd 20.5.9.RC15-USA-6:846
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: tivo-httpd-1:20.5.9.RC15-USA-6:846
+| http-title: Congratulations!
+|_Requested resource was /index.html
+443/tcp  open   ssl/http   TiVo To Go httpd 20.5.9.RC15-USA-6:846
+| http-auth: 
+| HTTP/1.1 401 Authorization Required
+|_  Digest nonce=484BBB137F64C7E9 qop=auth realm=TiVo DVR
+|_http-server-header: tivo-httpd-1:20.5.9.RC15-USA-6:846
+|_http-title: Site doesn't have a title (text/html).
+|_ssl-cert: ERROR: Script execution failed (use -d to debug)
+|_ssl-date: TLS randomness does not represent time
+2190/tcp open   tcpwrapped
+2191/tcp open   tvbus?
+9080/tcp closed glrpc
+Service Info: Device: media device
+
+Nmap scan report for 10.0.1.113
+Host is up (0.0069s latency).
+Not shown: 998 closed ports
+PORT      STATE SERVICE VERSION
+53/tcp    open  domain  dnsmasq 2.52
+| dns-nsid: 
+|_  bind.version: dnsmasq-2.52
+49153/tcp open  upnp    Belkin Wemo upnpd (UPnP 1.0)
+Service Info: Device: power-misc
+
+Nmap scan report for 10.0.1.114
+Host is up (0.011s latency).
+Not shown: 995 closed ports
+PORT      STATE SERVICE           VERSION
+80/tcp    open  http              lighttpd 1.4.35
+| http-methods: 
+|_  Supported Methods: OPTIONS GET HEAD POST
+|_http-server-header: lighttpd/1.4.35
+|_http-title: Site doesn't have a title (text/html; charset=utf-8).
+5000/tcp  open  rtsp              Apple AirTunes rtspd 190.9 (Apple TV)
+|_rtsp-methods: ANNOUNCE, SETUP, RECORD, PAUSE, FLUSH, TEARDOWN, OPTIONS, GET_PARAMETER, SET_PARAMETER, POST, GET
+8008/tcp  open  http?
+|_http-title: Site doesn't have a title (text/html).
+8009/tcp  open  ssl/ajp13?
+|_ajp-methods: Failed to get a valid response for the OPTION request
+|_ssl-cert: ERROR: Script execution failed (use -d to debug)
+|_ssl-date: TLS randomness does not represent time
+10000/tcp open  snet-sensor-mgmt?
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port10000-TCP:V=7.11%I=7%D=3/26%Time=56F697EF%P=x86_64-apple-darwin15.4
+SF:.0%r(GetRequest,7C,"HTTP/1\.1\x20404\x20Not\x20Found\r\nConnection:\x20
+SF:close\r\nContent-Length:\x2027\r\nContent-Type:\x20application/json\r\n
+SF:\r\n{\"error\":\[404,\"Not\x20Found\"\]}")%r(HTTPOptions,7C,"HTTP/1\.1\
+SF:x20404\x20Not\x20Found\r\nConnection:\x20close\r\nContent-Length:\x2027
+SF:\r\nContent-Type:\x20application/json\r\n\r\n{\"error\":\[404,\"Not\x20
+SF:Found\"\]}")%r(FourOhFourRequest,7C,"HTTP/1\.1\x20404\x20Not\x20Found\r
+SF:\nConnection:\x20close\r\nContent-Length:\x2027\r\nContent-Type:\x20app
+SF:lication/json\r\n\r\n{\"error\":\[404,\"Not\x20Found\"\]}");
+Service Info: OS: Mac OS X; Device: media device; CPE: cpe:/o:apple:mac_os_x
+
+Nmap scan report for 10.0.1.115
+Host is up (0.0071s latency).
+Not shown: 976 closed ports
+PORT      STATE    SERVICE       VERSION
+83/tcp    filtered mit-ml-dev
+407/tcp   filtered timbuktu
+544/tcp   filtered kshell
+668/tcp   filtered mecomm
+720/tcp   filtered unknown
+1023/tcp  filtered netvenuechat
+1041/tcp  filtered danf-ak2
+1119/tcp  filtered bnetgame
+1216/tcp  filtered etebac5
+1310/tcp  filtered husky
+1352/tcp  filtered lotusnotes
+1998/tcp  filtered x25-svc-port
+2393/tcp  filtered ms-olap1
+2492/tcp  filtered groove
+2909/tcp  filtered funk-dialout
+4848/tcp  filtered appserv-http
+4998/tcp  filtered maybe-veritas
+5550/tcp  filtered sdadmind
+5911/tcp  filtered cpdlc
+6100/tcp  filtered synchronet-db
+8651/tcp  filtered unknown
+49161/tcp filtered unknown
+61532/tcp filtered unknown
+62078/tcp open     iphone-sync?
+
+Nmap scan report for 10.0.1.116
+Host is up (0.0025s latency).
+Not shown: 998 closed ports
+PORT     STATE SERVICE    VERSION
+80/tcp   open  tcpwrapped
+|_http-cors: HEAD GET POST PUT DELETE OPTIONS
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-title: hue personal wireless lighting
+8080/tcp open  http       Web-Based Enterprise Management CIM serverOpenPegasus WBEM httpd
+|_http-title: Site doesn't have a title.
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Nmap scan report for 10.0.1.117
+Host is up (0.0078s latency).
+Not shown: 998 closed ports
+PORT     STATE SERVICE VERSION
+22/tcp   open  ssh     (protocol 2.0)
+| ssh-hostkey: 
+|   1024 74:64:c3:6d:df:70:e1:21:b0:2a:c3:9b:fa:96:31:4f (DSA)
+|   2048 a0:a3:04:c3:15:d0:bf:10:0a:d7:0d:8c:6a:94:69:2a (RSA)
+|_  256 ca:7f:2b:f9:52:ea:97:49:c2:60:ab:90:9f:40:3c:7e (ECDSA)
+8080/tcp open  http    Dump1090 (MalcomRobb fork) http interface
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Dump1090
+|_http-title: Site doesn't have a title (text/html;charset=utf-8).
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port22-TCP:V=7.11%I=7%D=3/26%Time=56F697F3%P=x86_64-apple-darwin15.4.0%
+SF:r(NULL,29,"SSH-2\.0-OpenSSH_6\.7p1\x20Raspbian-5\+deb8u1\r\n");
+
+Nmap scan report for 10.0.1.119
+Host is up (0.010s latency).
+All 1000 scanned ports on 10.0.1.119 are closed
+
+Nmap scan report for 10.0.1.122
+Host is up (0.0082s latency).
+Not shown: 994 closed ports
+PORT      STATE SERVICE     VERSION
+3689/tcp  open  rendezvous?
+5000/tcp  open  rtsp        AirTunes rtspd 280.32.2
+|_rtsp-methods: ANNOUNCE, SETUP, RECORD, PAUSE, FLUSH, TEARDOWN, OPTIONS, GET_PARAMETER, SET_PARAMETER, POST, GET, PUT
+7000/tcp  open  rtsp        AirTunes rtspd 280.32.2
+|_rtsp-methods: ANNOUNCE, SETUP, RECORD, PAUSE, FLUSH, TEARDOWN, OPTIONS, GET_PARAMETER, SET_PARAMETER, POST, GET, PUT
+7100/tcp  open  http        Apple AirPlay httpd
+|_http-title: Site doesn't have a title.
+49152/tcp open  unknown
+62078/tcp open  tcpwrapped
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port3689-TCP:V=7.11%I=7%D=3/26%Time=56F697FA%P=x86_64-apple-darwin15.4.
+SF:0%r(GetRequest,74,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDAAP-Server:\x
+SF:20iTunes/11\.1b37\x20\(OS\x20X\)\r\nDate:\x202016-03-26\x2014:08:53\x20
+SF:\+0000\r\nContent-Length:\x200\r\n\r\n")%r(GenericLines,74,"HTTP/1\.1\x
+SF:20400\x20Bad\x20Request\r\nDAAP-Server:\x20iTunes/11\.1b37\x20\(OS\x20X
+SF:\)\r\nDate:\x202016-03-26\x2014:08:58\x20\+0000\r\nContent-Length:\x200
+SF:\r\n\r\n")%r(HTTPOptions,74,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDAAP
+SF:-Server:\x20iTunes/11\.1b37\x20\(OS\x20X\)\r\nDate:\x202016-03-26\x2014
+SF::09:03\x20\+0000\r\nContent-Length:\x200\r\n\r\n")%r(RTSPRequest,74,"HT
+SF:TP/1\.1\x20400\x20Bad\x20Request\r\nDAAP-Server:\x20iTunes/11\.1b37\x20
+SF:\(OS\x20X\)\r\nDate:\x202016-03-26\x2014:09:08\x20\+0000\r\nContent-Len
+SF:gth:\x200\r\n\r\n")%r(SSLSessionReq,74,"HTTP/1\.1\x20400\x20Bad\x20Requ
+SF:est\r\nDAAP-Server:\x20iTunes/11\.1b37\x20\(OS\x20X\)\r\nDate:\x202016-
+SF:03-26\x2014:09:35\x20\+0000\r\nContent-Length:\x200\r\n\r\n")%r(TLSSess
+SF:ionReq,74,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDAAP-Server:\x20iTunes
+SF:/11\.1b37\x20\(OS\x20X\)\r\nDate:\x202016-03-26\x2014:09:40\x20\+0000\r
+SF:\nContent-Length:\x200\r\n\r\n")%r(Kerberos,74,"HTTP/1\.1\x20400\x20Bad
+SF:\x20Request\r\nDAAP-Server:\x20iTunes/11\.1b37\x20\(OS\x20X\)\r\nDate:\
+SF:x202016-03-26\x2014:09:45\x20\+0000\r\nContent-Length:\x200\r\n\r\n")%r
+SF:(FourOhFourRequest,74,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDAAP-Serve
+SF:r:\x20iTunes/11\.1b37\x20\(OS\x20X\)\r\nDate:\x202016-03-26\x2014:10:00
+SF:\x20\+0000\r\nContent-Length:\x200\r\n\r\n")%r(SIPOptions,74,"HTTP/1\.1
+SF:\x20400\x20Bad\x20Request\r\nDAAP-Server:\x20iTunes/11\.1b37\x20\(OS\x2
+SF:0X\)\r\nDate:\x202016-03-26\x2014:10:15\x20\+0000\r\nContent-Length:\x2
+SF:00\r\n\r\n");
+Service Info: Device: media device
+
+Nmap scan report for 10.0.1.123
+Host is up (0.0095s latency).
+Not shown: 994 closed ports
+PORT      STATE SERVICE     VERSION
+3689/tcp  open  rendezvous?
+5000/tcp  open  rtsp        AirTunes rtspd 280.32.2
+|_rtsp-methods: ANNOUNCE, SETUP, RECORD, PAUSE, FLUSH, TEARDOWN, OPTIONS, GET_PARAMETER, SET_PARAMETER, POST, GET, PUT
+7000/tcp  open  rtsp        AirTunes rtspd 280.32.2
+|_rtsp-methods: ANNOUNCE, SETUP, RECORD, PAUSE, FLUSH, TEARDOWN, OPTIONS, GET_PARAMETER, SET_PARAMETER, POST, GET, PUT
+7100/tcp  open  http        Apple AirPlay httpd
+|_http-title: Site doesn't have a title.
+49161/tcp open  unknown
+62078/tcp open  tcpwrapped
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port3689-TCP:V=7.11%I=7%D=3/26%Time=56F697FE%P=x86_64-apple-darwin15.4.
+SF:0%r(GetRequest,74,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDAAP-Server:\x
+SF:20iTunes/11\.1b37\x20\(OS\x20X\)\r\nDate:\x202016-03-26\x2014:08:57\x20
+SF:\+0000\r\nContent-Length:\x200\r\n\r\n")%r(GenericLines,74,"HTTP/1\.1\x
+SF:20400\x20Bad\x20Request\r\nDAAP-Server:\x20iTunes/11\.1b37\x20\(OS\x20X
+SF:\)\r\nDate:\x202016-03-26\x2014:09:02\x20\+0000\r\nContent-Length:\x200
+SF:\r\n\r\n")%r(HTTPOptions,74,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDAAP
+SF:-Server:\x20iTunes/11\.1b37\x20\(OS\x20X\)\r\nDate:\x202016-03-26\x2014
+SF::09:08\x20\+0000\r\nContent-Length:\x200\r\n\r\n")%r(RTSPRequest,74,"HT
+SF:TP/1\.1\x20400\x20Bad\x20Request\r\nDAAP-Server:\x20iTunes/11\.1b37\x20
+SF:\(OS\x20X\)\r\nDate:\x202016-03-26\x2014:09:13\x20\+0000\r\nContent-Len
+SF:gth:\x200\r\n\r\n")%r(SSLSessionReq,74,"HTTP/1\.1\x20400\x20Bad\x20Requ
+SF:est\r\nDAAP-Server:\x20iTunes/11\.1b37\x20\(OS\x20X\)\r\nDate:\x202016-
+SF:03-26\x2014:09:40\x20\+0000\r\nContent-Length:\x200\r\n\r\n")%r(TLSSess
+SF:ionReq,74,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDAAP-Server:\x20iTunes
+SF:/11\.1b37\x20\(OS\x20X\)\r\nDate:\x202016-03-26\x2014:09:45\x20\+0000\r
+SF:\nContent-Length:\x200\r\n\r\n")%r(Kerberos,74,"HTTP/1\.1\x20400\x20Bad
+SF:\x20Request\r\nDAAP-Server:\x20iTunes/11\.1b37\x20\(OS\x20X\)\r\nDate:\
+SF:x202016-03-26\x2014:09:50\x20\+0000\r\nContent-Length:\x200\r\n\r\n")%r
+SF:(FourOhFourRequest,74,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDAAP-Serve
+SF:r:\x20iTunes/11\.1b37\x20\(OS\x20X\)\r\nDate:\x202016-03-26\x2014:10:05
+SF:\x20\+0000\r\nContent-Length:\x200\r\n\r\n")%r(SIPOptions,74,"HTTP/1\.1
+SF:\x20400\x20Bad\x20Request\r\nDAAP-Server:\x20iTunes/11\.1b37\x20\(OS\x2
+SF:0X\)\r\nDate:\x202016-03-26\x2014:10:20\x20\+0000\r\nContent-Length:\x2
+SF:00\r\n\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port49161-TCP:V=7.11%I=7%D=3/26%Time=56F697FB%P=x86_64-apple-darwin15.4
+SF:.0%r(NULL,A,"\t\x08\x16\x20\0\xda\x01\x02\x08\0")%r(GenericLines,A,"\t\
+SF:x08\x16\x20\0\xda\x01\x02\x08\0")%r(GetRequest,A,"\t\x08\x16\x20\0\xda\
+SF:x01\x02\x08\0")%r(HTTPOptions,A,"\t\x08\x16\x20\0\xda\x01\x02\x08\0")%r
+SF:(RTSPRequest,A,"\t\x08\x16\x20\0\xda\x01\x02\x08\0")%r(RPCCheck,19,"\t\
+SF:x08\x16\x20\0\xda\x01\x02\x08\0\x04\x08\0\x20e\x04\x08\0\x20e\x04\x08\0
+SF:\x20e")%r(DNSVersionBindReq,14,"\t\x08\x16\x20\0\xda\x01\x02\x08\0\x04\
+SF:x08\0\x20e\x04\x08\0\x20e")%r(DNSStatusRequest,16,"\t\x08\x16\x20\0\xda
+SF:\x01\x02\x08\0\x04\x08\0\x20e\x06\x08\0\x12\0\x20e")%r(Help,A,"\t\x08\x
+SF:16\x20\0\xda\x01\x02\x08\0")%r(SSLSessionReq,14,"\t\x08\x16\x20\0\xda\x
+SF:01\x02\x08\0\x04\x08\0\x20e\x04\x08\0\x20e")%r(TLSSessionReq,F,"\t\x08\
+SF:x16\x20\0\xda\x01\x02\x08\0\x04\x08\0\x20e")%r(Kerberos,1E,"\t\x08\x16\
+SF:x20\0\xda\x01\x02\x08\0\x04\x08\0\x20e\x04\x08\0\x20e\x04\x08\0\x20e\x0
+SF:4\x08\0\x20e")%r(SMBProgNeg,19,"\t\x08\x16\x20\0\xda\x01\x02\x08\0\x04\
+SF:x08\0\x20e\x04\x08\0\x20e\x04\x08\0\x20e")%r(X11Probe,A,"\t\x08\x16\x20
+SF:\0\xda\x01\x02\x08\0")%r(FourOhFourRequest,A,"\t\x08\x16\x20\0\xda\x01\
+SF:x02\x08\0")%r(LPDString,F,"\t\x08\x16\x20\0\xda\x01\x02\x08\0\x04\x08\0
+SF:\x20e")%r(LDAPBindReq,A,"\t\x08\x16\x20\0\xda\x01\x02\x08\0")%r(SIPOpti
+SF:ons,14,"\t\x08\x16\x20\0\xda\x01\x02\x08\0\x04\x08\0\x20e\x04\x08\0\x20
+SF:e")%r(LANDesk-RC,A,"\t\x08\x16\x20\0\xda\x01\x02\x08\0")%r(TerminalServ
+SF:er,14,"\t\x08\x16\x20\0\xda\x01\x02\x08\0\x04\x08\0\x20e\x04\x08\0\x20e
+SF:")%r(NCP,A,"\t\x08\x16\x20\0\xda\x01\x02\x08\0")%r(NotesRPC,14,"\t\x08\
+SF:x16\x20\0\xda\x01\x02\x08\0\x04\x08\0\x20e\x04\x08\0\x20e")%r(WMSReques
+SF:t,14,"\t\x08\x16\x20\0\xda\x01\x02\x08\0\x04\x08\0\x20e\x04\x08\0\x20e"
+SF:)%r(oracle-tns,F,"\t\x08\x16\x20\0\xda\x01\x02\x08\0\x04\x08\0\x20e")%r
+SF:(afp,41,"\t\x08\x16\x20\0\xda\x01\x02\x08\0\x04\x08\0\x20e\x04\x08\0\x2
+SF:0e\x04\x08\0\x20e\x04\x08\0\x20e\x04\x08\0\x20e\x04\x08\0\x20e\x04\x08\
+SF:0\x20e\x04\x08\0\x20e\x04\x08\0\x20e\x04\x08\0\x20e\x04\x08\0\x20e")%r(
+SF:kumo-server,A,"\t\x08\x16\x20\0\xda\x01\x02\x08\0")%r(giop,A,"\t\x08\x1
+SF:6\x20\0\xda\x01\x02\x08\0");
+Service Info: Device: media device
+
+Nmap scan report for 10.0.1.126
+Host is up (0.012s latency).
+Not shown: 995 filtered ports
+PORT      STATE SERVICE    VERSION
+80/tcp    open  http       TiVo To Go httpd 20.4.7.stream-01-6:A94
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: tivo-httpd-1:20.4.7.stream-01-6:A94
+| http-title: Congratulations!
+|_Requested resource was /index.html
+443/tcp   open  ssl/http   TiVo To Go httpd 20.4.7.stream-01-6:A94
+| http-auth: 
+| HTTP/1.1 401 Authorization Required
+|_  Digest nonce=69984BF50D14217C qop=auth realm=TiVo DVR
+|_http-server-header: tivo-httpd-1:20.4.7.stream-01-6:A94
+|_ssl-cert: ERROR: Script execution failed (use -d to debug)
+|_ssl-date: 2016-03-26T14:12:25+00:00; +1s from scanner time.
+| sslv2: 
+|   SSLv2 supported
+|_  ciphers: none
+2190/tcp  open  tcpwrapped
+2191/tcp  open  tvbus?
+49152/tcp open  upnp       Portable SDK for UPnP devices 1.6.8 (Linux 2.6.33.3; UPnP 1.0)
+Service Info: OS: Linux; Device: media device; CPE: cpe:/o:linux:linux_kernel:2.6.33.3
+
+Nmap scan report for 10.0.1.127
+Host is up (0.013s latency).
+Not shown: 998 closed ports
+PORT      STATE    SERVICE VERSION
+80/tcp    open     http    nginx
+|_http-server-header: nginx
+|_http-title: 404 Not Found
+20031/tcp filtered unknown
+
+Nmap scan report for 10.0.1.129
+Host is up (0.017s latency).
+Not shown: 998 closed ports
+PORT     STATE SERVICE             VERSION
+80/tcp   open  http
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-title: Site doesn't have a title (text/html; charset=utf-8).
+8888/tcp open  ssl/sun-answerbook?
+| ssl-cert: Subject: commonName=aau
+| Issuer: commonName=aau
+| Public Key type: rsa
+| Public Key bits: 1024
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2016-02-15T15:34:16
+| Not valid after:  2026-02-12T15:34:16
+| MD5:   b302 1eb3 ba83 2e45 2628 a5ea 251e acaf
+|_SHA-1: 406f 81a3 c2a6 ac14 89f7 0be6 450a 9132 7dd9 2c14
+|_ssl-date: TLS randomness does not represent time
+| tls-nextprotoneg: 
+|   http/1.1
+|_  http/1.0
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.11%I=7%D=3/26%Time=56F69803%P=x86_64-apple-darwin15.4.0%
+SF:r(GetRequest,D1,"HTTP/1\.1\x20500\x20Internal\x20Server\x20Error\r\nX-C
+SF:ontent-Type-Options:\x20nosniff\r\nContent-Type:\x20text/html;\x20chars
+SF:et=utf-8\r\nContent-Length:\x2022\r\nDate:\x20Sat,\x2026\x20Mar\x202016
+SF:\x2014:09:07\x20GMT\r\nConnection:\x20close\r\n\r\nInternal\x20Server\x
+SF:20Error\n")%r(HTTPOptions,C0,"HTTP/1\.1\x20404\x20Not\x20Found\r\nX-Con
+SF:tent-Type-Options:\x20nosniff\r\nContent-Type:\x20text/html;\x20charset
+SF:=utf-8\r\nContent-Length:\x2017\r\nDate:\x20Sat,\x2026\x20Mar\x202016\x
+SF:2014:09:07\x20GMT\r\nConnection:\x20close\r\n\r\nCannot\x20OPTIONS\x20/
+SF:\n")%r(FourOhFourRequest,DF,"HTTP/1\.1\x20404\x20Not\x20Found\r\nX-Cont
+SF:ent-Type-Options:\x20nosniff\r\nContent-Type:\x20text/html;\x20charset=
+SF:utf-8\r\nContent-Length:\x2048\r\nDate:\x20Sat,\x2026\x20Mar\x202016\x2
+SF:014:09:08\x20GMT\r\nConnection:\x20close\r\n\r\nCannot\x20GET\x20/nice%
+SF:20ports%2C/Tri%6Eity\.txt%2ebak\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port8888-TCP:V=7.11%T=SSL%I=7%D=3/26%Time=56F6982D%P=x86_64-apple-darwi
+SF:n15.4.0%r(GetRequest,3FE,"HTTP/1\.1\x20200\x20OK\r\ncontent-length:\x20
+SF:926\r\nDate:\x20Sat,\x2026\x20Mar\x202016\x2014:09:49\x20GMT\r\nConnect
+SF:ion:\x20close\r\n\r\n<\?xml\x20version=\"1\.0\"\?>\n<root\x20xmlns=\"ur
+SF:n:schemas-wink-com:device-1-0\">\n\x20\x20<specVersion>\n\x20\x20\x20\x
+SF:20<major>1</major>\n\x20\x20\x20\x20<minor>0</minor>\n\x20\x20</specVer
+SF:sion>\n\x20\x20<URLBase>https://10\.0\.1\.129:8888</URLBase>\n\x20\x20<
+SF:device>\n\x20\x20\x20\x20<deviceType>urn:wink-com:device:hub:1</deviceT
+SF:ype>\n\x20\x20\x20\x20<friendlyName>Wink\x20Hub</friendlyName>\n\x20\x2
+SF:0\x20\x20<manufacturer>Wink,\x20Inc\.</manufacturer>\n\x20\x20\x20\x20<
+SF:manufacturerURL>http://www\.wink\.com</manufacturerURL>\n\x20\x20\x20\x
+SF:20<modelDescription>Wink\x20Hub</modelDescription>\n\x20\x20\x20\x20<mo
+SF:delName>Wink\x20Hub</modelName>\n\x20\x20\x20\x20<modelNumber/>\n\x20\x
+SF:20\x20\x20<modelURL>http://www\.wink\.com</modelURL>\n\x20\x20\x20\x20<
+SF:serialNumber/>\n\x20\x20\x20\x20<UDN>uuid:0117dff3-674a-4cfb-b941-ead17
+SF:3ded40d</UDN>\n\x20\x20\x20\x20<UPC/>\n\x20\x20\x20\x20<iconList/>\n\x2
+SF:0\x20\x20\x20<presentationURL/>\n\x20\x20\x20\x20<serviceList>\n\x20\x2
+SF:0\x20\x20\x20\x20<service>\n\x20\x20\x20\x20\x20\x20\x20\x20<serviceTyp
+SF:e>urn:wink-com:service:fasterLights:1</serviceType>\n\x20\x20\x20\x20\x
+SF:20\x20\x20\x20<serviceId>urn")%r(HTTPOptions,C0,"HTTP/1\.1\x20404\x20No
+SF:t\x20Found\r\nX-Content-Type-Options:\x20nosniff\r\nContent-Type:\x20te
+SF:xt/html;\x20charset=utf-8\r\nContent-Length:\x2017\r\nDate:\x20Sat,\x20
+SF:26\x20Mar\x202016\x2014:09:49\x20GMT\r\nConnection:\x20close\r\n\r\nCan
+SF:not\x20OPTIONS\x20/\n")%r(FourOhFourRequest,AD,"HTTP/1\.1\x20401\x20no\
+SF:x20token\x20provided\r\ncontent-length:\x2031\r\ncontent-type:\x20appli
+SF:cation/json\r\nDate:\x20Sat,\x2026\x20Mar\x202016\x2014:09:51\x20GMT\r\
+SF:nConnection:\x20close\r\n\r\n{\"message\":\"no\x20token\x20provided\"}"
+SF:);
+
+Nmap scan report for 10.0.1.130
+Host is up (0.011s latency).
+Not shown: 998 closed ports
+PORT      STATE SERVICE VERSION
+53/tcp    open  domain  dnsmasq 2.52
+| dns-nsid: 
+|_  bind.version: dnsmasq-2.52
+49153/tcp open  upnp    Belkin Wemo upnpd (UPnP 1.0)
+Service Info: Device: power-misc
+
+Nmap scan report for 10.0.1.132
+Host is up (0.0051s latency).
+Not shown: 998 closed ports
+PORT      STATE SERVICE VERSION
+53/tcp    open  domain  dnsmasq 2.52
+| dns-nsid: 
+|_  bind.version: dnsmasq-2.52
+49153/tcp open  upnp    Belkin Wemo upnpd (UPnP 1.0)
+Service Info: Device: power-misc
+
+Nmap scan report for 10.0.1.133
+Host is up (0.011s latency).
+Not shown: 998 closed ports
+PORT      STATE SERVICE VERSION
+53/tcp    open  domain  dnsmasq 2.52
+| dns-nsid: 
+|_  bind.version: dnsmasq-2.52
+49153/tcp open  upnp    Belkin Wemo upnpd (UPnP 1.0)
+Service Info: Device: power-misc
+
+Nmap scan report for 10.0.1.134
+Host is up (0.0083s latency).
+Not shown: 998 closed ports
+PORT      STATE SERVICE VERSION
+53/tcp    open  domain  dnsmasq 2.52
+| dns-nsid: 
+|_  bind.version: dnsmasq-2.52
+49153/tcp open  upnp    Belkin Wemo upnpd (UPnP 1.0)
+Service Info: Device: power-misc
+
+Nmap scan report for 10.0.1.135
+Host is up (0.0073s latency).
+Not shown: 998 closed ports
+PORT      STATE SERVICE VERSION
+53/tcp    open  domain  dnsmasq 2.52
+| dns-nsid: 
+|_  bind.version: dnsmasq-2.52
+49153/tcp open  upnp    Belkin Wemo upnpd (UPnP 1.0)
+Service Info: Device: power-misc
+
+Nmap scan report for 10.0.1.136
+Host is up (0.0096s latency).
+Not shown: 998 closed ports
+PORT      STATE SERVICE VERSION
+53/tcp    open  domain  dnsmasq 2.52
+| dns-nsid: 
+|_  bind.version: dnsmasq-2.52
+49153/tcp open  upnp    Belkin Wemo upnpd (UPnP 1.0)
+Service Info: Device: power-misc
+
+Nmap scan report for 10.0.1.137
+Host is up (0.012s latency).
+Not shown: 998 closed ports
+PORT      STATE SERVICE VERSION
+53/tcp    open  domain  dnsmasq 2.52
+| dns-nsid: 
+|_  bind.version: dnsmasq-2.52
+49153/tcp open  upnp    Belkin Wemo upnpd (UPnP 1.0)
+Service Info: Device: power-misc
+
+Nmap scan report for 10.0.1.138
+Host is up (0.0082s latency).
+Not shown: 998 closed ports
+PORT      STATE SERVICE VERSION
+53/tcp    open  domain  dnsmasq 2.52
+| dns-nsid: 
+|_  bind.version: dnsmasq-2.52
+49153/tcp open  upnp    Belkin Wemo upnpd (UPnP 1.0)
+Service Info: Device: power-misc
+
+Nmap scan report for 10.0.1.139
+Host is up (0.0055s latency).
+Not shown: 998 closed ports
+PORT      STATE SERVICE VERSION
+53/tcp    open  domain  dnsmasq 2.52
+| dns-nsid: 
+|_  bind.version: dnsmasq-2.52
+49153/tcp open  upnp    Belkin Wemo upnpd (UPnP 1.0)
+Service Info: Device: power-misc
+
+Nmap scan report for 10.0.1.140
+Host is up (0.013s latency).
+Not shown: 998 closed ports
+PORT      STATE SERVICE VERSION
+53/tcp    open  domain  dnsmasq 2.52
+| dns-nsid: 
+|_  bind.version: dnsmasq-2.52
+49153/tcp open  upnp    Belkin Wemo upnpd (UPnP 1.0)
+Service Info: Device: power-misc
+
+Nmap scan report for 10.0.1.141
+Host is up (0.0081s latency).
+Not shown: 998 closed ports
+PORT      STATE SERVICE VERSION
+53/tcp    open  domain  dnsmasq 2.52
+| dns-nsid: 
+|_  bind.version: dnsmasq-2.52
+49153/tcp open  upnp    Belkin Wemo upnpd (UPnP 1.0)
+Service Info: Device: power-misc
+
+Nmap scan report for 10.0.1.142
+Host is up (0.011s latency).
+Not shown: 998 closed ports
+PORT      STATE SERVICE VERSION
+53/tcp    open  domain  dnsmasq 2.52
+| dns-nsid: 
+|_  bind.version: dnsmasq-2.52
+49153/tcp open  upnp    Belkin Wemo upnpd (UPnP 1.0)
+Service Info: Device: power-misc
+
+Nmap scan report for 10.0.1.144
+Host is up (0.0069s latency).
+All 1000 scanned ports on 10.0.1.144 are closed
+
+Nmap scan report for 10.0.1.145
+Host is up (0.0079s latency).
+All 1000 scanned ports on 10.0.1.145 are closed
+
+Nmap scan report for 10.0.1.146
+Host is up (0.0062s latency).
+Not shown: 998 closed ports
+PORT      STATE SERVICE VERSION
+53/tcp    open  domain  dnsmasq 2.52
+| dns-nsid: 
+|_  bind.version: dnsmasq-2.52
+49153/tcp open  upnp    Belkin Wemo upnpd (UPnP 1.0)
+Service Info: Device: power-misc
+
+Nmap scan report for 10.0.1.147
+Host is up (0.0060s latency).
+Not shown: 998 closed ports
+PORT      STATE SERVICE VERSION
+53/tcp    open  domain  dnsmasq 2.52
+| dns-nsid: 
+|_  bind.version: dnsmasq-2.52
+49153/tcp open  upnp    Belkin Wemo upnpd (UPnP 1.0)
+Service Info: Device: power-misc
+
+Nmap scan report for 10.0.1.148
+Host is up (0.015s latency).
+All 1000 scanned ports on 10.0.1.148 are closed
+
+Nmap scan report for 10.0.1.149
+Host is up (0.0062s latency).
+Not shown: 998 closed ports
+PORT      STATE SERVICE VERSION
+53/tcp    open  domain  dnsmasq 2.52
+| dns-nsid: 
+|_  bind.version: dnsmasq-2.52
+49153/tcp open  upnp    Belkin Wemo upnpd (UPnP 1.0)
+Service Info: Device: power-misc
+
+Nmap scan report for 10.0.1.150
+Host is up (0.011s latency).
+All 1000 scanned ports on 10.0.1.150 are closed
+
+Nmap scan report for 10.0.1.151
+Host is up (0.022s latency).
+All 1000 scanned ports on 10.0.1.151 are closed
+
+Nmap scan report for 10.0.1.153
+Host is up (0.0089s latency).
+All 1000 scanned ports on 10.0.1.153 are closed
+
+Nmap scan report for 10.0.1.154
+Host is up (0.010s latency).
+Not shown: 999 closed ports
+PORT     STATE SERVICE VERSION
+8008/tcp open  http    Amazon Whisperplay DIAL REST service
+|_http-title: Site doesn't have a title (text/plain).
+Service Info: Device: media device
+
+Nmap scan report for 10.0.1.155
+Host is up (0.011s latency).
+Not shown: 994 closed ports
+PORT     STATE    SERVICE    VERSION
+80/tcp   open     upnp       Epson WorkForce WF-2540 printer UPnP (UPnP 1.0; Epson UPnP SDK 1.0)
+| http-methods: 
+|_  Supported Methods: GET HEAD POST
+|_http-server-header: EPSON_Linux UPnP/1.0 Epson UPnP SDK/1.0
+|_http-title: Site doesn't have a title (text/html).
+443/tcp  open     ssl/upnp   Epson WorkForce WF-2540 printer UPnP (UPnP 1.0; Epson UPnP SDK 1.0)
+| http-methods: 
+|_  Supported Methods: GET
+|_http-server-header: EPSON_Linux UPnP/1.0 Epson UPnP SDK/1.0
+|_http-title: Site doesn't have a title (text/html).
+|_ssl-cert: ERROR: Script execution failed (use -d to debug)
+|_ssl-date: 2016-03-26T14:12:37+00:00; -1s from scanner time.
+515/tcp  open     printer
+631/tcp  open     upnp       Epson WorkForce WF-2540 printer UPnP (UPnP 1.0; Epson UPnP SDK 1.0)
+| http-methods: 
+|_  Supported Methods: GET HEAD POST
+|_http-server-header: EPSON_Linux UPnP/1.0 Epson UPnP SDK/1.0
+|_http-title: Site doesn't have a title (text/html).
+1092/tcp filtered obrpd
+9100/tcp open     jetdirect?
+Service Info: OS: Linux; Device: printer; CPE: cpe:/h:epson:wf-2540, cpe:/o:linux:linux_kernel
+
+Nmap scan report for 10.0.1.157
+Host is up (0.013s latency).
+Not shown: 998 closed ports
+PORT      STATE SERVICE           VERSION
+5009/tcp  open  airport-admin     Apple AirPort or Time Capsule admin
+10000/tcp open  snet-sensor-mgmt?
+
+Nmap scan report for 10.0.1.158
+Host is up (0.0064s latency).
+Not shown: 998 closed ports
+PORT      STATE SERVICE VERSION
+53/tcp    open  domain  dnsmasq 2.52
+| dns-nsid: 
+|_  bind.version: dnsmasq-2.52
+49153/tcp open  upnp    Belkin Wemo upnpd (UPnP 1.0)
+Service Info: Device: power-misc
+
+Nmap scan report for 10.0.1.160
+Host is up (0.011s latency).
+Not shown: 999 closed ports
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 7.2p2 Ubuntu 1 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 cc:3d:5e:c8:47:a0:d6:d2:26:ef:0d:b7:2f:ca:6b:92 (RSA)
+|_  256 ba:63:f6:cc:51:e0:11:d9:98:98:9f:2d:e2:d3:be:a5 (ECDSA)
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Nmap scan report for 10.0.1.164
+Host is up (0.013s latency).
+Not shown: 993 closed ports
+PORT      STATE SERVICE VERSION
+53/tcp    open  domain  dnsmasq 2.71
+| dns-nsid: 
+|_  bind.version: dnsmasq-2.71
+80/tcp    open  http    Libratone httpd/0.1.1
+| http-methods: 
+|_  Supported Methods: GET
+|_http-server-header: Libratone httpd/0.1.1
+|_http-title: Site doesn't have a title (text/html).
+5000/tcp  open  upnp?
+49152/tcp open  upnp
+49153/tcp open  upnp
+49154/tcp open  upnp
+49155/tcp open  upnp
+5 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.11%I=7%D=3/26%Time=56F69828%P=x86_64-apple-darwin15.4.0%
+SF:r(GetRequest,12C,"HTTP/1\.0\x20200\x20OK\r\nServer:\x20Libratone\x20htt
+SF:pd/0\.1\.1\r\nContent-Type:\x20text/html\r\n\r\n<html>\n<head>\n<!--<ME
+SF:TA\x20http-equiv=\"refresh\"\x20content=\"0;URL=/httpcgi\?WifiState\">-
+SF:->\n<META\x20http-equiv=\"refresh\"\x20content=\"0;URL=/cgi\?Overview\"
+SF:>\n<!--<META\x20http-equiv=\"refresh\"\x20content=\"0;URL=/httpcgi\?ApL
+SF:ist\">-->\n</head>\n</html>\n")%r(FourOhFourRequest,F6,"HTTP/1\.0\x2040
+SF:4\x20NOT\x20FOUND\r\nServer:\x20Libratone\x20httpd/0\.1\.1\r\nContent-T
+SF:ype:\x20text/html\r\n\r\n<HTML><TITLE>Not\x20Found</TITLE>\r\n<BODY><P>
+SF:The\x20server\x20could\x20not\x20fulfill\r\nyour\x20request\x20because\
+SF:x20the\x20resource\x20specified\r\nis\x20unavailable\x20or\x20nonexiste
+SF:nt\.\r\n</BODY></HTML>\r\n")%r(Help,D8,"HTTP/1\.0\x20501\x20Method\x20N
+SF:ot\x20Implemented\r\nServer:\x20Libratone\x20httpd/0\.1\.1\r\nContent-T
+SF:ype:\x20text/html\r\n\r\n<HTML><HEAD><TITLE>Method\x20Not\x20Implemente
+SF:d\r\n</TITLE></HEAD>\r\n<BODY><P>HTTP\x20request\x20method\x20not\x20su
+SF:pported\.\r\n</BODY></HTML>\r\n")%r(LPDString,D8,"HTTP/1\.0\x20501\x20M
+SF:ethod\x20Not\x20Implemented\r\nServer:\x20Libratone\x20httpd/0\.1\.1\r\
+SF:nContent-Type:\x20text/html\r\n\r\n<HTML><HEAD><TITLE>Method\x20Not\x20
+SF:Implemented\r\n</TITLE></HEAD>\r\n<BODY><P>HTTP\x20request\x20method\x2
+SF:0not\x20supported\.\r\n</BODY></HTML>\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port49152-TCP:V=7.11%I=7%D=3/26%Time=56F6982A%P=x86_64-apple-darwin15.4
+SF:.0%r(FourOhFourRequest,BB,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nSERVER
+SF::\x20Linux/3\.10\.0\+\x20UPnP/1\.0\x20DLNADOC/1\.50\r\nCONNECTION:\x20c
+SF:lose\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n<htm
+SF:l><body><h1>400\x20Bad\x20Request</h1></body></html>")%r(GetRequest,BB,
+SF:"HTTP/1\.1\x20400\x20Bad\x20Request\r\nSERVER:\x20Linux/3\.10\.0\+\x20U
+SF:PnP/1\.0\x20DLNADOC/1\.50\r\nCONNECTION:\x20close\r\nCONTENT-LENGTH:\x2
+SF:050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n<html><body><h1>400\x20Bad\x20
+SF:Request</h1></body></html>")%r(HTTPOptions,C3,"HTTP/1\.1\x20501\x20Not\
+SF:x20Implemented\r\nSERVER:\x20Linux/3\.10\.0\+\x20UPnP/1\.0\x20DLNADOC/1
+SF:\.50\r\nCONNECTION:\x20close\r\nCONTENT-LENGTH:\x2054\r\nCONTENT-TYPE:\
+SF:x20text/html\r\n\r\n<html><body><h1>501\x20Not\x20Implemented</h1></bod
+SF:y></html>");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port49153-TCP:V=7.11%I=7%D=3/26%Time=56F69831%P=x86_64-apple-darwin15.4
+SF:.0%r(GetRequest,BB,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nSERVER:\x20Li
+SF:nux/3\.10\.0\+\x20UPnP/1\.0\x20DLNADOC/1\.50\r\nCONNECTION:\x20close\r\
+SF:nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n<html><body
+SF:><h1>400\x20Bad\x20Request</h1></body></html>")%r(HTTPOptions,C3,"HTTP/
+SF:1\.1\x20501\x20Not\x20Implemented\r\nSERVER:\x20Linux/3\.10\.0\+\x20UPn
+SF:P/1\.0\x20DLNADOC/1\.50\r\nCONNECTION:\x20close\r\nCONTENT-LENGTH:\x205
+SF:4\r\nCONTENT-TYPE:\x20text/html\r\n\r\n<html><body><h1>501\x20Not\x20Im
+SF:plemented</h1></body></html>")%r(FourOhFourRequest,BB,"HTTP/1\.1\x20400
+SF:\x20Bad\x20Request\r\nSERVER:\x20Linux/3\.10\.0\+\x20UPnP/1\.0\x20DLNAD
+SF:OC/1\.50\r\nCONNECTION:\x20close\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TY
+SF:PE:\x20text/html\r\n\r\n<html><body><h1>400\x20Bad\x20Request</h1></bod
+SF:y></html>");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port49154-TCP:V=7.11%I=7%D=3/26%Time=56F69833%P=x86_64-apple-darwin15.4
+SF:.0%r(GetRequest,BB,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nSERVER:\x20Li
+SF:nux/3\.10\.0\+\x20UPnP/1\.0\x20DLNADOC/1\.50\r\nCONNECTION:\x20close\r\
+SF:nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n<html><body
+SF:><h1>400\x20Bad\x20Request</h1></body></html>")%r(HTTPOptions,C3,"HTTP/
+SF:1\.1\x20501\x20Not\x20Implemented\r\nSERVER:\x20Linux/3\.10\.0\+\x20UPn
+SF:P/1\.0\x20DLNADOC/1\.50\r\nCONNECTION:\x20close\r\nCONTENT-LENGTH:\x205
+SF:4\r\nCONTENT-TYPE:\x20text/html\r\n\r\n<html><body><h1>501\x20Not\x20Im
+SF:plemented</h1></body></html>")%r(FourOhFourRequest,BB,"HTTP/1\.1\x20400
+SF:\x20Bad\x20Request\r\nSERVER:\x20Linux/3\.10\.0\+\x20UPnP/1\.0\x20DLNAD
+SF:OC/1\.50\r\nCONNECTION:\x20close\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TY
+SF:PE:\x20text/html\r\n\r\n<html><body><h1>400\x20Bad\x20Request</h1></bod
+SF:y></html>");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port49155-TCP:V=7.11%I=7%D=3/26%Time=56F69834%P=x86_64-apple-darwin15.4
+SF:.0%r(GetRequest,BB,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nSERVER:\x20Li
+SF:nux/3\.10\.0\+\x20UPnP/1\.0\x20DLNADOC/1\.50\r\nCONNECTION:\x20close\r\
+SF:nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n<html><body
+SF:><h1>400\x20Bad\x20Request</h1></body></html>")%r(HTTPOptions,C3,"HTTP/
+SF:1\.1\x20501\x20Not\x20Implemented\r\nSERVER:\x20Linux/3\.10\.0\+\x20UPn
+SF:P/1\.0\x20DLNADOC/1\.50\r\nCONNECTION:\x20close\r\nCONTENT-LENGTH:\x205
+SF:4\r\nCONTENT-TYPE:\x20text/html\r\n\r\n<html><body><h1>501\x20Not\x20Im
+SF:plemented</h1></body></html>")%r(FourOhFourRequest,BB,"HTTP/1\.1\x20400
+SF:\x20Bad\x20Request\r\nSERVER:\x20Linux/3\.10\.0\+\x20UPnP/1\.0\x20DLNAD
+SF:OC/1\.50\r\nCONNECTION:\x20close\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TY
+SF:PE:\x20text/html\r\n\r\n<html><body><h1>400\x20Bad\x20Request</h1></bod
+SF:y></html>");
+
+Read data files from: /usr/local/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 26 07:13:31 2016 -- 256 IP addresses (55 hosts up) scanned in 423.12 seconds
