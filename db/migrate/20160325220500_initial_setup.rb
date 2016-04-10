@@ -18,15 +18,27 @@ class InitialSetup < ActiveRecord::Migration
 
     create_table :samples do |t|
       t.integer :device_id
+      t.column, :mac_address, 'char(6)', null: false
       t.column  :ipv4, 'char(4)', null: true
       t.column :ipv6, 'char(8)', null: true
       t.integer :signal_strength
 
+      t.index :device_id
+      t.index :mac_address
       t.index :ipv4
       t.index :ipv6
       t.index :signal_strength
 
       t.timestamps null: false
+    end
+
+    create_table :journal do |t|
+      t.integer :device_id
+      t.msg :string
+
+      t.timestamps null: false
+
+      t.index :device_id
     end
 
     create_table :software_versions do |t|
