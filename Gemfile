@@ -12,5 +12,8 @@ gem 'pry'
 
 gem 'xml-simple'
 
+gem 'UPnP'
+gem 'ruby-nmap'
+
 gem 'wemo', git: 'git@github.com:jordanbyron/wemo.git', branch: 'master'
 gem 'hue'

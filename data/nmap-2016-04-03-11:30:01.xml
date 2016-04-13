@@ -618,3 +618,1219 @@
 <taskend task="Connect Scan" time="1459708317" extrainfo="55000 total ports"/>
 <taskbegin task="Service scan" time="1459708317"/>
 <taskprogress task="Service scan" time="1459708350" percent="44.53" remaining="42" etc="1459708391"/>
+<taskprogress task="Service scan" time="1459708381" percent="50.78" remaining="63" etc="1459708443"/>
+<taskprogress task="Service scan" time="1459708413" percent="55.47" remaining="78" etc="1459708490"/>
+<taskprogress task="Service scan" time="1459708443" percent="68.75" remaining="58" etc="1459708500"/>
+<taskend task="Service scan" time="1459708591" extrainfo="128 services on 55 hosts"/>
+<taskbegin task="NSE" time="1459708593"/>
+<taskend task="NSE" time="1459708674"/>
+<host starttime="1459708202" endtime="1459708638"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="10.0.1.1" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="996">
+<extrareasons reason="conn-refused" count="996"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ssh" product="OpenSSH" version="6.0p1 Debian 4+deb7u2" extrainfo="protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:6.0p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  1024 b1:01:f6:82:55:3d:d8:14:18:4d:15:b2:2e:a5:4e:73 (DSA)&#xa;  2048 4a:01:f3:4c:0c:40:2d:06:24:07:af:62:52:b6:7f:24 (RSA)"><table>
+<elem key="key">QUFBQUIzTnphQzFrYzNNQUFBQ0JBUGJRa0dqWTNuZkZkeWFZTlpqNXBPYUUyMEpyeWw0VlNqSnNwaU9PZUROUGZ1cGRKRWx6NTRMcjJOMldiWFJKeWFYb2FoZ0s1NW0zVHBsZkhRaFhOdG9oUS80aitCVjdKUTcwc3hZTVVUZkpRWk5ZdUJUaFdiUTRRREVRWjREVkQrUEFFY3RFN0s4ellRY1hNNk8yajFCUFdXelo1TWExT3N1ZWJFSDh2dE1MQUFBQUZRQ2ppdEN6UFRHRGVOUjlmeHJTcEVKZjN3WWEyUUFBQUlBWTRhL1N0VkdlSGJJRCtIQVVKZXZSR3FSTUUrZkJlNndFUmZ3V0prMWZiSVQ3Z2xHb25DdnZLOE5XU0dFMG5zUUczQy9jTFYyeVVkMHNzYi9acDdmSjgyblFZcDh4TnQwNXZqby9WaTFEUThtMkJZeWV0YTE0TE1salptTmI3V2hibUNpTWFMcUZROU04ak5mcGZ6clRRNkFNOXUxblJ4dWUwN0RFM1JKRUZ3QUFBSUE4UmhMQWRUdTJLblJiMU42KzF0WXM4TDJQRE1RaWVzTEJkWUdhV3BsaHIwWU9mODRhc2ozS0M4NnNBRGMySVRVaWZuT0E4RGZoT2gwR2M3ZWNwOWovMDIvNTBHVDdPRXZGbHVWMUgvNHNFbjNFR3dOaitkOWd0amVXNlUySGFUVHdSQTQ1OWVaUlNORFJJUGFTSlYvT1B3eWhqaTI2bTkyaVZEZEpoRi9aTnc9PQ==</elem>
+<elem key="type">ssh-dss</elem>
+<elem key="bits">1024</elem>
+<elem key="fingerprint">b101f682553dd814184d15b22ea54e73</elem>
+</table>
+<table>
+<elem key="key">QUFBQUIzTnphQzF5YzJFQUFBQURBUUFCQUFBQkFRQzlBVVUyazFNdXpKTnFsWUZOYkVQbnRicDhJZktGTWtZSzBNWUt2dlFuc1VRUFdZdUkvUlJNdWlsRjhFSk1ldkhVbmhSR2gvcnArTFJNUEloMThGM29vdkhSMHhGUVZ2a2o0T2NHcnN5VHVKTW53T0thK282U25ORDZhSXZGYlpsbU40L04vOVdhNlJ0T1Z2TS9kbVFESTd5c3NNbGxFenZhY05La3NTU3JncmFlUkltUGk4Wld2dm9PWDhsTE1GRU5XUER3RlRtSjRFVGthdHZGUkdqeU84b2xxb3FvRkw1ZkkxWVlFN2lwYmo4aFJBa2hybnJIdjM1L3NBNG9Bam1WZTQ0VXNrYXc0U2pCQmw1V3dBVzR4dXZUbThRL2Z0V3Bhai9PTTFWbktzNmR4UDFRbUhqcEt4MGZlQ3NYS0pjRGc3Slp0NEc1UEllKzVPQkdtS0V4</elem>
+<elem key="type">ssh-rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="fingerprint">4a01f34c0c402d062407af6252b67f24</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="domain" product="dnsmasq" version="2.62" method="probed" conf="10"><cpe>cpe:/a:thekelleys:dnsmasq:2.62</cpe></service><script id="dns-nsid" output="&#xa;  bind.version: dnsmasq-2.62"><elem key="bind.version">dnsmasq-2.62</elem>
+</script></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="lighttpd" method="probed" conf="10"><cpe>cpe:/a:lighttpd:lighttpd</cpe></service><script id="http-methods" output="No Allow or Public header in OPTIONS response (status code 301)"/><script id="http-title" output="Did not follow redirect to https://10.0.1.1/"><elem key="redirect_url">https://10.0.1.1/</elem>
+</script></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="lighttpd" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:lighttpd:lighttpd</cpe></service><script id="http-methods" output="No Allow or Public header in OPTIONS response (status code 200)"/><script id="http-title" output="EdgeOS"><elem key="title">EdgeOS</elem>
+</script><script id="ssl-cert" output="Subject: commonName=UBNT Router UI/organizationName=Ubiquiti Networks/stateOrProvinceName=CA/countryName=US&#xa;Issuer: commonName=UBNT Router UI/organizationName=Ubiquiti Networks/stateOrProvinceName=CA/countryName=US&#xa;Public Key type: rsa&#xa;Public Key bits: 1024&#xa;Not valid before: 2011-06-01T09:00:38+00:00&#xa;Not valid after:  2021-05-29T09:00:38+00:00&#xa;MD5:   dcc9 6960 aed6 fdec 8728 307c 8358 0434&#xa;SHA-1: f714 0c11 030c 91b0 fdff 2eba e02c db34 3789 574e"><table key="subject">
+<elem key="localityName">San Jose</elem>
+<elem key="countryName">US</elem>
+<elem key="organizationName">Ubiquiti Networks</elem>
+<elem key="stateOrProvinceName">CA</elem>
+<elem key="commonName">UBNT Router UI</elem>
+</table>
+<table key="issuer">
+<elem key="localityName">San Jose</elem>
+<elem key="countryName">US</elem>
+<elem key="organizationName">Ubiquiti Networks</elem>
+<elem key="stateOrProvinceName">CA</elem>
+<elem key="commonName">UBNT Router UI</elem>
+</table>
+<table key="pubkey">
+<elem key="bits">1024</elem>
+<elem key="type">rsa</elem>
+</table>
+<table key="validity">
+<elem key="notBefore">2011-06-01T09:00:38+00:00</elem>
+<elem key="notAfter">2021-05-29T09:00:38+00:00</elem>
+</table>
+<elem key="md5">dcc96960aed6fdec8728307c83580434</elem>
+<elem key="sha1">f7140c11030c91b0fdff2ebae02cdb343789574e</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIDCjCCAnOgAwIBAgIJAMSUln3LMbfcMA0GCSqGSIb3DQEBBQUAMGIxCzAJBgNV&#xa;BAYTAlVTMRcwFQYDVQQDEw5VQk5UIFJvdXRlciBVSTEaMBgGA1UEChMRVWJpcXVp&#xa;dGkgTmV0d29ya3MxCzAJBgNVBAgTAkNBMREwDwYDVQQHEwhTYW4gSm9zZTAeFw0x&#xa;MTA2MDExMDAwMzhaFw0yMTA1MjkxMDAwMzhaMGIxCzAJBgNVBAYTAlVTMRcwFQYD&#xa;VQQDEw5VQk5UIFJvdXRlciBVSTEaMBgGA1UEChMRVWJpcXVpdGkgTmV0d29ya3Mx&#xa;CzAJBgNVBAgTAkNBMREwDwYDVQQHEwhTYW4gSm9zZTCBnzANBgkqhkiG9w0BAQEF&#xa;AAOBjQAwgYkCgYEA62foj0dG27fyFamJ5jTR1sqFzUjruD/qNeHjsG03j+mx+Gz7&#xa;AySFsqAPrn6W4T/PpUCUCOxH0d0iWryB9KMGtDJVW+hnHm3JpTZZWtG/maR5pN3c&#xa;Feb0zX1Cj+FjIFpL7Q+sP9v0uBFPDXm0qJooIGHVZJK1aq/bIdzJGH7oWIkCAwEA&#xa;AaOBxzCBxDAdBgNVHQ4EFgQUoJZDOCrSABDKJ16eh3rrlAmbvggwgZQGA1UdIwSB&#xa;jDCBiYAUoJZDOCrSABDKJ16eh3rrlAmbvgihZqRkMGIxCzAJBgNVBAYTAlVTMRcw&#xa;FQYDVQQDEw5VQk5UIFJvdXRlciBVSTEaMBgGA1UEChMRVWJpcXVpdGkgTmV0d29y&#xa;a3MxCzAJBgNVBAgTAkNBMREwDwYDVQQHEwhTYW4gSm9zZYIJAMSUln3LMbfcMAwG&#xa;A1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQADgYEAs0CRUhEmOeRtodLLjCNoCK7r&#xa;l5u4zrTTLtcNGk3VibTR1W6GqoZNXkF77XmAGEd8rWmAwtUAesYhRjHxVGubzNHa&#xa;Y7bz6YCYEEEbGQpRzZWvP1Z2/zEH8wtnPKLftr25Q4V1howWwdlFa/5+pMQ0mdD1&#xa;474kLEvnC4PTuB4eGuU=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="ssl-date" output="2016-04-03T18:37:18+00:00; 0s from local time."><elem key="date">2016-04-03T18:37:18+00:00</elem>
+<elem key="delta">0</elem>
+</script></port>
+</ports>
+<times srtt="8306" rttvar="3257" to="100000"/>
+</host>
+<host starttime="1459708202" endtime="1459708638"><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="10.0.1.20" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="991">
+<extrareasons reason="conn-refused" count="991"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ssh" product="OpenSSH" version="6.9" extrainfo="protocol 2.0" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:6.9</cpe></service><script id="ssh-hostkey" output="ERROR: Script execution failed (use -d to debug)"/></port>
+<port protocol="tcp" portid="111"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="rpcbind" version="2-4" extrainfo="RPC #100000" method="probed" conf="10"/><script id="rpcinfo" output="&#xa;  program version   port/proto  service&#xa;  100000  2,3,4        111/tcp  rpcbind&#xa;  100000  2,3,4        111/udp  rpcbind&#xa;  100003  2,3         2049/tcp  nfs&#xa;  100003  2,3         2049/udp  nfs&#xa;  100005  1,3          935/udp  mountd&#xa;  100005  1,3         1023/tcp  mountd&#xa;  100011  1,2          774/udp  rquotad&#xa;  100011  1,2          999/tcp  rquotad&#xa;  100021  0,1,3,4      685/udp  nlockmgr&#xa;  100021  0,1,3,4     1017/tcp  nlockmgr&#xa;  100024  1            622/udp  status&#xa;  100024  1           1021/tcp  status&#xa;"><table key="100021">
+<table key="tcp">
+<elem key="port">1017</elem>
+<table key="version">
+<elem>0</elem>
+<elem>1</elem>
+<elem>3</elem>
+<elem>4</elem>
+</table>
+</table>
+<table key="udp">
+<elem key="port">685</elem>
+<table key="version">
+<elem>0</elem>
+<elem>1</elem>
+<elem>3</elem>
+<elem>4</elem>
+</table>
+</table>
+</table>
+<table key="100011">
+<table key="tcp">
+<elem key="port">999</elem>
+<table key="version">
+<elem>1</elem>
+<elem>2</elem>
+</table>
+</table>
+<table key="udp">
+<elem key="port">774</elem>
+<table key="version">
+<elem>1</elem>
+<elem>2</elem>
+</table>
+</table>
+</table>
+<table key="100005">
+<table key="tcp">
+<elem key="port">1023</elem>
+<table key="version">
+<elem>1</elem>
+<elem>3</elem>
+</table>
+</table>
+<table key="udp">
+<elem key="port">935</elem>
+<table key="version">
+<elem>1</elem>
+<elem>3</elem>
+</table>
+</table>
+</table>
+<table key="100003">
+<table key="tcp">
+<elem key="port">2049</elem>
+<table key="version">
+<elem>2</elem>
+<elem>3</elem>
+</table>
+</table>
+<table key="udp">
+<elem key="port">2049</elem>
+<table key="version">
+<elem>2</elem>
+<elem>3</elem>
+</table>
+</table>
+</table>
+<table key="100024">
+<table key="tcp">
+<elem key="port">1021</elem>
+<table key="version">
+<elem>1</elem>
+</table>
+</table>
+<table key="udp">
+<elem key="port">622</elem>
+<table key="version">
+<elem>1</elem>
+</table>
+</table>
+</table>
+<table key="100000">
+<table key="tcp">
+<elem key="port">111</elem>
+<table key="version">
+<elem>2</elem>
+<elem>3</elem>
+<elem>4</elem>
+</table>
+</table>
+<table key="udp">
+<elem key="port">111</elem>
+<table key="version">
+<elem>2</elem>
+<elem>3</elem>
+<elem>4</elem>
+</table>
+</table>
+</table>
+</script></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="microsoft-ds" method="table" conf="3"/></port>
+<port protocol="tcp" portid="548"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="afp" servicefp="SF-Port548-TCP:V=6.47%I=7%D=4/3%Time=570161A3%P=x86_64-pc-linux-gnu%r(SSLSessionReq,14D,&quot;\x01\x03\0\0Q\xec\xff\xff\0\0\x01=\0\0\0\0\0\x20\0\)\0M\0\0\x9f\xf3\x0bJohn\xd5s\x20iMac\0v\0\x86\0\x87\0\xaa\0\xb9\x08iMac15,1\x05\x06AFP3\.4\x06AFP3\.3\x06AFP3\.2\x06AFP3\.1\x06AFPX03\x05\tDHCAST128\x04DHX2\x06Recon1\rClient\x20Krb\x20v2\x03GSS\x9c\xeb\?\xcc\x19\xf4Yr\xa26\xe1N\x82\xb1\+\x13\0\x01\x20afpserver/johns-imac\.local@LOCAL\0\0\rJohn\xe2\x80\x99s\x20iMac\0\0\0\x80`~\x06\x06\+\x06\x01\x05\x05\x02\xa0t0r\xa0D0B\x06\t\*\x86H\x82\xf7\x12\x01\x02\x02\x06\t\*\x86H\x86\xf7\x12\x01\x02\x02\x06\x06\*\x85p\+\x0e\x03\x06\x06\+\x06\x01\x05\x05\x0e\x06\n\+\x06\x01\x04\x01\x827\x02\x02\n\x06\x06\+\x05\x01\x05\x02\x07\x06\x06\+\x06\x01\x05\x02\x05\xa3\*0\(\xa0&amp;\x1b\$not_defined_in_RFC4178@please_ignore&quot;)%r(SSLv23SessionReq,14D,&quot;\x01\x03\0\x80Q\xec\xff\xff\0\0\x01=\0\0\0\0\0\x20\0\)\0M\0\0\x9f\xf3\x0bJohn\xd5s\x20iMac\0v\0\x86\0\x87\0\xaa\0\xb9\x08iMac15,1\x05\x06AFP3\.4\x06AFP3\.3\x06AFP3\.2\x06AFP3\.1\x06AFPX03\x05\tDHCAST128\x04DHX2\x06Recon1\rClient\x20Krb\x20v2\x03GSS\x9c\xeb\?\xcc\x19\xf4Yr\xa26\xe1N\x82\xb1\+\x13\0\x01\x20afpserver/johns-imac\.local@LOCAL\0\0\rJohn\xe2\x80\x99s\x20iMac\0\0\0\x80`~\x06\x06\+\x06\x01\x05\x05\x02\xa0t0r\xa0D0B\x06\t\*\x86H\x82\xf7\x12\x01\x02\x02\x06\t\*\x86H\x86\xf7\x12\x01\x02\x02\x06\x06\*\x85p\+\x0e\x03\x06\x06\+\x06\x01\x05\x05\x0e\x06\n\+\x06\x01\x04\x01\x827\x02\x02\n\x06\x06\+\x05\x01\x05\x02\x07\x06\x06\+\x06\x01\x05\x02\x05\xa3\*0\(\xa0&amp;\x1b\$not_defined_in_RFC4178@please_ignore&quot;)%r(afp,14D,&quot;\x01\x03\0\x01\0\0\0\0\0\0\x01=\0\0\0\0\0\x20\0\)\0M\0\0\x9f\xf3\x0bJohn\xd5s\x20iMac\0v\0\x86\0\x87\0\xaa\0\xb9\x08iMac15,1\x05\x06AFP3\.4\x06AFP3\.3\x06AFP3\.2\x06AFP3\.1\x06AFPX03\x05\tDHCAST128\x04DHX2\x06Recon1\rClient\x20Krb\x20v2\x03GSS\x9c\xeb\?\xcc\x19\xf4Yr\xa26\xe1N\x82\xb1\+\x13\0\x01\x20afpserver/johns-imac\.local@LOCAL\0\0\rJohn\xe2\x80\x99s\x20iMac\0\0\0\x80`~\x06\x06\+\x06\x01\x05\x05\x02\xa0t0r\xa0D0B\x06\t\*\x86H\x82\xf7\x12\x01\x02\x02\x06\t\*\x86H\x86\xf7\x12\x01\x02\x02\x06\x06\*\x85p\+\x0e\x03\x06\x06\+\x06\x01\x05\x05\x0e\x06\n\+\x06\x01\x04\x01\x827\x02\x02\n\x06\x06\+\x05\x01\x05\x02\x07\x06\x06\+\x06\x01\x05\x02\x05\xa3\*0\(\xa0&amp;\x1b\$not_defined_in_RFC4178@please_ignore&quot;);" method="table" conf="3"/><script id="afp-serverinfo" output="&#xa;  | Server Flags: 0x9ff3&#xa;  |   Super Client: Yes&#xa;  |   UUIDs: Yes&#xa;  |   UTF8 Server Name: Yes&#xa;  |   Open Directory: Yes&#xa;  |   Reconnect: Yes&#xa;  |   Server Notifications: Yes&#xa;  |   TCP/IP: Yes&#xa;  |   Server Signature: Yes&#xa;  |   ServerMessages: No&#xa;  |   Password Saving Prohibited: No&#xa;  |   Password Changing: Yes&#xa;  |_  Copy File: Yes&#xa;  Server Name: John\xD5s iMac&#xa;  Machine Type: iMac15,1&#xa;  AFP Versions: AFP3.4, AFP3.3, AFP3.2, AFP3.1, AFPX03&#xa;  UAMs: DHCAST128, DHX2, Recon1, Client Krb v2, GSS&#xa;  Server Signature: 9ceb3fcc19f45972a236e14e82b12b13&#xa;  Directory Name 1: afpserver/johns-imac.local@LOCAL&#xa;  UTF8 Server Name: John\xE2\x80\x99s iMac&#xa;"/></port>
+<port protocol="tcp" portid="999"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="rquotad" version="1-2" extrainfo="RPC #100011" method="probed" conf="10"/></port>
+<port protocol="tcp" portid="1021"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="status" version="1" extrainfo="RPC #100024" method="probed" conf="10"/></port>
+<port protocol="tcp" portid="1023"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="mountd" version="1-3" extrainfo="RPC #100005" method="probed" conf="10"/></port>
+<port protocol="tcp" portid="2049"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="5900"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="vnc" product="Apple remote desktop vnc" ostype="Mac OS X" method="probed" conf="10"><cpe>cpe:/o:apple:mac_os_x</cpe></service><script id="vnc-info" output="&#xa;  Protocol version: 3.889&#xa;  Security types: &#xa;    Mac OS X security type (30)&#xa;    Mac OS X security type (35)"><elem key="Protocol version">3.889</elem>
+<table key="Security types">
+<table>
+<elem key="name">Mac OS X security type</elem>
+<elem key="type">30</elem>
+</table>
+<table>
+<elem key="name">Mac OS X security type</elem>
+<elem key="type">35</elem>
+</table>
+</table>
+</script></port>
+</ports>
+<hostscript><script id="nbstat" output="NetBIOS name: JOHNS-IMAC, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: ac:87:a3:04:51:95 (Apple)&#xa;Names:&#xa;  JOHNS-IMAC&lt;00&gt;       Flags: &lt;unique&gt;&lt;active&gt;&#xa;  JOHNS-IMAC&lt;20&gt;       Flags: &lt;unique&gt;&lt;active&gt;&#xa;  WORKGROUP&lt;00&gt;        Flags: &lt;group&gt;&lt;active&gt;"><elem key="user">&lt;unknown&gt;</elem>
+<elem key="server_name">JOHNS-IMAC</elem>
+<table key="mac">
+<elem key="address">ac:87:a3:04:51:95</elem>
+<elem key="manuf">Apple</elem>
+</table>
+<table key="statistics">
+<elem>ac 87 a3 04 51 95 00 00 00 00 00 00 00 00 00 00 00</elem>
+<elem>00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00</elem>
+<elem>00 00 00 00 00 00 00 00 00 00 00 00 00 00</elem>
+</table>
+<table key="names">
+<table>
+<elem key="suffix">0</elem>
+<elem key="name">JOHNS-IMAC</elem>
+<elem key="flags">25600</elem>
+</table>
+<table>
+<elem key="suffix">32</elem>
+<elem key="name">JOHNS-IMAC</elem>
+<elem key="flags">25600</elem>
+</table>
+<table>
+<elem key="suffix">0</elem>
+<elem key="name">WORKGROUP</elem>
+<elem key="flags">58368</elem>
+</table>
+</table>
+</script></hostscript><times srtt="405" rttvar="50" to="100000"/>
+</host>
+<host starttime="1459708202" endtime="1459708635"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="10.0.1.24" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="991">
+<extrareasons reason="conn-refused" count="991"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="soap" product="gSOAP soap" version="2.7" method="probed" conf="10"/><script id="http-methods" output="No Allow or Public header in OPTIONS response (status code 501)"/><script id="http-title" output="Did not follow redirect to https://10.0.1.24/hp/device/"><elem key="redirect_url">https://10.0.1.24/hp/device/</elem>
+</script></port>
+<port protocol="tcp" portid="81"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="82"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="83"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="soap" product="gSOAP soap" version="2.7" tunnel="ssl" method="probed" conf="10"/><script id="http-methods" output="No Allow or Public header in OPTIONS response (status code 501)"/><script id="ssl-cert" output="Subject: commonName=NPIFEF242/organizationName=Hewlett-Packard Co.&#xa;Issuer: commonName=NPIFEF242/organizationName=Hewlett-Packard Co.&#xa;Public Key type: rsa&#xa;Public Key bits: 1024&#xa;Not valid before: 2012-07-31T22:00:00+00:00&#xa;Not valid after:  2022-07-31T22:00:00+00:00&#xa;MD5:   b8df f3fb a139 c2d3 80c0 0c18 910e 04b0&#xa;SHA-1: bb42 54ba 3c65 1d24 5808 6918 3a32 8d1c 3085 4db2"><table key="subject">
+<elem key="commonName">NPIFEF242</elem>
+<elem key="organizationName">Hewlett-Packard Co.</elem>
+<elem key="organizationalUnitName">XXXXXXXXXX</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">NPIFEF242</elem>
+<elem key="organizationName">Hewlett-Packard Co.</elem>
+<elem key="organizationalUnitName">XXXXXXXXXX</elem>
+</table>
+<table key="pubkey">
+<elem key="bits">1024</elem>
+<elem key="type">rsa</elem>
+</table>
+<table key="validity">
+<elem key="notBefore">2012-07-31T22:00:00+00:00</elem>
+<elem key="notAfter">2022-07-31T22:00:00+00:00</elem>
+</table>
+<elem key="md5">b8dff3fba139c2d380c00c18910e04b0</elem>
+<elem key="sha1">bb4254ba3c651d24580869183a328d1c30854db2</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIICVjCCAb+gAwIBAgIEyRpSZTANBgkqhkiG9w0BAQQFADBeMRIwEAYDVQQDEwlO&#xa;UElGRUYyNDIxHDAaBgNVBAoTE0hld2xldHQtUGFja2FyZCBDby4xFTATBgNVBAsT&#xa;DEQ0QzlFRkZFRjI0MjETMBEGA1UECxMKWFhYWFhYWFhYWDAeFw0xMjA3MzEyMzAw&#xa;MDBaFw0yMjA3MzEyMzAwMDBaMF4xEjAQBgNVBAMTCU5QSUZFRjI0MjEcMBoGA1UE&#xa;ChMTSGV3bGV0dC1QYWNrYXJkIENvLjEVMBMGA1UECxMMRDRDOUVGRkVGMjQyMRMw&#xa;EQYDVQQLEwpYWFhYWFhYWFhYMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDA&#xa;eCYiGiD4tWXSdSTPSxwl/MUQlo0kUdpInVX/ATSY7DSkYTKAnpdfLuhqZMf4/Kuh&#xa;1Og7vyiPEIyuHqWPQn4Vxbw9vObh0RbXYT7EgnQDiyj5c8hxCRZ17XJXCDEPYCM0&#xa;z9e9Yyeq1RPv5qp43jr3k3Nc+TLh1wecw6Hznx93XwIDAQABoyEwHzAdBgNVHSUE&#xa;FjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwDQYJKoZIhvcNAQEEBQADgYEArmxCm33f&#xa;qY42mWgVUHpikJqRNH6FNGiRZOfqdXHFHRcZe4JqNvVNrb3aDotHGGHUjDUozEcc&#xa;pzjapkM9hKG/JDsCTNh3Vy+7g4t0JohjNwUuPNpZ2uwQZ4Fg+BepV8SQ1d639pnv&#xa;hkcGwvQRESYUcVtsUxBNHFDUNKcGzXGV3tk=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="ssl-date" output="1970-01-01T00:00:14+00:00; -46y93d18h36m24s from local time."><elem key="date">1970-01-01T00:00:14+00:00</elem>
+<elem key="delta">-1459708584</elem>
+</script></port>
+<port protocol="tcp" portid="515"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="printer" method="probed" conf="10"/></port>
+<port protocol="tcp" portid="631"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="soap" product="gSOAP soap" version="2.7" method="probed" conf="10"/><script id="http-methods" output="No Allow or Public header in OPTIONS response (status code 501)"/><script id="http-title" output="Did not follow redirect to https://10.0.1.24/hp/device/"><elem key="redirect_url">https://10.0.1.24/hp/device/</elem>
+</script></port>
+<port protocol="tcp" portid="8080"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="soap" product="gSOAP soap" version="2.7" method="probed" conf="10"/><script id="http-methods" output="No Allow or Public header in OPTIONS response (status code 501)"/><script id="http-title" output="Did not follow redirect to https://10.0.1.24/hp/device/"><elem key="redirect_url">https://10.0.1.24/hp/device/</elem>
+</script></port>
+<port protocol="tcp" portid="9100"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="jetdirect" method="table" conf="3"/></port>
+</ports>
+<times srtt="4549" rttvar="333" to="100000"/>
+</host>
+<host starttime="1459708202" endtime="1459708629"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="10.0.1.27" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="997">
+<extrareasons reason="conn-refused" count="997"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ssh" product="OpenSSH" version="6.7p1 Debian 5+deb8u1" extrainfo="protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:6.7p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="ERROR: Script execution failed (use -d to debug)"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Apache httpd" version="2.4.10" extrainfo="(Debian)" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.10</cpe></service><script id="http-methods" output="GET HEAD POST OPTIONS"/><script id="http-title" output="Index of /"><elem key="title">Index of /</elem>
+</script></port>
+<port protocol="tcp" portid="111"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="rpcbind" version="2-4" extrainfo="RPC #100000" method="probed" conf="10"/><script id="rpcinfo" output="&#xa;  program version   port/proto  service&#xa;  100000  2,3,4        111/tcp  rpcbind&#xa;  100000  2,3,4        111/udp  rpcbind&#xa;"><table key="100000">
+<table key="udp">
+<elem key="port">111</elem>
+<table key="version">
+<elem>2</elem>
+<elem>3</elem>
+<elem>4</elem>
+</table>
+</table>
+<table key="tcp">
+<elem key="port">111</elem>
+<table key="version">
+<elem>2</elem>
+<elem>3</elem>
+<elem>4</elem>
+</table>
+</table>
+</table>
+</script></port>
+</ports>
+<times srtt="228" rttvar="125" to="100000"/>
+</host>
+<host starttime="1459708202" endtime="1459708658"><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="10.0.1.39" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="995">
+<extrareasons reason="conn-refused" count="995"/>
+</extraports>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="netbios-ssn" method="table" conf="3"/></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="netbios-ssn" method="probed" conf="10"/></port>
+<port protocol="tcp" portid="548"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="afp" product="Apple Airport Extreme/Time Capsule AFP" extrainfo="name: back-house; protocol 3.2 WAP" method="probed" conf="10"/><script id="afp-serverinfo" output="&#xa;  | Server Flags: 0x8ffb&#xa;  |   Super Client: Yes&#xa;  |   UUIDs: Yes&#xa;  |   UTF8 Server Name: Yes&#xa;  |   Open Directory: Yes&#xa;  |   Reconnect: Yes&#xa;  |   Server Notifications: Yes&#xa;  |   TCP/IP: Yes&#xa;  |   Server Signature: Yes&#xa;  |   ServerMessages: Yes&#xa;  |   Password Saving Prohibited: No&#xa;  |   Password Changing: Yes&#xa;  |_  Copy File: Yes&#xa;  Server Name: back-house&#xa;  Machine Type: AirPort7,120&#xa;  AFP Versions: AFP3.3, AFP3.2, AFP3.1&#xa;  UAMs: DHCAST128, DHX2, SRP&#xa;  Server Signature: 4338364b56454b46464a31520069672d&#xa;  Network Address 1: 10.0.1.39:548&#xa;  Network Address 2: [fe80:000b:0000:0000:8a1f:a1ff:fe2a:ac1f]:548&#xa;  Network Address 3: [fe80:000c:0000:0000:8835:15ff:fe33:a110]:548&#xa;  Network Address 4: 10.0.1.39&#xa;  UTF8 Server Name: The House&#xa;"/></port>
+<port protocol="tcp" portid="5009"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="airport-admin" product="Apple AirPort or Time Capsule admin" method="probed" conf="10"/></port>
+<port protocol="tcp" portid="10000"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="snet-sensor-mgmt" method="table" conf="3"/><script id="ndmp-version" output="&#xa;  ERROR: Failed to get host information from server"/></port>
+</ports>
+<hostscript><script id="nbstat" output="NetBIOS name: BACK-HOUSE, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: 88:1f:a1:2a:ac:1f (Apple)&#xa;Names:&#xa;  BACK-HOUSE&lt;00&gt;       Flags: &lt;unique&gt;&lt;active&gt;&lt;permanent&gt;&#xa;  WORKGROUP&lt;00&gt;        Flags: &lt;group&gt;&lt;active&gt;&lt;permanent&gt;&#xa;  BACK-HOUSE&lt;20&gt;       Flags: &lt;unique&gt;&lt;active&gt;&lt;permanent&gt;"><elem key="user">&lt;unknown&gt;</elem>
+<elem key="server_name">BACK-HOUSE</elem>
+<table key="mac">
+<elem key="address">88:1f:a1:2a:ac:1f</elem>
+<elem key="manuf">Apple</elem>
+</table>
+<table key="statistics">
+<elem>88 1f a1 2a ac 1f 00 00 00 00 00 00 00 00 00 00 00</elem>
+<elem>00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00</elem>
+<elem>00 00 00 00 00 00 00 00 00 00 00 00</elem>
+</table>
+<table key="names">
+<table>
+<elem key="suffix">0</elem>
+<elem key="name">BACK-HOUSE</elem>
+<elem key="flags">1536</elem>
+</table>
+<table>
+<elem key="suffix">0</elem>
+<elem key="name">WORKGROUP</elem>
+<elem key="flags">34304</elem>
+</table>
+<table>
+<elem key="suffix">32</elem>
+<elem key="name">BACK-HOUSE</elem>
+<elem key="flags">1536</elem>
+</table>
+</table>
+</script></hostscript><times srtt="10882" rttvar="3809" to="100000"/>
+</host>
+<host starttime="1459708202" endtime="1459708593"><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="10.0.1.40" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="1000">
+<extrareasons reason="conn-refused" count="1000"/>
+</extraports>
+</ports>
+<times srtt="10375" rttvar="1741" to="100000"/>
+</host>
+<host starttime="1459708202" endtime="1459708593"><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="10.0.1.41" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="998">
+<extrareasons reason="conn-refused" count="998"/>
+</extraports>
+<port protocol="tcp" portid="1164"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="qsm-proxy" method="table" conf="3"/></port>
+<port protocol="tcp" portid="49400"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="compaqdiag" method="table" conf="3"/></port>
+</ports>
+<times srtt="12536" rttvar="3058" to="100000"/>
+</host>
+<host starttime="1459708202" endtime="1459708629"><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="10.0.1.43" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="998">
+<extrareasons reason="conn-refused" count="998"/>
+</extraports>
+<port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="domain" product="dnsmasq" version="2.52" method="probed" conf="10"><cpe>cpe:/a:thekelleys:dnsmasq:2.52</cpe></service><script id="dns-nsid" output="&#xa;  bind.version: dnsmasq-2.52"><elem key="bind.version">dnsmasq-2.52</elem>
+</script></port>
+<port protocol="tcp" portid="49153"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="unknown" servicefp="SF-Port49153-TCP:V=6.47%I=7%D=4/3%Time=570161A7%P=x86_64-pc-linux-gnu%r(NULL,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(GenericLines,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(GetRequest,A3,&quot;HTTP/1\.0\x20404\x20Not\x20Found\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2048\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;404\x20Not\x20Found&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(HTTPOptions,AF,&quot;HTTP/0\.0\x20501\x20Not\x20Implemented\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2054\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;501\x20Not\x20Implemented&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(RTSPRequest,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(RPCCheck,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(DNSVersionBindReq,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(DNSStatusRequest,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(Help,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;);" method="table" conf="3"/></port>
+</ports>
+<times srtt="16111" rttvar="5867" to="100000"/>
+</host>
+<host starttime="1459708202" endtime="1459708603"><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="10.0.1.46" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="999">
+<extrareasons reason="conn-refused" count="999"/>
+</extraports>
+<port protocol="tcp" portid="62078"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="iphone-sync" method="table" conf="3"/></port>
+</ports>
+<times srtt="14720" rttvar="5686" to="100000"/>
+</host>
+<host starttime="1459708202" endtime="1459708632"><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="10.0.1.47" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="998">
+<extrareasons reason="conn-refused" count="998"/>
+</extraports>
+<port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="domain" product="dnsmasq" version="2.52" method="probed" conf="10"><cpe>cpe:/a:thekelleys:dnsmasq:2.52</cpe></service><script id="dns-nsid" output="&#xa;  bind.version: dnsmasq-2.52"><elem key="bind.version">dnsmasq-2.52</elem>
+</script></port>
+<port protocol="tcp" portid="49153"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="unknown" servicefp="SF-Port49153-TCP:V=6.47%I=7%D=4/3%Time=570161A7%P=x86_64-pc-linux-gnu%r(NULL,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(GenericLines,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(GetRequest,A3,&quot;HTTP/1\.0\x20404\x20Not\x20Found\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2048\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;404\x20Not\x20Found&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(HTTPOptions,AF,&quot;HTTP/0\.0\x20501\x20Not\x20Implemented\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2054\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;501\x20Not\x20Implemented&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(RTSPRequest,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(RPCCheck,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(DNSVersionBindReq,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(DNSStatusRequest,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(Help,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;);" method="table" conf="3"/></port>
+</ports>
+<times srtt="24382" rttvar="14236" to="100000"/>
+</host>
+<host starttime="1459708202" endtime="1459708638"><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="10.0.1.48" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="992">
+<extrareasons reason="conn-refused" count="992"/>
+</extraports>
+<port protocol="tcp" portid="111"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="rpcbind" version="2-4" extrainfo="RPC #100000" method="probed" conf="10"/><script id="rpcinfo" output="&#xa;  program version   port/proto  service&#xa;  100000  2,3,4        111/tcp  rpcbind&#xa;  100000  2,3,4        111/udp  rpcbind&#xa;  100003  2,3         2049/tcp  nfs&#xa;  100003  2,3         2049/udp  nfs&#xa;  100005  1,3          929/udp  mountd&#xa;  100005  1,3         1023/tcp  mountd&#xa;  100011  1,2          681/udp  rquotad&#xa;  100011  1,2          997/tcp  rquotad&#xa;  100021  0,1,3,4      818/udp  nlockmgr&#xa;  100021  0,1,3,4     1015/tcp  nlockmgr&#xa;  100024  1            926/udp  status&#xa;  100024  1           1019/tcp  status&#xa;"><table key="100021">
+<table key="tcp">
+<elem key="port">1015</elem>
+<table key="version">
+<elem>0</elem>
+<elem>1</elem>
+<elem>3</elem>
+<elem>4</elem>
+</table>
+</table>
+<table key="udp">
+<elem key="port">818</elem>
+<table key="version">
+<elem>0</elem>
+<elem>1</elem>
+<elem>3</elem>
+<elem>4</elem>
+</table>
+</table>
+</table>
+<table key="100011">
+<table key="tcp">
+<elem key="port">997</elem>
+<table key="version">
+<elem>1</elem>
+<elem>2</elem>
+</table>
+</table>
+<table key="udp">
+<elem key="port">681</elem>
+<table key="version">
+<elem>1</elem>
+<elem>2</elem>
+</table>
+</table>
+</table>
+<table key="100005">
+<table key="tcp">
+<elem key="port">1023</elem>
+<table key="version">
+<elem>1</elem>
+<elem>3</elem>
+</table>
+</table>
+<table key="udp">
+<elem key="port">929</elem>
+<table key="version">
+<elem>1</elem>
+<elem>3</elem>
+</table>
+</table>
+</table>
+<table key="100003">
+<table key="tcp">
+<elem key="port">2049</elem>
+<table key="version">
+<elem>2</elem>
+<elem>3</elem>
+</table>
+</table>
+<table key="udp">
+<elem key="port">2049</elem>
+<table key="version">
+<elem>2</elem>
+<elem>3</elem>
+</table>
+</table>
+</table>
+<table key="100024">
+<table key="tcp">
+<elem key="port">1019</elem>
+<table key="version">
+<elem>1</elem>
+</table>
+</table>
+<table key="udp">
+<elem key="port">926</elem>
+<table key="version">
+<elem>1</elem>
+</table>
+</table>
+</table>
+<table key="100000">
+<table key="tcp">
+<elem key="port">111</elem>
+<table key="version">
+<elem>2</elem>
+<elem>3</elem>
+<elem>4</elem>
+</table>
+</table>
+<table key="udp">
+<elem key="port">111</elem>
+<table key="version">
+<elem>2</elem>
+<elem>3</elem>
+<elem>4</elem>
+</table>
+</table>
+</table>
+</script></port>
+<port protocol="tcp" portid="1023"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="mountd" version="1-3" extrainfo="RPC #100005" method="probed" conf="10"/></port>
+<port protocol="tcp" portid="2049"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="3000"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="3128"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http-proxy" product="Squid http proxy" version="3.3.8" method="probed" conf="10"><cpe>cpe:/a:squid-cache:squid:3.3.8</cpe></service><script id="http-methods" output="No Allow or Public header in OPTIONS response (status code 400)"/><script id="http-open-proxy" output="Potentially OPEN proxy.&#xa;Methods supported:  GET HEAD"/><script id="http-title" output="ERROR: The requested URL could not be retrieved"><elem key="title">ERROR: The requested URL could not be retrieved</elem>
+</script></port>
+<port protocol="tcp" portid="3306"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/><script id="mysql-info" output="ERROR: Script execution failed (use -d to debug)"/></port>
+<port protocol="tcp" portid="8080"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="nginx" version="1.4.6" extrainfo="Ubuntu" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx:1.4.6</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="http-methods" output="No Allow or Public header in OPTIONS response (status code 502)"/><script id="http-title" output="502 Bad Gateway"><elem key="title">502 Bad Gateway</elem>
+</script></port>
+<port protocol="tcp" portid="8081"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+</ports>
+<times srtt="18177" rttvar="14365" to="100000"/>
+</host>
+<host starttime="1459708202" endtime="1459708622"><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="10.0.1.51" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="998">
+<extrareasons reason="conn-refused" count="998"/>
+</extraports>
+<port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="domain" product="dnsmasq" version="2.52" method="probed" conf="10"><cpe>cpe:/a:thekelleys:dnsmasq:2.52</cpe></service><script id="dns-nsid" output="&#xa;  bind.version: dnsmasq-2.52"><elem key="bind.version">dnsmasq-2.52</elem>
+</script></port>
+<port protocol="tcp" portid="49153"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="unknown" servicefp="SF-Port49153-TCP:V=6.47%I=7%D=4/3%Time=570161A8%P=x86_64-pc-linux-gnu%r(NULL,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(GenericLines,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(GetRequest,A3,&quot;HTTP/1\.0\x20404\x20Not\x20Found\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2048\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;404\x20Not\x20Found&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(HTTPOptions,AF,&quot;HTTP/0\.0\x20501\x20Not\x20Implemented\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2054\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;501\x20Not\x20Implemented&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(RTSPRequest,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(RPCCheck,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(DNSVersionBindReq,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(DNSStatusRequest,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(Help,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;);" method="table" conf="3"/></port>
+</ports>
+<times srtt="28266" rttvar="14091" to="100000"/>
+</host>
+<host starttime="1459708202" endtime="1459708666"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="10.0.1.54" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="997">
+<extrareasons reason="conn-refused" count="997"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="nginx" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx</cpe></service><script id="http-generator" output="ERROR: Script execution failed (use -d to debug)"/><script id="http-methods" output="No Allow or Public header in OPTIONS response (status code 302)"/><script id="http-title" output="Did not follow redirect to http://10.0.1.54:10000/contentshare/WebApp/index.html"><elem key="redirect_url">http://10.0.1.54:10000/contentshare/WebApp/index.html</elem>
+</script></port>
+<port protocol="tcp" portid="8008"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" method="probed" conf="10"/><script id="http-methods" output="No Allow or Public header in OPTIONS response (status code 404)"/><script id="http-server-header" output="Software version grabbed from Server header.&#xa;Consider submitting a service fingerprint.&#xa;Run with -&#45;script-args http-server-header.skip&#xa;"/><script id="http-title" output="Site doesn&apos;t have a title (text/html)."></script></port>
+<port protocol="tcp" portid="8009"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ajp13" tunnel="ssl" method="table" conf="3"/><script id="ajp-methods" output="Failed to get a valid response for the OPTION request"/><script id="ssl-cert" output="Subject: commonName=0f811682-91a1-94b0-2b3c-fc8235157d67&#xa;Issuer: commonName=0f811682-91a1-94b0-2b3c-fc8235157d67&#xa;Public Key type: rsa&#xa;Public Key bits: 2048&#xa;Not valid before: 2016-04-02T14:04:37+00:00&#xa;Not valid after:  2016-04-04T14:04:37+00:00&#xa;MD5:   d243 61ed 2256 e756 6d55 f2f8 ebcb 06ed&#xa;SHA-1: e4e5 bffe 71da a484 e234 17fb 962e ba70 fe9d 0e5e"><table key="subject">
+<elem key="commonName">0f811682-91a1-94b0-2b3c-fc8235157d67</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">0f811682-91a1-94b0-2b3c-fc8235157d67</elem>
+</table>
+<table key="pubkey">
+<elem key="bits">2048</elem>
+<elem key="type">rsa</elem>
+</table>
+<table key="validity">
+<elem key="notBefore">2016-04-02T14:04:37+00:00</elem>
+<elem key="notAfter">2016-04-04T14:04:37+00:00</elem>
+</table>
+<elem key="md5">d24361ed2256e7566d55f2f8ebcb06ed</elem>
+<elem key="sha1">e4e5bffe71daa484e23417fb962eba70fe9d0e5e</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIC2jCCAcKgAwIBAgIEBG9TTTANBgkqhkiG9w0BAQsFADAvMS0wKwYDVQQDDCQw&#xa;ZjgxMTY4Mi05MWExLTk0YjAtMmIzYy1mYzgyMzUxNTdkNjcwHhcNMTYwNDAyMTUw&#xa;NDM3WhcNMTYwNDA0MTUwNDM3WjAvMS0wKwYDVQQDDCQwZjgxMTY4Mi05MWExLTk0&#xa;YjAtMmIzYy1mYzgyMzUxNTdkNjcwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEK&#xa;AoIBAQDB6v3i7Ig+4MwZ91rpjpjBZk/b3jLYdUfyV2mFigdc0pkNOqfj7ogITed5&#xa;9cf0mnif998E+8Yi3MpBdFQiQFG/rxWSkJZKsVZlxC2w3CtJBMdgiADGzoX1MUzy&#xa;oi0bxafqY2jAeAw9wEE8L+CjRnIKPA/cxhTtewjEsXY8XrbJV+BSGNZPgfLAcct1&#xa;8a4G82YZKkS9wUFDH99I9CQ+P3Nf+jpW+fZrXb2CQs4XM1jsav4UGHTMxcYLbab1&#xa;tzxzg/c/ULuGdlabfdgYSgYzZDLVpTdkRltLH9J2xRX6xXMRVzT3Xt0uzXLuOYDQ&#xa;b046nnpu0999jiSkJ92XiSFY1JobAgMBAAEwDQYJKoZIhvcNAQELBQADggEBAJkM&#xa;saEfXhZjnDPEYBfcgrOjLABv9b5pWJFYjCw9K7KdawPG4rktiCxnMEyglWUQXjwy&#xa;k8LUiDDvR/3k5vM0H6uBvLOoY9vd6fNsAtuxpLKLyhAB3DzTkEqKksfLFrfqQPru&#xa;OOLKbYgYsE8K+gxjty4qil0ROFcxvLQKpbf1yu86L+N0zKDNOe5PUYBSLv02Y1VQ&#xa;hP2HtzHoX++h9+iV12yDgUQ1jHaK6AX85WSWpYfdbBfcydmfDrtmyi3THpuE/WRd&#xa;hGvJuugpQ9q8G7siCZSd7RzfTaNrOAWrqapFzYY9Qm9rsg+LmtiYrmxSR+JXHUgO&#xa;7zlDD7okOEiy6WTUGlU=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="ssl-date" output="2029-03-01T19:15:40+00:00; +12y332d0h38m22s from local time."><elem key="date">2029-03-01T19:15:40+00:00</elem>
+<elem key="delta">407378302</elem>
+</script></port>
+</ports>
+<times srtt="11092" rttvar="4135" to="100000"/>
+</host>
+<host starttime="1459708202" endtime="1459708593"><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="10.0.1.96" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="1000">
+<extrareasons reason="conn-refused" count="1000"/>
+</extraports>
+</ports>
+<times srtt="32532" rttvar="12278" to="100000"/>
+</host>
+<host starttime="1459708202" endtime="1459708651"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="10.0.1.103" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="995">
+<extrareasons reason="no-responses" count="995"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="TiVo To Go httpd" version="20.5.9.RC15-USA-6:846" devicetype="media device" method="probed" conf="10"/><script id="http-methods" output="No Allow or Public header in OPTIONS response (status code 302)"/><script id="http-title" output="Congratulations!&#xa;Requested resource was /index.html"><elem key="title">Congratulations!</elem>
+<elem key="redirect_url">/index.html</elem>
+</script></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="TiVo To Go httpd" version="20.5.9.RC15-USA-6:846" devicetype="media device" tunnel="ssl" method="probed" conf="10"/><script id="http-auth" output="&#xa;HTTP/1.1 401 Authorization Required&#xd;&#xa;  Digest realm=TiVo DVR nonce=5174A633D5D315DE qop=auth&#xa;"><table>
+<table key="params">
+<elem key="realm">TiVo DVR</elem>
+<elem key="nonce">5174A633D5D315DE</elem>
+<elem key="qop">auth</elem>
+</table>
+<elem key="scheme">Digest</elem>
+</table>
+</script><script id="http-methods" output="No Allow or Public header in OPTIONS response (status code 401)"/><script id="http-title" output="Site doesn&apos;t have a title (text/html)."></script><script id="ssl-cert" output="Subject: commonName=8460001907FE836/organizationName=TiVo Inc./stateOrProvinceName=CA/countryName=US&#xa;Issuer: commonName=8460001907FE836/organizationName=TiVo Inc./stateOrProvinceName=CA/countryName=US&#xa;Public Key type: rsa&#xa;Public Key bits: 2048&#xa;Not valid before: 2015-04-20T14:00:37+00:00&#xa;Not valid after:  2025-04-17T14:00:37+00:00&#xa;MD5:   9c51 3c9c a125 6dac 7414 d3a3 8424 4405&#xa;SHA-1: 3289 a016 8310 9b32 ad55 5b99 2877 bee6 fd54 251a"><table key="subject">
+<elem key="localityName">Alviso</elem>
+<elem key="stateOrProvinceName">CA</elem>
+<elem key="organizationName">TiVo Inc.</elem>
+<elem key="commonName">8460001907FE836</elem>
+<elem key="emailAddress">support@tivo.com</elem>
+<elem key="organizationalUnitName">IT</elem>
+<elem key="countryName">US</elem>
+</table>
+<table key="issuer">
+<elem key="localityName">Alviso</elem>
+<elem key="stateOrProvinceName">CA</elem>
+<elem key="organizationName">TiVo Inc.</elem>
+<elem key="commonName">8460001907FE836</elem>
+<elem key="emailAddress">support@tivo.com</elem>
+<elem key="organizationalUnitName">IT</elem>
+<elem key="countryName">US</elem>
+</table>
+<table key="pubkey">
+<elem key="bits">2048</elem>
+<elem key="type">rsa</elem>
+</table>
+<table key="validity">
+<elem key="notBefore">2015-04-20T14:00:37+00:00</elem>
+<elem key="notAfter">2025-04-17T14:00:37+00:00</elem>
+</table>
+<elem key="md5">9c513c9ca1256dac7414d3a384244405</elem>
+<elem key="sha1">3289a01683109b32ad555b992877bee6fd54251a</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIDhzCCAm8CBCmo6TMwDQYJKoZIhvcNAQEFBQAwgYcxGDAWBgNVBAMMDzg0NjAw&#xa;MDE5MDdGRTgzNjESMBAGA1UECgwJVGlWbyBJbmMuMQswCQYDVQQLDAJJVDEPMA0G&#xa;A1UEBwwGQWx2aXNvMQswCQYDVQQIDAJDQTELMAkGA1UEBhMCVVMxHzAdBgkqhkiG&#xa;9w0BCQEWEHN1cHBvcnRAdGl2by5jb20wHhcNMTUwNDIwMTUwMDM3WhcNMjUwNDE3&#xa;MTUwMDM3WjCBhzEYMBYGA1UEAwwPODQ2MDAwMTkwN0ZFODM2MRIwEAYDVQQKDAlU&#xa;aVZvIEluYy4xCzAJBgNVBAsMAklUMQ8wDQYDVQQHDAZBbHZpc28xCzAJBgNVBAgM&#xa;AkNBMQswCQYDVQQGEwJVUzEfMB0GCSqGSIb3DQEJARYQc3VwcG9ydEB0aXZvLmNv&#xa;bTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAJcbOLs5V2yr0fLY1tyk&#xa;S5H9vcPjL53a7aoYqlP6Uoipjnev6yqFUw0q5oAY6YWxBSnnuvpnbdJrsUhNP+vy&#xa;WFf8J8yhi8Pf67vXmTDR3JOtA+xfWLI65zJr6wQEzrnC17/RXXsUfRqZ7CpNYpij&#xa;pMG9POROIiTBlrTNmZa0SBdtJ61V9+Wukn2TpsjGmV+CkHvotLjXiyW2pxQwKTfn&#xa;ctlnQqgD/9I8lUqJvNEovT0mz+gnluRXUjwLl8AVrZldV1lZkh6++qLi6ZbvI0lz&#xa;5l3eFMs4U7wkCsgzDUAOP4eKVLA8+bDgSf8Kj/gDqDYKR3vS/CczevgluuZJ90US&#xa;nb8CAwEAATANBgkqhkiG9w0BAQUFAAOCAQEAWErWTC5GdbzajboG6aEITQjiZeH+&#xa;GxbVl58DhtXL8j/nB47XbUVcNXR0ZZSO7HcurnOCsnrwJMVHVU7dORapnpMEyAEG&#xa;ObTZ9xX7+wXBlL9SJ6CmhdO3mvrKRY/xjTUH4kgLnWSC4AIF2o6GMKv0a39ZhYPp&#xa;67hUT3Ju2GHuz/K1hLW4BzEldwbo25aL+vUSGZGEIbRK7Fh32GtfOdq3UgRspp7Z&#xa;w7aGKMh9fTonY23SPrIHetB6dSEhmM8zLogwf93x4ENKP+hwWppJNwANV7LB2Mif&#xa;/McZ6nqpoN+bUmo7J4/pbt0l/WAK6kFfIDrx0SSWl+kX3rTqYoL9oib4ig==&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script></port>
+<port protocol="tcp" portid="2190"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="2191"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="tvbus" method="table" conf="3"/></port>
+<port protocol="tcp" portid="9080"><state state="closed" reason="conn-refused" reason_ttl="0"/><service name="glrpc" method="table" conf="3"/></port>
+</ports>
+<times srtt="7351" rttvar="3165" to="100000"/>
+</host>
+<host starttime="1459708202" endtime="1459708593"><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="10.0.1.110" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="1000">
+<extrareasons reason="conn-refused" count="1000"/>
+</extraports>
+</ports>
+<times srtt="19396" rttvar="10384" to="100000"/>
+</host>
+<host starttime="1459708202" endtime="1459708603"><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="10.0.1.113" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="998">
+<extrareasons reason="conn-refused" count="998"/>
+</extraports>
+<port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="domain" product="dnsmasq" version="2.52" method="probed" conf="10"><cpe>cpe:/a:thekelleys:dnsmasq:2.52</cpe></service><script id="dns-nsid" output="&#xa;  bind.version: dnsmasq-2.52"><elem key="bind.version">dnsmasq-2.52</elem>
+</script></port>
+<port protocol="tcp" portid="49153"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="unknown" servicefp="SF-Port49153-TCP:V=6.47%I=7%D=4/3%Time=570161AE%P=x86_64-pc-linux-gnu%r(NULL,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(GenericLines,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(GetRequest,A3,&quot;HTTP/1\.0\x20404\x20Not\x20Found\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2048\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;404\x20Not\x20Found&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(HTTPOptions,AF,&quot;HTTP/0\.0\x20501\x20Not\x20Implemented\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2054\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;501\x20Not\x20Implemented&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(RTSPRequest,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(RPCCheck,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(DNSVersionBindReq,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(DNSStatusRequest,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(Help,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;);" method="table" conf="3"/></port>
+</ports>
+<times srtt="18436" rttvar="7094" to="100000"/>
+</host>
+<host starttime="1459708202" endtime="1459708639"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="10.0.1.114" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="995">
+<extrareasons reason="conn-refused" count="995"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="lighttpd" version="1.4.35" method="probed" conf="10"><cpe>cpe:/a:lighttpd:lighttpd:1.4.35</cpe></service><script id="http-methods" output="OPTIONS GET HEAD POST"/><script id="http-title" output="Site doesn&apos;t have a title (text/html; charset=utf-8)."></script></port>
+<port protocol="tcp" portid="5000"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="rtsp" product="Apple AirTunes rtspd" version="190.9" extrainfo="Apple TV" ostype="Mac OS X" devicetype="media device" method="probed" conf="10"><cpe>cpe:/a:apple:apple_tv</cpe><cpe>cpe:/o:apple:mac_os_x</cpe></service><script id="rtsp-methods" output="&#xa;  ANNOUNCE, SETUP, RECORD, PAUSE, FLUSH, TEARDOWN, OPTIONS, GET_PARAMETER, SET_PARAMETER, POST, GET&#xa;"/></port>
+<port protocol="tcp" portid="8008"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" method="table" conf="3"/><script id="http-methods" output="No Allow or Public header in OPTIONS response (status code 404)"/><script id="http-title" output="Site doesn&apos;t have a title (text/html)."></script></port>
+<port protocol="tcp" portid="8009"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ajp13" tunnel="ssl" method="table" conf="3"/><script id="ajp-methods" output="Failed to get a valid response for the OPTION request"/><script id="ssl-cert" output="Subject: commonName=9f508ad6-5b7b-2b27-da11-3e7b752d0b1c&#xa;Issuer: commonName=9f508ad6-5b7b-2b27-da11-3e7b752d0b1c&#xa;Public Key type: rsa&#xa;Public Key bits: 2048&#xa;Not valid before: 2016-04-02T14:07:41+00:00&#xa;Not valid after:  2016-04-04T14:07:41+00:00&#xa;MD5:   9008 235d 1c61 4e58 5a1f ec5b 25e5 c060&#xa;SHA-1: 1c31 cb9f 27a9 fda4 16f1 4ba6 3407 34b5 bb6a 8ae5"><table key="subject">
+<elem key="commonName">9f508ad6-5b7b-2b27-da11-3e7b752d0b1c</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">9f508ad6-5b7b-2b27-da11-3e7b752d0b1c</elem>
+</table>
+<table key="pubkey">
+<elem key="bits">2048</elem>
+<elem key="type">rsa</elem>
+</table>
+<table key="validity">
+<elem key="notBefore">2016-04-02T14:07:41+00:00</elem>
+<elem key="notAfter">2016-04-04T14:07:41+00:00</elem>
+</table>
+<elem key="md5">9008235d1c614e585a1fec5b25e5c060</elem>
+<elem key="sha1">1c31cb9f27a9fda416f14ba6340734b5bb6a8ae5</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIC2jCCAcKgAwIBAgIEBG9UBTANBgkqhkiG9w0BAQsFADAvMS0wKwYDVQQDEyQ5&#xa;ZjUwOGFkNi01YjdiLTJiMjctZGExMS0zZTdiNzUyZDBiMWMwHhcNMTYwNDAyMTUw&#xa;NzQxWhcNMTYwNDA0MTUwNzQxWjAvMS0wKwYDVQQDEyQ5ZjUwOGFkNi01YjdiLTJi&#xa;MjctZGExMS0zZTdiNzUyZDBiMWMwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEK&#xa;AoIBAQCsCSt41acZPKjTQ1uxzWDnGR5CxRYXDm6PbNlL/vC62gIcpgg+Nfl0mb6F&#xa;UqvOsGv58bj0jgE4GYXZXl0DP7NJf9VRkJUy9qGYQ+mAgHY3SOEEKl07cmh7REvt&#xa;VBeX2CPPfgZX9ntCAO5xN3DXJqcN/cT9HlaAgqRDWZh9eZJr0MeV08Vw2galfog8&#xa;OFKfqZhGz7ePiOKfN/Mda+OjG6gpiSwJwf8OT3wGsyHkuPyaPvf0ba/uQKtNd/Z2&#xa;xD4yvxp4rfIwxPWlyPHsIAmr/VygvX3RzClee7NcnO3BeqxEjXS7VBOsKGjVtXC7&#xa;YX+Uig7tM9wYlaoz0jKW7D3NNxoLAgMBAAEwDQYJKoZIhvcNAQELBQADggEBABSx&#xa;UcAMS2di7wPcOCQ2xYwWR5HqEdvopf5t/DNLYCR9IzBi7gAbyDNdZGrQpiDB+L61&#xa;/DOWsMf7VuskNhQdJh3XmW5VkeQIgnSxUFOuHBGdHoNkLrzzZk5A1/IAxvifLdF+&#xa;j7z9iDNzMlY0ZnzmkASP9CMZAc/CR2x20y1VenugA7THnBjx1rb1rkjyrhnMFPvh&#xa;zcJRC/w7vtv2MbVBRHoNLSQr9Bu1Vskg+ZsvsBdQnMpo1pf4bLgk2DIzR25Mk/k8&#xa;FNeqnstwdCX+FZ+GHJY9v1RzcvwpRCBBOOYk19tkUkXi0SKeRQoOagI1TwO6QDH+&#xa;qB/1xzjB/rk1juppQjg=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="ssl-date" output="2063-06-12T17:10:22+00:00; +47y69d22h33m45s from local time."><elem key="date">2063-06-12T17:10:22+00:00</elem>
+<elem key="delta">1489185225</elem>
+</script></port>
+<port protocol="tcp" portid="10000"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="snet-sensor-mgmt" servicefp="SF-Port10000-TCP:V=6.47%I=7%D=4/3%Time=570161B5%P=x86_64-pc-linux-gnu%r(GetRequest,7C,&quot;HTTP/1\.1\x20404\x20Not\x20Found\r\nConnection:\x20close\r\nContent-Length:\x2027\r\nContent-Type:\x20application/json\r\n\r\n{\&quot;error\&quot;:\[404,\&quot;Not\x20Found\&quot;\]}&quot;)%r(HTTPOptions,7C,&quot;HTTP/1\.1\x20404\x20Not\x20Found\r\nConnection:\x20close\r\nContent-Length:\x2027\r\nContent-Type:\x20application/json\r\n\r\n{\&quot;error\&quot;:\[404,\&quot;Not\x20Found\&quot;\]}&quot;)%r(FourOhFourRequest,7C,&quot;HTTP/1\.1\x20404\x20Not\x20Found\r\nConnection:\x20close\r\nContent-Length:\x2027\r\nContent-Type:\x20application/json\r\n\r\n{\&quot;error\&quot;:\[404,\&quot;Not\x20Found\&quot;\]}&quot;);" method="table" conf="3"/><script id="ndmp-version" output="&#xa;  ERROR: Failed to get host information from server"/></port>
+</ports>
+<times srtt="10482" rttvar="7533" to="100000"/>
+</host>
+<host starttime="1459708202" endtime="1459708674"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="10.0.1.116" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="998">
+<extrareasons reason="conn-refused" count="998"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/><script id="http-cors" output="HEAD GET POST PUT DELETE OPTIONS"/><script id="http-methods" output="No Allow or Public header in OPTIONS response (status code 404)"/><script id="http-title" output="hue personal wireless lighting"><elem key="title">hue personal wireless lighting</elem>
+</script></port>
+<port protocol="tcp" portid="8080"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Web-Based Enterprise Management CIM serverOpenPegasus WBEM httpd" ostype="Linux" method="probed" conf="10"><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="http-methods" output="No Allow or Public header in OPTIONS response (status code 501)"/><script id="http-title" output="Site doesn&apos;t have a title."></script></port>
+</ports>
+<times srtt="12252" rttvar="4877" to="100000"/>
+</host>
+<host starttime="1459708202" endtime="1459708635"><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="10.0.1.117" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="998">
+<extrareasons reason="conn-refused" count="998"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ssh" extrainfo="protocol 2.0" servicefp="SF-Port22-TCP:V=6.47%I=7%D=4/3%Time=570161B6%P=x86_64-pc-linux-gnu%r(NULL,29,&quot;SSH-2\.0-OpenSSH_6\.7p1\x20Raspbian-5\+deb8u1\r\n&quot;);" method="probed" conf="10"/><script id="ssh-hostkey" output="ERROR: Script execution failed (use -d to debug)"/></port>
+<port protocol="tcp" portid="8080"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http-proxy" product="Dump1090" method="probed" conf="10"/><script id="http-methods" output="No Allow or Public header in OPTIONS response (status code 200)"/><script id="http-server-header" output="Software version grabbed from Server header.&#xa;Consider submitting a service fingerprint.&#xa;Run with -&#45;script-args http-server-header.skip&#xa;"/><script id="http-title" output="DUMP1090"><elem key="title">DUMP1090</elem>
+</script></port>
+</ports>
+<times srtt="19405" rttvar="7301" to="100000"/>
+</host>
+<host starttime="1459708202" endtime="1459708593"><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="10.0.1.119" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="1000">
+<extrareasons reason="conn-refused" count="1000"/>
+</extraports>
+</ports>
+<times srtt="20858" rttvar="9831" to="100000"/>
+</host>
+<host starttime="1459708202" endtime="1459708665"><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="10.0.1.122" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="995">
+<extrareasons reason="conn-refused" count="995"/>
+</extraports>
+<port protocol="tcp" portid="3689"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="rendezvous" servicefp="SF-Port3689-TCP:V=6.47%I=7%D=4/3%Time=570161BC%P=x86_64-pc-linux-gnu%r(GetRequest,74,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nDAAP-Server:\x20iTunes/11\.1b37\x20\(OS\x20X\)\r\nDate:\x202016-04-03\x2018:32:23\x20\+0000\r\nContent-Length:\x200\r\n\r\n&quot;)%r(GenericLines,74,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nDAAP-Server:\x20iTunes/11\.1b37\x20\(OS\x20X\)\r\nDate:\x202016-04-03\x2018:32:28\x20\+0000\r\nContent-Length:\x200\r\n\r\n&quot;)%r(HTTPOptions,74,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nDAAP-Server:\x20iTunes/11\.1b37\x20\(OS\x20X\)\r\nDate:\x202016-04-03\x2018:32:33\x20\+0000\r\nContent-Length:\x200\r\n\r\n&quot;)%r(RTSPRequest,74,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nDAAP-Server:\x20iTunes/11\.1b37\x20\(OS\x20X\)\r\nDate:\x202016-04-03\x2018:32:38\x20\+0000\r\nContent-Length:\x200\r\n\r\n&quot;)%r(SSLSessionReq,74,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nDAAP-Server:\x20iTunes/11\.1b37\x20\(OS\x20X\)\r\nDate:\x202016-04-03\x2018:33:05\x20\+0000\r\nContent-Length:\x200\r\n\r\n&quot;)%r(Kerberos,74,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nDAAP-Server:\x20iTunes/11\.1b37\x20\(OS\x20X\)\r\nDate:\x202016-04-03\x2018:33:10\x20\+0000\r\nContent-Length:\x200\r\n\r\n&quot;)%r(FourOhFourRequest,74,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nDAAP-Server:\x20iTunes/11\.1b37\x20\(OS\x20X\)\r\nDate:\x202016-04-03\x2018:33:25\x20\+0000\r\nContent-Length:\x200\r\n\r\n&quot;)%r(SIPOptions,74,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nDAAP-Server:\x20iTunes/11\.1b37\x20\(OS\x20X\)\r\nDate:\x202016-04-03\x2018:33:40\x20\+0000\r\nContent-Length:\x200\r\n\r\n&quot;);" method="table" conf="3"/></port>
+<port protocol="tcp" portid="5000"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="upnp" servicefp="SF-Port5000-TCP:V=6.47%I=7%D=4/3%Time=570161B8%P=x86_64-pc-linux-gnu%r(GetRequest,48,&quot;HTTP/1\.1\x20404\x20Not\x20Found\r\nContent-Length:\x200\r\nServer:\x20AirTunes/280\.32\.2\r\n\r\n&quot;)%r(RTSPRequest,9E,&quot;RTSP/1\.0\x20200\x20OK\r\nPublic:\x20ANNOUNCE,\x20SETUP,\x20RECORD,\x20PAUSE,\x20FLUSH,\x20TEARDOWN,\x20OPTIONS,\x20GET_PARAMETER,\x20SET_PARAMETER,\x20POST,\x20GET,\x20PUT\r\nServer:\x20AirTunes/280\.32\.2\r\n\r\n&quot;)%r(HTTPOptions,9E,&quot;HTTP/1\.1\x20200\x20OK\r\nPublic:\x20ANNOUNCE,\x20SETUP,\x20RECORD,\x20PAUSE,\x20FLUSH,\x20TEARDOWN,\x20OPTIONS,\x20GET_PARAMETER,\x20SET_PARAMETER,\x20POST,\x20GET,\x20PUT\r\nServer:\x20AirTunes/280\.32\.2\r\n\r\n&quot;)%r(FourOhFourRequest,48,&quot;HTTP/1\.1\x20404\x20Not\x20Found\r\nContent-Length:\x200\r\nServer:\x20AirTunes/280\.32\.2\r\n\r\n&quot;)%r(SIPOptions,B0,&quot;RTSP/1\.0\x20200\x20OK\r\nPublic:\x20ANNOUNCE,\x20SETUP,\x20RECORD,\x20PAUSE,\x20FLUSH,\x20TEARDOWN,\x20OPTIONS,\x20GET_PARAMETER,\x20SET_PARAMETER,\x20POST,\x20GET,\x20PUT\r\nServer:\x20AirTunes/280\.32\.2\r\nCSeq:\x2042\x20OPTIONS\r\n\r\n&quot;);" method="table" conf="3"/></port>
+<port protocol="tcp" portid="7000"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="afs3-fileserver" servicefp="SF-Port7000-TCP:V=6.47%I=7%D=4/3%Time=570161C7%P=x86_64-pc-linux-gnu%r(GetRequest,48,&quot;HTTP/1\.1\x20404\x20Not\x20Found\r\nContent-Length:\x200\r\nServer:\x20AirTunes/280\.32\.2\r\n\r\n&quot;)%r(HTTPOptions,9E,&quot;HTTP/1\.1\x20200\x20OK\r\nPublic:\x20ANNOUNCE,\x20SETUP,\x20RECORD,\x20PAUSE,\x20FLUSH,\x20TEARDOWN,\x20OPTIONS,\x20GET_PARAMETER,\x20SET_PARAMETER,\x20POST,\x20GET,\x20PUT\r\nServer:\x20AirTunes/280\.32\.2\r\n\r\n&quot;)%r(RTSPRequest,9E,&quot;RTSP/1\.0\x20200\x20OK\r\nPublic:\x20ANNOUNCE,\x20SETUP,\x20RECORD,\x20PAUSE,\x20FLUSH,\x20TEARDOWN,\x20OPTIONS,\x20GET_PARAMETER,\x20SET_PARAMETER,\x20POST,\x20GET,\x20PUT\r\nServer:\x20AirTunes/280\.32\.2\r\n\r\n&quot;)%r(FourOhFourRequest,48,&quot;HTTP/1\.1\x20404\x20Not\x20Found\r\nContent-Length:\x200\r\nServer:\x20AirTunes/280\.32\.2\r\n\r\n&quot;)%r(SIPOptions,B0,&quot;RTSP/1\.0\x20200\x20OK\r\nPublic:\x20ANNOUNCE,\x20SETUP,\x20RECORD,\x20PAUSE,\x20FLUSH,\x20TEARDOWN,\x20OPTIONS,\x20GET_PARAMETER,\x20SET_PARAMETER,\x20POST,\x20GET,\x20PUT\r\nServer:\x20AirTunes/280\.32\.2\r\nCSeq:\x2042\x20OPTIONS\r\n\r\n&quot;);" method="table" conf="3"/></port>
+<port protocol="tcp" portid="7100"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Apple AirPlay httpd" devicetype="media device" method="probed" conf="10"/><script id="http-methods" output="No Allow or Public header in OPTIONS response (status code 400)"/><script id="http-title" output="Site doesn&apos;t have a title."></script></port>
+<port protocol="tcp" portid="62078"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+</ports>
+<times srtt="12787" rttvar="6491" to="100000"/>
+</host>
+<host starttime="1459708202" endtime="1459708669"><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="10.0.1.123" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="994">
+<extrareasons reason="conn-refused" count="994"/>
+</extraports>
+<port protocol="tcp" portid="3689"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="rendezvous" servicefp="SF-Port3689-TCP:V=6.47%I=7%D=4/3%Time=570161C1%P=x86_64-pc-linux-gnu%r(GetRequest,74,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nDAAP-Server:\x20iTunes/11\.1b37\x20\(OS\x20X\)\r\nDate:\x202016-04-03\x2018:32:28\x20\+0000\r\nContent-Length:\x200\r\n\r\n&quot;)%r(GenericLines,74,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nDAAP-Server:\x20iTunes/11\.1b37\x20\(OS\x20X\)\r\nDate:\x202016-04-03\x2018:32:33\x20\+0000\r\nContent-Length:\x200\r\n\r\n&quot;)%r(HTTPOptions,74,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nDAAP-Server:\x20iTunes/11\.1b37\x20\(OS\x20X\)\r\nDate:\x202016-04-03\x2018:32:38\x20\+0000\r\nContent-Length:\x200\r\n\r\n&quot;)%r(RTSPRequest,74,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nDAAP-Server:\x20iTunes/11\.1b37\x20\(OS\x20X\)\r\nDate:\x202016-04-03\x2018:32:43\x20\+0000\r\nContent-Length:\x200\r\n\r\n&quot;)%r(SSLSessionReq,74,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nDAAP-Server:\x20iTunes/11\.1b37\x20\(OS\x20X\)\r\nDate:\x202016-04-03\x2018:33:10\x20\+0000\r\nContent-Length:\x200\r\n\r\n&quot;)%r(Kerberos,74,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nDAAP-Server:\x20iTunes/11\.1b37\x20\(OS\x20X\)\r\nDate:\x202016-04-03\x2018:33:15\x20\+0000\r\nContent-Length:\x200\r\n\r\n&quot;)%r(FourOhFourRequest,74,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nDAAP-Server:\x20iTunes/11\.1b37\x20\(OS\x20X\)\r\nDate:\x202016-04-03\x2018:33:30\x20\+0000\r\nContent-Length:\x200\r\n\r\n&quot;)%r(SIPOptions,74,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nDAAP-Server:\x20iTunes/11\.1b37\x20\(OS\x20X\)\r\nDate:\x202016-04-03\x2018:33:45\x20\+0000\r\nContent-Length:\x200\r\n\r\n&quot;);" method="table" conf="3"/></port>
+<port protocol="tcp" portid="5000"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="upnp" servicefp="SF-Port5000-TCP:V=6.47%I=7%D=4/3%Time=570161BC%P=x86_64-pc-linux-gnu%r(GetRequest,48,&quot;HTTP/1\.1\x20404\x20Not\x20Found\r\nContent-Length:\x200\r\nServer:\x20AirTunes/280\.32\.2\r\n\r\n&quot;)%r(RTSPRequest,9E,&quot;RTSP/1\.0\x20200\x20OK\r\nPublic:\x20ANNOUNCE,\x20SETUP,\x20RECORD,\x20PAUSE,\x20FLUSH,\x20TEARDOWN,\x20OPTIONS,\x20GET_PARAMETER,\x20SET_PARAMETER,\x20POST,\x20GET,\x20PUT\r\nServer:\x20AirTunes/280\.32\.2\r\n\r\n&quot;)%r(HTTPOptions,9E,&quot;HTTP/1\.1\x20200\x20OK\r\nPublic:\x20ANNOUNCE,\x20SETUP,\x20RECORD,\x20PAUSE,\x20FLUSH,\x20TEARDOWN,\x20OPTIONS,\x20GET_PARAMETER,\x20SET_PARAMETER,\x20POST,\x20GET,\x20PUT\r\nServer:\x20AirTunes/280\.32\.2\r\n\r\n&quot;)%r(FourOhFourRequest,48,&quot;HTTP/1\.1\x20404\x20Not\x20Found\r\nContent-Length:\x200\r\nServer:\x20AirTunes/280\.32\.2\r\n\r\n&quot;)%r(SIPOptions,B0,&quot;RTSP/1\.0\x20200\x20OK\r\nPublic:\x20ANNOUNCE,\x20SETUP,\x20RECORD,\x20PAUSE,\x20FLUSH,\x20TEARDOWN,\x20OPTIONS,\x20GET_PARAMETER,\x20SET_PARAMETER,\x20POST,\x20GET,\x20PUT\r\nServer:\x20AirTunes/280\.32\.2\r\nCSeq:\x2042\x20OPTIONS\r\n\r\n&quot;);" method="table" conf="3"/></port>
+<port protocol="tcp" portid="7000"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="afs3-fileserver" servicefp="SF-Port7000-TCP:V=6.47%I=7%D=4/3%Time=570161CD%P=x86_64-pc-linux-gnu%r(GetRequest,48,&quot;HTTP/1\.1\x20404\x20Not\x20Found\r\nContent-Length:\x200\r\nServer:\x20AirTunes/280\.32\.2\r\n\r\n&quot;)%r(HTTPOptions,9E,&quot;HTTP/1\.1\x20200\x20OK\r\nPublic:\x20ANNOUNCE,\x20SETUP,\x20RECORD,\x20PAUSE,\x20FLUSH,\x20TEARDOWN,\x20OPTIONS,\x20GET_PARAMETER,\x20SET_PARAMETER,\x20POST,\x20GET,\x20PUT\r\nServer:\x20AirTunes/280\.32\.2\r\n\r\n&quot;)%r(RTSPRequest,9E,&quot;RTSP/1\.0\x20200\x20OK\r\nPublic:\x20ANNOUNCE,\x20SETUP,\x20RECORD,\x20PAUSE,\x20FLUSH,\x20TEARDOWN,\x20OPTIONS,\x20GET_PARAMETER,\x20SET_PARAMETER,\x20POST,\x20GET,\x20PUT\r\nServer:\x20AirTunes/280\.32\.2\r\n\r\n&quot;)%r(FourOhFourRequest,48,&quot;HTTP/1\.1\x20404\x20Not\x20Found\r\nContent-Length:\x200\r\nServer:\x20AirTunes/280\.32\.2\r\n\r\n&quot;)%r(SIPOptions,B0,&quot;RTSP/1\.0\x20200\x20OK\r\nPublic:\x20ANNOUNCE,\x20SETUP,\x20RECORD,\x20PAUSE,\x20FLUSH,\x20TEARDOWN,\x20OPTIONS,\x20GET_PARAMETER,\x20SET_PARAMETER,\x20POST,\x20GET,\x20PUT\r\nServer:\x20AirTunes/280\.32\.2\r\nCSeq:\x2042\x20OPTIONS\r\n\r\n&quot;);" method="table" conf="3"/></port>
+<port protocol="tcp" portid="7100"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Apple AirPlay httpd" devicetype="media device" method="probed" conf="10"/><script id="http-methods" output="No Allow or Public header in OPTIONS response (status code 400)"/><script id="http-title" output="Site doesn&apos;t have a title."></script></port>
+<port protocol="tcp" portid="49161"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="unknown" servicefp="SF-Port49161-TCP:V=6.47%I=7%D=4/3%Time=570161C0%P=x86_64-pc-linux-gnu%r(NULL,A,&quot;\t\x08\x16\x20\0\xda\x01\x02\x08\0&quot;)%r(GenericLines,A,&quot;\t\x08\x16\x20\0\xda\x01\x02\x08\0&quot;)%r(GetRequest,A,&quot;\t\x08\x16\x20\0\xda\x01\x02\x08\0&quot;)%r(HTTPOptions,A,&quot;\t\x08\x16\x20\0\xda\x01\x02\x08\0&quot;)%r(RTSPRequest,A,&quot;\t\x08\x16\x20\0\xda\x01\x02\x08\0&quot;)%r(RPCCheck,19,&quot;\t\x08\x16\x20\0\xda\x01\x02\x08\0\x04\x08\0\x20e\x04\x08\0\x20e\x04\x08\0\x20e&quot;)%r(DNSVersionBindReq,14,&quot;\t\x08\x16\x20\0\xda\x01\x02\x08\0\x04\x08\0\x20e\x04\x08\0\x20e&quot;)%r(DNSStatusRequest,16,&quot;\t\x08\x16\x20\0\xda\x01\x02\x08\0\x04\x08\0\x20e\x06\x08\0\x12\0\x20e&quot;)%r(Help,A,&quot;\t\x08\x16\x20\0\xda\x01\x02\x08\0&quot;)%r(SSLSessionReq,14,&quot;\t\x08\x16\x20\0\xda\x01\x02\x08\0\x04\x08\0\x20e\x04\x08\0\x20e&quot;)%r(Kerberos,1E,&quot;\t\x08\x16\x20\0\xda\x01\x02\x08\0\x04\x08\0\x20e\x04\x08\0\x20e\x04\x08\0\x20e\x04\x08\0\x20e&quot;)%r(SMBProgNeg,19,&quot;\t\x08\x16\x20\0\xda\x01\x02\x08\0\x04\x08\0\x20e\x04\x08\0\x20e\x04\x08\0\x20e&quot;)%r(X11Probe,A,&quot;\t\x08\x16\x20\0\xda\x01\x02\x08\0&quot;)%r(FourOhFourRequest,A,&quot;\t\x08\x16\x20\0\xda\x01\x02\x08\0&quot;)%r(LPDString,F,&quot;\t\x08\x16\x20\0\xda\x01\x02\x08\0\x04\x08\0\x20e&quot;)%r(LDAPBindReq,A,&quot;\t\x08\x16\x20\0\xda\x01\x02\x08\0&quot;)%r(SIPOptions,14,&quot;\t\x08\x16\x20\0\xda\x01\x02\x08\0\x04\x08\0\x20e\x04\x08\0\x20e&quot;)%r(LANDesk-RC,A,&quot;\t\x08\x16\x20\0\xda\x01\x02\x08\0&quot;)%r(TerminalServer,14,&quot;\t\x08\x16\x20\0\xda\x01\x02\x08\0\x04\x08\0\x20e\x04\x08\0\x20e&quot;)%r(NCP,A,&quot;\t\x08\x16\x20\0\xda\x01\x02\x08\0&quot;)%r(NotesRPC,14,&quot;\t\x08\x16\x20\0\xda\x01\x02\x08\0\x04\x08\0\x20e\x04\x08\0\x20e&quot;)%r(WMSRequest,14,&quot;\t\x08\x16\x20\0\xda\x01\x02\x08\0\x04\x08\0\x20e\x04\x08\0\x20e&quot;)%r(oracle-tns,F,&quot;\t\x08\x16\x20\0\xda\x01\x02\x08\0\x04\x08\0\x20e&quot;)%r(afp,41,&quot;\t\x08\x16\x20\0\xda\x01\x02\x08\0\x04\x08\0\x20e\x04\x08\0\x20e\x04\x08\0\x20e\x04\x08\0\x20e\x04\x08\0\x20e\x04\x08\0\x20e\x04\x08\0\x20e\x04\x08\0\x20e\x04\x08\0\x20e\x04\x08\0\x20e\x04\x08\0\x20e&quot;)%r(kumo-server,A,&quot;\t\x08\x16\x20\0\xda\x01\x02\x08\0&quot;);" method="table" conf="3"/></port>
+<port protocol="tcp" portid="62078"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+</ports>
+<times srtt="11925" rttvar="5259" to="100000"/>
+</host>
+<host starttime="1459708202" endtime="1459708666"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="10.0.1.126" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="995">
+<extrareasons reason="no-responses" count="995"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="TiVo To Go httpd" version="20.4.7.stream-01-6:A94" devicetype="media device" method="probed" conf="10"/><script id="http-methods" output="No Allow or Public header in OPTIONS response (status code 302)"/><script id="http-title" output="Congratulations!&#xa;Requested resource was /index.html"><elem key="title">Congratulations!</elem>
+<elem key="redirect_url">/index.html</elem>
+</script></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="TiVo To Go httpd" version="20.4.7.stream-01-6:A94" devicetype="media device" tunnel="ssl" method="probed" conf="10"/><script id="http-auth" output="&#xa;HTTP/1.1 401 Authorization Required&#xd;&#xa;  Digest realm=TiVo DVR nonce=4C901AF26E1CE1A5 qop=auth&#xa;"><table>
+<table key="params">
+<elem key="realm">TiVo DVR</elem>
+<elem key="nonce">4C901AF26E1CE1A5</elem>
+<elem key="qop">auth</elem>
+</table>
+<elem key="scheme">Digest</elem>
+</table>
+</script><script id="http-methods" output="No Allow or Public header in OPTIONS response (status code 401)"/><script id="http-title" output="Site doesn&apos;t have a title (text/html)."></script><script id="ssl-cert" output="Subject: commonName=A94000190342DB6/organizationName=TiVo Inc./stateOrProvinceName=CA/countryName=US&#xa;Issuer: commonName=A94000190342DB6/organizationName=TiVo Inc./stateOrProvinceName=CA/countryName=US&#xa;Public Key type: rsa&#xa;Public Key bits: 2048&#xa;Not valid before: 2015-06-27T21:47:38+00:00&#xa;Not valid after:  2025-06-24T21:47:38+00:00&#xa;MD5:   f09d c111 6f77 2fa3 4c08 90d7 a6aa 8c40&#xa;SHA-1: 9ba7 6dca aae4 3e83 3b87 f931 a28b 6fe3 a9ff 9324"><table key="subject">
+<elem key="localityName">Alviso</elem>
+<elem key="stateOrProvinceName">CA</elem>
+<elem key="organizationName">TiVo Inc.</elem>
+<elem key="commonName">A94000190342DB6</elem>
+<elem key="emailAddress">support@tivo.com</elem>
+<elem key="organizationalUnitName">IT</elem>
+<elem key="countryName">US</elem>
+</table>
+<table key="issuer">
+<elem key="localityName">Alviso</elem>
+<elem key="stateOrProvinceName">CA</elem>
+<elem key="organizationName">TiVo Inc.</elem>
+<elem key="commonName">A94000190342DB6</elem>
+<elem key="emailAddress">support@tivo.com</elem>
+<elem key="organizationalUnitName">IT</elem>
+<elem key="countryName">US</elem>
+</table>
+<table key="pubkey">
+<elem key="bits">2048</elem>
+<elem key="type">rsa</elem>
+</table>
+<table key="validity">
+<elem key="notBefore">2015-06-27T21:47:38+00:00</elem>
+<elem key="notAfter">2025-06-24T21:47:38+00:00</elem>
+</table>
+<elem key="md5">f09dc1116f772fa34c0890d7a6aa8c40</elem>
+<elem key="sha1">9ba76dcaaae43e833b87f931a28b6fe3a9ff9324</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIDhzCCAm8CBBuu6FMwDQYJKoZIhvcNAQEFBQAwgYcxGDAWBgNVBAMMD0E5NDAw&#xa;MDE5MDM0MkRCNjESMBAGA1UECgwJVGlWbyBJbmMuMQswCQYDVQQLDAJJVDEPMA0G&#xa;A1UEBwwGQWx2aXNvMQswCQYDVQQIDAJDQTELMAkGA1UEBhMCVVMxHzAdBgkqhkiG&#xa;9w0BCQEWEHN1cHBvcnRAdGl2by5jb20wHhcNMTUwNjI3MjI0NzM4WhcNMjUwNjI0&#xa;MjI0NzM4WjCBhzEYMBYGA1UEAwwPQTk0MDAwMTkwMzQyREI2MRIwEAYDVQQKDAlU&#xa;aVZvIEluYy4xCzAJBgNVBAsMAklUMQ8wDQYDVQQHDAZBbHZpc28xCzAJBgNVBAgM&#xa;AkNBMQswCQYDVQQGEwJVUzEfMB0GCSqGSIb3DQEJARYQc3VwcG9ydEB0aXZvLmNv&#xa;bTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAJsHvxWSGjG4DgY4Yhg2&#xa;7RE1UdLyJw27/+d9LUUV4kL1QIlCJl0rW+7EuG5dsNu/7i7T1hD8XyvQUy54KtzL&#xa;wIqwZj8afydaGRdbYGmmn3/8vk7MeAR42X3G1/56gI+TiF8Tf0iSpSI7eDkeA17e&#xa;0F8jDyI5XFMC5Q93oeIvAWN3vDeIa/5QczJWJ7xn6OfjpSXLDtw1IbdfQBsAnt6L&#xa;V5umVzLqidPCHu8rlZ14g180TNTAx5JByWQ4eK9V3QTIJ/phB+91Tn+EyUhzNfG3&#xa;XAnVuXB8XyrpoCJJXFZY4eBRHah9Upsx+ot2GpIPHZ3wVvEbdglGyKLmY+XutFO0&#xa;afMCAwEAATANBgkqhkiG9w0BAQUFAAOCAQEAlD8bRgON8E13Q/bCuhTU0ihA8dGA&#xa;7cn8nM/vJH4GLWIOVdbCr16XfU68Bgm+syqG7v3QkqkrDONe3xz+ON4tMJ30mUCq&#xa;rrRz2Y968cU9W4kGvrGMiWwMymRZUAVku1xCiOxSRIxRgifbTMe9eMGU8l82AB+5&#xa;U5wc7HnZ/QbJntqYiesqmkRm76QaovhnBEac5E07DKdrFPzjCkZ4B13134WWSwMV&#xa;KvXy3H0MUtR2aTixsnj3l/wM8LHjGNSaXWPqzJokMnzF1wVhLrpqO3x4sqLkD0dx&#xa;MD3rD821hbHQ1HqjcPayrHtX3WPPlqG+UI0WSm/cA5w/3ZwC4aHt2nMUrg==&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="sslv2" output="&#xa;  SSLv2 supported&#xa;  ciphers: none"><elem>SSLv2 supported</elem>
+<elem key="ciphers">none</elem>
+</script></port>
+<port protocol="tcp" portid="2190"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="2191"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="tvbus" method="table" conf="3"/></port>
+<port protocol="tcp" portid="49152"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="upnp" product="Portable SDK for UPnP devices" version="1.6.8" extrainfo="Linux 2.6.33.3; UPnP 1.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/o:linux:linux_kernel:2.6.33.3</cpe></service></port>
+</ports>
+<times srtt="14994" rttvar="10234" to="100000"/>
+</host>
+<host starttime="1459708202" endtime="1459708627"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="10.0.1.127" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="998">
+<extrareasons reason="conn-refused" count="998"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="nginx" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx</cpe></service><script id="http-methods" output="No Allow or Public header in OPTIONS response (status code 404)"/><script id="http-title" output="404 Not Found"><elem key="title">404 Not Found</elem>
+</script></port>
+<port protocol="tcp" portid="20031"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="unknown" method="table" conf="3"/></port>
+</ports>
+<times srtt="19549" rttvar="6944" to="100000"/>
+</host>
+<host starttime="1459708202" endtime="1459708634"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="10.0.1.129" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="998">
+<extrareasons reason="conn-refused" count="998"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" method="probed" conf="10"/><script id="http-methods" output="No Allow or Public header in OPTIONS response (status code 404)"/><script id="http-server-header" output="Software version grabbed from Server header.&#xa;Consider submitting a service fingerprint.&#xa;Run with -&#45;script-args http-server-header.skip&#xa;"/><script id="http-title" output="Site doesn&apos;t have a title (text/html; charset=utf-8)."></script></port>
+<port protocol="tcp" portid="8888"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="sun-answerbook" method="table" conf="3"/></port>
+</ports>
+<times srtt="25886" rttvar="8317" to="100000"/>
+</host>
+<host starttime="1459708202" endtime="1459708617"><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="10.0.1.130" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="998">
+<extrareasons reason="conn-refused" count="998"/>
+</extraports>
+<port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="domain" product="dnsmasq" version="2.52" method="probed" conf="10"><cpe>cpe:/a:thekelleys:dnsmasq:2.52</cpe></service><script id="dns-nsid" output="&#xa;  bind.version: dnsmasq-2.52"><elem key="bind.version">dnsmasq-2.52</elem>
+</script></port>
+<port protocol="tcp" portid="49153"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="unknown" servicefp="SF-Port49153-TCP:V=6.47%I=7%D=4/3%Time=570161E1%P=x86_64-pc-linux-gnu%r(NULL,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(GenericLines,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(GetRequest,A3,&quot;HTTP/1\.0\x20404\x20Not\x20Found\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2048\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;404\x20Not\x20Found&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(HTTPOptions,AF,&quot;HTTP/0\.0\x20501\x20Not\x20Implemented\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2054\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;501\x20Not\x20Implemented&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(RTSPRequest,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(RPCCheck,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(DNSVersionBindReq,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(DNSStatusRequest,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(Help,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;);" method="table" conf="3"/></port>
+</ports>
+<times srtt="22354" rttvar="8073" to="100000"/>
+</host>
+<host starttime="1459708202" endtime="1459708642"><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="10.0.1.132" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="998">
+<extrareasons reason="conn-refused" count="998"/>
+</extraports>
+<port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="domain" product="dnsmasq" version="2.52" method="probed" conf="10"><cpe>cpe:/a:thekelleys:dnsmasq:2.52</cpe></service><script id="dns-nsid" output="&#xa;  bind.version: dnsmasq-2.52"><elem key="bind.version">dnsmasq-2.52</elem>
+</script></port>
+<port protocol="tcp" portid="49153"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="unknown" servicefp="SF-Port49153-TCP:V=6.47%I=7%D=4/3%Time=570161F0%P=x86_64-pc-linux-gnu%r(NULL,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(GenericLines,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(GetRequest,A3,&quot;HTTP/1\.0\x20404\x20Not\x20Found\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2048\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;404\x20Not\x20Found&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(HTTPOptions,AF,&quot;HTTP/0\.0\x20501\x20Not\x20Implemented\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2054\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;501\x20Not\x20Implemented&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(RTSPRequest,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(RPCCheck,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(DNSVersionBindReq,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(DNSStatusRequest,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(Help,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;);" method="table" conf="3"/></port>
+</ports>
+<times srtt="19065" rttvar="5852" to="100000"/>
+</host>
+<host starttime="1459708202" endtime="1459708603"><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="10.0.1.133" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="998">
+<extrareasons reason="conn-refused" count="998"/>
+</extraports>
+<port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="domain" product="dnsmasq" version="2.52" method="probed" conf="10"><cpe>cpe:/a:thekelleys:dnsmasq:2.52</cpe></service><script id="dns-nsid" output="&#xa;  bind.version: dnsmasq-2.52"><elem key="bind.version">dnsmasq-2.52</elem>
+</script></port>
+<port protocol="tcp" portid="49153"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="unknown" servicefp="SF-Port49153-TCP:V=6.47%I=7%D=4/3%Time=570161F8%P=x86_64-pc-linux-gnu%r(NULL,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(GenericLines,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(GetRequest,A3,&quot;HTTP/1\.0\x20404\x20Not\x20Found\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2048\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;404\x20Not\x20Found&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(HTTPOptions,AF,&quot;HTTP/0\.0\x20501\x20Not\x20Implemented\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2054\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;501\x20Not\x20Implemented&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(RTSPRequest,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(RPCCheck,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(DNSVersionBindReq,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(DNSStatusRequest,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(Help,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;);" method="table" conf="3"/></port>
+</ports>
+<times srtt="19245" rttvar="6672" to="100000"/>
+</host>
+<host starttime="1459708202" endtime="1459708641"><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="10.0.1.134" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="998">
+<extrareasons reason="conn-refused" count="998"/>
+</extraports>
+<port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="domain" product="dnsmasq" version="2.52" method="probed" conf="10"><cpe>cpe:/a:thekelleys:dnsmasq:2.52</cpe></service><script id="dns-nsid" output="&#xa;  bind.version: dnsmasq-2.52"><elem key="bind.version">dnsmasq-2.52</elem>
+</script></port>
+<port protocol="tcp" portid="49153"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="unknown" servicefp="SF-Port49153-TCP:V=6.47%I=7%D=4/3%Time=57016201%P=x86_64-pc-linux-gnu%r(NULL,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(GenericLines,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(GetRequest,A3,&quot;HTTP/1\.0\x20404\x20Not\x20Found\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2048\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;404\x20Not\x20Found&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(HTTPOptions,AF,&quot;HTTP/0\.0\x20501\x20Not\x20Implemented\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2054\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;501\x20Not\x20Implemented&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(RTSPRequest,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(RPCCheck,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(DNSVersionBindReq,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(DNSStatusRequest,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(Help,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;);" method="table" conf="3"/></port>
+</ports>
+<times srtt="21906" rttvar="5796" to="100000"/>
+</host>
+<host starttime="1459708202" endtime="1459708647"><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="10.0.1.135" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="998">
+<extrareasons reason="conn-refused" count="998"/>
+</extraports>
+<port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="domain" product="dnsmasq" version="2.52" method="probed" conf="10"><cpe>cpe:/a:thekelleys:dnsmasq:2.52</cpe></service><script id="dns-nsid" output="&#xa;  bind.version: dnsmasq-2.52"><elem key="bind.version">dnsmasq-2.52</elem>
+</script></port>
+<port protocol="tcp" portid="49153"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="unknown" servicefp="SF-Port49153-TCP:V=6.47%I=7%D=4/3%Time=57016206%P=x86_64-pc-linux-gnu%r(NULL,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(GenericLines,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(GetRequest,A3,&quot;HTTP/1\.0\x20404\x20Not\x20Found\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2048\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;404\x20Not\x20Found&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(HTTPOptions,AF,&quot;HTTP/0\.0\x20501\x20Not\x20Implemented\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2054\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;501\x20Not\x20Implemented&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(RTSPRequest,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(RPCCheck,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(DNSVersionBindReq,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(DNSStatusRequest,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(Help,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;);" method="table" conf="3"/></port>
+</ports>
+<times srtt="31548" rttvar="15264" to="100000"/>
+</host>
+<host starttime="1459708202" endtime="1459708603"><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="10.0.1.136" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="998">
+<extrareasons reason="conn-refused" count="998"/>
+</extraports>
+<port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="domain" product="dnsmasq" version="2.52" method="probed" conf="10"><cpe>cpe:/a:thekelleys:dnsmasq:2.52</cpe></service><script id="dns-nsid" output="&#xa;  bind.version: dnsmasq-2.52"><elem key="bind.version">dnsmasq-2.52</elem>
+</script></port>
+<port protocol="tcp" portid="49153"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="unknown" servicefp="SF-Port49153-TCP:V=6.47%I=7%D=4/3%Time=5701620A%P=x86_64-pc-linux-gnu%r(NULL,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(GenericLines,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(GetRequest,A3,&quot;HTTP/1\.0\x20404\x20Not\x20Found\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2048\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;404\x20Not\x20Found&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(HTTPOptions,AF,&quot;HTTP/0\.0\x20501\x20Not\x20Implemented\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2054\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;501\x20Not\x20Implemented&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(RTSPRequest,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(RPCCheck,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(DNSVersionBindReq,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(DNSStatusRequest,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(Help,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;);" method="table" conf="3"/></port>
+</ports>
+<times srtt="24010" rttvar="12002" to="100000"/>
+</host>
+<host starttime="1459708202" endtime="1459708638"><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="10.0.1.137" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="998">
+<extrareasons reason="conn-refused" count="998"/>
+</extraports>
+<port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="domain" product="dnsmasq" version="2.52" method="probed" conf="10"><cpe>cpe:/a:thekelleys:dnsmasq:2.52</cpe></service><script id="dns-nsid" output="&#xa;  bind.version: dnsmasq-2.52"><elem key="bind.version">dnsmasq-2.52</elem>
+</script></port>
+<port protocol="tcp" portid="49153"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="unknown" servicefp="SF-Port49153-TCP:V=6.47%I=7%D=4/3%Time=5701620F%P=x86_64-pc-linux-gnu%r(NULL,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(GenericLines,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(GetRequest,A3,&quot;HTTP/1\.0\x20404\x20Not\x20Found\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2048\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;404\x20Not\x20Found&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(HTTPOptions,AF,&quot;HTTP/0\.0\x20501\x20Not\x20Implemented\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2054\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;501\x20Not\x20Implemented&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(RTSPRequest,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(RPCCheck,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(DNSVersionBindReq,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(DNSStatusRequest,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(Help,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;);" method="table" conf="3"/></port>
+</ports>
+<times srtt="30274" rttvar="13230" to="100000"/>
+</host>
+<host starttime="1459708202" endtime="1459708620"><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="10.0.1.138" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="998">
+<extrareasons reason="conn-refused" count="998"/>
+</extraports>
+<port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="domain" product="dnsmasq" version="2.52" method="probed" conf="10"><cpe>cpe:/a:thekelleys:dnsmasq:2.52</cpe></service><script id="dns-nsid" output="&#xa;  bind.version: dnsmasq-2.52"><elem key="bind.version">dnsmasq-2.52</elem>
+</script></port>
+<port protocol="tcp" portid="49153"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="unknown" servicefp="SF-Port49153-TCP:V=6.47%I=7%D=4/3%Time=57016212%P=x86_64-pc-linux-gnu%r(NULL,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(GenericLines,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(GetRequest,A3,&quot;HTTP/1\.0\x20404\x20Not\x20Found\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2048\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;404\x20Not\x20Found&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(HTTPOptions,AF,&quot;HTTP/0\.0\x20501\x20Not\x20Implemented\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2054\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;501\x20Not\x20Implemented&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(RTSPRequest,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(RPCCheck,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(DNSVersionBindReq,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(DNSStatusRequest,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(Help,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;);" method="table" conf="3"/></port>
+</ports>
+<times srtt="19654" rttvar="8210" to="100000"/>
+</host>
+<host starttime="1459708202" endtime="1459708627"><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="10.0.1.139" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="998">
+<extrareasons reason="conn-refused" count="998"/>
+</extraports>
+<port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="domain" product="dnsmasq" version="2.52" method="probed" conf="10"><cpe>cpe:/a:thekelleys:dnsmasq:2.52</cpe></service><script id="dns-nsid" output="&#xa;  bind.version: dnsmasq-2.52"><elem key="bind.version">dnsmasq-2.52</elem>
+</script></port>
+<port protocol="tcp" portid="49153"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="unknown" servicefp="SF-Port49153-TCP:V=6.47%I=7%D=4/3%Time=57016217%P=x86_64-pc-linux-gnu%r(NULL,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(GenericLines,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(GetRequest,A3,&quot;HTTP/1\.0\x20404\x20Not\x20Found\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2048\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;404\x20Not\x20Found&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(HTTPOptions,AF,&quot;HTTP/0\.0\x20501\x20Not\x20Implemented\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2054\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;501\x20Not\x20Implemented&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(RTSPRequest,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(RPCCheck,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(DNSVersionBindReq,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(DNSStatusRequest,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(Help,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;);" method="table" conf="3"/></port>
+</ports>
+<times srtt="24163" rttvar="10058" to="100000"/>
+</host>
+<host starttime="1459708202" endtime="1459708621"><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="10.0.1.140" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="998">
+<extrareasons reason="conn-refused" count="998"/>
+</extraports>
+<port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="domain" product="dnsmasq" version="2.52" method="probed" conf="10"><cpe>cpe:/a:thekelleys:dnsmasq:2.52</cpe></service><script id="dns-nsid" output="&#xa;  bind.version: dnsmasq-2.52"><elem key="bind.version">dnsmasq-2.52</elem>
+</script></port>
+<port protocol="tcp" portid="49153"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="unknown" servicefp="SF-Port49153-TCP:V=6.47%I=7%D=4/3%Time=57016219%P=x86_64-pc-linux-gnu%r(NULL,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(GenericLines,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(GetRequest,A3,&quot;HTTP/1\.0\x20404\x20Not\x20Found\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2048\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;404\x20Not\x20Found&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(HTTPOptions,AF,&quot;HTTP/0\.0\x20501\x20Not\x20Implemented\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2054\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;501\x20Not\x20Implemented&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(RTSPRequest,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(RPCCheck,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(DNSVersionBindReq,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(DNSStatusRequest,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(Help,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;);" method="table" conf="3"/></port>
+</ports>
+<times srtt="18445" rttvar="8554" to="100000"/>
+</host>
+<host starttime="1459708202" endtime="1459708638"><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="10.0.1.141" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="998">
+<extrareasons reason="conn-refused" count="998"/>
+</extraports>
+<port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="domain" product="dnsmasq" version="2.52" method="probed" conf="10"><cpe>cpe:/a:thekelleys:dnsmasq:2.52</cpe></service><script id="dns-nsid" output="&#xa;  bind.version: dnsmasq-2.52"><elem key="bind.version">dnsmasq-2.52</elem>
+</script></port>
+<port protocol="tcp" portid="49153"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="unknown" servicefp="SF-Port49153-TCP:V=6.47%I=7%D=4/3%Time=5701621B%P=x86_64-pc-linux-gnu%r(NULL,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(GenericLines,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(GetRequest,A3,&quot;HTTP/1\.0\x20404\x20Not\x20Found\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2048\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;404\x20Not\x20Found&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(HTTPOptions,AF,&quot;HTTP/0\.0\x20501\x20Not\x20Implemented\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2054\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;501\x20Not\x20Implemented&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(RTSPRequest,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(RPCCheck,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(DNSVersionBindReq,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(DNSStatusRequest,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(Help,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;);" method="table" conf="3"/></port>
+</ports>
+<times srtt="34555" rttvar="10038" to="100000"/>
+</host>
+<host starttime="1459708202" endtime="1459708636"><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="10.0.1.142" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="998">
+<extrareasons reason="conn-refused" count="998"/>
+</extraports>
+<port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="domain" product="dnsmasq" version="2.52" method="probed" conf="10"><cpe>cpe:/a:thekelleys:dnsmasq:2.52</cpe></service><script id="dns-nsid" output="&#xa;  bind.version: dnsmasq-2.52"><elem key="bind.version">dnsmasq-2.52</elem>
+</script></port>
+<port protocol="tcp" portid="49153"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="unknown" servicefp="SF-Port49153-TCP:V=6.47%I=7%D=4/3%Time=5701621D%P=x86_64-pc-linux-gnu%r(NULL,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(GenericLines,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(GetRequest,A3,&quot;HTTP/1\.0\x20404\x20Not\x20Found\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2048\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;404\x20Not\x20Found&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(HTTPOptions,AF,&quot;HTTP/0\.0\x20501\x20Not\x20Implemented\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2054\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;501\x20Not\x20Implemented&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(RTSPRequest,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(RPCCheck,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(DNSVersionBindReq,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(DNSStatusRequest,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(Help,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;);" method="table" conf="3"/></port>
+</ports>
+<times srtt="28081" rttvar="11258" to="100000"/>
+</host>
+<host starttime="1459708202" endtime="1459708593"><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="10.0.1.143" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="1000">
+<extrareasons reason="conn-refused" count="1000"/>
+</extraports>
+</ports>
+<times srtt="26550" rttvar="13201" to="100000"/>
+</host>
+<host starttime="1459708202" endtime="1459708593"><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="10.0.1.144" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="1000">
+<extrareasons reason="conn-refused" count="1000"/>
+</extraports>
+</ports>
+<times srtt="20668" rttvar="6499" to="100000"/>
+</host>
+<host starttime="1459708202" endtime="1459708593"><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="10.0.1.145" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="1000">
+<extrareasons reason="conn-refused" count="1000"/>
+</extraports>
+</ports>
+<times srtt="23284" rttvar="12184" to="100000"/>
+</host>
+<host starttime="1459708202" endtime="1459708634"><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="10.0.1.146" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="998">
+<extrareasons reason="conn-refused" count="998"/>
+</extraports>
+<port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="domain" product="dnsmasq" version="2.52" method="probed" conf="10"><cpe>cpe:/a:thekelleys:dnsmasq:2.52</cpe></service><script id="dns-nsid" output="&#xa;  bind.version: dnsmasq-2.52"><elem key="bind.version">dnsmasq-2.52</elem>
+</script></port>
+<port protocol="tcp" portid="49153"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="unknown" servicefp="SF-Port49153-TCP:V=6.47%I=7%D=4/3%Time=57016220%P=x86_64-pc-linux-gnu%r(NULL,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(GenericLines,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(GetRequest,A3,&quot;HTTP/1\.0\x20404\x20Not\x20Found\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2048\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;404\x20Not\x20Found&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(HTTPOptions,AF,&quot;HTTP/0\.0\x20501\x20Not\x20Implemented\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2054\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;501\x20Not\x20Implemented&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(RTSPRequest,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(RPCCheck,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(DNSVersionBindReq,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(DNSStatusRequest,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(Help,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;);" method="table" conf="3"/></port>
+</ports>
+<times srtt="20876" rttvar="10970" to="100000"/>
+</host>
+<host starttime="1459708202" endtime="1459708609"><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="10.0.1.147" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="998">
+<extrareasons reason="conn-refused" count="998"/>
+</extraports>
+<port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="domain" product="dnsmasq" version="2.52" method="probed" conf="10"><cpe>cpe:/a:thekelleys:dnsmasq:2.52</cpe></service><script id="dns-nsid" output="&#xa;  bind.version: dnsmasq-2.52"><elem key="bind.version">dnsmasq-2.52</elem>
+</script></port>
+<port protocol="tcp" portid="49153"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="unknown" servicefp="SF-Port49153-TCP:V=6.47%I=7%D=4/3%Time=57016223%P=x86_64-pc-linux-gnu%r(NULL,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(GenericLines,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(GetRequest,A3,&quot;HTTP/1\.0\x20404\x20Not\x20Found\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2048\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;404\x20Not\x20Found&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(HTTPOptions,AF,&quot;HTTP/0\.0\x20501\x20Not\x20Implemented\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2054\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;501\x20Not\x20Implemented&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(RTSPRequest,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(RPCCheck,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(DNSVersionBindReq,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(DNSStatusRequest,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(Help,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;);" method="table" conf="3"/></port>
+</ports>
+<times srtt="27178" rttvar="9529" to="100000"/>
+</host>
+<host starttime="1459708202" endtime="1459708593"><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="10.0.1.148" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="1000">
+<extrareasons reason="conn-refused" count="1000"/>
+</extraports>
+</ports>
+<times srtt="28901" rttvar="14495" to="100000"/>
+</host>
+<host starttime="1459708202" endtime="1459708642"><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="10.0.1.149" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="998">
+<extrareasons reason="conn-refused" count="998"/>
+</extraports>
+<port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="domain" product="dnsmasq" version="2.52" method="probed" conf="10"><cpe>cpe:/a:thekelleys:dnsmasq:2.52</cpe></service><script id="dns-nsid" output="&#xa;  bind.version: dnsmasq-2.52"><elem key="bind.version">dnsmasq-2.52</elem>
+</script></port>
+<port protocol="tcp" portid="49153"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="unknown" servicefp="SF-Port49153-TCP:V=6.47%I=7%D=4/3%Time=57016223%P=x86_64-pc-linux-gnu%r(NULL,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(GenericLines,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(GetRequest,A3,&quot;HTTP/1\.0\x20404\x20Not\x20Found\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2048\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;404\x20Not\x20Found&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(HTTPOptions,AF,&quot;HTTP/0\.0\x20501\x20Not\x20Implemented\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2054\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;501\x20Not\x20Implemented&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(RTSPRequest,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(RPCCheck,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(DNSVersionBindReq,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(DNSStatusRequest,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(Help,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;);" method="table" conf="3"/></port>
+</ports>
+<times srtt="20902" rttvar="5195" to="100000"/>
+</host>
+<host starttime="1459708202" endtime="1459708593"><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="10.0.1.150" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="1000">
+<extrareasons reason="conn-refused" count="1000"/>
+</extraports>
+</ports>
+<times srtt="21014" rttvar="9456" to="100000"/>
+</host>
+<host starttime="1459708202" endtime="1459708593"><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="10.0.1.151" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="1000">
+<extrareasons reason="conn-refused" count="1000"/>
+</extraports>
+</ports>
+<times srtt="22168" rttvar="6161" to="100000"/>
+</host>
+<host starttime="1459708202" endtime="1459708593"><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="10.0.1.152" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="1000">
+<extrareasons reason="conn-refused" count="1000"/>
+</extraports>
+</ports>
+<times srtt="21419" rttvar="8765" to="100000"/>
+</host>
+<host starttime="1459708202" endtime="1459708593"><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="10.0.1.153" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="1000">
+<extrareasons reason="conn-refused" count="1000"/>
+</extraports>
+</ports>
+<times srtt="11405" rttvar="5992" to="100000"/>
+</host>
+<host starttime="1459708202" endtime="1459708593"><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="10.0.1.154" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="1000">
+<extrareasons reason="conn-refused" count="1000"/>
+</extraports>
+</ports>
+<times srtt="10249" rttvar="7152" to="100000"/>
+</host>
+<host starttime="1459708202" endtime="1459708630"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="10.0.1.155" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="995">
+<extrareasons reason="conn-refused" count="995"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="upnp" product="Epson WorkForce WF-2540 printer UPnP" extrainfo="Linux; UPnP 1.0; Epson UPnP SDK 1.0" devicetype="printer" method="probed" conf="10"><cpe>cpe:/h:epson:wf-2540</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="http-methods" output="No Allow or Public header in OPTIONS response (status code 405)"/><script id="http-title" output="Site doesn&apos;t have a title (text/html)."></script></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Octoshape P2P streaming web service" method="probed" conf="10"/><script id="http-methods" output="No Allow or Public header in OPTIONS response (status code 404)"/><script id="http-title" output="Site doesn&apos;t have a title (text/html)."></script><script id="ssl-cert" output="Subject: commonName=192.168.0.2/organizationName=SEIKO EPSON CORP./countryName=JP&#xa;Issuer: commonName=192.168.0.2/organizationName=SEIKO EPSON CORP./countryName=JP&#xa;Public Key type: rsa&#xa;Public Key bits: 2048&#xa;Not valid before: 2013-01-01T00:00:03+00:00&#xa;Not valid after:  2022-12-30T00:00:03+00:00&#xa;MD5:   7d87 3c01 3ce7 1051 5478 dfe9 57ba 0732&#xa;SHA-1: 8946 579c 1eea 8c72 f950 8266 ff5c 5aba d0b8 193e"><table key="subject">
+<elem key="commonName">192.168.0.2</elem>
+<elem key="organizationName">SEIKO EPSON CORP.</elem>
+<elem key="countryName">JP</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">192.168.0.2</elem>
+<elem key="organizationName">SEIKO EPSON CORP.</elem>
+<elem key="countryName">JP</elem>
+</table>
+<table key="pubkey">
+<elem key="bits">2048</elem>
+<elem key="type">rsa</elem>
+</table>
+<table key="validity">
+<elem key="notBefore">2013-01-01T00:00:03+00:00</elem>
+<elem key="notAfter">2022-12-30T00:00:03+00:00</elem>
+</table>
+<elem key="md5">7d873c013ce710515478dfe957ba0732</elem>
+<elem key="sha1">8946579c1eea8c72f9508266ff5c5abad0b8193e</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIDUDCCAjigAwIBAgIJAK2Xe+2SfaAvMA0GCSqGSIb3DQEBBQUAMD8xCzAJBgNV&#xa;BAYTAkpQMRQwEgYDVQQDEwsxOTIuMTY4LjAuMjEaMBgGA1UEChMRU0VJS08gRVBT&#xa;T04gQ09SUC4wHhcNMTMwMTAxMDAwMDAzWhcNMjIxMjMwMDAwMDAzWjA/MQswCQYD&#xa;VQQGEwJKUDEUMBIGA1UEAxMLMTkyLjE2OC4wLjIxGjAYBgNVBAoTEVNFSUtPIEVQ&#xa;U09OIENPUlAuMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA3bjz+biC&#xa;r2E2mck4oGqhcK62Y8NsydYHpqC7COLMaYekCI6aBdKDAn8OhgSWotBjwUSj2D3Q&#xa;rNUPFSlNcxHpsqN0Hi0vIryfv/lwmOFcwrA9/RcWLSFjF7tOM7jDA9YrxN9JU1cu&#xa;8z7WlmsCpSICncpR4nCuwbO0V32P5K5rTCgjKTzyg4g2k9UFpsirEKe6e5z9+ep7&#xa;xDJsODBp1KcieSZYiLRhyC5xhKk96JpYfuxUNhYbyrGUThMJnv5vFLhpq254VUgk&#xa;Hhg6Vor+vpMUD4votK9KamkfAneJdTY/d4YZ7AAv66oD4+2e/zfEociiTadAqDMV&#xa;/DVnw9XcsVIKOQIDAQABo08wTTAMBgNVHQ8EBQMDB/mAMD0GA1UdEQQ2MDSHBMCo&#xa;AAKCCzE5Mi4xNjguMC4yghJFUFNPTkQ0MDBFNi5sb2NhbC6CC0VQU09ORDQwMEU2&#xa;MA0GCSqGSIb3DQEBBQUAA4IBAQAuW7c5RMsWx214RYZBWOf+Ms2FgP3/7LVl95YB&#xa;EL2/LnKIeKm0kfp3eHk8ZVwXnvGauBtvz7oyszzbYEpccGAPerEDiYuj/37ZX9yk&#xa;NAKJ8whmP2HPWXzX2GtKb2yLia5d1vYBzqnGRIbcz6Shbj2th8b4nl/zfpAtTul8&#xa;LsJBXkmTct3gUXF3CcZQ2nUkCrvop+t1+QTtaE/Qy+X/BzNrwDgqXOkyqzwewunE&#xa;QhMVcz9NyBQXqAVBbYblwjEQATN1cf7BzZ6Vwl9ajukHNv5HHKSSXmjnsO12pfNQ&#xa;YpZAZEDQ9gx5bh/fSj4p9DpGBJeGuRKVpsNc3kMxVVzHADmM&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="ssl-date" output="2016-04-03T18:37:10+00:00; 0s from local time."><elem key="date">2016-04-03T18:37:10+00:00</elem>
+<elem key="delta">0</elem>
+</script></port>
+<port protocol="tcp" portid="515"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="printer" method="probed" conf="10"/></port>
+<port protocol="tcp" portid="631"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="upnp" product="Epson WorkForce WF-2540 printer UPnP" extrainfo="Linux; UPnP 1.0; Epson UPnP SDK 1.0" devicetype="printer" method="probed" conf="10"><cpe>cpe:/h:epson:wf-2540</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="http-methods" output="No Allow or Public header in OPTIONS response (status code 405)"/><script id="http-title" output="Site doesn&apos;t have a title (text/html)."></script></port>
+<port protocol="tcp" portid="9100"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="jetdirect" method="table" conf="3"/></port>
+</ports>
+<times srtt="46484" rttvar="60994" to="290460"/>
+</host>
+<host starttime="1459708202" endtime="1459708593"><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="10.0.1.157" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="998">
+<extrareasons reason="conn-refused" count="998"/>
+</extraports>
+<port protocol="tcp" portid="5009"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="airport-admin" product="Apple AirPort or Time Capsule admin" method="probed" conf="10"/></port>
+<port protocol="tcp" portid="10000"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="snet-sensor-mgmt" method="table" conf="3"/></port>
+</ports>
+<times srtt="9338" rttvar="5310" to="100000"/>
+</host>
+<host starttime="1459708202" endtime="1459708621"><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="10.0.1.158" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="998">
+<extrareasons reason="conn-refused" count="998"/>
+</extraports>
+<port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="domain" product="dnsmasq" version="2.52" method="probed" conf="10"><cpe>cpe:/a:thekelleys:dnsmasq:2.52</cpe></service><script id="dns-nsid" output="&#xa;  bind.version: dnsmasq-2.52"><elem key="bind.version">dnsmasq-2.52</elem>
+</script></port>
+<port protocol="tcp" portid="49153"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="unknown" servicefp="SF-Port49153-TCP:V=6.47%I=7%D=4/3%Time=57016228%P=x86_64-pc-linux-gnu%r(NULL,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(GenericLines,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(GetRequest,A3,&quot;HTTP/1\.0\x20404\x20Not\x20Found\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2048\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;404\x20Not\x20Found&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(HTTPOptions,AF,&quot;HTTP/0\.0\x20501\x20Not\x20Implemented\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2054\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;501\x20Not\x20Implemented&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(RTSPRequest,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(RPCCheck,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(DNSVersionBindReq,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(DNSStatusRequest,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(Help,A7,&quot;HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Unspecified,\x20UPnP/1\.0,\x20Unspecified\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;);" method="table" conf="3"/></port>
+</ports>
+<times srtt="19339" rttvar="9898" to="100000"/>
+</host>
+<host starttime="1459708202" endtime="1459708605"><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="10.0.1.160" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="999">
+<extrareasons reason="conn-refused" count="999"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ssh" extrainfo="protocol 2.0" servicefp="SF-Port22-TCP:V=6.47%I=7%D=4/3%Time=5701622B%P=x86_64-pc-linux-gnu%r(NULL,20,&quot;SSH-2\.0-OpenSSH_7\.2p2\x20Ubuntu-2\r\n&quot;);" method="probed" conf="10"/><script id="ssh-hostkey" output="ERROR: Script execution failed (use -d to debug)"/></port>
+</ports>
+<times srtt="496" rttvar="6" to="100000"/>
+</host>
+<host starttime="1459708202" endtime="1459708645"><status state="up" reason="syn-ack" reason_ttl="0"/>
+<address addr="10.0.1.164" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="993">
+<extrareasons reason="conn-refused" count="993"/>
+</extraports>
+<port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="domain" product="dnsmasq" version="2.71" method="probed" conf="10"><cpe>cpe:/a:thekelleys:dnsmasq:2.71</cpe></service><script id="dns-nsid" output="&#xa;  bind.version: dnsmasq-2.71"><elem key="bind.version">dnsmasq-2.71</elem>
+</script></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Libratone httpd/0.1.1" method="probed" conf="10"/><script id="http-server-header" output="Software version grabbed from Server header.&#xa;Consider submitting a service fingerprint.&#xa;Run with -&#45;script-args http-server-header.skip&#xa;"/><script id="http-title" output="Site doesn&apos;t have a title (text/html)."></script></port>
+<port protocol="tcp" portid="5000"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="upnp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="49152"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="unknown" servicefp="SF-Port49152-TCP:V=6.47%I=7%D=4/3%Time=5701622D%P=x86_64-pc-linux-gnu%r(FourOhFourRequest,BB,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nSERVER:\x20Linux/3\.10\.0\+\x20UPnP/1\.0\x20DLNADOC/1\.50\r\nCONNECTION:\x20close\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(GetRequest,BB,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nSERVER:\x20Linux/3\.10\.0\+\x20UPnP/1\.0\x20DLNADOC/1\.50\r\nCONNECTION:\x20close\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(HTTPOptions,C3,&quot;HTTP/1\.1\x20501\x20Not\x20Implemented\r\nSERVER:\x20Linux/3\.10\.0\+\x20UPnP/1\.0\x20DLNADOC/1\.50\r\nCONNECTION:\x20close\r\nCONTENT-LENGTH:\x2054\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;501\x20Not\x20Implemented&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;);" method="table" conf="3"/></port>
+<port protocol="tcp" portid="49153"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="unknown" servicefp="SF-Port49153-TCP:V=6.47%I=7%D=4/3%Time=57016232%P=x86_64-pc-linux-gnu%r(GetRequest,BB,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nSERVER:\x20Linux/3\.10\.0\+\x20UPnP/1\.0\x20DLNADOC/1\.50\r\nCONNECTION:\x20close\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(HTTPOptions,C3,&quot;HTTP/1\.1\x20501\x20Not\x20Implemented\r\nSERVER:\x20Linux/3\.10\.0\+\x20UPnP/1\.0\x20DLNADOC/1\.50\r\nCONNECTION:\x20close\r\nCONTENT-LENGTH:\x2054\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;501\x20Not\x20Implemented&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(FourOhFourRequest,BB,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nSERVER:\x20Linux/3\.10\.0\+\x20UPnP/1\.0\x20DLNADOC/1\.50\r\nCONNECTION:\x20close\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;);" method="table" conf="3"/></port>
+<port protocol="tcp" portid="49154"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="unknown" servicefp="SF-Port49154-TCP:V=6.47%I=7%D=4/3%Time=57016232%P=x86_64-pc-linux-gnu%r(GetRequest,BB,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nSERVER:\x20Linux/3\.10\.0\+\x20UPnP/1\.0\x20DLNADOC/1\.50\r\nCONNECTION:\x20close\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(HTTPOptions,C3,&quot;HTTP/1\.1\x20501\x20Not\x20Implemented\r\nSERVER:\x20Linux/3\.10\.0\+\x20UPnP/1\.0\x20DLNADOC/1\.50\r\nCONNECTION:\x20close\r\nCONTENT-LENGTH:\x2054\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;501\x20Not\x20Implemented&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(FourOhFourRequest,BB,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nSERVER:\x20Linux/3\.10\.0\+\x20UPnP/1\.0\x20DLNADOC/1\.50\r\nCONNECTION:\x20close\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;);" method="table" conf="3"/></port>
+<port protocol="tcp" portid="49155"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="unknown" servicefp="SF-Port49155-TCP:V=6.47%I=7%D=4/3%Time=57016232%P=x86_64-pc-linux-gnu%r(GetRequest,BB,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nSERVER:\x20Linux/3\.10\.0\+\x20UPnP/1\.0\x20DLNADOC/1\.50\r\nCONNECTION:\x20close\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(HTTPOptions,C3,&quot;HTTP/1\.1\x20501\x20Not\x20Implemented\r\nSERVER:\x20Linux/3\.10\.0\+\x20UPnP/1\.0\x20DLNADOC/1\.50\r\nCONNECTION:\x20close\r\nCONTENT-LENGTH:\x2054\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;501\x20Not\x20Implemented&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;)%r(FourOhFourRequest,BB,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nSERVER:\x20Linux/3\.10\.0\+\x20UPnP/1\.0\x20DLNADOC/1\.50\r\nCONNECTION:\x20close\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n&lt;html&gt;&lt;body&gt;&lt;h1&gt;400\x20Bad\x20Request&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;&quot;);" method="table" conf="3"/></port>
+</ports>
+<times srtt="35494" rttvar="25416" to="137158"/>
+</host>
+<taskbegin task="NSE" time="1459708675"/>
+<taskend task="NSE" time="1459708675"/>
+<runstats><finished time="1459708675" timestr="Sun Apr  3 11:37:55 2016" elapsed="473.44" summary="Nmap done at Sun Apr  3 11:37:55 2016; 256 IP addresses (55 hosts up) scanned in 473.44 seconds" exit="success"/><hosts up="55" down="201" total="256"/>
+</runstats>
+</nmaprun>
