@@ -10,6 +10,8 @@ gem 'dotenv'
 
 gem 'pry'
 
+gem 'arp'
+
 gem 'xml-simple'
 
 gem 'UPnP'
