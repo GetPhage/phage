@@ -27,9 +27,9 @@ class Scan
     results do |item|
 #      ScanDiff.new(scan: scan,
                    
-      d = Device.new(mac_address: item[:mac],
-                     ipv4: item[:ip])
-      d.save
+      d = Device.find_or_create_by!( mac_address: item[:mac]) do |device|
+        device[:ipv4] = item[:ip]
+      end
     end
   end
   end

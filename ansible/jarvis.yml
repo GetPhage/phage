@@ -35,3 +35,8 @@
           priv: "ALL"                    # privilege string format: example: INSERT,UPDATE/table:SELECT/anothertable:ALL
           role_attr_flags: "CREATEDB"    # role attribute flags
     - role: basics
+    - role: franklinkim.sudo
+      sudo_users:
+        - name: vagrant
+          nopasswd: yes
+          commands: /usr/bin/nmap
