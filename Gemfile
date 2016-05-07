@@ -1,9 +1,10 @@
 source 'https://rubygems.org'
 
-gem 'activerecord'
+gem 'activerecord', '=5.0.0beta4'
 gem 'rake'
 gem 'sqlite3'
 gem 'logger'
+gem 'pg'
 
 gem 'backup'
 gem 'dotenv'

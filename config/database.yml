@@ -1,5 +1,10 @@
-adapter: sqlite3
-encoding: utf8
-database: jarvis.sqlite
+adapter: postgresql
+encoding: unicode
+database: jarvis
+username: postgres
+#password: V6HCfBZCkre2Mc
+
+#adapter: sqlite3
+#database: jarvis.sqlite
 #username: root
 #password:

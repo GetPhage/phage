@@ -1,6 +1,7 @@
 require 'arp'
+#require 'models'
 
-module Scan
+class Scan
   class Passive
     def initialize
       @results = []
@@ -12,16 +13,26 @@ module Scan
 
         @results.push({ ip: match[1], mac: match[2] })
 
-        @cache = Arp::Cache.new
+#        @cache = Arp::Cache.new
       end
     end
 
     def results
-      @cache.each { |entry| yield entry }
-#      @results.each { |r| yield r }
+#      @cache.each { |entry| yield entry }
+      @results.each { |r| yield r }
+    end
+
+  def perform
+#    scan = Scan.new scan_type: 'passive'
+    results do |item|
+#      ScanDiff.new(scan: scan,
+                   
+      d = Device.new(mac_address: item[:mac],
+                     ipv4: item[:ip])
+      d.save
     end
   end
+  end
+
 end
 
-scan = Scan::Passive.new
-scan.results { |s| pp s }

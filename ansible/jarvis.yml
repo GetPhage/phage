@@ -1,0 +1,35 @@
+- name: Build Jarvis box
+  hosts: all
+  sudo: true
+  sudo_user: root
+  vars:
+    rbenv:
+      env: user
+      version: v0.4.0
+      ruby_version: 2.3.1
+  roles:
+    - role: zzet.rbenv
+      rbenv_users:
+        - vagrant
+      rbenv_plugins:
+        - { name: "ruby-build",
+            repo: "https://github.com/sstephenson/ruby-build.git",
+            version: "v20160426"
+        }
+    - role: ANXS.postgresql
+      postgresql_version: 9.5
+      postgresql_encoding: 'UTF-8'
+      postgresql_locale: 'en_US.UTF-8'
+      postgresql_databases:
+        - name: jarvis
+          owner: jarvis          # optional; specify the owner of the database
+      postgresql_users:
+        - name: jarvis
+          pass: V6HCfBZCkre2Mc
+          encrypted: no       # denotes if the password is already encrypted.
+      postgresql_user_privileges:
+        - name: jarvis                   # user name
+          db: jarvis                     # database
+          priv: "ALL"                    # privilege string format: example: INSERT,UPDATE/table:SELECT/anothertable:ALL
+          role_attr_flags: "CREATEDB"    # role attribute flags
+    - role: basics
