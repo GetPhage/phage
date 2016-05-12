@@ -5,14 +5,11 @@ require 'yaml'
 require 'sqlite3'
 require 'logger'
 
-task :default => :migrate
-
-desc "Migrate the database through scripts in db/migrate. Target specific version with VERSION=x"
-task :migrate => :environment do
-  ActiveRecord::Migrator.migrate('db/migrate', ENV["VERSION"] ? ENV["VERSION"].to_i : nil )
-end
+task default: %w[db:migrate]
 
 task :environment do
   ActiveRecord::Base.establish_connection(YAML::load(File.open('config/database.yml')))
   ActiveRecord::Base.logger = Logger.new(File.open('database.log', 'a'))
 end
+
+Dir.glob('lib/tasks/*.rake').each { |r| load r}

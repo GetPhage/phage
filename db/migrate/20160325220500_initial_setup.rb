@@ -10,7 +10,7 @@ class InitialSetup < ActiveRecord::Migration[5.0]
       t.string :device_name, :string, null: false
       t.column :device_type, :integer, null: false
 
-      t.string :my_ip, null: false
+      t.string :my_ipv4, null: false
       t.string :my_ipv6, null: true
       t.string :mac_address, null: false
 
@@ -55,7 +55,7 @@ class InitialSetup < ActiveRecord::Migration[5.0]
       t.timestamps null: false
     end
 
-    create_table :scan do |t|
+    create_table :scans do |t|
       t.string :scan_type
 
       t.timestamp :start
@@ -68,7 +68,7 @@ class InitialSetup < ActiveRecord::Migration[5.0]
       t.index :scan_type
     end
 
-    create_table :scan_diff do |t|
+    create_table :scan_diffs do |t|
       t.integer :scan_id, null: false
       t.integer :device_id, null: true
 
@@ -96,7 +96,7 @@ class InitialSetup < ActiveRecord::Migration[5.0]
       t.index :version
     end
 
-    create_table :software_blacklist do |t|
+    create_table :software_blacklists do |t|
       t.string :name
       t.string :version
       t.string :reason
@@ -107,7 +107,7 @@ class InitialSetup < ActiveRecord::Migration[5.0]
       t.index :version
     end
 
-    create_table :upnp do |t|
+    create_table :upnps do |t|
       t.string :uuid
 
       t.integer :device_id, null: true
@@ -119,7 +119,7 @@ class InitialSetup < ActiveRecord::Migration[5.0]
       t.index :last_seen
     end
 
-    create_table :upnp_service do |t|
+    create_table :upnp_services do |t|
       t.string :name, null: false
 
       t.timestamps null: false
@@ -127,7 +127,7 @@ class InitialSetup < ActiveRecord::Migration[5.0]
       t.index :name
     end
 
-    create_table :upnp_service_map do |t|
+    create_table :upnp_service_maps do |t|
       t.integer :upnp_id
       t.integer :upnp_service_id
 
@@ -153,7 +153,7 @@ class InitialSetup < ActiveRecord::Migration[5.0]
       t.index :last_seen
     end
 
-    create_table :mdns_service do |t|
+    create_table :mdns_services do |t|
       t.string :name, null: false
 
       t.timestamps null: false
@@ -161,7 +161,7 @@ class InitialSetup < ActiveRecord::Migration[5.0]
       t.index :name
     end
 
-    create_table :mdns_service_map do |t|
+    create_table :mdns_service_maps do |t|
       t.integer :mdns_id
       t.integer :mdns_service_id
 
@@ -174,51 +174,51 @@ class InitialSetup < ActiveRecord::Migration[5.0]
     add_foreign_key :samples, :devices
     add_foreign_key :software_versions, :devices
 
-    add_foreign_key :scan_diff, :scan
-    add_foreign_key :scan_diff, :devices
+    add_foreign_key :scan_diffs, :scans
+    add_foreign_key :scan_diffs, :devices
 
-    add_foreign_key :upnp, :devices
+    add_foreign_key :upnps, :devices
     add_foreign_key :mdns, :devices
 
-    add_foreign_key :upnp_service_map, :upnp
-    add_foreign_key :upnp_service_map, :upnp_service
+    add_foreign_key :upnp_service_maps, :upnps
+    add_foreign_key :upnp_service_maps, :upnp_services
 
-    add_foreign_key :mdns_service_map, :mdns
-    add_foreign_key :mdns_service_map, :mdns_service
+    add_foreign_key :mdns_service_maps, :mdns
+    add_foreign_key :mdns_service_maps, :mdns_services
   end
 
   def down
     drop_table :devices
     drop_table :samples
 
-    drop_table :scan
-    drop_table :scan_diff
+    drop_table :scans
+    drop_table :scan_diffs
 
     drop_table :software_versions
-    drop_table :software_blacklist
+    drop_table :software_blacklists
 
-    drop_table :upnp
+    drop_table :upnps
     drop_table :upnp_services
-    drop_table :upnp_service_map
+    drop_table :upnp_service_maps
 
-    drop_table :mdns
+    drop_table :mdnss
     drop_table :mdns_services
-    drop_table :mdns_service_map
+    drop_table :mdns_service_maps
 
     remove_foreign_key :samples, :devices
     remove_foreign_key :software_versions, :devices
 
-    remove_foreign_key :scan_diff, :scan
-    remove_foreign_key :scan_diff, :device
+    remove_foreign_key :scan_diffs, :scan
+    remove_foreign_key :scan_diffs, :device
 
-    remove_foreign_key :upnp, :devices
+    remove_foreign_key :upnps, :devices
     remove_foreign_key :mdns, :devices
+s
+    remove_foreign_key :upnp_service_maps, :upnps
+    remove_foreign_key :upnp_service_maps, :upnp_services
 
-    remove_foreign_key :upnp_service_map, :upnp
-    remove_foreign_key :upnp_service_map, :upnp_services
-
-    remove_foreign_key :mdns_service_map, :mdns
-    remove_foreign_key :mdns_service_map, :mdns_services
+    remove_foreign_key :mdns_service_maps, :mdns
+    remove_foreign_key :mdns_service_maps, :mdns_services
   end
 
 end

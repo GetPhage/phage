@@ -31,7 +31,7 @@ class ScanDiff < ActiveRecord::Base
   belongs_to :device
 end
 
-class SoftwareVersions < ActiveRecord::Base
+class SoftwareVersion < ActiveRecord::Base
 end
 
 class SoftwareBlacklist < ActiveRecord::Base

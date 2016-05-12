@@ -40,3 +40,18 @@
         - name: vagrant
           nopasswd: yes
           commands: /usr/bin/nmap
+    - role: geerlingguy.redis
+      redis_databases: 1
+      redis_maxmemory: 96000000
+      redis_bind_interface: 127.0.0.1
+    - role: crushlovely.sidekiq-upstart
+      app_name: jarvis
+      app_path: /vagrant
+      server_env: development
+    - role: mashimom.oh-my-zsh
+      ohmyzsh.user: vagrant
+      ohmyzsh.plugins: [git, git-extras,  ruby, redis-cli]
+    - role: franklinkim.ufw
+      ufw_default_input_policy: DROP
+      ufw_rules:
+        - { port: 22, rule: allow }

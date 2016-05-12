@@ -1,0 +1,7 @@
+---
+# defaults file for oh-my-zsh
+
+ohmyzsh:
+  user: "{{ ansible_env.USER }}"
+  plugins: [git, vagrant, docker, command-not-found, gradle, lein]
+  theme: pygmalion
