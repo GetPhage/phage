@@ -20,9 +20,17 @@ passive_scanner.each do |item|
   next unless item[:interface] == 'eth1'
 
   device = Device.find_by mac_address: item[:mac_address]
+
+#    pp device
+#    pp device.public_methods.sort
+
   unless device
     device = Device.create mac_address: item[:mac_address], ipv4: item[:ipv4], last_seen: Time.now
-    device.create_scandiff scan: scan, type: 'New Device', data: { ipv4: item[:ipv4] }
-    
+    diff = ScanDiff.create scan: scan, kind: 'New Device', data: { ipv4: item[:ipv4] }, status: :added
+    pp device, diff
+  else
+    if device[:ipv4] != item[:ipv4]
+      diff = ScanDiff.create scan: scan, kind: 'IP address change', data: { ipv4: item[:ipv4]  }, status: :changed
+    end
   end
 end

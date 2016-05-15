@@ -26,7 +26,7 @@ class InitialSetup < ActiveRecord::Migration[5.0]
       t.column :mac_address, :string, null: false
       t.string :ipv4, null: true
       t.string :ipv6, null: true
-      t.string :type
+      t.string :kind
       t.timestamp :last_seen
 
       t.timestamps null: false
@@ -34,7 +34,7 @@ class InitialSetup < ActiveRecord::Migration[5.0]
       t.index :mac_address
       t.index :ipv4
       t.index :ipv6
-      t.index :type
+      t.index :kind
       t.index :last_seen
     end
 
@@ -72,7 +72,7 @@ class InitialSetup < ActiveRecord::Migration[5.0]
       t.integer :scan_id, null: false
       t.integer :device_id, null: true
 
-      t.string :type, null: false
+      t.string :kind, null: false
       #      t.enum :status, [ :added, :removed, :changed ], null: false
       t.column :status, :integer, null: false
 
@@ -81,7 +81,7 @@ class InitialSetup < ActiveRecord::Migration[5.0]
 
       t.index :scan_id
       t.index :device_id
-      t.index :type
+      t.index :kind
       t.index :data, using: :gin
     end
 

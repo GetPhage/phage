@@ -300,6 +300,7 @@ GEM
       wasabi (~> 3.4)
     simple_oauth (0.2.0)
     slop (3.6.0)
+    snmp (1.2.0)
     soap4r (1.5.8)
       httpclient (>= 2.1.1)
     socksify (1.7.0)
@@ -346,9 +347,7 @@ DEPENDENCIES
   pry
   rake
   ruby-nmap
+  snmp
   sqlite3
   wemo!
   xml-simple
-
-BUNDLED WITH
-   1.12.2

@@ -1,7 +1,7 @@
 class Scan
   class Deep
-    def perform
-      system "nmap -oA `date '+%F-%R:%S'` -v -A 10.0.1.0/24"
+    def initialize(host)
+      system "nmap -oA `date '+%F-%R:%S'` -v -A #{host}"
     end
   end
 end

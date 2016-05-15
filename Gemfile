@@ -12,6 +12,7 @@ gem 'dotenv'
 gem 'pry'
 
 gem 'arp'
+gem 'snmp'
 
 gem 'xml-simple'
 
