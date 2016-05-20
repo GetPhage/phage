@@ -6,7 +6,19 @@ Optionally ping 255.255.255.255
 
 
 
+# SNMP ARP scan
+
+Scan the ARP tables of any SNMP agents we can reach
+
+
 # deep scan
+
+Attempts to identify device type and manufacturer
+
+# software versions scan
+
+Attempts to identify versions of software (OS, httpd, sshd, etc)
+running on devices.
 
 
 

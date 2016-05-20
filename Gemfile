@@ -13,10 +13,10 @@ gem 'pry'
 
 gem 'arp'
 gem 'snmp'
-
 gem 'xml-simple'
 
 gem 'UPnP'
+gem 'ssdp'
 gem 'ruby-nmap'
 
 gem 'wemo', git: 'git@github.com:jordanbyron/wemo.git', branch: 'master'
