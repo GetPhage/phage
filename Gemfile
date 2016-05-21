@@ -14,6 +14,7 @@ gem 'pry'
 gem 'arp'
 gem 'snmp'
 gem 'xml-simple'
+gem 'net-ping'
 
 gem 'UPnP'
 gem 'ssdp'

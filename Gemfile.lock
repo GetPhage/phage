@@ -257,6 +257,7 @@ GEM
     multi_json (1.10.1)
     multi_xml (0.5.5)
     multipart-post (1.2.0)
+    net-ping (1.7.8)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-sftp (2.1.2)
@@ -344,6 +345,7 @@ DEPENDENCIES
   dotenv
   hue
   logger
+  net-ping
   pg
   pry
   rake
@@ -353,6 +355,3 @@ DEPENDENCIES
   ssdp
   wemo!
   xml-simple
-
-BUNDLED WITH
-   1.12.3
