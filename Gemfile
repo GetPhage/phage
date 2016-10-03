@@ -16,8 +16,7 @@ gem 'snmp'
 gem 'xml-simple'
 gem 'net-ping'
 
-gem 'UPnP'
-gem 'ssdp'
+gem 'playful'
 gem 'ruby-nmap'
 
 gem 'wemo', git: 'git@github.com:jordanbyron/wemo.git', branch: 'master'
