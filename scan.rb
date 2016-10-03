@@ -36,3 +36,10 @@ passive_scanner.each do |item|
     end
   end
 end
+
+Device.find_each do |dev|
+  next if passive_scanner.any? { |d| d[:mac_address] == dev[:mac_address] }
+
+  diff = ScanDiff.create scan: scan, kind: 'Missing Device', data: { ipv4: dev[:ipv4]  }, status: :removed
+  pp dev, diff
+end
