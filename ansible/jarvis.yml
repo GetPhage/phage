@@ -1,4 +1,4 @@
-- name: Build Jarvis box
+- name: Build Phage box
   hosts: all
   sudo: true
   sudo_user: root
@@ -7,12 +7,13 @@
       env: user
       version: v0.4.0
       ruby_version: 2.3.1
+    default_user: vagrant
   roles:
     - role: yatesr.timezone
       timezone: America/Los_Angeles
     - role: zzet.rbenv
       rbenv_users:
-        - vagrant
+        - "{{ default_user }}"
       rbenv_plugins:
         - { name: "ruby-build",
             repo: "https://github.com/sstephenson/ruby-build.git",
@@ -23,35 +24,28 @@
       postgresql_encoding: 'UTF-8'
       postgresql_locale: 'en_US.UTF-8'
       postgresql_databases:
-        - name: jarvis
-          owner: jarvis          # optional; specify the owner of the database
+        - name: phage
+          owner: phage          # optional; specify the owner of the database
       postgresql_users:
-        - name: jarvis
+        - name: phage
           pass: V6HCfBZCkre2Mc
           encrypted: no       # denotes if the password is already encrypted.
       postgresql_user_privileges:
-        - name: jarvis                   # user name
-          db: jarvis                     # database
+        - name: phage                   # user name
+          db: phage                     # database
           priv: "ALL"                    # privilege string format: example: INSERT,UPDATE/table:SELECT/anothertable:ALL
           role_attr_flags: "CREATEDB"    # role attribute flags
     - role: basics
     - role: franklinkim.sudo
       sudo_users:
-        - name: vagrant
+        - name: "{{ default_user }}"
           nopasswd: yes
           commands: /usr/bin/nmap
-    - role: geerlingguy.redis
-      redis_databases: 1
-      redis_maxmemory: 96000000
-      redis_bind_interface: 127.0.0.1
-    - role: crushlovely.sidekiq-upstart
-      app_name: jarvis
-      app_path: /vagrant
-      server_env: development
     - role: mashimom.oh-my-zsh
-      ohmyzsh.user: vagrant
-      ohmyzsh.plugins: [git, git-extras,  ruby, redis-cli]
+      ohmyzsh.user: "{{ default_user }}"
+      ohmyzsh.plugins: [git, git-extras,  ruby, emacs, postgres, rbenv, rails, rake, tmux, ubuntu]
     - role: franklinkim.ufw
       ufw_default_input_policy: DROP
       ufw_rules:
         - { port: 22, rule: allow }
+        - { port: 80, rule: allow }

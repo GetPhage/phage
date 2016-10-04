@@ -4,9 +4,9 @@
   - name: clean apt cache
     shell: apt-get -y autoremove && apt-get -y autoclean
     when: ansible_pkg_mgr == 'apt'
-    sudo: true
+    become: yes
 
   - name: clean yum cache
     shell: yum -y clean all
     when: ansible_pkg_mgr == 'yum'
-    sudo: true
+    become: yes

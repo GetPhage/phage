@@ -1,4 +1,0 @@
-app_name: test
-app_path: /home/ubuntu/test
-server_env: qa
-app_process_name: "{{ app_name }}"

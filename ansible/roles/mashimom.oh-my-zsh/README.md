@@ -9,6 +9,7 @@ The role's variables are:
 
 | Variable | Default value | Description |
 |----------|---------------|-------------|
+| `ohmyzsh_user` | "{{ ansible_env.USER }}" | User on which oh-my-zsh will be configured |
 | `ohmyzsh_plugins` | `[git, vagrant, docker, command-not-found, gradle, lein]` | List of the plugins that should be added to oh-my-zsh |
 | `ohmyzsh_theme` | `pygmalion` | Theme to be ser on oh-my-zsh |
 
@@ -22,4 +23,4 @@ Including an example of how to use this role:
 
 ## License
 
-[Apache License v2.0](LICENSE)
+[MIT](LICENSE)
