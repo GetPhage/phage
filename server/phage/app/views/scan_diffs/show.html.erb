@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Scan:</strong>
+  <%= @scan_diff.scan %>
+</p>
+
+<p>
+  <strong>Device:</strong>
+  <%= @scan_diff.device %>
+</p>
+
+<p>
+  <strong>Kind:</strong>
+  <%= @scan_diff.kind %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @scan_diff.status %>
+</p>
+
+<p>
+  <strong>Extra:</strong>
+  <%= @scan_diff.extra %>
+</p>
+
+<%= link_to 'Edit', edit_scan_diff_path(@scan_diff) %> |
+<%= link_to 'Back', scan_diffs_path %>

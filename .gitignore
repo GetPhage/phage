@@ -4,3 +4,8 @@ jarvis.sqlite
 database.log
 .vagrant/
 
+/ansible/*.retry
+
+*.xml
+*.nmap
+*.gnmap

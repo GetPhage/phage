@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  scan: one
+  device: one
+  kind: MyString
+  status: 1
+  extra: 
+
+two:
+  scan: two
+  device: two
+  kind: MyString
+  status: 1
+  extra: 

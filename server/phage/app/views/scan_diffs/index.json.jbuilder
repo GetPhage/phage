@@ -1,0 +1,1 @@
+json.array! @scan_diffs, partial: 'scan_diffs/scan_diff', as: :scan_diff

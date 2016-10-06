@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Scans</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Scan type</th>
+      <th>Start</th>
+      <th>End</th>
+      <th>Notes</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @scans.each do |scan| %>
+      <tr>
+        <td><%= scan.scan_type %></td>
+        <td><%= scan.start %></td>
+        <td><%= scan.end %></td>
+        <td><%= scan.notes %></td>
+        <td><%= link_to 'Show', scan %></td>
+        <td><%= link_to 'Edit', edit_scan_path(scan) %></td>
+        <td><%= link_to 'Destroy', scan, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Scan', new_scan_path %>

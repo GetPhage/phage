@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Scan Diffs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Scan</th>
+      <th>Device</th>
+      <th>Kind</th>
+      <th>Status</th>
+      <th>Extra</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @scan_diffs.each do |scan_diff| %>
+      <tr>
+        <td><%= scan_diff.scan %></td>
+        <td><%= scan_diff.device %></td>
+        <td><%= scan_diff.kind %></td>
+        <td><%= scan_diff.status %></td>
+        <td><%= scan_diff.extra %></td>
+        <td><%= link_to 'Show', scan_diff %></td>
+        <td><%= link_to 'Edit', edit_scan_diff_path(scan_diff) %></td>
+        <td><%= link_to 'Destroy', scan_diff, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Scan Diff', new_scan_diff_path %>

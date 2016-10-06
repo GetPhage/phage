@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  scan_type: MyString
+  start: 2016-10-06 07:35:57
+  end: 2016-10-06 07:35:57
+  notes: MyString
+
+two:
+  scan_type: MyString
+  start: 2016-10-06 07:35:57
+  end: 2016-10-06 07:35:57
+  notes: MyString

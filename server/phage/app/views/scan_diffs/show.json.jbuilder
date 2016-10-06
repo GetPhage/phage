@@ -1,0 +1,1 @@
+json.partial! "scan_diffs/scan_diff", scan_diff: @scan_diff

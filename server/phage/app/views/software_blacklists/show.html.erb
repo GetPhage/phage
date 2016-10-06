@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @software_blacklist.name %>
+</p>
+
+<p>
+  <strong>Version:</strong>
+  <%= @software_blacklist.version %>
+</p>
+
+<p>
+  <strong>Reason:</strong>
+  <%= @software_blacklist.reason %>
+</p>
+
+<%= link_to 'Edit', edit_software_blacklist_path(@software_blacklist) %> |
+<%= link_to 'Back', software_blacklists_path %>

@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Mac address:</strong>
+  <%= @device.mac_address %>
+</p>
+
+<p>
+  <strong>Ipv4:</strong>
+  <%= @device.ipv4 %>
+</p>
+
+<p>
+  <strong>Ipv6:</strong>
+  <%= @device.ipv6 %>
+</p>
+
+<p>
+  <strong>Kind:</strong>
+  <%= @device.kind %>
+</p>
+
+<p>
+  <strong>Last seen:</strong>
+  <%= @device.last_seen %>
+</p>
+
+<p>
+  <strong>Extra:</strong>
+  <%= @device.extra %>
+</p>
+
+<%= link_to 'Edit', edit_device_path(@device) %> |
+<%= link_to 'Back', devices_path %>

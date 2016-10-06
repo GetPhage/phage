@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  mac_address: 
+  ipv4: 
+  ipv6: 
+  kind: MyString
+  last_seen: 2016-10-06 07:19:32
+  extra: 
+
+two:
+  mac_address: 
+  ipv4: 
+  ipv6: 
+  kind: MyString
+  last_seen: 2016-10-06 07:19:32
+  extra: 
