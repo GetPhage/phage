@@ -5,12 +5,12 @@ class CreateScanDiffs < ActiveRecord::Migration[5.0]
       t.belongs_to :device, foreign_key: true
       t.string :kind
       t.integer :status
-      t.hstore :extra
+      t.jsonb :extra
 
       t.timestamps
     end
     add_index :scan_diffs, :kind
     add_index :scan_diffs, :status
-    add_index :scan_diffs, :extra
+    add_index :scan_diffs, :extra, using: :gin
   end
 end

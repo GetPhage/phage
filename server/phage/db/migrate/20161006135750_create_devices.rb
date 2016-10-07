@@ -1,12 +1,14 @@
 class CreateDevices < ActiveRecord::Migration[5.0]
   def change
+#    enable_extension "hstore"
+
     create_table :devices do |t|
-      t.mac_address :mac_address
-      t.ip_address :ipv4
-      t.ip_address :ipv6
+      t.macaddr :mac_address
+      t.inet :ipv4
+      t.inet :ipv6
       t.string :kind
       t.timestamp :last_seen
-      t.hstore :extra
+      t.jsonb :extra
 
       t.timestamps
     end
@@ -14,6 +16,6 @@ class CreateDevices < ActiveRecord::Migration[5.0]
     add_index :devices, :ipv4
     add_index :devices, :ipv6
     add_index :devices, :kind
-    add_index :devices, :extra
+    add_index :devices, :extra, using: :gin
   end
 end

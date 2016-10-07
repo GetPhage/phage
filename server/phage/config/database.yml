@@ -4,7 +4,7 @@ default: &default
   database: phage
   pool: 5
   username: phage
-  password:V6HCfBZCkre2Mc
+  password: V6HCfBZCkre2Mc
 
 development:
   <<: *default
