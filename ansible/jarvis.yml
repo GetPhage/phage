@@ -30,11 +30,17 @@
         - name: phage
           pass: V6HCfBZCkre2Mc
           encrypted: no       # denotes if the password is already encrypted.
+        - name: superloser
+          pass: 8Bx@zXFR4rA9
+          encrypted: no       # denotes if the password is already encrypted.
       postgresql_user_privileges:
         - name: phage                   # user name
           db: phage                     # database
           priv: "ALL"                    # privilege string format: example: INSERT,UPDATE/table:SELECT/anothertable:ALL
           role_attr_flags: "CREATEDB"    # role attribute flags
+        - name: superloser
+          priv: "all"                    # privilege string format: example: INSERT,UPDATE/table:SELECT/anothertable:ALL
+          role_attr_flags: "SUPERUSER"    # role attribute flags
     - role: basics
     - role: franklinkim.sudo
       sudo_users:
