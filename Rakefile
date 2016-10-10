@@ -1,15 +1,7 @@
-#!/usr/bin/env rake
+# Add your own tasks in files placed in lib/tasks ending in .rake,
+# for example lib/tasks/capistrano.rake, and they will automatically be available to Rake.
 
-require 'active_record'
-require 'yaml'
-require 'sqlite3'
-require 'logger'
+require_relative 'config/application'
+require 'backburner/tasks'
 
-task default: %w[db:migrate]
-
-task :environment do
-  ActiveRecord::Base.establish_connection(YAML::load(File.open('config/database.yml')))
-  ActiveRecord::Base.logger = Logger.new(File.open('database.log', 'a'))
-end
-
-Dir.glob('lib/tasks/*.rake').each { |r| load r}
+Rails.application.load_tasks
