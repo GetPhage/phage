@@ -43,11 +43,11 @@ module Phage
           pp d
 
           if d
-            unless d[:ipv4] == item[:ipv4]
+            unless d[:ipv4].include?(item[:ipv4])
               puts "different ip"
               puts d[:ipv4], item[:ipv4]
 
-              d[:ipv4] = item[:ipv4]
+              d[:ipv4].push item[:ipv4]
               d.save
 
               ScanDiff.create( { ipv4: item[:ipv4], device: d, status: :change, scan: scan, kind: "passive" } )
@@ -56,7 +56,7 @@ module Phage
 
           unless d
             puts "create device"
-            d = Device.create mac_address: item[:mac_address], ipv4: item[:ipv4], kind: '', last_seen: Time.now
+            d = Device.create mac_address: item[:mac_address], ipv4: [ item[:ipv4] ], kind: '', last_seen: Time.now
             pp d
 
             ScanDiff.create( { mac_address: item[:mac_address], ipv4: item[:ipv4], device: d, status: :change, scan: scan, kind: "passive" } )

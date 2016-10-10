@@ -4,8 +4,8 @@ class CreateSamples < ActiveRecord::Migration[5.0]
       t.integer :device_id, null: false
 
       t.string :mac_address, null: false
-      t.string  :ipv4, null: true
-      t.string :ipv6, null: true
+      t.string  :ipv4, array: true, null: true
+      t.string :ipv6, array: true, null: true
       t.integer :signal_strength, null: true
 
       t.index :device_id

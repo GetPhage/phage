@@ -17,8 +17,8 @@ ActiveRecord::Schema.define(version: 20161006154509) do
 
   create_table "devices", force: :cascade do |t|
     t.macaddr  "mac_address",              null: false
-    t.inet     "ipv4"
-    t.inet     "ipv6"
+    t.inet     "ipv4",                                  array: true
+    t.inet     "ipv6",                                  array: true
     t.string   "kind",                     null: false
     t.datetime "last_seen",                null: false
     t.jsonb    "extra",       default: {}, null: false
@@ -48,8 +48,8 @@ ActiveRecord::Schema.define(version: 20161006154509) do
   create_table "samples", force: :cascade do |t|
     t.integer  "device_id",       null: false
     t.string   "mac_address",     null: false
-    t.string   "ipv4"
-    t.string   "ipv6"
+    t.string   "ipv4",                         array: true
+    t.string   "ipv6",                         array: true
     t.integer  "signal_strength"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false

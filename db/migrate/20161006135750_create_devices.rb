@@ -2,8 +2,8 @@ class CreateDevices < ActiveRecord::Migration[5.0]
   def change
     create_table :devices do |t|
       t.macaddr :mac_address, null: false
-      t.inet :ipv4, null: true
-      t.inet :ipv6, null: true
+      t.inet :ipv4, array: true, null: true
+      t.inet :ipv6, array: true, null: true
       t.string :kind, null: false
       t.timestamp :last_seen, null: false
       t.jsonb :extra, null: false, default: {}
