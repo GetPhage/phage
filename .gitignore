@@ -1,11 +1,16 @@
 .bundle/
 .DS_Store
+._.DS_Store
 jarvis.sqlite
 database.log
 .vagrant/
 
 /ansible/*.retry
 
+#*
+*~
+
 *.xml
+*.XML
 *.nmap
 *.gnmap

@@ -38,4 +38,9 @@ RailsAdmin.config do |config|
     # history_index
     # history_show
   end
+
 end
+
+  class RailsAdmin::Config::Fields::Types::Macaddr < RailsAdmin::Config::Fields::Base
+    RailsAdmin::Config::Fields::Types::register(self)
+  end
