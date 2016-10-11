@@ -10,20 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161006154509) do
+ActiveRecord::Schema.define(version: 20161011172850) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "devices", force: :cascade do |t|
-    t.macaddr  "mac_address",              null: false
-    t.inet     "ipv4",                                  array: true
-    t.inet     "ipv6",                                  array: true
-    t.string   "kind",                     null: false
-    t.datetime "last_seen",                null: false
-    t.jsonb    "extra",       default: {}, null: false
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
+    t.macaddr  "mac_address",                null: false
+    t.inet     "ipv4",                                    array: true
+    t.inet     "ipv6",                                    array: true
+    t.string   "kind",                       null: false
+    t.datetime "last_seen",                  null: false
+    t.jsonb    "extra",       default: {},   null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.string   "name",                                    array: true
+    t.boolean  "active",      default: true, null: false
     t.index ["extra"], name: "index_devices_on_extra", using: :gin
     t.index ["ipv4"], name: "index_devices_on_ipv4", using: :btree
     t.index ["ipv6"], name: "index_devices_on_ipv6", using: :btree
@@ -43,6 +45,22 @@ ActiveRecord::Schema.define(version: 20161006154509) do
     t.string   "default_gw"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+  end
+
+  create_table "product_categories", force: :cascade do |t|
+    t.string   "name"
+    t.boolean  "mobile"
+    t.integer  "product_category_id"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+    t.index ["mobile"], name: "index_product_categories_on_mobile", using: :btree
+    t.index ["name"], name: "index_product_categories_on_name", using: :btree
+    t.index ["product_category_id"], name: "index_product_categories_on_product_category_id", using: :btree
+  end
+
+  create_table "products", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "samples", force: :cascade do |t|
@@ -96,6 +114,7 @@ ActiveRecord::Schema.define(version: 20161006154509) do
     t.index ["reason"], name: "index_software_blacklists_on_reason", using: :btree
   end
 
+  add_foreign_key "product_categories", "product_categories"
   add_foreign_key "scan_diffs", "devices"
   add_foreign_key "scan_diffs", "scans"
 end

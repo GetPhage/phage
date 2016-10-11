@@ -26,10 +26,10 @@ module Phage
 
         lines = `/usr/sbin/arp -a`.split "\n"
         lines.each do |line|
-          match = line.match /\((\d+\.\d+\.\d+\.\d+)\) at (\h{1,2}:\h{1,2}:\h{1,2}:\h{1,2}:\h{1,2}:\h{1,2}) \[ether\] on (\S+)/
+          match = line.match /(\S+) \((\d+\.\d+\.\d+\.\d+)\) at (\h{1,2}:\h{1,2}:\h{1,2}:\h{1,2}:\h{1,2}:\h{1,2}) \[ether\] on (\S+)/
           next unless match
 
-          @collection.push({ ipv4: match[1], mac_address: match[2], interface: match[3] })
+          @collection.push({ ipv4: match[2], mac_address: match[3], interface: match[4], name: match[1] == '?' ? '' : match[1] })
         end
       end
 
@@ -43,7 +43,14 @@ module Phage
           pp d
 
           if d
-            unless d[:ipv4].include?(item[:ipv4])
+            unless d.active?
+              d.active = true
+              d.save
+
+              ScanDiff.create( { extras: { active: true }, device: d, status: :change, scan: scan, kind: 'passive' } )
+            end
+
+            unless d.has_ipv4?(item[:ipv4])
               puts "different ip"
               puts d[:ipv4], item[:ipv4]
 
@@ -52,14 +59,31 @@ module Phage
 
               ScanDiff.create( { ipv4: item[:ipv4], device: d, status: :change, scan: scan, kind: "passive" } )
             end
-          end
 
-          unless d
+            unless item[:name] != '' && d.has_name?(item[:name])
+              puts "different name"
+              puts d[:name], item[:name]
+
+              d[:name] ||= []
+              d[:name].push item[:name]
+              d.save
+
+              ScanDiff.create( { name: item[:name], device: d, status: :add, scan: scan, kind: "passive" } )
+            end
+          else
             puts "create device"
             d = Device.create mac_address: item[:mac_address], ipv4: [ item[:ipv4] ], kind: '', last_seen: Time.now
             pp d
 
-            ScanDiff.create( { mac_address: item[:mac_address], ipv4: item[:ipv4], device: d, status: :change, scan: scan, kind: "passive" } )
+            ScanDiff.create( { mac_address: item[:mac_address], ipv4: item[:ipv4], device: d, status: :add, scan: scan, kind: "passive" } )
+          end
+        end
+
+        Device.all.each do |device|
+          if @collection.select { |item| item[:mac_address] == device[:mac_address] }.empty?
+            device.active = false
+            device.save
+            ScanDiff.create( { mac_address: device[:mac_address], device: device, status: :remove, scan: scan, kind: "passive" } )
           end
         end
 

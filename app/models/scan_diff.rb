@@ -4,5 +4,5 @@ class ScanDiff < ApplicationRecord
 
   enum status: [:add, :remove, :change]
 
-  store_accessor :extra, :ipv4, :ipv6, :mac_address
+  store_accessor :extra, :ipv4, :ipv6, :mac_address, :name
 end

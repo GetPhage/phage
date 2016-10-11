@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :products
+  resources :product_categories
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   resources :software_blacklists
   resources :scan_diffs

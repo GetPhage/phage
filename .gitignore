@@ -6,6 +6,9 @@ database.log
 .vagrant/
 
 /ansible/*.retry
+/tmp/*
+/public/assets/*
+/log/*
 
 #*
 *~

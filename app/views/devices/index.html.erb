@@ -2,25 +2,29 @@
 
 <h1>Devices</h1>
 
+<p><%= Device.all.count %> devices known</p>
+<p><%= Device.where(active: true).count %> active, <%= Device.where(active:false).count %> inactive</p>
 <table>
   <thead>
     <tr>
       <th>Mac address</th>
+      <th>Name</th>
       <th>Ipv4</th>
       <th>Ipv6</th>
       <th>Kind</th>
       <th>Last seen</th>
       <th>Extra</th>
-      <th colspan="3"></th>
+      <th colspan="7"></th>
     </tr>
   </thead>
 
   <tbody>
     <% @devices.each do |device| %>
-      <tr>
+      <tr class='<%= device.active ? "active" : "inactive" %>'>
         <td><%= device.mac_address %></td>
-        <td><%= device.ipv4 %></td>
-        <td><%= device.ipv6 %></td>
+	<td><%= device.name && device.name.join(', ') %></td>
+        <td><%= device.ipv4 && device.ipv4.join(', ') %></td>
+        <td><%= device.ipv6 && device.ipv6.join(', ')  %></td>
         <td><%= device.kind %></td>
         <td><%= device.last_seen %></td>
         <td><%= device.extra %></td>
