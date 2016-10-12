@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Prefix:</strong>
+  <%= @oui.prefix %>
+</p>
+
+<p>
+  <strong>Manufacturer:</strong>
+  <%= @oui.manufacturer %>
+</p>
+
+<%= link_to 'Edit', edit_oui_path(@oui) %> |
+<%= link_to 'Back', ouis_path %>

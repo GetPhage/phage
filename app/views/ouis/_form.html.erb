@@ -1,0 +1,27 @@
+<%= form_for(oui) do |f| %>
+  <% if oui.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(oui.errors.count, "error") %> prohibited this oui from being saved:</h2>
+
+      <ul>
+      <% oui.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :prefix %>
+    <%= f.text_field :prefix %>
+  </div>
+
+  <div class="field">
+    <%= f.label :manufacturer %>
+    <%= f.text_field :manufacturer %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Ouis</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Prefix</th>
+      <th>Manufacturer</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ouis.each do |oui| %>
+      <tr>
+        <td><%= oui.prefix %></td>
+        <td><%= oui.manufacturer %></td>
+        <td><%= link_to 'Show', oui %></td>
+        <td><%= link_to 'Edit', edit_oui_path(oui) %></td>
+        <td><%= link_to 'Destroy', oui, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Oui', new_oui_path %>
