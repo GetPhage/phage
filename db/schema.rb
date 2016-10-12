@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161011214946) do
+ActiveRecord::Schema.define(version: 20161012134932) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,11 +26,13 @@ ActiveRecord::Schema.define(version: 20161011214946) do
     t.datetime "updated_at",                 null: false
     t.string   "name",                                    array: true
     t.boolean  "active",      default: true, null: false
+    t.integer  "oui_id"
     t.index ["extra"], name: "index_devices_on_extra", using: :gin
     t.index ["ipv4"], name: "index_devices_on_ipv4", using: :btree
     t.index ["ipv6"], name: "index_devices_on_ipv6", using: :btree
     t.index ["kind"], name: "index_devices_on_kind", using: :btree
     t.index ["mac_address"], name: "index_devices_on_mac_address", using: :btree
+    t.index ["oui_id"], name: "index_devices_on_oui_id", using: :btree
   end
 
   create_table "networks", force: :cascade do |t|
@@ -123,6 +125,7 @@ ActiveRecord::Schema.define(version: 20161011214946) do
     t.index ["reason"], name: "index_software_blacklists_on_reason", using: :btree
   end
 
+  add_foreign_key "devices", "ouis"
   add_foreign_key "product_categories", "product_categories"
   add_foreign_key "scan_diffs", "devices"
   add_foreign_key "scan_diffs", "scans"

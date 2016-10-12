@@ -7,6 +7,8 @@ class Device < ApplicationRecord
     end
   end
 
+  belongs_to :oui
+
   def has_name?(name)
     self.name.include? name
   end
