@@ -1,4 +1,7 @@
 // Place all the styles related to the devices controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.inactive { color: lightgray; }
+.inactive { color: gray }
+
+tr:nth-child(even) { background-color: lightgray; }
+
