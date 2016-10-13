@@ -66,3 +66,5 @@ gem 'net-ping'
 
 # temporary fix for Sinatra dependency issue
 gem 'sinatra', github: 'sinatra/sinatra'
+
+gem 'bootstrap', '~> 4.0.0.alpha4'
