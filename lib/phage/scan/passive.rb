@@ -37,17 +37,17 @@ module Phage
         scan = ::Scan.create scan_type: "passive", start: start, end: complete
 
         @collection.each do |item|
-          pp item
+#          pp item
           
           d = Device.find_by mac_address: item[:mac_address]
-          pp d
+#          pp d
 
           if d
             unless d.active?
               d.active = true
               d.save
 
-              ScanDiff.create( { extras: { active: true }, device: d, status: :change, scan: scan, kind: 'passive' } )
+              ScanDiff.create( { extra: { active: true }, device: d, status: :change, scan: scan, kind: 'passive' } )
             end
 
             unless d.has_ipv4?(item[:ipv4])
@@ -60,9 +60,9 @@ module Phage
               ScanDiff.create( { ipv4: item[:ipv4], device: d, status: :change, scan: scan, kind: "passive" } )
             end
 
-            unless item[:name] != '' && d.has_name?(item[:name])
+            if item[:name] != '' && d.has_name?(item[:name]) then
               puts "different name"
-              puts d[:name], item[:name]
+              puts "'#{d[:name]}', '#{item[:name]}'"
 
               d[:name] ||= []
               d[:name].push item[:name]

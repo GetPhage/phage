@@ -1,7 +1,7 @@
 require 'phage/scan/passive'
 
 class PassiveScanJob < ApplicationJob
-  queue_as :default
+  queue_as "com.romkey.phage.backburner-jobs"
 
   def perform(*args)
     start = Time.now

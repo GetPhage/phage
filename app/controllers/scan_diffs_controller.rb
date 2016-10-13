@@ -4,7 +4,7 @@ class ScanDiffsController < ApplicationController
   # GET /scan_diffs
   # GET /scan_diffs.json
   def index
-    @scan_diffs = ScanDiff.all
+    @scan_diffs = ScanDiff.all.order(id: :desc)
   end
 
   # GET /scan_diffs/1
