@@ -2,6 +2,7 @@ namespace :names do
   task :cleanup => [:environment] do
     Device.all.each do |dev|
       dev.name = dev.name.select { |name| name != '' }
+      dev.name.uniq!
       dev.save
     end
 
