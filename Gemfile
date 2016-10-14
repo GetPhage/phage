@@ -72,3 +72,6 @@ gem 'will_paginate', '~> 3.1.0'
 
 # UPNP support
 gem 'playful'
+
+# mDNS support
+gem 'dnssd'

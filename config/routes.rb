@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :mdns
   resources :upnps
   resources :ouis
   resources :products

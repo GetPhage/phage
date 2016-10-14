@@ -1,0 +1,1 @@
+json.array! @mdns, partial: 'mdns/mdn', as: :mdn

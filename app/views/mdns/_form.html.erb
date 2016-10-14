@@ -1,0 +1,37 @@
+<%= form_for(mdn) do |f| %>
+  <% if mdn.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(mdn.errors.count, "error") %> prohibited this mdn from being saved:</h2>
+
+      <ul>
+      <% mdn.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :service %>
+    <%= f.text_field :service %>
+  </div>
+
+  <div class="field">
+    <%= f.label :protocol %>
+    <%= f.text_field :protocol %>
+  </div>
+
+  <div class="field">
+    <%= f.label :device_id %>
+    <%= f.text_field :device_id %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
