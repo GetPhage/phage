@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :upnps
   resources :ouis
   resources :products
   resources :product_categories

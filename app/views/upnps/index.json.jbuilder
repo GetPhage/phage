@@ -1,0 +1,1 @@
+json.array! @upnps, partial: 'upnps/upnp', as: :upnp

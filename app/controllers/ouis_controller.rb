@@ -4,7 +4,7 @@ class OuisController < ApplicationController
   # GET /ouis
   # GET /ouis.json
   def index
-    @ouis = Oui.all
+    @ouis = Oui.all.order(updated_at: :asc)
   end
 
   # GET /ouis/1

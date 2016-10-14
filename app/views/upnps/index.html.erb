@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Upnps</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Device</th>
+      <th>St</th>
+      <th>Usn</th>
+      <th>Location</th>
+      <th>Cache control</th>
+      <th>Server</th>
+      <th>Ext</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @upnps.each do |upnp| %>
+      <tr>
+        <td><%= upnp.device ? link_to(upnp.device.name.first || upnp.device.id, upnp.device) : '' %></td>
+        <td><%= upnp.st %></td>
+        <td><%= upnp.usn %></td>
+        <td><%= link_to upnp.location, upnp.location %></td>
+        <td><%= upnp.cache_control %></td>
+        <td><%= upnp.server %></td>
+        <td><%= upnp.ext %></td>
+        <td><%= link_to 'Show', upnp %></td>
+        <td><%= link_to 'Edit', edit_upnp_path(upnp) %></td>
+        <td><%= link_to 'Destroy', upnp, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Upnp', new_upnp_path %>

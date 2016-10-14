@@ -4,7 +4,7 @@ class ScanDiffsController < ApplicationController
   # GET /scan_diffs
   # GET /scan_diffs.json
   def index
-    @scan_diffs = ScanDiff.all.order(id: :desc)
+    @scan_diffs = ScanDiff.all.order(id: :desc).paginate(:page => params[:page], per_page: 50)
   end
 
   # GET /scan_diffs/1

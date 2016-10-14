@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  device: one
+  st: MyString
+  usn: MyString
+  location: MyString
+  cache_control: MyString
+  server: MyString
+  ext: MyString
+
+two:
+  device: two
+  st: MyString
+  usn: MyString
+  location: MyString
+  cache_control: MyString
+  server: MyString
+  ext: MyString

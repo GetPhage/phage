@@ -68,3 +68,7 @@ gem 'net-ping'
 gem 'sinatra', github: 'sinatra/sinatra'
 
 gem 'bootstrap', '~> 4.0.0.alpha4'
+gem 'will_paginate', '~> 3.1.0'
+
+# UPNP support
+gem 'playful'

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161012134932) do
+ActiveRecord::Schema.define(version: 20161013162603) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -125,8 +125,28 @@ ActiveRecord::Schema.define(version: 20161012134932) do
     t.index ["reason"], name: "index_software_blacklists_on_reason", using: :btree
   end
 
+  create_table "upnps", force: :cascade do |t|
+    t.integer  "device_id"
+    t.string   "st"
+    t.string   "usn"
+    t.string   "location"
+    t.string   "cache_control"
+    t.string   "server"
+    t.string   "ext"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.index ["cache_control"], name: "index_upnps_on_cache_control", using: :btree
+    t.index ["device_id"], name: "index_upnps_on_device_id", using: :btree
+    t.index ["ext"], name: "index_upnps_on_ext", using: :btree
+    t.index ["location"], name: "index_upnps_on_location", using: :btree
+    t.index ["server"], name: "index_upnps_on_server", using: :btree
+    t.index ["st"], name: "index_upnps_on_st", using: :btree
+    t.index ["usn"], name: "index_upnps_on_usn", using: :btree
+  end
+
   add_foreign_key "devices", "ouis"
   add_foreign_key "product_categories", "product_categories"
   add_foreign_key "scan_diffs", "devices"
   add_foreign_key "scan_diffs", "scans"
+  add_foreign_key "upnps", "devices"
 end

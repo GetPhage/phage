@@ -1,0 +1,52 @@
+<%= form_for(upnp) do |f| %>
+  <% if upnp.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(upnp.errors.count, "error") %> prohibited this upnp from being saved:</h2>
+
+      <ul>
+      <% upnp.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :device_id %>
+    <%= f.text_field :device_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :st %>
+    <%= f.text_field :st %>
+  </div>
+
+  <div class="field">
+    <%= f.label :usn %>
+    <%= f.text_field :usn %>
+  </div>
+
+  <div class="field">
+    <%= f.label :location %>
+    <%= f.text_field :location %>
+  </div>
+
+  <div class="field">
+    <%= f.label :cache_control %>
+    <%= f.text_field :cache_control %>
+  </div>
+
+  <div class="field">
+    <%= f.label :server %>
+    <%= f.text_field :server %>
+  </div>
+
+  <div class="field">
+    <%= f.label :ext %>
+    <%= f.text_field :ext %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

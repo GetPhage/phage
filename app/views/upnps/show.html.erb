@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Device:</strong>
+  <%= @upnp.device %>
+</p>
+
+<p>
+  <strong>St:</strong>
+  <%= @upnp.st %>
+</p>
+
+<p>
+  <strong>Usn:</strong>
+  <%= @upnp.usn %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @upnp.location %>
+</p>
+
+<p>
+  <strong>Cache control:</strong>
+  <%= @upnp.cache_control %>
+</p>
+
+<p>
+  <strong>Server:</strong>
+  <%= @upnp.server %>
+</p>
+
+<p>
+  <strong>Ext:</strong>
+  <%= @upnp.ext %>
+</p>
+
+<%= link_to 'Edit', edit_upnp_path(@upnp) %> |
+<%= link_to 'Back', upnps_path %>
