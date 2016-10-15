@@ -10,29 +10,60 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161013162603) do
+ActiveRecord::Schema.define(version: 20161015052058) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "devices", force: :cascade do |t|
-    t.macaddr  "mac_address",                null: false
-    t.inet     "ipv4",                                    array: true
-    t.inet     "ipv6",                                    array: true
-    t.string   "kind",                       null: false
-    t.datetime "last_seen",                  null: false
-    t.jsonb    "extra",       default: {},   null: false
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
-    t.string   "name",                                    array: true
-    t.boolean  "active",      default: true, null: false
+    t.macaddr  "mac_address",                      null: false
+    t.inet     "ipv4",                                          array: true
+    t.inet     "ipv6",                                          array: true
+    t.string   "kind",                             null: false
+    t.datetime "last_seen",                        null: false
+    t.jsonb    "extra",             default: {},   null: false
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
+    t.string   "name",                                          array: true
+    t.boolean  "active",            default: true, null: false
     t.integer  "oui_id"
+    t.string   "firmware_version"
+    t.integer  "product_id"
+    t.string   "serial_number"
+    t.string   "model_number"
+    t.string   "model_shortname"
+    t.string   "upc"
+    t.string   "model_description"
     t.index ["extra"], name: "index_devices_on_extra", using: :gin
+    t.index ["firmware_version"], name: "index_devices_on_firmware_version", using: :btree
     t.index ["ipv4"], name: "index_devices_on_ipv4", using: :btree
     t.index ["ipv6"], name: "index_devices_on_ipv6", using: :btree
     t.index ["kind"], name: "index_devices_on_kind", using: :btree
     t.index ["mac_address"], name: "index_devices_on_mac_address", using: :btree
+    t.index ["model_description"], name: "index_devices_on_model_description", using: :btree
     t.index ["oui_id"], name: "index_devices_on_oui_id", using: :btree
+    t.index ["product_id"], name: "index_devices_on_product_id", using: :btree
+    t.index ["upc"], name: "index_devices_on_upc", using: :btree
+  end
+
+  create_table "manufacturers", force: :cascade do |t|
+    t.string   "name"
+    t.string   "web"
+    t.string   "support_url"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["name"], name: "index_manufacturers_on_name", using: :btree
+  end
+
+  create_table "mdns", force: :cascade do |t|
+    t.string   "name"
+    t.string   "service"
+    t.string   "protocol"
+    t.integer  "device_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["device_id"], name: "index_mdns_on_device_id", using: :btree
+    t.index ["name"], name: "index_mdns_on_name", using: :btree
   end
 
   create_table "networks", force: :cascade do |t|
@@ -70,8 +101,10 @@ ActiveRecord::Schema.define(version: 20161013162603) do
   end
 
   create_table "products", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.integer  "manufacturer_id"
+    t.index ["manufacturer_id"], name: "index_products_on_manufacturer_id", using: :btree
   end
 
   create_table "samples", force: :cascade do |t|
@@ -145,7 +178,10 @@ ActiveRecord::Schema.define(version: 20161013162603) do
   end
 
   add_foreign_key "devices", "ouis"
+  add_foreign_key "devices", "products"
+  add_foreign_key "mdns", "devices"
   add_foreign_key "product_categories", "product_categories"
+  add_foreign_key "products", "manufacturers"
   add_foreign_key "scan_diffs", "devices"
   add_foreign_key "scan_diffs", "scans"
   add_foreign_key "upnps", "devices"
