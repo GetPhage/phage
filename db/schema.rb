@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161015052058) do
+ActiveRecord::Schema.define(version: 20161015135624) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -56,14 +56,23 @@ ActiveRecord::Schema.define(version: 20161015052058) do
   end
 
   create_table "mdns", force: :cascade do |t|
-    t.string   "name"
+    t.string   "hostname"
     t.string   "service"
     t.string   "protocol"
     t.integer  "device_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+    t.string   "txt",                     null: false
+    t.inet     "ipv4",       default: [],              array: true
+    t.inet     "ipv6",       default: [],              array: true
+    t.integer  "port",                    null: false
+    t.jsonb    "extra",      default: {}, null: false
     t.index ["device_id"], name: "index_mdns_on_device_id", using: :btree
-    t.index ["name"], name: "index_mdns_on_name", using: :btree
+    t.index ["extra"], name: "index_mdns_on_extra", using: :gin
+    t.index ["hostname"], name: "index_mdns_on_hostname", using: :btree
+    t.index ["ipv4"], name: "index_mdns_on_ipv4", using: :gin
+    t.index ["ipv6"], name: "index_mdns_on_ipv6", using: :gin
+    t.index ["port"], name: "index_mdns_on_port", using: :btree
   end
 
   create_table "networks", force: :cascade do |t|

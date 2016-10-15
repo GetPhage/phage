@@ -4,7 +4,7 @@ class UpnpsController < ApplicationController
   # GET /upnps
   # GET /upnps.json
   def index
-    @upnps = Upnp.all.order(updated_at: :asc)
+    @upnps = Upnp.all.order(updated_at: :asc).paginate(:page => params[:page], per_page: 100)
   end
 
   # GET /upnps/1
