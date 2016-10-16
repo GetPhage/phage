@@ -1,6 +1,7 @@
 require 'phage/scan/upnp'
 
 namespace :upnp do
+  desc ""
   task :devices => [:environment] do
     Upnp.all.each do |u|
       next if u.device
