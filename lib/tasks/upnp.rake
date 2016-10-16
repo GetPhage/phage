@@ -1,7 +1,7 @@
 require 'phage/scan/upnp'
 
 namespace :upnp do
-  desc ""
+  desc "Associate devices with UPNP info"
   task :devices => [:environment] do
     Upnp.all.each do |u|
       next if u.device
@@ -12,6 +12,7 @@ namespace :upnp do
     end
   end
 
+  desc "Update UPNP-related device metadata"
   task :names => [:environment] do
     Upnp.all.each do |u|
       next unless u.device
@@ -21,9 +22,12 @@ namespace :upnp do
 
       puts info["root"]["device"]["friendlyName"]
 
-      m = Manufacturer.first_or_create(name: info["root"]["device"]["manufacturer"])
+      m = Manufacturer.where(name: info["root"]["device"]["manufacturer"]).first_or_create(name: info["root"]["device"]["manufacturer"])
+      p = Product.where(manufacturer: m, name: info["root"]["device"]["modelName"]).first_or_create manufacturer: m,
+                                                                                                    name: info["root"]["device"]["modelName"]
 
-#      u.device.manufacturer_id = m.id;
+      u.device.product = p
+
       u.device[:name].push info["root"]["device"]["friendlyName"]
       u.device[:firmware_version] = info["root"]["device"]["firmwareVersion"]
       u.device[:serial_number] = info["root"]["device"]["serialNumber"]

@@ -8,6 +8,13 @@ class Device < ApplicationRecord
   end
 
   belongs_to :oui
+  belongs_to :product
+  
+  def add_name(name)
+    unless has_name? name
+      self.name.push name
+    end
+  end
 
   def has_name?(name)
     self.name.include? name

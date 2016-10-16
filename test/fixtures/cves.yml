@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  seq: MyString
+  status: MyString
+  desc: MyString
+  refs: MyString
+  comments: MyString
+
+two:
+  name: MyString
+  seq: MyString
+  status: MyString
+  desc: MyString
+  refs: MyString
+  comments: MyString

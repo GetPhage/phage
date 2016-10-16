@@ -10,10 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161015135624) do
+ActiveRecord::Schema.define(version: 20161016054556) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "cves", force: :cascade do |t|
+    t.string   "name"
+    t.string   "seq"
+    t.string   "status"
+    t.string   "desc"
+    t.string   "refs"
+    t.string   "comments"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["desc"], name: "index_cves_on_desc", using: :btree
+    t.index ["name"], name: "index_cves_on_name", using: :btree
+    t.index ["seq"], name: "index_cves_on_seq", using: :btree
+  end
 
   create_table "devices", force: :cascade do |t|
     t.macaddr  "mac_address",                      null: false
@@ -113,6 +127,7 @@ ActiveRecord::Schema.define(version: 20161015135624) do
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
     t.integer  "manufacturer_id"
+    t.string   "name",            null: false
     t.index ["manufacturer_id"], name: "index_products_on_manufacturer_id", using: :btree
   end
 

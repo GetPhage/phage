@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Phage</title>
+<title><%= yield(:title) %></title>
+<% content_for :title, "Phage" %>
 <%= csrf_meta_tags %>
 
 <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>

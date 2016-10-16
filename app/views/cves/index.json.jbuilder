@@ -1,0 +1,1 @@
+json.array! @cves, partial: 'cves/cfe', as: :cfe

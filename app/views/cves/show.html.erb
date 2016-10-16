@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @cfe.name %>
+</p>
+
+<p>
+  <strong>Seq:</strong>
+  <%= @cfe.seq %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @cfe.status %>
+</p>
+
+<p>
+  <strong>Desc:</strong>
+  <%= @cfe.desc %>
+</p>
+
+<p>
+  <strong>Refs:</strong>
+  <%= @cfe.refs %>
+</p>
+
+<p>
+  <strong>Comments:</strong>
+  <%= @cfe.comments %>
+</p>
+
+<%= link_to 'Edit', edit_cfe_path(@cfe) %> |
+<%= link_to 'Back', cves_path %>

@@ -1,0 +1,47 @@
+<%= form_for(cfe) do |f| %>
+  <% if cfe.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(cfe.errors.count, "error") %> prohibited this cfe from being saved:</h2>
+
+      <ul>
+      <% cfe.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :seq %>
+    <%= f.text_field :seq %>
+  </div>
+
+  <div class="field">
+    <%= f.label :status %>
+    <%= f.text_field :status %>
+  </div>
+
+  <div class="field">
+    <%= f.label :desc %>
+    <%= f.text_field :desc %>
+  </div>
+
+  <div class="field">
+    <%= f.label :refs %>
+    <%= f.text_field :refs %>
+  </div>
+
+  <div class="field">
+    <%= f.label :comments %>
+    <%= f.text_field :comments %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

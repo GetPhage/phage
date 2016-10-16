@@ -1,0 +1,1 @@
+json.partial! "cves/cfe", cfe: @cfe

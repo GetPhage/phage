@@ -1,6 +1,7 @@
 require 'import_oui'
 
 namespace :oui do
+  desc "Import OUIs from oui.txt"
   task :import => [:environment] do
     oui = OUI.new "./oui.txt"
     oui.each do |item|
@@ -8,6 +9,7 @@ namespace :oui do
     end
   end
 
+  desc "Associate OUIs with Devices"
   task :associate => [:environment] do
     Device.all.each do |device|
       puts device.mac_address

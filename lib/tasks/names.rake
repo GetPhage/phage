@@ -1,4 +1,5 @@
 namespace :names do
+  desc "Clean up common device name issues"
   task :cleanup => [:environment] do
     Device.all.each do |dev|
       dev.name ||= []
