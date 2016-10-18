@@ -4,7 +4,7 @@ class CvesController < ApplicationController
   # GET /cves
   # GET /cves.json
   def index
-    @cves = Cve.all
+    @cves = Cve.all.order(updated_at: :asc).paginate(:page => params[:page], per_page: 20)
   end
 
   # GET /cves/1

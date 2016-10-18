@@ -28,7 +28,9 @@ namespace :upnp do
 
       u.device.product = p
 
-      u.device[:name].push info["root"]["device"]["friendlyName"]
+      unless u.device[:name].include? info["root"]["device"]["friendlyName"]
+        u.device[:name].push info["root"]["device"]["friendlyName"]
+      end
       u.device[:firmware_version] = info["root"]["device"]["firmwareVersion"]
       u.device[:serial_number] = info["root"]["device"]["serialNumber"]
       u.device[:upc] = info["root"]["device"]["UPC"]

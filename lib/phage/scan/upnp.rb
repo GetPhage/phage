@@ -21,6 +21,7 @@ module Phage
 
         puts "init"
         all_devices = Playful::SSDP.search :all
+        all_devices += Playful::SSDP.search :all, do_broadcast_search: true
         all_devices += Playful::SSDP.search("urn:Belkin:device:controllee:1")
 
         @collection += all_devices
@@ -37,6 +38,22 @@ module Phage
         end
 
         all_devices.length
+      end
+
+      def self.poke_all
+        Device.all.each do |dev|
+          discovery_msg = <<END_OF_DISCOVER_MSG
+M-SEARCH * HTTP/1.1
+HOST: #{dev.ipv4.first}:1900
+MAN: ssdp:discover
+MX: 10
+ST: ssdp:all
+END_OF_DISCOVER_MSG
+        end
+
+        Socket.udp_server_loop(@port) do |data, src|
+          
+        end
       end
 
       def self.probe_device(upnp)

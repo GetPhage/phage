@@ -77,6 +77,8 @@ module Phage
 
         Device.all.each do |device|
           if @collection.select { |item| item[:mac_address] == device[:mac_address] }.empty?
+            next unless device.active
+
             device.active = false
             device.save
             ScanDiff.create( { mac_address: device[:mac_address], device: device, status: :remove, scan: scan, kind: "passive" } )

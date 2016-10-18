@@ -7,13 +7,16 @@
 </p>
 
 <p>
-  <strong>Name:</strong>
-  <%= @device.name %>
+  <strong>Names:</strong>
+  <%= @device.name.join(', ') %>
 </p>
+
+<%= @device.product.try(:name) %>
+<%= @device.product.try(:manufacturer).try(:name) %>
 
 <p>
   <strong>Ipv4:</strong>
-  <%= @device.ipv4 %>
+  <%= @device.ipv4.map(&:to_s).join(', ') %>
 </p>
 
 <p>
