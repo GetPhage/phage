@@ -31,13 +31,27 @@
 
 <p>
   <strong>Last seen:</strong>
-  <%= @device.last_seen %>
+  <%=distance_of_time_in_words(@device.last_seen, Time.now, include_seconds: true) %>
 </p>
 
 <p>
   <strong>Extra:</strong>
   <%= @device.extra %>
 </p>
+
+<pre>
+  <%= results =  @device.scan_diff.where("extra ? 'active'").inject({}) { |hash, sd| hash.merge({ sd.created_at => sd.extra["active"] }) } ;
+  new_results = results.clone
+  results.each { |key, value| new_results[key - 0.01] = !value }
+  JSON.pretty_generate(results)
+  JSON.pretty_generate(new_results) %>
+</pre>
+
+<%= results =  @device.scan_diff.where("extra ? 'active'").inject({}) { |hash, sd| hash.merge({ sd.created_at => sd.extra["active"] }) } ;
+  new_results = results.clone
+  results.each { |key, value| new_results[key - 0.01] = !value }
+ column_chart( new_results ) %>
+<%= column_chart(  @device.scan_diff.where("extra ? 'active'").inject({}) { |hash, sd| hash.merge( { sd.created_at => sd.extra["active"] ? 1 : 0  })}, discrete: true ) %>
 
 <%= link_to 'Edit', edit_device_path(@device) %> |
 <%= link_to 'Back', devices_path %>

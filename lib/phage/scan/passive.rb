@@ -41,6 +41,7 @@ module Phage
           if d
             unless d.active?
               d.active = true
+              d.last_seen = Time.now
               d.save
 
               ScanDiff.create( { extra: { active: true }, device: d, status: :change, scan: scan, kind: 'passive' } )
@@ -81,7 +82,7 @@ module Phage
 
             device.active = false
             device.save
-            ScanDiff.create( { mac_address: device[:mac_address], device: device, status: :remove, scan: scan, kind: "passive" } )
+            ScanDiff.create( { extra: { active: false }, device: device, status: :change, scan: scan, kind: "passive" } )
           end
         end
 

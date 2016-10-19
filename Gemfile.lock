@@ -72,6 +72,7 @@ GEM
       sass (>= 3.4.19)
     builder (3.2.2)
     byebug (9.0.6)
+    chartkick (2.1.1)
     coffee-rails (4.2.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.2.x)
@@ -103,6 +104,8 @@ GEM
       railties (>= 3.2, < 5.1)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
+    groupdate (3.0.2)
+      activesupport (>= 3)
     gyoku (1.3.1)
       builder (>= 2.1.2)
     haml (4.0.7)
@@ -270,9 +273,11 @@ DEPENDENCIES
   beanstalkd_view
   bootstrap (~> 4.0.0.alpha4)
   byebug
+  chartkick
   coffee-rails (~> 4.2)
   dnssd
   dotenv
+  groupdate
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)

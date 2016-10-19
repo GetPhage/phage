@@ -9,6 +9,7 @@ class Device < ApplicationRecord
 
   belongs_to :oui
   belongs_to :product
+  has_many :scan_diff
   
   def add_name(name)
     unless has_name? name

@@ -75,3 +75,7 @@ gem 'playful'
 
 # mDNS support
 gem 'dnssd'
+
+# charts
+gem 'chartkick'
+gem 'groupdate'
