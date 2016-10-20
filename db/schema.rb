@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161016054556) do
+ActiveRecord::Schema.define(version: 20161020165847) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,6 +48,10 @@ ActiveRecord::Schema.define(version: 20161016054556) do
     t.string   "model_shortname"
     t.string   "upc"
     t.string   "model_description"
+    t.integer  "udpv4",             default: [],                array: true
+    t.integer  "tcpv4",             default: [],                array: true
+    t.integer  "udpv6",             default: [],                array: true
+    t.integer  "tcpv6",             default: [],                array: true
     t.index ["extra"], name: "index_devices_on_extra", using: :gin
     t.index ["firmware_version"], name: "index_devices_on_firmware_version", using: :btree
     t.index ["ipv4"], name: "index_devices_on_ipv4", using: :btree
@@ -57,6 +61,10 @@ ActiveRecord::Schema.define(version: 20161016054556) do
     t.index ["model_description"], name: "index_devices_on_model_description", using: :btree
     t.index ["oui_id"], name: "index_devices_on_oui_id", using: :btree
     t.index ["product_id"], name: "index_devices_on_product_id", using: :btree
+    t.index ["tcpv4"], name: "index_devices_on_tcpv4", using: :gin
+    t.index ["tcpv6"], name: "index_devices_on_tcpv6", using: :gin
+    t.index ["udpv4"], name: "index_devices_on_udpv4", using: :gin
+    t.index ["udpv6"], name: "index_devices_on_udpv6", using: :gin
     t.index ["upc"], name: "index_devices_on_upc", using: :btree
   end
 
@@ -170,6 +178,19 @@ ActiveRecord::Schema.define(version: 20161016054556) do
     t.datetime "updated_at",              null: false
     t.index ["scan_type"], name: "index_scans_on_scan_type", using: :btree
     t.index ["start"], name: "index_scans_on_start", using: :btree
+  end
+
+  create_table "services", force: :cascade do |t|
+    t.string   "name",                     null: false
+    t.integer  "port_number",              null: false
+    t.string   "protocol",    default: "", null: false
+    t.string   "description", default: "", null: false
+    t.string   "reference",   default: "", null: false
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.index ["name"], name: "index_services_on_name", using: :btree
+    t.index ["port_number"], name: "index_services_on_port_number", using: :btree
+    t.index ["protocol"], name: "index_services_on_protocol", using: :btree
   end
 
   create_table "software_blacklists", force: :cascade do |t|

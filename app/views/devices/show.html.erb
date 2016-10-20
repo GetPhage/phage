@@ -39,6 +39,12 @@
   <%= @device.extra %>
 </p>
 
+<p>
+  <strong>Open ports:</strong>
+  <strong>TCPv4:</strong>
+  <%= @device.tcpv4.join(', ') %>
+  </p>
+
 <pre>
   <%= results =  @device.scan_diff.where("extra ? 'active'").inject({}) { |hash, sd| hash.merge({ sd.created_at => sd.extra["active"] }) } ;
   new_results = results.clone
@@ -49,8 +55,7 @@
 
 <%= results =  @device.scan_diff.where("extra ? 'active'").inject({}) { |hash, sd| hash.merge({ sd.created_at => sd.extra["active"] }) } ;
   new_results = results.clone
-  results.each { |key, value| new_results[key - 0.01] = !value }
- column_chart( new_results ) %>
+  results.each { |key, value| new_results[key - 0.01] = !value } %>
 <%= column_chart(  @device.scan_diff.where("extra ? 'active'").inject({}) { |hash, sd| hash.merge( { sd.created_at => sd.extra["active"] ? 1 : 0  })}, discrete: true ) %>
 
 <%= link_to 'Edit', edit_device_path(@device) %> |

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :services
   resources :cves
   resources :manufacturers
   resources :mdns
