@@ -44,12 +44,15 @@ module Phage
       def self.scan_network()
       end
 
-      def diff
+      def diff(start = Time.now, complete = Time.now)
+        scan = Scan.create scan_type: "ports", start: start, complete: complete
+
         @collection.each do |key, item|
           d = Device.find key
           removed_ports = d[:tcpv4] - item[:tcpv4]
           unless removed_ports.empty?
             ScanDiff.create device: d,
+                            scan: scan,
                             status: :remove,
                             kind: "ports",
                             extra: { ports: removed_ports }
@@ -58,6 +61,7 @@ module Phage
           new_ports = item[:tcpv4] - d[:tcpv4]
           unless new_ports.empty?
             ScanDiff.create device: d,
+                            scan: scan,
                             status: :add,
                             kind: "ports",
                             extra: { ports: new_ports }

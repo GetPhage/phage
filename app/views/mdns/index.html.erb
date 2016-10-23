@@ -5,9 +5,11 @@
 <table>
   <thead>
     <tr>
-      <th>Name</th>
+      <th>Hostname</th>
       <th>Service</th>
       <th>Protocol</th>
+      <th>Port</th>
+      <th>Txt</th>
       <th>Device</th>
       <th colspan="3"></th>
     </tr>
@@ -16,10 +18,12 @@
   <tbody>
     <% @mdns.each do |mdn| %>
       <tr>
-        <td><%= mdn.name %></td>
+        <td><%= mdn.hostname %></td>
         <td><%= mdn.service %></td>
         <td><%= mdn.protocol %></td>
-        <td><%= mdn.device %></td>
+        <td><%= mdn.port %></td>
+        <td><%= mdn.txt %></td>
+        <td><%= link_to( mdn.device.try(:name).try(:first) || mdn.device.try(:id) || 'no device', mdn.device ) %></td>
         <td><%= link_to 'Show', mdn %></td>
         <td><%= link_to 'Edit', edit_mdn_path(mdn) %></td>
         <td><%= link_to 'Destroy', mdn, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -4,7 +4,7 @@ class MdnsController < ApplicationController
   # GET /mdns
   # GET /mdns.json
   def index
-    @mdns = Mdn.all
+    @mdns = Mdn.all.order(updated_at: :desc)
   end
 
   # GET /mdns/1
