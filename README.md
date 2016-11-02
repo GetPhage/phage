@@ -1,24 +1,25 @@
-# README
+# Phage - An Immune System for the Internet
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Phage is a next generation firewall which observes the behavior of devices on a local area network, categorizes them, learns how they normally behave and can automatically block them if they start behaving differently.
 
-Things you may want to cover:
+Phage consists of several components:
 
-* Ruby version
+- network (client-side) active scanner and observer
+- server side machine learner and categorizer
+- (potentially, future) smart phone app for network management
 
-* System dependencies
+# Phage Scanner and Observer
 
-* Configuration
+This component sits in your network's router and actively scans your network in order to identify devices on it.
 
-* Database creation
+It also observes their behavior.
 
-* Database initialization
+Currently this is in the proof-of-concept phase - in order to speed development, thse components are currently written in Ruby. For production use they'll need to be rewritten in C with an eye toward minimizing resource use.
 
-* How to run the test suite
+# Phage Server and Learner
 
-* Services (job queues, cache servers, search engines, etc.)
+Phage Server is being gradually built using Rails. Currently the
+scanner is tightly coupled to the server; they need to be split and
+start using the JSON REST API.
 
-* Deployment instructions
-
-* ...
+As of yet no work has been done on the learner.
