@@ -1,5 +1,6 @@
 class ScanDiffsController < ApplicationController
   before_action :set_scan_diff, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /scan_diffs
   # GET /scan_diffs.json

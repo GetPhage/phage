@@ -78,3 +78,7 @@ gem 'dnssd'
 # charts
 gem 'chartkick'
 gem 'groupdate'
+
+#users
+gem 'devise'
+gem 'omniauth-slack'

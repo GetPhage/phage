@@ -1,5 +1,6 @@
 class MdnsController < ApplicationController
   before_action :set_mdn, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /mdns
   # GET /mdns.json
