@@ -1,5 +1,6 @@
 class OuisController < ApplicationController
   before_action :set_oui, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /ouis
   # GET /ouis.json

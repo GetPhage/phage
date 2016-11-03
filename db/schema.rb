@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161020165847) do
+ActiveRecord::Schema.define(version: 20161025153455) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -109,6 +109,8 @@ ActiveRecord::Schema.define(version: 20161020165847) do
     t.string   "default_gw"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.integer  "user_id"
+    t.index ["user_id"], name: "index_networks_on_user_id", using: :btree
   end
 
   create_table "ouis", force: :cascade do |t|
@@ -176,6 +178,8 @@ ActiveRecord::Schema.define(version: 20161020165847) do
     t.string   "notes",      default: "", null: false
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
+    t.integer  "network_id"
+    t.index ["network_id"], name: "index_scans_on_network_id", using: :btree
     t.index ["scan_type"], name: "index_scans_on_scan_type", using: :btree
     t.index ["start"], name: "index_scans_on_start", using: :btree
   end
@@ -222,12 +226,33 @@ ActiveRecord::Schema.define(version: 20161020165847) do
     t.index ["usn"], name: "index_upnps_on_usn", using: :btree
   end
 
+  create_table "users", force: :cascade do |t|
+    t.string   "first_name",             default: "",    null: false
+    t.boolean  "admin",                  default: false, null: false
+    t.string   "email",                  default: "",    null: false
+    t.string   "encrypted_password",     default: "",    null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          default: 0,     null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.inet     "current_sign_in_ip"
+    t.inet     "last_sign_in_ip"
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
+    t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+  end
+
   add_foreign_key "devices", "ouis"
   add_foreign_key "devices", "products"
   add_foreign_key "mdns", "devices"
+  add_foreign_key "networks", "users"
   add_foreign_key "product_categories", "product_categories"
   add_foreign_key "products", "manufacturers"
   add_foreign_key "scan_diffs", "devices"
   add_foreign_key "scan_diffs", "scans"
+  add_foreign_key "scans", "networks"
   add_foreign_key "upnps", "devices"
 end

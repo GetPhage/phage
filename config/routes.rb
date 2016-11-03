@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  devise_for :users, controllers: { omniauth_callbacks: "callbacks" }
+
+  root to: 'user#index'
+
   resources :services
   resources :cves
   resources :manufacturers
@@ -7,7 +11,6 @@ Rails.application.routes.draw do
   resources :ouis
   resources :products
   resources :product_categories
-  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   resources :software_blacklists
   resources :scan_diffs
   resources :samples
@@ -16,5 +19,6 @@ Rails.application.routes.draw do
   resources :networks
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   mount BeanstalkdView::Server, :at => "/beanstalkd"
 end

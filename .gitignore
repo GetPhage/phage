@@ -10,6 +10,8 @@ database.log
 /public/assets/*
 /log/*
 
+.env
+
 #*
 *~
 
