@@ -53,14 +53,30 @@ You'll need to set up Postgres manually for now. Then
 
 ##Operation
 
+###Bootstrap Phage
+
+To perform all imports and initial housekeeping tasks:
+
+`bin/rake phage:bootstrap`
+
+You should only do this when bringing up a fresh instance of Phage.
+
 ###Import OUIs
 
-To import MAC address prefixes from IEEE:
+To download and import MAC address prefixes from IEEE:
 
 `bin/rake oui:import`
 
+This is very slow!
+
 ###Import CVEs
 
-To import Common Vulnerability and Exposures:
+To download and import Common Vulnerability and Exposures:
 
 `bin/rake cve:import`
+
+###Import Services (Port Numbers)
+
+To download and import service name/port number mappings:
+
+`bin/rake services:import`

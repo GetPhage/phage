@@ -11,7 +11,7 @@ class OUI
       
   def initialize(filename)
     @collection = []
-    input = File.open filename
+    input = File.open filename, 'r:UTF-8'
 
     input.each_line do |line|
       m = line.match /([0-9|a-f|A-F]{6})\s+\(base 16\)\s+(.+)$/
