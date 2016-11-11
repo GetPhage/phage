@@ -4,6 +4,10 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable, :omniauthable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  def is_admin?
+    self.admin
+  end
+
   def self.from_omniauth(auth)
     where(email: auth.info.email).first_or_create do |user|
       user.update(

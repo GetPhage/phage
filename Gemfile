@@ -70,6 +70,7 @@ gem 'bootstrap', '~> 4.0.0.alpha4'
 gem 'will_paginate', '~> 3.1.0'
 
 # UPNP support
+gem 'log_switch', '~> 0.4.0'
 gem 'playful'
 
 # mDNS support

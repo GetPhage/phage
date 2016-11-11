@@ -18,10 +18,11 @@
     <% @scan_diffs.each do |scan_diff| %>
       <tr>
         <td><%= link_to "Scan #{scan_diff.scan_id}", scan_diff.scan %></td>
-        <td><%= link_to(scan_diff.device.name && scan_diff.device.name.empty? ? scan_diff.device.name[0] : "Device #{scan_diff.device_id}", scan_diff.device) %></td>
+        <td><%= link_to(scan_diff.device.friendly_name, scan_diff.device) %></td>
         <td><%= scan_diff.kind %></td>
         <td><%= scan_diff.status %></td>
         <td><%= scan_diff.extra %></td>
+	<td><%= distance_of_time_in_words(scan_diff.created_at.to_s, Time.now, include_seconds: true) %></td>
         <td><%= link_to 'Show', scan_diff %></td>
         <td><%= link_to 'Edit', edit_scan_diff_path(scan_diff) %></td>
         <td><%= link_to 'Destroy', scan_diff, method: :delete, data: { confirm: 'Are you sure?' } %></td>

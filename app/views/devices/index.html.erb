@@ -22,7 +22,7 @@
     <% @devices.each do |device| %>
       <tr class='<%= device.active ? "active" : "inactive" %>'>
         <td><%= device.mac_address %><br/><%= device.oui && device.oui.manufacturer %></td>
-	<td><%= device.name && device.name.join(', ') %></td>
+	<td><%= device.friendly_name %></td>
         <td><%= device.ipv4 && device.ipv4.join(', ') %></td>
         <td><%= device.ipv6 && device.ipv6.join(', ')  %></td>
         <td><%= device.kind %></td>

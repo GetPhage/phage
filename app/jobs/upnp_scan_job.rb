@@ -11,6 +11,6 @@ class UpnpScanJob < ApplicationJob
 
     puts "SCANNER"
     pp scanner
-#    scanner.diff(start, complete)
+    scanner.diff(start, complete)
   end
 end

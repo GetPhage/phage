@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161025153455) do
+ActiveRecord::Schema.define(version: 20161110181756) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(version: 20161025153455) do
     t.jsonb    "extra",             default: {},   null: false
     t.datetime "created_at",                       null: false
     t.datetime "updated_at",                       null: false
-    t.string   "name",                                          array: true
+    t.string   "name",              default: [],   null: false, array: true
     t.boolean  "active",            default: true, null: false
     t.integer  "oui_id"
     t.string   "firmware_version"
@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(version: 20161025153455) do
     t.integer  "tcpv4",             default: [],                array: true
     t.integer  "udpv6",             default: [],                array: true
     t.integer  "tcpv6",             default: [],                array: true
+    t.integer  "network_id"
     t.index ["extra"], name: "index_devices_on_extra", using: :gin
     t.index ["firmware_version"], name: "index_devices_on_firmware_version", using: :btree
     t.index ["ipv4"], name: "index_devices_on_ipv4", using: :btree
@@ -59,6 +60,7 @@ ActiveRecord::Schema.define(version: 20161025153455) do
     t.index ["kind"], name: "index_devices_on_kind", using: :btree
     t.index ["mac_address"], name: "index_devices_on_mac_address", using: :btree
     t.index ["model_description"], name: "index_devices_on_model_description", using: :btree
+    t.index ["network_id"], name: "index_devices_on_network_id", using: :btree
     t.index ["oui_id"], name: "index_devices_on_oui_id", using: :btree
     t.index ["product_id"], name: "index_devices_on_product_id", using: :btree
     t.index ["tcpv4"], name: "index_devices_on_tcpv4", using: :gin
@@ -245,6 +247,7 @@ ActiveRecord::Schema.define(version: 20161025153455) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "devices", "networks"
   add_foreign_key "devices", "ouis"
   add_foreign_key "devices", "products"
   add_foreign_key "mdns", "devices"
