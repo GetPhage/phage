@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>History</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Message</th>
+      <th>Device</th>
+      <th>Scan Diff</th>
+      <th>When</th>
+      <th colspan="4"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @histories.each do |history| %>
+      <tr>
+        <td><%= history.message %></td>
+        <td><%= link_to history.scan_diff.device.friendly_name, history.scan_diff.device %></td>
+        <td><%= link_to history.scan_diff.id, history.scan_diff.device %></td>
+	<td><%= distance_of_time_in_words(history.scan_diff.created_at.to_s, Time.now, include_seconds: true) %></td>
+        <td><%= link_to 'Show', history %></td>
+        <td><%= link_to 'Edit', edit_history_path(history) %></td>
+        <td><%= link_to 'Destroy', history, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New History', new_history_path %>
+
+<div>
+  <%= will_paginate @devices %>
+</div>

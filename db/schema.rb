@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161110181756) do
+ActiveRecord::Schema.define(version: 20161111010341) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -68,6 +68,17 @@ ActiveRecord::Schema.define(version: 20161110181756) do
     t.index ["udpv4"], name: "index_devices_on_udpv4", using: :gin
     t.index ["udpv6"], name: "index_devices_on_udpv6", using: :gin
     t.index ["upc"], name: "index_devices_on_upc", using: :btree
+  end
+
+  create_table "histories", force: :cascade do |t|
+    t.string   "message",      default: "", null: false
+    t.integer  "scan_diff_id"
+    t.integer  "user_id"
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+    t.index ["message"], name: "index_histories_on_message", using: :btree
+    t.index ["scan_diff_id"], name: "index_histories_on_scan_diff_id", using: :btree
+    t.index ["user_id"], name: "index_histories_on_user_id", using: :btree
   end
 
   create_table "manufacturers", force: :cascade do |t|
@@ -250,6 +261,8 @@ ActiveRecord::Schema.define(version: 20161110181756) do
   add_foreign_key "devices", "networks"
   add_foreign_key "devices", "ouis"
   add_foreign_key "devices", "products"
+  add_foreign_key "histories", "scan_diffs"
+  add_foreign_key "histories", "users"
   add_foreign_key "mdns", "devices"
   add_foreign_key "networks", "users"
   add_foreign_key "product_categories", "product_categories"

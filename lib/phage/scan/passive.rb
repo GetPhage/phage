@@ -44,7 +44,7 @@ module Phage
               d.last_seen = Time.now
               d.save
 
-              ScanDiff.create( { extra: { active: true }, device: d, status: :change, scan: scan, kind: 'passive' } )
+              ScanDiff.create( { extra: { active: true }, device: d, status: :up, scan: scan, kind: 'passive' } )
             end
 
             unless d.has_ipv4?(item[:ipv4])
@@ -65,7 +65,7 @@ module Phage
               d[:name].push item[:name]
               d.save
 
-              ScanDiff.create( { name: item[:name], device: d, status: :add, scan: scan, kind: "passive" } )
+              ScanDiff.create( { extra: { active: false }, name: item[:name], device: d, status: :down, scan: scan, kind: "passive" } )
             end
           else
             puts "create device"
@@ -82,7 +82,7 @@ module Phage
 
             device.active = false
             device.save
-            ScanDiff.create( { extra: { active: false }, device: device, status: :change, scan: scan, kind: "passive" } )
+            ScanDiff.create( { extra: { active: false }, device: device, status: :down, scan: scan, kind: "passive" } )
           end
         end
 
