@@ -1,6 +1,6 @@
 class UpnpsController < ApplicationController
   before_action :set_upnp, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!
+#  before_action :authenticate_user!
 
   # GET /upnps
   # GET /upnps.json

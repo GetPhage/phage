@@ -17,6 +17,8 @@ module Phage
       attr_accessor :collection
 
       def initialize
+        start = Time.now
+
         @collection = []
 
         puts "init"
@@ -36,6 +38,10 @@ module Phage
                                                       device: Phage::Scan::Upnp::get_device(dev),
                                                       ext: dev)
         end
+
+        complete = Time.now
+
+        ::Scan.create scan_type: 'upnp', start: start, end: complete
 
         all_devices.length
       end

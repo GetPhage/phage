@@ -5,7 +5,7 @@ class ScansController < ApplicationController
   # GET /scans
   # GET /scans.json
   def index
-    @scans = Scan.all
+    @scans = Scan.order(updated_at: :asc).paginate(:page => params[:page], per_page: 50)
   end
 
   # GET /scans/1

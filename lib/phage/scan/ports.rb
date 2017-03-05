@@ -45,7 +45,7 @@ module Phage
       end
 
       def diff(start = Time.now, complete = Time.now)
-        scan = Scan.create scan_type: "ports", start: start, complete: complete
+        scan = ::Scan.create scan_type: 'ports', start: start, complete: complete
 
         @collection.each do |key, item|
           d = Device.find key

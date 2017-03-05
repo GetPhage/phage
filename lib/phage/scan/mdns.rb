@@ -18,12 +18,21 @@ module Phage
       def initialize
         @collection = []
 
-        results = `avahi-browse -a -r -t -v -k`
+#        results = `avahi-browse -a -r -t -v -k`
+
+        results = `avahi-browse -v -r -p -k -t _http._tcp`
+        results += `avahi-browse -v -r -p -k -t _https._tcp`
+        results += `avahi-browse -v -r -p -k -t _ssh._tcp`
+        results += `avahi-browse -v -r -p -k -t _daap._tcp`
+        results += `avahi-browse -v -r -p -k -t _nfs._tcp`
+        results += `avahi-browse -v -r -p -k -t _printer._tcp`
+        results += `avahi-browse -v -r -p -k -t _workstation._tcp`
         if results.nil?
           abort 'Failed to run avahi-browse'
         end
 
         mdns = Phage::Scan::Mdns.parse_avahi results
+        pp mdns
         mdns.each do |m|
           if m[:address] && !m[:address].empty?
             device = Device.where("'#{m[:address]}' = ANY(ipv4)").first
@@ -43,58 +52,30 @@ module Phage
         str.each_line do |line|
           line.chomp!
 
-          if line == ': All for now'
-            return all_items
-          end
-
-          next if line.match /^Failed to resolve service/
           next if line.match /^\+/
+          next if !line.match /^\=/
+          
+#          m = line.match /\=;\S+;IPv(?<ip_version>[4|6]);(?<service_name>\S+);(?<service>\S+);(?<domain>\S+);(?<hostname>\S+);(?<ip_address>\S+);(<?<port>\d+)/
+          m = line.match /\=;\S+;IPv(?<ip_version>[4|6]);(?<service_name>\S+);(?<service>\S+);(?<domain>\S+);(?<hostname>\S+);(?<ip_address>\S+);(?<port>\S+);(?<txt>.*)/
 
-          if line.match(/^=/)
-            unless item.empty?
-              all_items.push item
+          if m
+            hash = Hash[ m.names.zip(m.captures) ]
+            hash.symbolize_keys!
+
+            unless hash[:txt].empty?
+              hash[:txt] = hash[:txt].split(/"\s+"/ )
             end
 
-            m = line.match /\s+(\S+)\s+([\w\.]+)$/
-            item = { service: m[1], domain: m[2], lines: [ line ] }
+            pp line
+            pp hash
 
-            next
+            item[:lines].push hash
+          else
+            puts "unknown line #{line}"
           end
-
-          item[:lines].push line
-
-          m = line.match /^\s+hostname = \[(\S+)\]$/
-          if m
-            item[:hostname] = m[1]
-            next
-          end
-
-          m = line.match /^\s+address = \[(\S+)\]$/
-          if m
-            item[:address] = m[1]
-            next
-          end
-
-          m = line.match /^\s+port = \[(\d+)\]$/
-          if m
-            item[:port] = m[1]
-            next
-          end
-
-          m = line.match /^\s+txt = \[(.+)\]$/
-          if m
-            item[:txt] = m[1]
-            next
-          end
-
-          m = line.match /^\s+txt = \[\]/
-          if m
-            item[:txt] = ''
-            next
-         end
-
-          puts "unknown line: #{line}"
         end
+
+        all_items
       end
 
       def diff(start = Time.now, complete = Time.now)

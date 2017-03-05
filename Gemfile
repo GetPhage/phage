@@ -83,3 +83,5 @@ gem 'groupdate'
 #users
 gem 'devise'
 gem 'omniauth-slack'
+
+gem 'whenever'

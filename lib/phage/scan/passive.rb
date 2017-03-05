@@ -40,7 +40,6 @@ module Phage
           d = Device.find_by mac_address: item[:mac_address]
           if d
             unless d.active?
-              d.active = true
               d.last_seen = Time.now
               d.save
 
