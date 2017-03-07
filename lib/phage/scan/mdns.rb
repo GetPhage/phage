@@ -18,28 +18,33 @@ module Phage
       def initialize
         @collection = []
 
-#        results = `avahi-browse -a -r -t -v -k`
-
         results = `avahi-browse -v -r -p -k -t _http._tcp`
         results += `avahi-browse -v -r -p -k -t _https._tcp`
+        results += `avahi-browse -v -r -p -k -t _ipp._tcp`
+        results += `avahi-browse -v -r -p -k -t _ipps._tcp`
         results += `avahi-browse -v -r -p -k -t _ssh._tcp`
+        results += `avahi-browse -v -r -p -k -t _homekit._tcp`
         results += `avahi-browse -v -r -p -k -t _daap._tcp`
         results += `avahi-browse -v -r -p -k -t _nfs._tcp`
         results += `avahi-browse -v -r -p -k -t _printer._tcp`
+        results += `avahi-browse -v -r -p -k -t _mediaremotetv._tcp`
+        results += `avahi-browse -v -r -p -k -t _airplay._tcp`
+        results += `avahi-browse -v -r -p -k -t _afpovertcp._tcp`
+        results += `avahi-browse -v -r -p -k -t _spotify-connect._tcp`
+        results += `avahi-browse -v -r -p -k -t _androidtvremote._tcp`
         results += `avahi-browse -v -r -p -k -t _workstation._tcp`
         if results.nil?
           abort 'Failed to run avahi-browse'
         end
 
         mdns = Phage::Scan::Mdns.parse_avahi results
-        pp mdns
+#        pp mdns
         mdns.each do |m|
-          if m[:address] && !m[:address].empty?
-            device = Device.where("'#{m[:address]}' = ANY(ipv4)").first
-            m[:device] = device
+          if m[:ip_address] && !m[:ip_address].empty?
+            m[:device] = Device.where("'#{m[:ip_address]}' = ANY(ipv4)").first
           else
             puts 'missing address!'
-            pp m
+#            pp m
           end
 
           @collection.push m
@@ -47,7 +52,6 @@ module Phage
       end
 
       def self.parse_avahi(str)
-        item = { lines: [] }
         all_items = []
         str.each_line do |line|
           line.chomp!
@@ -66,10 +70,10 @@ module Phage
               hash[:txt] = hash[:txt].split(/"\s+"/ )
             end
 
-            pp line
-            pp hash
+#            pp line
+#            pp hash
 
-            item[:lines].push hash
+            all_items.push hash
           else
             puts "unknown line #{line}"
           end
@@ -81,17 +85,16 @@ module Phage
       def diff(start = Time.now, complete = Time.now)
         scan = ::Scan.create scan_type: 'mdns', start: start, end: complete
 
+        puts "Mdns:diff has #{@collection.length} records"
+
         @collection.each do |mdns|
           pp mdns
-          next if mdns[:service].nil? || mdns[:service].empty?
 
-          service_protocol = mdns[:service].split
-
-          next unless ::Mdn.where(hostname: mdns[:hostname], service: service_protocol[0], protocol: service_protocol[1]).empty?
+          next unless ::Mdn.where(hostname: mdns[:hostname], service: mdns[:service], protocol: 'tcp').empty?
 
           m = ::Mdn.create hostname: mdns[:hostname],
-                          service: service_protocol[0],
-                          protocol: service_protocol[1],
+                          service: mdns[:service],
+                          protocol: 'tcp',
                           port: mdns[:port],
                           txt: mdns[:txt],
                           device: mdns[:device]
@@ -100,7 +103,7 @@ module Phage
         end
 
         ::Mdn.all.each do |mdns|
-          next unless @collection.select { |item| item[:hostname] == mdns[:hostname] && item[:service] == "#{mdns[:service]}.#{mdns[:protocol]}" }.empty?
+          next unless @collection.select { |item| item[:hostname] == mdns[:hostname] && item[:service] == "#{mdns[:service]}" }.empty?
 
           ScanDiff.create extra: { mdns: mdns }, device: mdns[:device], status: :remove, scan: scan, kind: 'mdns'
         end

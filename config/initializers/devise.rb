@@ -273,4 +273,6 @@ Devise.setup do |config|
   # config.omniauth_path_prefix = '/my_engine/users/auth'
 
   config.omniauth :slack, ENV['SLACK_APP_ID'], ENV['SLACK_APP_SECRET'], scope: 'users:read,team:read'
+
+  config.secret_key = '965d9eb321d2124a87a7047624bad720f15188e28394c3b7b876c1e2f05a7459c1cd6981f8718ea3a1c20656bcced3f9303223074efde972e912ed3e59e34ab5'
 end
