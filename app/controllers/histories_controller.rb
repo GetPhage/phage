@@ -4,7 +4,7 @@ class HistoriesController < ApplicationController
   # GET /histories
   # GET /histories.json
   def index
-    @histories = History.per_user(current_user).order(updated_at: :asc).paginate(:page => params[:page], per_page: 25)
+    @histories = History.per_user(current_user).order(updated_at: :desc).paginate(:page => params[:page], per_page: 25)
   end
 
   # GET /histories/1
