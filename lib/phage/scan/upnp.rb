@@ -22,9 +22,13 @@ module Phage
         @collection = []
 
         puts "init"
-        all_devices = Playful::SSDP.search :all
-        all_devices += Playful::SSDP.search :all, do_broadcast_search: true
-        all_devices += Playful::SSDP.search("urn:Belkin:device:controllee:1")
+        all_devices = []
+        res = Playful::SSDP.search :all
+        all_devices += res if res
+        res = Playful::SSDP.search :all, do_broadcast_search: true
+        all_devices += res if res
+        res = Playful::SSDP.search("urn:Belkin:device:controllee:1")
+        all_devices += res if res
 
         @collection += all_devices
 

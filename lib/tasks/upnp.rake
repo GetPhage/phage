@@ -48,7 +48,7 @@ namespace :upnp do
   end
 
   desc "Perform UPNP scan immediately (not in background)"
-  task :scan => [:environment] do
+  task :scan_now => [:environment] do
     UpnpScanJob.perform_now
   end
 end
