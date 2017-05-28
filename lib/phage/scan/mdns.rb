@@ -1,5 +1,4 @@
 require 'forwardable'
-
 require 'dnssd'
 
 require 'pp'
@@ -18,21 +17,12 @@ module Phage
       def initialize
         @collection = []
 
-        results = `avahi-browse -v -r -p -k -t _http._tcp`
-        results += `avahi-browse -v -r -p -k -t _https._tcp`
-        results += `avahi-browse -v -r -p -k -t _ipp._tcp`
-        results += `avahi-browse -v -r -p -k -t _ipps._tcp`
-        results += `avahi-browse -v -r -p -k -t _ssh._tcp`
-        results += `avahi-browse -v -r -p -k -t _homekit._tcp`
-        results += `avahi-browse -v -r -p -k -t _daap._tcp`
-        results += `avahi-browse -v -r -p -k -t _nfs._tcp`
-        results += `avahi-browse -v -r -p -k -t _printer._tcp`
-        results += `avahi-browse -v -r -p -k -t _mediaremotetv._tcp`
-        results += `avahi-browse -v -r -p -k -t _airplay._tcp`
-        results += `avahi-browse -v -r -p -k -t _afpovertcp._tcp`
-        results += `avahi-browse -v -r -p -k -t _spotify-connect._tcp`
-        results += `avahi-browse -v -r -p -k -t _androidtvremote._tcp`
-        results += `avahi-browse -v -r -p -k -t _workstation._tcp`
+        %w(airport http https homekit daap nfs mediaremotetv spotify-connect androidtvremote workstation printer printer._sub._http airplay raop privet uscans uscan ipp ippusb ipps scanner pdl-datastream ptp airplay raop ssh ftp telnet afpovertcp smb rfb adisk googlecast).each do |service|
+          results = `avahi-browse -v -r -p -k -t _#{service}._tcp`
+        end
+
+        results += `avahi-browse -v -r -p -k -t _sleep-proxy._udp`
+      
         if results.nil?
           abort 'Failed to run avahi-browse'
         end
