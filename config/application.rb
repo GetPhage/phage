@@ -27,7 +27,7 @@ Backburner.configure do |config|
   config.default_priority    = 65536
   config.respond_timeout     = 120
   config.default_worker      = Backburner::Workers::Simple
-  config.logger              = Logger.new(STDOUT)
+  config.logger              = Logger.new(File.new("/tmp/phage2.log", "w+"))
   config.primary_queue       = "backburner-jobs"
   config.priority_labels     = { :custom => 50, :useless => 1000 }
   config.reserve_timeout     = nil
