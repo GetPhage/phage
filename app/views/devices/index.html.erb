@@ -26,7 +26,7 @@
         <td><%= device.ipv4 && device.ipv4.join(', ') %></td>
         <td><%= device.ipv6 && device.ipv6.join(', ')  %></td>
         <td><%= device.kind %></td>
-        <td><%= distance_of_time_in_words(device.last_seen, Time.now, include_seconds: true) %></td>
+        <td><%= Time.now - device.last_seen < 60 ? 'now' : distance_of_time_in_words(device.last_seen, Time.now, include_seconds: true) %></td>
         <td><%= device.extra %></td>
         <td><%= link_to 'Show', device %></td>
         <td><%= link_to 'Edit', edit_device_path(device) %></td>
