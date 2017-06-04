@@ -1,0 +1,7 @@
+# Logfile created on 2017-06-04 09:14:40 -0700 by logger.rb/54362
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-06-04 09:14:40 -0700 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO rbenv: rbenv_ruby is not set; ruby version will be defined by the remote hosts via rbenv
+  INFO [87785be7] Running /usr/bin/env mkdir -p /tmp as phage@ummon
+ DEBUG [87785be7] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /tmp )
