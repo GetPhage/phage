@@ -2,10 +2,10 @@ default: &default
   adapter: postgresql
   encoding: unicode
   database: phage
-  host: localhost
+  host: <%= ENV['DB_HOSTNAME'] %>
   pool: 5
-  username: phage
-  password: V6HCfBZCkre2Mc
+  username: <%= ENV['DB_USERNAME'] %>
+  password: <%= ENV['DB_PASSWORD'] %>
 
 development:
   <<: *default

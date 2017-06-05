@@ -5,3 +5,310 @@
   INFO rbenv: rbenv_ruby is not set; ruby version will be defined by the remote hosts via rbenv
   INFO [87785be7] Running /usr/bin/env mkdir -p /tmp as phage@ummon
  DEBUG [87785be7] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /tmp )
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-06-04 09:44:47 -0700 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO rbenv: rbenv_ruby is not set; ruby version will be defined by the remote hosts via rbenv
+  INFO [b0911ff0] Running /usr/bin/env mkdir -p /tmp as phage@ummon
+ DEBUG [b0911ff0] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /tmp )
+  INFO [b0911ff0] Finished in 0.495 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-phage-production-romkey.sh 0.0%
+  INFO Uploading /tmp/git-ssh-phage-production-romkey.sh 100.0%
+  INFO [f5cf1299] Running /usr/bin/env chmod 700 /tmp/git-ssh-phage-production-romkey.sh as phage@ummon
+ DEBUG [f5cf1299] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env chmod 700 /tmp/git-ssh-phage-production-romkey.sh )
+  INFO [f5cf1299] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [fe1d8eaa] Running /usr/bin/env git ls-remote git@github.com:GetPhage/phage.git HEAD as phage@ummon
+ DEBUG [fe1d8eaa] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-phage-production-romkey.sh" ; /usr/bin/env git ls-remote git@github.com:GetPhage/phage.git HEAD )
+ DEBUG [fe1d8eaa] 	d955b671c7b6b9923ef76a9b28156d03cd236997	HEAD
+  INFO [fe1d8eaa] Finished in 0.346 seconds with exit status 0 (successful).
+  INFO [be4a902c] Running /usr/bin/env mkdir -p /var/www/phage/shared /var/www/phage/releases as phage@ummon
+ DEBUG [be4a902c] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /var/www/phage/shared /var/www/phage/releases )
+ DEBUG [be4a902c] 	mkdir: cannot create directory ‘/var/www’
+ DEBUG [be4a902c] 	: Permission denied
+ DEBUG [be4a902c] 	mkdir: cannot create directory ‘/var/www’: Permission denied
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-06-04 10:02:48 -0700 cap production git:check
+  INFO ---------------------------------------------------------------------------
+  INFO rbenv: rbenv_ruby is not set; ruby version will be defined by the remote hosts via rbenv
+  INFO [4aa6ab13] Running /usr/bin/env mkdir -p /tmp as phage@ummon
+ DEBUG [4aa6ab13] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /tmp )
+  INFO [4aa6ab13] Finished in 0.494 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-phage-production-romkey.sh 0.0%
+  INFO Uploading /tmp/git-ssh-phage-production-romkey.sh 100.0%
+  INFO [a9e8c557] Running /usr/bin/env chmod 700 /tmp/git-ssh-phage-production-romkey.sh as phage@ummon
+ DEBUG [a9e8c557] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env chmod 700 /tmp/git-ssh-phage-production-romkey.sh )
+  INFO [a9e8c557] Finished in 0.008 seconds with exit status 0 (successful).
+  INFO [1c0f0c99] Running /usr/bin/env git ls-remote git@github.com:GetPhage/phage.git HEAD as phage@ummon
+ DEBUG [1c0f0c99] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-phage-production-romkey.sh" ; /usr/bin/env git ls-remote git@github.com:GetPhage/phage.git HEAD )
+ DEBUG [1c0f0c99] 	d955b671c7b6b9923ef76a9b28156d03cd236997	HEAD
+  INFO [1c0f0c99] Finished in 0.337 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-06-04 10:03:00 -0700 cap production deploy:check
+  INFO ---------------------------------------------------------------------------
+  INFO rbenv: rbenv_ruby is not set; ruby version will be defined by the remote hosts via rbenv
+  INFO [918c5edc] Running /usr/bin/env mkdir -p /tmp as phage@ummon
+ DEBUG [918c5edc] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /tmp )
+  INFO [918c5edc] Finished in 0.411 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-phage-production-romkey.sh 0.0%
+  INFO Uploading /tmp/git-ssh-phage-production-romkey.sh 100.0%
+  INFO [bcdbd138] Running /usr/bin/env chmod 700 /tmp/git-ssh-phage-production-romkey.sh as phage@ummon
+ DEBUG [bcdbd138] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env chmod 700 /tmp/git-ssh-phage-production-romkey.sh )
+  INFO [bcdbd138] Finished in 0.008 seconds with exit status 0 (successful).
+  INFO [da42d619] Running /usr/bin/env git ls-remote git@github.com:GetPhage/phage.git HEAD as phage@ummon
+ DEBUG [da42d619] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-phage-production-romkey.sh" ; /usr/bin/env git ls-remote git@github.com:GetPhage/phage.git HEAD )
+ DEBUG [da42d619] 	d955b671c7b6b9923ef76a9b28156d03cd236997	HEAD
+  INFO [da42d619] Finished in 0.337 seconds with exit status 0 (successful).
+  INFO [49f7b27e] Running /usr/bin/env mkdir -p /var/www/phage/shared /var/www/phage/releases as phage@ummon
+ DEBUG [49f7b27e] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /var/www/phage/shared /var/www/phage/releases )
+ DEBUG [49f7b27e] 	mkdir: cannot create directory ‘/var/www’
+ DEBUG [49f7b27e] 	: Permission denied
+ DEBUG [49f7b27e] 	mkdir: cannot create directory ‘/var/www’: Permission denied
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-06-04 10:05:51 -0700 cap production deploy:check
+  INFO ---------------------------------------------------------------------------
+  INFO rbenv: rbenv_ruby is not set; ruby version will be defined by the remote hosts via rbenv
+  INFO [56b72527] Running /usr/bin/env mkdir -p /tmp as phage@ummon
+ DEBUG [56b72527] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /tmp )
+  INFO [56b72527] Finished in 0.407 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-phage-production-romkey.sh 0.0%
+  INFO Uploading /tmp/git-ssh-phage-production-romkey.sh 100.0%
+  INFO [417716e0] Running /usr/bin/env chmod 700 /tmp/git-ssh-phage-production-romkey.sh as phage@ummon
+ DEBUG [417716e0] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env chmod 700 /tmp/git-ssh-phage-production-romkey.sh )
+  INFO [417716e0] Finished in 0.008 seconds with exit status 0 (successful).
+  INFO [d0502c84] Running /usr/bin/env git ls-remote git@github.com:GetPhage/phage.git HEAD as phage@ummon
+ DEBUG [d0502c84] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-phage-production-romkey.sh" ; /usr/bin/env git ls-remote git@github.com:GetPhage/phage.git HEAD )
+ DEBUG [d0502c84] 	d955b671c7b6b9923ef76a9b28156d03cd236997	HEAD
+  INFO [d0502c84] Finished in 0.345 seconds with exit status 0 (successful).
+  INFO [a9f3761e] Running /usr/bin/env mkdir -p /home/phage/phage/shared /home/phage/phage/releases as phage@ummon
+ DEBUG [a9f3761e] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /home/phage/phage/shared /home/phage/phage/releases )
+  INFO [a9f3761e] Finished in 0.009 seconds with exit status 0 (successful).
+  INFO [65acf6a1] Running /usr/bin/env mkdir -p /home/phage/phage/shared/public/assets as phage@ummon
+ DEBUG [65acf6a1] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /home/phage/phage/shared/public/assets )
+  INFO [65acf6a1] Finished in 0.008 seconds with exit status 0 (successful).
+ DEBUG [a6e0b602] Running [ -f /home/phage/phage/shared/puma.rb ] as phage@ummon
+ DEBUG [a6e0b602] Command: [ -f /home/phage/phage/shared/puma.rb ]
+ DEBUG [a6e0b602] Finished in 0.005 seconds with exit status 1 (failed).
+  WARN puma.rb NOT FOUND!
+ DEBUG Uploading /home/phage/phage/shared/puma.rb 0.0%
+  INFO Uploading /home/phage/phage/shared/puma.rb 100.0%
+  INFO puma.rb generated
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-06-04 10:06:09 -0700 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO rbenv: rbenv_ruby is not set; ruby version will be defined by the remote hosts via rbenv
+  INFO [92e44773] Running /usr/bin/env mkdir -p /tmp as phage@ummon
+ DEBUG [92e44773] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /tmp )
+  INFO [92e44773] Finished in 0.436 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-phage-production-romkey.sh 0.0%
+  INFO Uploading /tmp/git-ssh-phage-production-romkey.sh 100.0%
+  INFO [8d562bff] Running /usr/bin/env chmod 700 /tmp/git-ssh-phage-production-romkey.sh as phage@ummon
+ DEBUG [8d562bff] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env chmod 700 /tmp/git-ssh-phage-production-romkey.sh )
+  INFO [8d562bff] Finished in 0.007 seconds with exit status 0 (successful).
+  INFO [21a2adfa] Running /usr/bin/env git ls-remote git@github.com:GetPhage/phage.git HEAD as phage@ummon
+ DEBUG [21a2adfa] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-phage-production-romkey.sh" ; /usr/bin/env git ls-remote git@github.com:GetPhage/phage.git HEAD )
+ DEBUG [21a2adfa] 	d955b671c7b6b9923ef76a9b28156d03cd236997	HEAD
+  INFO [21a2adfa] Finished in 0.363 seconds with exit status 0 (successful).
+  INFO [7d866df6] Running /usr/bin/env mkdir -p /home/phage/phage/shared /home/phage/phage/releases as phage@ummon
+ DEBUG [7d866df6] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /home/phage/phage/shared /home/phage/phage/releases )
+  INFO [7d866df6] Finished in 0.009 seconds with exit status 0 (successful).
+  INFO [f38c6136] Running /usr/bin/env mkdir -p /home/phage/phage/shared/public/assets as phage@ummon
+ DEBUG [f38c6136] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /home/phage/phage/shared/public/assets )
+  INFO [f38c6136] Finished in 0.008 seconds with exit status 0 (successful).
+ DEBUG [1747dd8b] Running [ -f /home/phage/phage/shared/puma.rb ] as phage@ummon
+ DEBUG [1747dd8b] Command: [ -f /home/phage/phage/shared/puma.rb ]
+ DEBUG [1747dd8b] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG [02025afa] Running [ -f /home/phage/phage/current/REVISION ] as phage@ummon
+ DEBUG [02025afa] Command: [ -f /home/phage/phage/current/REVISION ]
+ DEBUG [02025afa] Finished in 0.005 seconds with exit status 1 (failed).
+ DEBUG [f742bdfe] Running [ -f /home/phage/phage/repo/HEAD ] as phage@ummon
+ DEBUG [f742bdfe] Command: [ -f /home/phage/phage/repo/HEAD ]
+ DEBUG [f742bdfe] Finished in 0.005 seconds with exit status 1 (failed).
+ DEBUG [80b69aa9] Running if test ! -d /home/phage/phage; then echo "Directory does not exist '/home/phage/phage'" 1>&2; false; fi as phage@ummon
+ DEBUG [80b69aa9] Command: if test ! -d /home/phage/phage; then echo "Directory does not exist '/home/phage/phage'" 1>&2; false; fi
+ DEBUG [80b69aa9] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [88eb6171] Running /usr/bin/env git clone --mirror git@github.com:GetPhage/phage.git /home/phage/phage/repo as phage@ummon
+ DEBUG [88eb6171] Command: cd /home/phage/phage && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-phage-production-romkey.sh" ; /usr/bin/env git clone --mirror git@github.com:GetPhage/phage.git /home/phage/phage/repo )
+ DEBUG [88eb6171] 	Cloning into bare repository '/home/phage/phage/repo'...
+  INFO [88eb6171] Finished in 1.606 seconds with exit status 0 (successful).
+ DEBUG [3375adba] Running if test ! -d /home/phage/phage/repo; then echo "Directory does not exist '/home/phage/phage/repo'" 1>&2; false; fi as phage@ummon
+ DEBUG [3375adba] Command: if test ! -d /home/phage/phage/repo; then echo "Directory does not exist '/home/phage/phage/repo'" 1>&2; false; fi
+ DEBUG [3375adba] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [f5d82dda] Running /usr/bin/env git remote set-url origin git@github.com:GetPhage/phage.git as phage@ummon
+ DEBUG [f5d82dda] Command: cd /home/phage/phage/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-phage-production-romkey.sh" ; /usr/bin/env git remote set-url origin git@github.com:GetPhage/phage.git )
+  INFO [f5d82dda] Finished in 0.011 seconds with exit status 0 (successful).
+  INFO [92f60ebf] Running /usr/bin/env git remote update --prune as phage@ummon
+ DEBUG [92f60ebf] Command: cd /home/phage/phage/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-phage-production-romkey.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [92f60ebf] 	Fetching origin
+  INFO [92f60ebf] Finished in 0.438 seconds with exit status 0 (successful).
+ DEBUG [63a11533] Running if test ! -d /home/phage/phage/repo; then echo "Directory does not exist '/home/phage/phage/repo'" 1>&2; false; fi as phage@ummon
+ DEBUG [63a11533] Command: if test ! -d /home/phage/phage/repo; then echo "Directory does not exist '/home/phage/phage/repo'" 1>&2; false; fi
+ DEBUG [63a11533] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [145d5905] Running /usr/bin/env mkdir -p /home/phage/phage/releases/20170604170610 as phage@ummon
+ DEBUG [145d5905] Command: cd /home/phage/phage/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-phage-production-romkey.sh" ; /usr/bin/env mkdir -p /home/phage/phage/releases/20170604170610 )
+  INFO [145d5905] Finished in 0.009 seconds with exit status 0 (successful).
+  INFO [cceb9c67] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/phage/phage/releases/20170604170610 as phage@ummon
+ DEBUG [cceb9c67] Command: cd /home/phage/phage/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-phage-production-romkey.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/phage/phage/releases/20170604170610 )
+  INFO [cceb9c67] Finished in 0.258 seconds with exit status 0 (successful).
+ DEBUG [f376cba7] Running if test ! -d /home/phage/phage/repo; then echo "Directory does not exist '/home/phage/phage/repo'" 1>&2; false; fi as phage@ummon
+ DEBUG [f376cba7] Command: if test ! -d /home/phage/phage/repo; then echo "Directory does not exist '/home/phage/phage/repo'" 1>&2; false; fi
+ DEBUG [f376cba7] Finished in 0.005 seconds with exit status 0 (successful).
+ DEBUG [e64049f9] Running /usr/bin/env git rev-list --max-count=1 master as phage@ummon
+ DEBUG [e64049f9] Command: cd /home/phage/phage/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-phage-production-romkey.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [e64049f9] 	d955b671c7b6b9923ef76a9b28156d03cd236997
+ DEBUG [e64049f9] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG [7d3d9569] Running if test ! -d /home/phage/phage/releases/20170604170610; then echo "Directory does not exist '/home/phage/phage/releases/20170604170610'" 1>&2; false; fi as phage@ummon
+ DEBUG [7d3d9569] Command: if test ! -d /home/phage/phage/releases/20170604170610; then echo "Directory does not exist '/home/phage/phage/releases/20170604170610'" 1>&2; false; fi
+ DEBUG [7d3d9569] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [b8549dbe] Running /usr/bin/env echo "d955b671c7b6b9923ef76a9b28156d03cd236997" >> REVISION as phage@ummon
+ DEBUG [b8549dbe] Command: cd /home/phage/phage/releases/20170604170610 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env echo "d955b671c7b6b9923ef76a9b28156d03cd236997" >> REVISION )
+  INFO [b8549dbe] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [181652ed] Running /usr/bin/env mkdir -p /home/phage/phage/releases/20170604170610/public as phage@ummon
+ DEBUG [181652ed] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /home/phage/phage/releases/20170604170610/public )
+  INFO [181652ed] Finished in 0.007 seconds with exit status 0 (successful).
+ DEBUG [918e2024] Running [ -L /home/phage/phage/releases/20170604170610/public/assets ] as phage@ummon
+ DEBUG [918e2024] Command: [ -L /home/phage/phage/releases/20170604170610/public/assets ]
+ DEBUG [918e2024] Finished in 0.005 seconds with exit status 1 (failed).
+ DEBUG [329ee942] Running [ -d /home/phage/phage/releases/20170604170610/public/assets ] as phage@ummon
+ DEBUG [329ee942] Command: [ -d /home/phage/phage/releases/20170604170610/public/assets ]
+ DEBUG [329ee942] Finished in 0.004 seconds with exit status 1 (failed).
+  INFO [ed8369c5] Running /usr/bin/env ln -s /home/phage/phage/shared/public/assets /home/phage/phage/releases/20170604170610/public/assets as phage@ummon
+ DEBUG [ed8369c5] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ln -s /home/phage/phage/shared/public/assets /home/phage/phage/releases/20170604170610/public/assets )
+  INFO [ed8369c5] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG [8ce9e82a] Running if test ! -d /home/phage/phage/releases/20170604170610; then echo "Directory does not exist '/home/phage/phage/releases/20170604170610'" 1>&2; false; fi as phage@ummon
+ DEBUG [8ce9e82a] Command: if test ! -d /home/phage/phage/releases/20170604170610; then echo "Directory does not exist '/home/phage/phage/releases/20170604170610'" 1>&2; false; fi
+ DEBUG [8ce9e82a] Finished in 0.004 seconds with exit status 0 (successful).
+ DEBUG [80e91541] Running $HOME/.rbenv/bin/rbenv exec bundle check --path /home/phage/phage/shared/bundle as phage@ummon
+ DEBUG [80e91541] Command: cd /home/phage/phage/releases/20170604170610 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; $HOME/.rbenv/bin/rbenv exec bundle check --path /home/phage/phage/shared/bundle )
+ DEBUG [80e91541] 	rbenv: bundle: command not found
+ DEBUG [80e91541] Finished in 0.039 seconds with exit status 127 (failed).
+  INFO [932081d1] Running $HOME/.rbenv/bin/rbenv exec bundle install --path /home/phage/phage/shared/bundle --without development test --deployment --quiet as phage@ummon
+ DEBUG [932081d1] Command: cd /home/phage/phage/releases/20170604170610 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; $HOME/.rbenv/bin/rbenv exec bundle install --path /home/phage/phage/shared/bundle --without development test --deployment --quiet )
+ DEBUG [932081d1] 	rbenv: bundle: command not found
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-06-04 10:07:12 -0700 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO rbenv: rbenv_ruby is not set; ruby version will be defined by the remote hosts via rbenv
+  INFO [90e423ec] Running /usr/bin/env mkdir -p /tmp as phage@ummon
+ DEBUG [90e423ec] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /tmp )
+  INFO [90e423ec] Finished in 0.605 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-phage-production-romkey.sh 0.0%
+  INFO Uploading /tmp/git-ssh-phage-production-romkey.sh 100.0%
+  INFO [d9b84d7d] Running /usr/bin/env chmod 700 /tmp/git-ssh-phage-production-romkey.sh as phage@ummon
+ DEBUG [d9b84d7d] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env chmod 700 /tmp/git-ssh-phage-production-romkey.sh )
+  INFO [d9b84d7d] Finished in 0.007 seconds with exit status 0 (successful).
+  INFO [cacf27ff] Running /usr/bin/env git ls-remote git@github.com:GetPhage/phage.git HEAD as phage@ummon
+ DEBUG [cacf27ff] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-phage-production-romkey.sh" ; /usr/bin/env git ls-remote git@github.com:GetPhage/phage.git HEAD )
+ DEBUG [cacf27ff] 	d955b671c7b6b9923ef76a9b28156d03cd236997	HEAD
+  INFO [cacf27ff] Finished in 0.334 seconds with exit status 0 (successful).
+  INFO [28c27197] Running /usr/bin/env mkdir -p /home/phage/phage/shared /home/phage/phage/releases as phage@ummon
+ DEBUG [28c27197] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /home/phage/phage/shared /home/phage/phage/releases )
+  INFO [28c27197] Finished in 0.008 seconds with exit status 0 (successful).
+  INFO [3558d728] Running /usr/bin/env mkdir -p /home/phage/phage/shared/public/assets as phage@ummon
+ DEBUG [3558d728] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /home/phage/phage/shared/public/assets )
+  INFO [3558d728] Finished in 0.008 seconds with exit status 0 (successful).
+ DEBUG [f9c3befa] Running [ -f /home/phage/phage/shared/puma.rb ] as phage@ummon
+ DEBUG [f9c3befa] Command: [ -f /home/phage/phage/shared/puma.rb ]
+ DEBUG [f9c3befa] Finished in 0.005 seconds with exit status 0 (successful).
+ DEBUG [66297160] Running [ -f /home/phage/phage/current/REVISION ] as phage@ummon
+ DEBUG [66297160] Command: [ -f /home/phage/phage/current/REVISION ]
+ DEBUG [66297160] Finished in 0.005 seconds with exit status 1 (failed).
+ DEBUG [d763d5c4] Running [ -f /home/phage/phage/repo/HEAD ] as phage@ummon
+ DEBUG [d763d5c4] Command: [ -f /home/phage/phage/repo/HEAD ]
+ DEBUG [d763d5c4] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/phage/phage/repo
+ DEBUG [c5ccef9e] Running if test ! -d /home/phage/phage/repo; then echo "Directory does not exist '/home/phage/phage/repo'" 1>&2; false; fi as phage@ummon
+ DEBUG [c5ccef9e] Command: if test ! -d /home/phage/phage/repo; then echo "Directory does not exist '/home/phage/phage/repo'" 1>&2; false; fi
+ DEBUG [c5ccef9e] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [83a7a972] Running /usr/bin/env git remote set-url origin git@github.com:GetPhage/phage.git as phage@ummon
+ DEBUG [83a7a972] Command: cd /home/phage/phage/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-phage-production-romkey.sh" ; /usr/bin/env git remote set-url origin git@github.com:GetPhage/phage.git )
+  INFO [83a7a972] Finished in 0.008 seconds with exit status 0 (successful).
+  INFO [a57d9938] Running /usr/bin/env git remote update --prune as phage@ummon
+ DEBUG [a57d9938] Command: cd /home/phage/phage/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-phage-production-romkey.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [a57d9938] 	Fetching origin
+  INFO [a57d9938] Finished in 0.602 seconds with exit status 0 (successful).
+ DEBUG [677a7650] Running if test ! -d /home/phage/phage/repo; then echo "Directory does not exist '/home/phage/phage/repo'" 1>&2; false; fi as phage@ummon
+ DEBUG [677a7650] Command: if test ! -d /home/phage/phage/repo; then echo "Directory does not exist '/home/phage/phage/repo'" 1>&2; false; fi
+ DEBUG [677a7650] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [9b3ccb8a] Running /usr/bin/env mkdir -p /home/phage/phage/releases/20170604170713 as phage@ummon
+ DEBUG [9b3ccb8a] Command: cd /home/phage/phage/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-phage-production-romkey.sh" ; /usr/bin/env mkdir -p /home/phage/phage/releases/20170604170713 )
+  INFO [9b3ccb8a] Finished in 0.008 seconds with exit status 0 (successful).
+  INFO [7f034268] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/phage/phage/releases/20170604170713 as phage@ummon
+ DEBUG [7f034268] Command: cd /home/phage/phage/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-phage-production-romkey.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/phage/phage/releases/20170604170713 )
+  INFO [7f034268] Finished in 0.268 seconds with exit status 0 (successful).
+ DEBUG [9ade48ff] Running if test ! -d /home/phage/phage/repo; then echo "Directory does not exist '/home/phage/phage/repo'" 1>&2; false; fi as phage@ummon
+ DEBUG [9ade48ff] Command: if test ! -d /home/phage/phage/repo; then echo "Directory does not exist '/home/phage/phage/repo'" 1>&2; false; fi
+ DEBUG [9ade48ff] Finished in 0.004 seconds with exit status 0 (successful).
+ DEBUG [95669aad] Running /usr/bin/env git rev-list --max-count=1 master as phage@ummon
+ DEBUG [95669aad] Command: cd /home/phage/phage/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-phage-production-romkey.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [95669aad] 	d955b671c7b6b9923ef76a9b28156d03cd236997
+ DEBUG [95669aad] Finished in 0.008 seconds with exit status 0 (successful).
+ DEBUG [82dc5771] Running if test ! -d /home/phage/phage/releases/20170604170713; then echo "Directory does not exist '/home/phage/phage/releases/20170604170713'" 1>&2; false; fi as phage@ummon
+ DEBUG [82dc5771] Command: if test ! -d /home/phage/phage/releases/20170604170713; then echo "Directory does not exist '/home/phage/phage/releases/20170604170713'" 1>&2; false; fi
+ DEBUG [82dc5771] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [6456e070] Running /usr/bin/env echo "d955b671c7b6b9923ef76a9b28156d03cd236997" >> REVISION as phage@ummon
+ DEBUG [6456e070] Command: cd /home/phage/phage/releases/20170604170713 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env echo "d955b671c7b6b9923ef76a9b28156d03cd236997" >> REVISION )
+  INFO [6456e070] Finished in 0.007 seconds with exit status 0 (successful).
+  INFO [75b19da9] Running /usr/bin/env mkdir -p /home/phage/phage/releases/20170604170713/public as phage@ummon
+ DEBUG [75b19da9] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /home/phage/phage/releases/20170604170713/public )
+  INFO [75b19da9] Finished in 0.007 seconds with exit status 0 (successful).
+ DEBUG [8215e3da] Running [ -L /home/phage/phage/releases/20170604170713/public/assets ] as phage@ummon
+ DEBUG [8215e3da] Command: [ -L /home/phage/phage/releases/20170604170713/public/assets ]
+ DEBUG [8215e3da] Finished in 0.005 seconds with exit status 1 (failed).
+ DEBUG [44d366e7] Running [ -d /home/phage/phage/releases/20170604170713/public/assets ] as phage@ummon
+ DEBUG [44d366e7] Command: [ -d /home/phage/phage/releases/20170604170713/public/assets ]
+ DEBUG [44d366e7] Finished in 0.005 seconds with exit status 1 (failed).
+  INFO [b02ecb1d] Running /usr/bin/env ln -s /home/phage/phage/shared/public/assets /home/phage/phage/releases/20170604170713/public/assets as phage@ummon
+ DEBUG [b02ecb1d] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ln -s /home/phage/phage/shared/public/assets /home/phage/phage/releases/20170604170713/public/assets )
+  INFO [b02ecb1d] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG [b6ede244] Running if test ! -d /home/phage/phage/releases/20170604170713; then echo "Directory does not exist '/home/phage/phage/releases/20170604170713'" 1>&2; false; fi as phage@ummon
+ DEBUG [b6ede244] Command: if test ! -d /home/phage/phage/releases/20170604170713; then echo "Directory does not exist '/home/phage/phage/releases/20170604170713'" 1>&2; false; fi
+ DEBUG [b6ede244] Finished in 0.004 seconds with exit status 0 (successful).
+ DEBUG [7574442d] Running $HOME/.rbenv/bin/rbenv exec bundle check --path /home/phage/phage/shared/bundle as phage@ummon
+ DEBUG [7574442d] Command: cd /home/phage/phage/releases/20170604170713 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; $HOME/.rbenv/bin/rbenv exec bundle check --path /home/phage/phage/shared/bundle )
+ DEBUG [7574442d] 	The git source `git://github.com/sinatra/sinatra.git` uses the `git` protocol, which transmits data without encryption. Disable this warning with `bundle config git.allow_insecure true`, or switch to the `https` protocol to keep your data secure.
+ DEBUG [7574442d] 	git://github.com/sinatra/sinatra.git (at master@af6dad2) is not yet checked out.
+Run `bundle install` first.
+ DEBUG [7574442d] Finished in 0.221 seconds with exit status 11 (failed).
+  INFO [4f4d44da] Running $HOME/.rbenv/bin/rbenv exec bundle install --path /home/phage/phage/shared/bundle --without development test --deployment --quiet as phage@ummon
+ DEBUG [4f4d44da] Command: cd /home/phage/phage/releases/20170604170713 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; $HOME/.rbenv/bin/rbenv exec bundle install --path /home/phage/phage/shared/bundle --without development test --deployment --quiet )
+  INFO [4f4d44da] Finished in 110.081 seconds with exit status 0 (successful).
+  INFO [f316b05a] Running /usr/bin/env ln -s /home/phage/phage/releases/20170604170713 /home/phage/phage/releases/current as phage@ummon
+ DEBUG [f316b05a] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ln -s /home/phage/phage/releases/20170604170713 /home/phage/phage/releases/current )
+  INFO [f316b05a] Finished in 0.008 seconds with exit status 0 (successful).
+  INFO [72a4620c] Running /usr/bin/env mv /home/phage/phage/releases/current /home/phage/phage as phage@ummon
+ DEBUG [72a4620c] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mv /home/phage/phage/releases/current /home/phage/phage )
+  INFO [72a4620c] Finished in 0.008 seconds with exit status 0 (successful).
+ DEBUG [2b59619c] Running /usr/bin/env ls -x /home/phage/phage/releases as phage@ummon
+ DEBUG [2b59619c] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ls -x /home/phage/phage/releases )
+ DEBUG [2b59619c] 	20170604170610	20170604170713
+ DEBUG [2b59619c] Finished in 0.008 seconds with exit status 0 (successful).
+ DEBUG [ffafeadd] Running if test ! -d /home/phage/phage/releases; then echo "Directory does not exist '/home/phage/phage/releases'" 1>&2; false; fi as phage@ummon
+ DEBUG [ffafeadd] Command: if test ! -d /home/phage/phage/releases; then echo "Directory does not exist '/home/phage/phage/releases'" 1>&2; false; fi
+ DEBUG [ffafeadd] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [9eaa336c] Running /usr/bin/env echo "Branch master (at d955b671c7b6b9923ef76a9b28156d03cd236997) deployed as release 20170604170713 by romkey" >> /home/phage/phage/revisions.log as phage@ummon
+ DEBUG [9eaa336c] Command: cd /home/phage/phage/releases && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env echo "Branch master (at d955b671c7b6b9923ef76a9b28156d03cd236997) deployed as release 20170604170713 by romkey" >> /home/phage/phage/revisions.log )
+  INFO [9eaa336c] Finished in 0.007 seconds with exit status 0 (successful).
+ DEBUG [b1c41943] Running if test ! -d /home/phage/phage/current; then echo "Directory does not exist '/home/phage/phage/current'" 1>&2; false; fi as phage@ummon
+ DEBUG [b1c41943] Command: if test ! -d /home/phage/phage/current; then echo "Directory does not exist '/home/phage/phage/current'" 1>&2; false; fi
+ DEBUG [b1c41943] Finished in 0.005 seconds with exit status 0 (successful).
+ DEBUG [722550d4] Running [ -f /home/phage/phage/shared/tmp/pids/puma.pid ] as phage@ummon
+ DEBUG [722550d4] Command: [ -f /home/phage/phage/shared/tmp/pids/puma.pid ]
+ DEBUG [722550d4] Finished in 0.005 seconds with exit status 1 (failed).
+ DEBUG [a1b3bf73] Running [ -f /home/phage/phage/shared/puma.rb ] as phage@ummon
+ DEBUG [a1b3bf73] Command: [ -f /home/phage/phage/shared/puma.rb ]
+ DEBUG [a1b3bf73] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO using conf file /home/phage/phage/shared/puma.rb
+ DEBUG [3c5764e2] Running [ -f /home/phage/phage/shared/tmp/pids/puma.pid ] as phage@ummon
+ DEBUG [3c5764e2] Command: [ -f /home/phage/phage/shared/tmp/pids/puma.pid ]
+ DEBUG [3c5764e2] Finished in 0.004 seconds with exit status 1 (failed).
+ DEBUG [71b88d44] Running if test ! -d /home/phage/phage/current; then echo "Directory does not exist '/home/phage/phage/current'" 1>&2; false; fi as phage@ummon
+ DEBUG [71b88d44] Command: if test ! -d /home/phage/phage/current; then echo "Directory does not exist '/home/phage/phage/current'" 1>&2; false; fi
+ DEBUG [71b88d44] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [9d886a18] Running $HOME/.rbenv/bin/rbenv exec bundle exec puma -C /home/phage/phage/shared/puma.rb --daemon as phage@ummon
+ DEBUG [9d886a18] Command: cd /home/phage/phage/current && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" RACK_ENV="production" ; $HOME/.rbenv/bin/rbenv exec bundle exec puma -C /home/phage/phage/shared/puma.rb --daemon )
+ DEBUG [9d886a18] 	Puma starting in single mode...
+* Version 3.6.0 (ruby 2.3.1-p112), codename: Sleepy Sunday Serenity
+* Min threads: 0, max threads: 16
+* Environment: production
+* Daemonizing...
+  INFO [9d886a18] Finished in 0.441 seconds with exit status 0 (successful).

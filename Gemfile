@@ -39,9 +39,9 @@ gem 'therubyracer'
 gem 'rails_admin'
 gem 'dotenv'
 
-group :workers do
-  gem 'backburner'
+gem 'backburner'
 
+group :workers do
   gem 'arp'
   gem 'snmp'
   gem 'xml-simple'
