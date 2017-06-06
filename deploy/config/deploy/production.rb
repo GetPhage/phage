@@ -7,7 +7,7 @@
 # server "example.com", user: "deploy", roles: %w{app web}, other_property: :other_value
 # server "db.example.com", user: "deploy", roles: %w{db}
 
-server 'ummon', user: 'phage', roles: %w{app jobs}
+server 'ummon', user: 'phage', roles: %w{web workers db puma:nginx}
 
 
 # role-based syntax
@@ -22,9 +22,9 @@ server 'ummon', user: 'phage', roles: %w{app jobs}
 # role :web, %w{user1@primary.com user2@additional.com}, other_property: :other_value
 # role :db,  %w{deploy@example.com}
 
-role :app, %{ummon}
-role :jobs, %{ummon}
-
+role :web, %{ummon}
+role :workers, %{ummon}
+role :db, %{ummon}
 
 # Configuration
 # =============
