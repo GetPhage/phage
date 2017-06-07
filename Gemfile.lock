@@ -337,7 +337,7 @@ DEPENDENCIES
   groupdate
   jbuilder (~> 2.5)
   jquery-rails
-  listen (~> 3.0.5)
+  listen
   log_switch (~> 0.4.0)
   logger
   logging-rails
