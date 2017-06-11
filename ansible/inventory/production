@@ -1,0 +1,14 @@
+[web]
+ummon
+
+[app]
+ummon
+
+[db]
+ummon
+
+[queue]
+ummon
+
+[worker]
+ummon

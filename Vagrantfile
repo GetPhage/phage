@@ -7,12 +7,15 @@ Vagrant.configure(2) do |config|
   config.vm.network "public_network", type: "dhcp", bridge: "en0: Wi-Fi (AirPort)"
   config.vm.synced_folder ".", "/phage"
 
+  config.vm.define "vagrant"
+
   config.vm.provision "ansible" do |ansible|
     ansible.verbose = "v"
-    ansible.playbook = "ansible/jarvis.yml"
+    #    ansible.playbook = "ansible/site.yml"
+        ansible.playbook = "ansible/vagrant.yml"
   end
 
   config.vm.provider "virtualbox" do |vb|
-    vb.memory = "2048"
+    vb.memory = "4096"
   end
 end

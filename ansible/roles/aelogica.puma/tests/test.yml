@@ -1,0 +1,16 @@
+---
+- hosts: localhost
+  remote_user: root
+
+  vars:
+    authorized_public_keys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDNWFqZJeYSRgL5C1JzNnhbo1wyQTKdLqeaZlSoP35laaEQd9BHaXKoUmn0AjWCxVn8LogPrdI/PD8OR/6pzXXJw9/0Uh8KvhBXSfn7TS2e6+COimeZHYzm87Lifrne80dLCNAv3qVay9JwodIzp+bbM4K/8B22lzb3wXrB6roV2z4ESOcg/NtmS6KeR/jFWJ47/r4Vwng7jSw4lwJA4cPcP56RbaEYSzHHEuoQ17PUggX268GxM4PDEAVST2T0ncoI9g8yKZx1h2Ve6nfFnIIukitnqMLq5iYXQ4tLtbJtDeOQxB8mk5kP68I42xRQma+tABQ/w0Wc1cj6rS4zIuVL test@example.com
+
+  roles:
+    - aelogica.deploy_user
+
+- hosts: localhost
+  remote_user: root
+
+  roles:
+    - ansible-role-puma
