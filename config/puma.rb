@@ -19,16 +19,15 @@ workers 4
 prune_bundler
 
 on_worker_boot do |worker_index|
-
   # write worker pid
-  File.open("tmp/puma_worker_#{worker_index}.pid", "w") { |f| f.puts Process.pid }
+  File.open("/home/phage/phage/shared/tmp/pids/puma_worker_#{worker_index}.pid", "w") { |f| f.puts Process.pid }
 
   # reconnect to redis
-  Redis.current.client.reconnect
+#  Redis.current.client.reconnect
 
-  ActiveSupport.on_load(:active_record) do
-    ActiveRecord::Base.establish_connection
-  end
+#  ActiveSupport.on_load(:active_record) do
+#    ActiveRecord::Base.establish_connection
+#  end
 end
 
 on_restart do
