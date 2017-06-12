@@ -37,7 +37,7 @@ gem 'logger'
 
 gem 'therubyracer'
 gem 'rails_admin'
-gem 'dotenv'
+gem 'dotenv-rails'
 
 gem 'backburner'
 

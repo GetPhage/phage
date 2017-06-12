@@ -104,7 +104,10 @@ GEM
       responders
       warden (~> 1.2.3)
     dnssd (3.0.1)
-    dotenv (2.1.1)
+    dotenv (2.2.1)
+    dotenv-rails (2.2.1)
+      dotenv (= 2.2.1)
+      railties (>= 3.2, < 5.2)
     em-http-request (1.1.5)
       addressable (>= 2.3.4)
       cookiejar (!= 0.3.1)
@@ -333,7 +336,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   devise
   dnssd
-  dotenv
+  dotenv-rails
   groupdate
   jbuilder (~> 2.5)
   jquery-rails
