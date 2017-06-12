@@ -15,7 +15,11 @@
         - owner: phage
           src: files/ssh-keys/phage_authorized_keys.pub
 
+    - name: ANXS.monit
+      tags: monit
+
     - name: ANXS.postgresql
+      tags: postgresql
       postgresql_version: 9.6
       postgresql_databases:
         - name: "{{ database_name }}"
@@ -34,6 +38,7 @@
 
     - geerlingguy.nginx          
     - name: zzet.rbenv
+      tags: ruby
       env: user
       default_ruby: "{{ ruby_version }}"
       rubies:
@@ -59,4 +64,7 @@
 
     - name: pwelch.avahi 
       avahi_useipv6:  yes 
-      avahi_install_utils: true 
+      avahi_install_utils: true
+
+    - name: env
+      tags: env
