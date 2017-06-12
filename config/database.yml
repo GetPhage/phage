@@ -20,4 +20,5 @@ test:
 
 production:
   <<: *default
-  database: phage
+  database: phage_production
+  
