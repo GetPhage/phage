@@ -37,7 +37,6 @@ gem 'therubyracer'
 gem 'rails_admin'
 gem 'dotenv-rails'
 
-gem 'god'
 gem 'backburner'
 
 group :workers do
