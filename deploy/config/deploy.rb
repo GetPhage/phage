@@ -8,7 +8,7 @@ set :deploy_to, '/home/phage/phage'
 #set :nginx_sites_available_path, "/etc/nginx/sites-available"
 #set :nginx_sites_enabled_path, "/etc/nginx/sites-enabled"
 
-set :rbenv_ruby, "2.3.3p222"
+set :rbenv_ruby, "2.3.1"
 
 # Default branch is :master
 ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
