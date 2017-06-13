@@ -1,0 +1,8 @@
+- group:
+     name: phage
+     state: present 
+- user:
+    name: phage
+    group: phage
+    password: $6$4UQ.JKZ6Zp5pw7Ub$j2MxF/uGOmgWHDLYaDtw64D8SONROZxcpvjYncBvuEx4U86Zs3tv1BwvrjbYwWxLAb2M8G0xJf5ydrD3Mn0ad1
+    state: present 

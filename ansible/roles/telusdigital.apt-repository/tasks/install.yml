@@ -1,0 +1,37 @@
+---
+- name: Install apt HTTPS Transport | apt
+  apt:
+    state: latest
+    name: apt-transport-https
+    update_cache: yes
+
+- name: "Import Signing Key via HKP | {{ repository_key }}"
+  apt_key:
+    state: present
+    keyserver: 'hkp://keyserver.ubuntu.com:80'
+    id: "{{ repository_key }}"
+  when: repository_key is defined
+  tags:
+    - repository
+    - signing-key
+    - using-apt
+    - assumes-trust
+    - improves-security
+
+- name: "Import Signing Key via public_key | {{ repository_key }}"
+  apt_key:
+    state: present
+    data: "{{ repository_key_public_key }}"
+  when: repository_key_public_key is defined
+  tags:
+    - repository
+    - signing-key
+    - using-apt
+    - assumes-trust
+    - improves-security
+
+- name: "Import Repository | {{ repository_url }}"
+  apt_repository:
+    state: present
+    repo: "{{ repository_url | mandatory }}"
+    update_cache: yes

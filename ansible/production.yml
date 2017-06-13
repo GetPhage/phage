@@ -1,0 +1,70 @@
+- name: Phage production servers playbook
+  hosts: all 
+  gather_facts: true
+  become: true
+  become_user: root
+  vars:
+    database_name: phage_production
+  roles:
+    - basics
+    - bennojoy.ntp
+    - yatesr.timezone
+    - users
+    - name: tersmitten.ssh-keys
+      ssh_keys_authorized_keys:
+        - owner: phage
+          src: files/ssh-keys/phage_authorized_keys.pub
+
+    - name: ANXS.monit
+      tags: monit
+
+    - name: ANXS.postgresql
+      tags: postgresql
+      postgresql_version: 9.6
+      postgresql_databases:
+        - name: "{{ database_name }}"
+          owner: phage
+          hstore: yes
+      postgresql_users:
+        - name: phage
+          db: phage
+          pass: "{{ database_user_password }}"
+          encrypted: no
+        - name: postgresql
+          pass: "{{ database_admin_password }}"
+          encrypted: no
+          priv: "ALL"
+
+
+    - geerlingguy.nginx          
+    - name: zzet.rbenv
+      tags: ruby
+      env: user
+      default_ruby: "{{ ruby_version }}"
+      rubies:
+        - version: "{{ ruby_version }}"
+      rbenv_plugins:
+        - { name: "rbenv-vars",
+            repo: "https://github.com/rbenv/rbenv-vars.git",
+            version: "v1.2.0" }
+        - { name: "ruby-build",
+            repo: "https://github.com/rbenv/ruby-build.git",
+            version: "master" }
+        - { name: "rbenv-default-gems",
+            repo: "https://github.com/rbenv/rbenv-default-gems.git",
+            version: "v1.0.0" }
+      rbenv_users: [ "phage" ]
+
+    - name:  aelogica.puma
+      puma_user: phage
+      puma_shared: /home/phage/phage/shared
+      puma_root: /home/phage/phage
+
+    - jasonj.beanstalkd
+
+    - name: pwelch.avahi 
+      avahi_useipv6:  yes 
+      avahi_install_utils: true
+
+    - name: env
+      tags: env

@@ -1,0 +1,6 @@
+- template:
+    dest: /home/phage/phage/.env
+    owner: phage
+    group: phage
+    mode: 0400
+    src: env.j2

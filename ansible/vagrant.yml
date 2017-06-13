@@ -1,0 +1,57 @@
+- name: Phage Vagrant playbook
+  hosts: all 
+  gather_facts: true
+  become: true
+  become_user: root
+  vars:
+    database_name: phage_vagrant
+    database_user_password: "thxW738Nmn]{tp"
+    database_admin_password: "B[=j83rrwmd9dQ" 
+  roles:
+    - basics
+    - bennojoy.ntp
+    - yatesr.timezone
+    - users
+    - name: tersmitten.ssh-keys
+      ssh_keys_authorized_keys:
+        - owner: phage
+          src: files/ssh-keys/phage_authorized_keys.pub
+
+    - name: ANXS.postgresql
+      postgresql_version: 9.6
+      postgresql_databases:
+        - name: "{{ database_name }}"
+          owner: phage
+          hstore: yes
+      postgresql_users:
+        - name: phage
+          db: phage
+          pass: "{{ database_user_password }}"
+          encrypted: no
+        - name: postgresql
+          pass: "{{ database_admin_password }}"
+          encrypted: no
+          priv: "ALL"
+    - name: zzet.rbenv
+      env: user
+      default_ruby: "{{ ruby_version }}"
+      rubies:
+        - version: "{{ ruby_version }}"
+      rbenv_plugins:
+        - { name: "rbenv-vars",
+            repo: "https://github.com/rbenv/rbenv-vars.git",
+            version: "v1.2.0" }
+        - { name: "ruby-build",
+            repo: "https://github.com/rbenv/ruby-build.git",
+            version: "master" }
+        - { name: "rbenv-default-gems",
+            repo: "https://github.com/rbenv/rbenv-default-gems.git",
+            version: "v1.0.0" }
+      rbenv_users: [ "phage" ]
+
+    - jasonj.beanstalkd
+
+    - name: pwelch.avahi 
+      avahi_useipv6:  yes 
+      avahi_install_utils: true 
+    - name: env
