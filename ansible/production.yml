@@ -8,7 +8,9 @@
   roles:
     - basics
     - bennojoy.ntp
-    - yatesr.timezone
+    - name: yatesr.timezone
+      timezone: America/Los_Angeles
+      tags: timezone
     - users
     - name: tersmitten.ssh-keys
       ssh_keys_authorized_keys:
