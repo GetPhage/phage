@@ -72,6 +72,8 @@ module Phage
             pp d
 
             ScanDiff.create( { mac_address: item[:mac_address], ipv4: item[:ipv4], device: d, status: :add, scan: scan, kind: "passive" } )
+
+            SendNewDeviceEmail.perform_later(d.id)
           end
         end
 

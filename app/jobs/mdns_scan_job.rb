@@ -1,7 +1,7 @@
 require 'phage/scan/mdns'
 
 class MdnsScanJob < ApplicationJob
-  queue_as "com.romkey.phage.backburner-jobs"
+  queue_as :default
 
   def perform(*args)
     start = Time.now

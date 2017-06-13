@@ -2,7 +2,7 @@ require 'phage/scan/ports'
 require 'pp'
 
 class PortScanJob < ApplicationJob
-  queue_as "com.romkey.phage.backburner-jobs"
+  queue_as :default
 
   def perform(*args)
     start = Time.now

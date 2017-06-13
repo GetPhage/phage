@@ -2,7 +2,7 @@ require 'phage/scan/upnp'
 require 'pp'
 
 class UpnpScanJob < ApplicationJob
-  queue_as "com.romkey.phage.backburner-jobs"
+  queue_as :default
 
   def perform(*args)
     start = Time.now
