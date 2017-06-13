@@ -22,7 +22,7 @@
 en:
   hello: "Hello world"
 
-    device_mailer:
-      new_device:
-        subject: New device
-        body: New device found on network %{device.ipv4[0]}
+  device_mailer:
+    new_device:
+      subject: New device
+      body: New device found on network %{device.ipv4[0]}
