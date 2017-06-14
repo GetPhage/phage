@@ -4,7 +4,7 @@ every 1.minutes do
   rbenv_rake "passive:scan"
 end
 
-every 5.minutes do
+every 15.minutes do
   rbenv_rake "mdns:scan"
 end
 
