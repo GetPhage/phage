@@ -1,5 +1,5 @@
 - template:
-    dest: /home/phage/phage/.env
+    dest: /home/phage/phage/shared/.env
     owner: phage
     group: phage
     mode: 0400

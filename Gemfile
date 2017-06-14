@@ -70,3 +70,5 @@ gem 'omniauth-slack'
 
 gem 'whenever'
 gem 'logging-rails', :require => 'logging/rails'
+
+gem 'bugsnag'
