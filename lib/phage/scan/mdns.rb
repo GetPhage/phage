@@ -19,7 +19,12 @@ module Phage
 
         results = ''
         %w(airport http https homekit daap nfs mediaremotetv spotify-connect androidtvremote workstation printer printer._sub._http airplay raop privet uscans uscan ipp ippusb ipps scanner pdl-datastream ptp airplay raop ssh ftp telnet afpovertcp smb rfb adisk googlecast).each do |service|
-          results += `avahi-browse -v -r -p -k -t _#{service}._tcp`
+          str = `avahi-browse -v -r -p -k -t _#{service}._tcp`
+          if str
+            results += str
+          else
+            puts "backticks returned nil!!!"
+          end
         end
         results += `avahi-browse -v -r -p -k -t _sleep-proxy._udp`
       
