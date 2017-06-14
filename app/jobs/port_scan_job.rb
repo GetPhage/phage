@@ -5,11 +5,17 @@ class PortScanJob < ApplicationJob
   queue_as :default
 
   def perform(*args)
-    start = Time.now
-    scanner = Phage::Scan::Ports.new
-    complete = Time.now
+    begin
+      start = Time.now
+      scanner = Phage::Scan::Ports.new
+      complete = Time.now
 
-    puts "SCANNER"
-    pp scanner
-    scanner.diff(start, complete)  end
+      puts "PortScanJob"
+      pp scanner
+      scanner.diff(start, complete)  end
+    rescue => exception
+      puts "PortScanJob"
+      puts exception.backtrace
+      raise
+    end
 end

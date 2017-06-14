@@ -4,10 +4,16 @@ class MdnsScanJob < ApplicationJob
   queue_as :default
 
   def perform(*args)
-    start = Time.now
-    scanner = Phage::Scan::Mdns.new
-    complete = Time.now
+    begin
+      start = Time.now
+      scanner = Phage::Scan::Mdns.new
+      complete = Time.now
 
-    scanner.diff(start, complete)
+      scanner.diff(start, complete)
+    rescue => exception
+      puts "MdnsScanJob"
+      puts exception.backtrace
+      raise
+    end
   end
 end
