@@ -41,6 +41,7 @@ module Phage
           if d
             unless d.active?
               d.last_seen = Time.now
+              d.active = true
               d.save
 
               ScanDiff.create( { extra: { active: true }, device: d, status: :up, scan: scan, kind: 'passive' } )

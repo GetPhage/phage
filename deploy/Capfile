@@ -18,7 +18,7 @@ install_plugin Capistrano::Puma::Workers
 # install_plugin Capistrano::Puma::Monit
 install_plugin Capistrano::Puma::Nginx
 
-require 'capistrano/whenever'
+require 'whenever/capistrano'
 
 require 'capistrano-nc/nc'
 
