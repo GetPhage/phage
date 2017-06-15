@@ -11,7 +11,7 @@ APP_DIR=/home/phage/phage/current
 SHARED_DIR=/home/phage/phage/shared
 PUMA_CONFIG_FILE=$APP_DIR/config/puma.rb
 PUMA_PID_FILE=$SHARED_DIR/tmp/pids/puma.pid
-PUMA_SOCKET=$SHARED_DIR/tmp/puma.sock
+PUMA_SOCKET=$SHARED_DIR/tmp/sockets/puma.sock
 
 # check if puma process is running
 puma_is_running() {
