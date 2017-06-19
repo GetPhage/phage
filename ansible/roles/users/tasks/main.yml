@@ -1,8 +1,24 @@
-- group:
-     name: phage
-     state: present 
-- user:
+- name: Create phage group
+  group:
+    name: phage
+    state: present 
+- name: Create phage user
+  user:
     name: phage
     group: phage
     password: $6$4UQ.JKZ6Zp5pw7Ub$j2MxF/uGOmgWHDLYaDtw64D8SONROZxcpvjYncBvuEx4U86Zs3tv1BwvrjbYwWxLAb2M8G0xJf5ydrD3Mn0ad1
     state: present 
+- name: Create phage source directory
+  file:
+    path: /home/phage/phage
+    state: directory
+    mode: 0755
+    owner: phage
+    group: phage
+- name: Create phage shared runtime directory
+  file:
+    path: /home/phage/phage/shared
+    state: directory
+    mode: 0755
+    owner: phage
+    group: phage

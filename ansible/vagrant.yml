@@ -3,10 +3,6 @@
   gather_facts: true
   become: true
   become_user: root
-  vars:
-    database_name: phage_vagrant
-    database_user_password: "thxW738Nmn]{tp"
-    database_admin_password: "B[=j83rrwmd9dQ" 
   roles:
     - basics
     - bennojoy.ntp
@@ -25,7 +21,7 @@
           hstore: yes
       postgresql_users:
         - name: phage
-          db: phage
+          db: "{{ database_name }}"
           pass: "{{ database_user_password }}"
           encrypted: no
         - name: postgresql
