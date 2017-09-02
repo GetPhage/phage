@@ -1,7 +1,7 @@
 class CreateFlow < ActiveRecord::Migration[5.0]
   def change
     create_table :flows do |t|
-      t.belongs_tos :device
+      t.belongs_to :device
       t.macaddr :mac_address, null: false
       t.inet :src_ip, null: false, default: '0.0.0.0'
       t.inet :dst_ip, null: false, default: '0.0.0.0'
