@@ -6,6 +6,9 @@ jarvis.sqlite
 database.log
 .vagrant/
 
+data/*
+
+
 /ansible/*.retry
 /tmp/*
 /public/assets/*
