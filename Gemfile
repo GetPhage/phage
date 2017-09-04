@@ -44,7 +44,7 @@ group :workers do
   gem 'snmp'
   gem 'xml-simple'
   gem 'net-ping'
-  gem 'dnssd'
+#  gem 'dnssd'
   gem 'log_switch', '~> 0.4.0'
   gem 'playful'
 
