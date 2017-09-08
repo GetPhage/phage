@@ -8,10 +8,10 @@ class CreatePartialFlow < ActiveRecord::Migration[5.0]
       t.integer :src_port, null: false, default: 0
       t.integer :dst_port, null: false, default: 0
       t.string :hostname, null: false, default: ''
-      t.integer :src_seq, null: false, default: 0
-      t.integer :src_ack, null: false, default: 0
-      t.integer :dst_seq, null: false, default: 0
-      t.integer :dst_ack, null: false, default: 0
+      t.integer :src_seq, null: false, default: 0, :limit => 8
+      t.integer :src_ack, null: false, default: 0, :limit => 8
+      t.integer :dst_seq, null: false, default: 0, :limit => 8
+      t.integer :dst_ack, null: false, default: 0, :limit => 8
       t.boolean :src_syn, null: false, default: false
       t.boolean :src_fin, null: false, default: false
       t.boolean :src_rst, null: false, default: false

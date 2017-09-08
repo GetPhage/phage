@@ -9,8 +9,8 @@ class CreateFlow < ActiveRecord::Migration[5.0]
       t.integer :dst_port, null: false, default: 0
       t.string :hostname, null: false, default: ''
       t.integer :duration, null: false, default: 0
-      t.integer :bytes_sent, null: false, default: 0
-      t.string :bytes_received, null: false, default: 0
+      t.integer :bytes_sent, null: false, default: 0, :limit => 8
+      t.integer :bytes_received, null: false, default: 0, :limit => 8
     end
     add_index :flows, :src_ip
     add_index :flows, :dst_ip

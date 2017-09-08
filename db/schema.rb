@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170903174309) do
+ActiveRecord::Schema.define(version: 20170905192335) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -79,8 +79,8 @@ ActiveRecord::Schema.define(version: 20170903174309) do
     t.integer "dst_port",       default: 0,         null: false
     t.string  "hostname",       default: "",        null: false
     t.integer "duration",       default: 0,         null: false
-    t.integer "bytes_sent",     default: 0,         null: false
-    t.string  "bytes_received", default: "0",       null: false
+    t.bigint  "bytes_sent",     default: 0,         null: false
+    t.bigint  "bytes_received", default: 0,         null: false
     t.index ["bytes_received"], name: "index_flows_on_bytes_received", using: :btree
     t.index ["device_id"], name: "index_flows_on_device_id", using: :btree
     t.index ["dst_ip"], name: "index_flows_on_dst_ip", using: :btree
@@ -164,16 +164,11 @@ ActiveRecord::Schema.define(version: 20170903174309) do
     t.integer  "src_port",    default: 0,         null: false
     t.integer  "dst_port",    default: 0,         null: false
     t.string   "hostname",    default: "",        null: false
-    t.integer  "src_seq",     default: 0,         null: false
-    t.integer  "src_ack",     default: 0,         null: false
-    t.integer  "dst_seq",     default: 0,         null: false
-    t.integer  "dst_ack",     default: 0,         null: false
-    t.boolean  "src_syn",     default: false,     null: false
-    t.boolean  "src_fin",     default: false,     null: false
-    t.boolean  "src_rst",     default: false,     null: false
-    t.boolean  "dst_syn",     default: false,     null: false
-    t.boolean  "dst_fin",     default: false,     null: false
-    t.boolean  "dst_rst",     default: false,     null: false
+    t.bigint   "src_seq",     default: 0,         null: false
+    t.bigint   "src_ack",     default: 0,         null: false
+    t.boolean  "is_syn",      default: false,     null: false
+    t.boolean  "is_fin",      default: false,     null: false
+    t.boolean  "is_rst",      default: false,     null: false
     t.datetime "timestamp",                       null: false
     t.index ["device_id"], name: "index_partial_flows_on_device_id", using: :btree
     t.index ["src_ip", "dst_ip", "src_port", "dst_port"], name: "partial_flow_index", using: :btree

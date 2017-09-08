@@ -1,7 +1,9 @@
 namespace :pcap do
   desc 'Import pcap files'
   task :import => [:environment] do
-    PartialFlow.import('./data/flow-dump')
+    filename = 'packets.json'
+    puts filename
+    PartialFlow::import(filename)
   end
 
   desc 'Remove pcap entries'
