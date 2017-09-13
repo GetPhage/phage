@@ -111,7 +111,7 @@ int main(int argc, char **argv) {
   char errbuf[256];
   int pkt_count = 0;
 
-  pcap = pcap_open_offline("./data/foo.pcap", errbuf);
+  pcap = pcap_open_offline("./data/foo-2.pcap", errbuf);
   if(pcap == NULL) {
     printf("Couldn't open ./data/foo.pcap: %s", errbuf);
     exit(1);
