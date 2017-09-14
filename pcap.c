@@ -136,6 +136,10 @@ int main(int argc, char **argv) {
       break;
     }
 
+    if(pkt_count > 0) {
+      printf(",\n\n");
+    }
+
     pkt_count++;
 
     /*
@@ -169,7 +173,7 @@ int main(int argc, char **argv) {
     printf(" \"syn\": %d,\n", tcph->th_flags & TH_SYN);
     printf(" \"fin\": %d,\n", tcph->th_flags & TH_FIN);
     printf(" \"rst\": %d\n", tcph->th_flags & TH_RST);
-    printf("},\n\n\n");
+    printf("}\n\n\n");
 
     /*
     printf("\nip %s -> %s\n", ip_src, ip_dst);
