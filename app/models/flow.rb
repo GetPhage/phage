@@ -7,6 +7,8 @@ class Flow < ApplicationRecord
 
       PartialFlow.where(is_fin: true).each do |pflow|
         possibles = PartialFlow.where(is_syn: true,
+                                      src_ip: pflow.dst_ip,
+                                      dst_ip: pflow.src_ip,
                                       src_port: pflow.dst_port,
                                       dst_port: pflow.src_port
                                      ).where("timestamp <= ?", pflow.timestamp)
@@ -21,6 +23,8 @@ class Flow < ApplicationRecord
         if possibles.all.count == 1
           match = possibles.first
 
+          d = Device.where("? = ANY(ipv4)", match.src_ip) || Device.where("? = ANY(ipv4)", match.dst_ip)
+
           # we sub 2 from the bytes sent to account for SYN and FIN
           Flow.create src_ip: match.src_ip,
                       dst_ip: match.dst_ip,
@@ -28,7 +32,8 @@ class Flow < ApplicationRecord
                       dst_port: match.dst_port,
                       bytes_sent: pflow.src_ack - match.src_seq - 2,
                       duration: pflow.timestamp - match.timestamp,
-                      mac_address: pflow.mac_address
+                      mac_address: pflow.mac_address,
+                      device: d
         end
       end
     end

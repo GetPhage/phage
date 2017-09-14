@@ -10,10 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170905192335) do
+ActiveRecord::Schema.define(version: 20170914041932) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "hstore"
 
   create_table "cves", force: :cascade do |t|
     t.string   "name"
@@ -27,6 +28,11 @@ ActiveRecord::Schema.define(version: 20170905192335) do
     t.index ["desc"], name: "index_cves_on_desc", using: :btree
     t.index ["name"], name: "index_cves_on_name", using: :btree
     t.index ["seq"], name: "index_cves_on_seq", using: :btree
+  end
+
+  create_table "dashboards", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "devices", force: :cascade do |t|
@@ -171,6 +177,10 @@ ActiveRecord::Schema.define(version: 20170905192335) do
     t.boolean  "is_rst",      default: false,     null: false
     t.datetime "timestamp",                       null: false
     t.index ["device_id"], name: "index_partial_flows_on_device_id", using: :btree
+    t.index ["is_fin", "src_ip", "dst_ip", "src_port", "dst_port", "timestamp"], name: "partial_flow_fin_hosts_index", using: :btree
+    t.index ["is_fin"], name: "index_partial_flows_on_is_fin", using: :btree
+    t.index ["is_syn", "src_ip", "dst_ip", "src_port", "dst_port", "timestamp"], name: "partial_flow_syn_hosts_index", using: :btree
+    t.index ["is_syn"], name: "index_partial_flows_on_is_syn", using: :btree
     t.index ["src_ip", "dst_ip", "src_port", "dst_port"], name: "partial_flow_index", using: :btree
   end
 
