@@ -23,7 +23,7 @@ class Flow < ApplicationRecord
         if possibles.all.count == 1
           match = possibles.first
 
-          d = Device.where("? = ANY(ipv4)", match.src_ip) || Device.where("? = ANY(ipv4)", match.dst_ip)
+          d = Device.where("? = ANY(ipv4)", match.src_ip.to_s).first || Device.where("? = ANY(ipv4)", match.dst_ip.to_s).first
 
           # we sub 2 from the bytes sent to account for SYN and FIN
           Flow.create src_ip: match.src_ip,

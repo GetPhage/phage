@@ -8,6 +8,7 @@ database.log
 
 data/*
 
+utils/pcap
 
 /ansible/*.retry
 /tmp/*

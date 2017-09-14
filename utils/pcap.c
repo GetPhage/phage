@@ -105,6 +105,13 @@ void pr_hex(const u_char *ptr, int len) {
   printf("\n\n\n\n");
 }
 
+const char *ether_to_s(const u_char *mac_addr) {
+  static char ether_string[18];
+
+  sprintf(ether_string, "%02x:%02x:%02x:%02x:%02x:%02x", (unsigned)mac_addr[0], (unsigned)mac_addr[1], (unsigned)mac_addr[2], (unsigned)mac_addr[3], (unsigned)mac_addr[4], (unsigned)mac_addr[5]);
+  return ether_string;
+}
+
 
 int main(int argc, char **argv) {
   pcap_t *pcap;
@@ -164,6 +171,8 @@ int main(int argc, char **argv) {
     inet_ntop(AF_INET, &iph->ip_dst, ip_dst, INET_ADDRSTRLEN);
 
     printf("{ \"time\": %lu,\n", packet_header.ts.tv_sec);
+    printf(" \"ether_src\": \"%s\"", ether_to_s(eph->ether_shost));
+    printf(" \"ether_dst\": \"%s\"", ether_to_s(eph->ether_dhost));
     printf(" \"src_ip\": \"%s\",\n", ip_src);
     printf(" \"dst_ip\": \"%s\",\n", ip_dst);
     printf(" \"src_port\": %u,\n", ntohs(tcph->th_sport));

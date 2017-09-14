@@ -55,6 +55,7 @@
     <% end %>
   </ul>
 </p>
+<% if false %>
 <pre>
   <%= results =  @device.scan_diff.where("extra ? 'active'").inject({}) { |hash, sd| hash.merge({ sd.created_at => sd.extra["active"] }) } ;
   new_results = results.clone
@@ -67,6 +68,7 @@
   new_results = results.clone
   results.each { |key, value| new_results[key - 0.01] = !value } %>
 <%= column_chart(  @device.scan_diff.where("extra ? 'active'").inject({}) { |hash, sd| hash.merge( { sd.created_at => sd.extra["active"] ? 1 : 0  })}, discrete: true ) %>
+<% end %>
 
 <%= link_to 'Edit', edit_device_path(@device) %> |
 <%= link_to 'Back', devices_path %>
