@@ -107,6 +107,7 @@ GEM
       railties (>= 4.1.0, < 5.1)
       responders
       warden (~> 1.2.3)
+    dnssd (3.0.1)
     dotenv (2.2.1)
     dotenv-rails (2.2.1)
       dotenv (= 2.2.1)
@@ -341,6 +342,7 @@ DEPENDENCIES
   chartkick
   coffee-rails (~> 4.2)
   devise
+  dnssd
   dotenv-rails
   groupdate
   jbuilder (~> 2.5)
