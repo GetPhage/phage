@@ -48,7 +48,7 @@
   <h2>Flows</h2>
 <p>
   <ul>
-    <% @device.flows.each do |flow| %>
+    <% Flow.where(device: @device).each do |flow| %>
     <li>
       <%= flow.src_ip %>:<%= flow.src_port %> -> <%= flow.dst_ip %>:<%= flow.dst_port %> <%= flow.bytes_sent %> in <%= flow.duration %> seconds
     </li>
