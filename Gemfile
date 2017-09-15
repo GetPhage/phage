@@ -74,3 +74,5 @@ gem 'logging-rails', :require => 'logging/rails'
 gem 'bugsnag'
 
 gem 'backup'
+
+gem 'histogram'

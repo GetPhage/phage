@@ -139,6 +139,7 @@ GEM
     haml (4.0.7)
       tilt
     hashie (3.4.6)
+    histogram (0.2.4.1)
     http_parser.rb (0.6.0)
     httpi (2.4.2)
       rack
@@ -345,6 +346,7 @@ DEPENDENCIES
   dnssd
   dotenv-rails
   groupdate
+  histogram
   jbuilder (~> 2.5)
   jquery-rails
   listen

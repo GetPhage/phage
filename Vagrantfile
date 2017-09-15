@@ -16,7 +16,7 @@ Vagrant.configure(2) do |config|
     ansible.verbose = "v"
     #    ansible.playbook = "ansible/site.yml"
     ansible.playbook = "ansible/vagrant.yml"
-    ansible.host_vars = YAML.load(File.read('ansible/host_vars/vagrant.yml'))
+#    ansible.host_vars = YAML.load(File.read('ansible/host_vars/vagrant.yml'))
   end
 
   config.vm.provider "virtualbox" do |vb|
