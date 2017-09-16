@@ -7,9 +7,7 @@ class PartialFlow < ApplicationRecord
     ActiveRecord::Base.logger.silence do
       packets = JSON.parse(File.read(file), symbolize_names: true)
       packets.each do |pkt|
-        pp pkt
-
-        PartialFlow.first_or_create  src_ip: pkt[:src_ip],
+        PartialFlow.create  src_ip: pkt[:src_ip],
                                      dst_ip: pkt[:dst_ip],
                                      src_port: pkt[:src_port],
                                      dst_port: pkt[:dst_port],
