@@ -55,6 +55,12 @@
     <% end %>
   </ul>
 </p>
+<%
+  (bins, freq) = Flow.where(device: @device).pluck(:bytes_sent).histogram([0, 10, 100, 1000, 10000, 100000, 1000000])
+  data = Hash[bins.zip(freq)]
+  %>
+<%= column_chart data %>
+
 <% if false %>
 <pre>
   <%= results =  @device.scan_diff.where("extra ? 'active'").inject({}) { |hash, sd| hash.merge({ sd.created_at => sd.extra["active"] }) } ;

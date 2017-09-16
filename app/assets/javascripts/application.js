@@ -11,9 +11,10 @@
 // about supported directives.
 //
 //= require jquery
+//= require tether
 //= require bootstrap
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-//= require Chart.bundle
+//= require chart.min
 //= require chartkick

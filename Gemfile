@@ -58,6 +58,10 @@ gem 'beanstalkd_view'
 gem 'sinatra', git: 'https://github.com/sinatra/sinatra'
 
 gem 'bootstrap', '~> 4.0.0.alpha4'
+source 'https://rails-assets.org' do
+  gem 'rails-assets-datetimepicker'
+  gem 'rails-assets-tether', '>= 1.4.0'
+end
 gem 'will_paginate', '~> 3.1.0'
 
 # charts
