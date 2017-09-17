@@ -3,6 +3,16 @@
   gather_facts: true
   become: true
   become_user: root
+  vars:
+    database_name: phage_vagrant
+    database_user_password: foobarfoobar
+    database_admin_password: foobarfoobargo
+    devise_prod_secret_key_base: 9489b3eee4eccba17ed77407233e8adc97baca7c74dc7ee33cd93e4c8b69477eea66eaedeb18af0be2679887c7c69c0a28c0fded0a71ea472a8c4laalal19cb
+    smtp_server_address: 127.0.0.1
+    smtp_domain: example.com
+    smtp_username: nobody
+    smtp_password: nothing
+    bugsnag_api_key: foo
   roles:
     - basics
     - bennojoy.ntp
