@@ -50,7 +50,20 @@
   <ul>
     <% Flow.where(device: @device).each do |flow| %>
     <li>
-      <%= flow.src_ip %>:<%= flow.src_port %> -> <%= flow.dst_ip %>:<%= flow.dst_port %><br/> <%= flow.bytes_sent %> bytes in <%= flow.duration %> seconds
+      <%       begin
+          src_port = Socket.getservbyport(f.src_port)
+        rescue
+          src_port = f.src_port.to_s
+        end
+
+        begin
+          dst_port = Socket.getservbyport(f.dst_port)
+        rescue
+          dst_port = f.dst_port.to_s
+               end
+	       %>
+
+      <%= flow.src_ip %>:<%= src_port %> -> <%= flow.dst_ip %>:<%=dst_port %><br/> <%= flow.bytes_sent %> bytes in <%= flow.duration %> seconds
     </li>
     <% end %>
   </ul>
