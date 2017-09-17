@@ -51,15 +51,15 @@
     <% Flow.where(device: @device).each do |flow| %>
     <li>
       <%       begin
-          src_port = Socket.getservbyport(f.src_port)
+          src_port = Socket.getservbyport(flow.src_port)
         rescue
-          src_port = f.src_port.to_s
+          src_port = flow.src_port.to_s
         end
 
         begin
-          dst_port = Socket.getservbyport(f.dst_port)
+          dst_port = Socket.getservbyport(flow.dst_port)
         rescue
-          dst_port = f.dst_port.to_s
+          dst_port = flow.dst_port.to_s
                end
 	       %>
 
