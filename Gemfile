@@ -1,14 +1,14 @@
 source 'https://rubygems.org'
 
-gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
-gem 'puma', '~> 3.0'
+gem 'rails', '~> 5.1.0'
+gem 'puma'
 gem 'listen'
-gem 'sass-rails', '~> 5.0'
-gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.2'
+gem 'sass-rails'
+gem 'uglifier'
+gem 'coffee-rails'
 
 gem 'jquery-rails'
-gem 'turbolinks', '~> 5'
+gem 'turbolinks'
 gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -23,7 +23,7 @@ group :development do
   gem 'web-console'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-  gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'spring-watcher-listen'
 end
 
 gem 'pg'
@@ -57,12 +57,13 @@ gem 'beanstalkd_view'
 # temporary fix for Sinatra dependency issue
 gem 'sinatra', git: 'https://github.com/sinatra/sinatra'
 
-gem 'bootstrap', '~> 4.0.0.alpha4'
+gem 'bootstrap'
 source 'https://rails-assets.org' do
   gem 'rails-assets-datetimepicker'
-  gem 'rails-assets-tether', '>= 1.4.0'
+  gem 'rails-assets-tether'
 end
-gem 'will_paginate', '~> 3.1.0'
+gem 'will_paginate'
+gem 'will_paginate-bootstrap4'
 
 # charts
 gem 'chartkick'
