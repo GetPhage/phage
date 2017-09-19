@@ -1,49 +1,28 @@
-<p id="notice"><%= notice %></p>
+<div class='card'>
+  <div class='card-header'>
+    <h1 class='card-title'><%= @device.friendly_name %></h1>
+  </div>
 
-<p>
-  <strong>Mac address:</strong>
-  <%= @device.mac_address %>
-  <%= @device.try(:product).try(:name) %>
-</p>
+  <% if @device.is_mobile %>
+  <span class="badge badge-pill badge-primary">Mobile</span>
+  <% end %>
+  <% if @device.is_thing %>
+  <span class="badge badge-pill badge-primary">Thing</span>
+  <% end %>
+  
+  <ul>
+    <li><%= @device.name.join(', ') %></li>
+    <li><%= @device.ipv4.map(&:to_s).join(', ') %></li>
+    <li><%= @device.mac_address %></li>
+    <li><%= @device.try(:product).try(:name) %></li>
+    <li><%= @device.product.try(:manufacturer).try(:name) %></li>
+    <li><%=distance_of_time_in_words(@device.last_seen, Time.now, include_seconds: true) %> ago</li>
+  </ul>
 
-<p>
-  <strong>Names:</strong>
-  <%= @device.name.join(', ') %>
-</p>
 
-<%= @device.product.try(:name) %>
-<%= @device.product.try(:manufacturer).try(:name) %>
 
-<p>
-  <strong>Ipv4:</strong>
-  <%= @device.ipv4.map(&:to_s).join(', ') %>
-</p>
-
-<p>
-  <strong>Ipv6:</strong>
-  <%= @device.ipv6 %>
-</p>
-
-<p>
-  <strong>Kind:</strong>
-  <%= @device.kind %>
-</p>
-
-<p>
-  <strong>Last seen:</strong>
-  <%=distance_of_time_in_words(@device.last_seen, Time.now, include_seconds: true) %>
-</p>
-
-<p>
-  <strong>Extra:</strong>
-  <%= @device.extra %>
-</p>
-
-<p>
-  <strong>Open ports:</strong>
-  <strong>TCPv4:</strong>
   <%= @device.tcpv4.join(', ') %>
-  </p>
+ 
 
   <h2>Flows</h2>
 <p>
@@ -75,21 +54,6 @@
   data = Hash[str_bins.zip(freq)]
   %>
 <%= column_chart data %>
-
-<% if false %>
-<pre>
-  <%= results =  @device.scan_diff.where("extra ? 'active'").inject({}) { |hash, sd| hash.merge({ sd.created_at => sd.extra["active"] }) } ;
-  new_results = results.clone
-  results.each { |key, value| new_results[key - 0.01] = !value }
-  JSON.pretty_generate(results)
-  JSON.pretty_generate(new_results) %>
-</pre>
-
-<%= results =  @device.scan_diff.where("extra ? 'active'").inject({}) { |hash, sd| hash.merge({ sd.created_at => sd.extra["active"] }) } ;
-  new_results = results.clone
-  results.each { |key, value| new_results[key - 0.01] = !value } %>
-<%= column_chart(  @device.scan_diff.where("extra ? 'active'").inject({}) { |hash, sd| hash.merge( { sd.created_at => sd.extra["active"] ? 1 : 0  })}, discrete: true ) %>
-<% end %>
 
 <%= link_to 'Edit', edit_device_path(@device) %> |
 <%= link_to 'Back', devices_path %>
