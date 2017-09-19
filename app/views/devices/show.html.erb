@@ -48,7 +48,7 @@
   <h2>Flows</h2>
 <p>
   <ul>
-    <% Flow.where(device: @device).each do |flow| %>
+    <% Flow.where(device: @device).limit(10).order(id: :desc).each do |flow| %>
     <li>
       <%       begin
           src_port = Socket.getservbyport(flow.src_port)
@@ -69,8 +69,10 @@
   </ul>
 </p>
 <%
-  (bins, freq) = Flow.where(device: @device).pluck(:bytes_sent).histogram([0, 10, 100, 1000, 10000, 100000, 1000000])
-  data = Hash[bins.zip(freq)]
+#  (bins, freq) = Flow.where(device: @device).pluck(:bytes_sent).histogram([0, 10, 100, 1000, 10000, 100000, 1000000]) 
+  (bins, freq) = Flow.where(device: @device).pluck(:bytes_sent).histogram
+  str_bins = bins.map do |bin|  number_with_precision(bin, :precision => 0, :delimiter => ',') end
+  data = Hash[str_bins.zip(freq)]
   %>
 <%= column_chart data %>
 
