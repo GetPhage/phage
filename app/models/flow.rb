@@ -24,6 +24,16 @@ class Flow < ApplicationRecord
           match = possibles.first
 
           d = Device.where("? = ANY(ipv4)", match.src_ip.to_s).first || Device.where("? = ANY(ipv4)", match.dst_ip.to_s).first
+          unless d
+            if src_ip.to_s.match /^10\./
+              ip = src_ip
+            else
+              ip = dst_ip
+            end
+
+            d = Device.create mac_address: pflow.mac_address,
+                              ipv4: [ ip ]
+          end
 
           # we sub 2 from the bytes sent to account for SYN and FIN
           Flow.create src_ip: match.src_ip,

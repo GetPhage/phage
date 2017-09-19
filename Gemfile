@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
-gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
-gem 'puma', '~> 3.0'
+gem 'rails', '~> 5.1.4'
+gem 'puma', '~> 3.4'
 gem 'listen'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
@@ -57,7 +57,7 @@ gem 'beanstalkd_view'
 # temporary fix for Sinatra dependency issue
 gem 'sinatra', git: 'https://github.com/sinatra/sinatra'
 
-gem 'bootstrap', '~> 4.0.0.alpha4'
+gem 'bootstrap', '~> 4.0.0.alpha6'
 source 'https://rails-assets.org' do
   gem 'rails-assets-datetimepicker'
   gem 'rails-assets-tether', '>= 1.4.0'
