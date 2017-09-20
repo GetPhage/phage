@@ -26,6 +26,10 @@ class Device < ApplicationRecord
   end
 
   def friendly_name
+    unless self.given_name.empty?
+      return self.given_name
+    end
+    
     unless self.name.empty?
       return self.name.first
     end

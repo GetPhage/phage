@@ -5,7 +5,11 @@ ActiveRecord::Base.logger = dev_null
 namespace :flow do
   desc 'Identify flows'
   task :identify => [:environment] do
-      Flow.identify
+    dev_null = Logger.new("/dev/null")
+    Rails.logger = dev_null
+    ActiveRecord::Base.logger = dev_null
+
+    Flow.identify
   end
 
   desc 'Remove flow entries'
