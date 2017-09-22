@@ -7,11 +7,10 @@
 <table class='table'>
   <thead>
     <tr>
-      <th>Mac address</th>
       <th>Name</th>
+      <th>Mac address</th>
       <th>Ipv4</th>
       <th>Ipv6</th>
-      <th>Kind</th>
       <th>Flows</th>
       <th>Last seen</th>
     </tr>
@@ -20,14 +19,12 @@
   <tbody>
     <% @devices.each do |device| %>
       <tr class='<%= device.active ? "active" : "inactive" %>'>
+	<td><%= link_to device.friendly_name, device %></td>
         <td><%= device.mac_address %><br/><%= device.oui && device.oui.manufacturer %></td>
-	<td><%= device.friendly_name %></td>
         <td><%= device.ipv4 && device.ipv4.join(', ') %></td>
         <td><%= device.ipv6 && device.ipv6.join(', ')  %></td>
-        <td><%= device.kind %></td>
 	<td><%= Flow.where(device: device).count %></td>
         <td><%= Time.now - device.last_seen < 60 ? 'now' : distance_of_time_in_words(device.last_seen, Time.now, include_seconds: true) %></td>
-        <td><%= link_to 'Show', device %></td>
         <td><%= link_to 'Edit', edit_device_path(device) %></td>
         <td><%= link_to 'Destroy', device, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>

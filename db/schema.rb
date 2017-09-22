@@ -91,15 +91,14 @@ ActiveRecord::Schema.define(version: 20170919164627) do
     t.integer "dst_port", default: 0, null: false
     t.string "hostname", default: "", null: false
     t.integer "duration", default: 0, null: false
-    t.boolean "partial", default: false, null: false
-    t.bigint "bytes_received", default: 0, null: false
     t.bigint "bytes_sent", default: 0, null: false
+    t.bigint "bytes_received", default: 0, null: false
+    t.index ["bytes_received"], name: "index_flows_on_bytes_received"
     t.index ["device_id"], name: "index_flows_on_device_id"
     t.index ["dst_ip"], name: "index_flows_on_dst_ip"
     t.index ["dst_port"], name: "index_flows_on_dst_port"
     t.index ["duration"], name: "index_flows_on_duration"
     t.index ["hostname"], name: "index_flows_on_hostname"
-    t.index ["partial"], name: "index_flows_on_partial"
     t.index ["src_ip"], name: "index_flows_on_src_ip"
     t.index ["src_port"], name: "index_flows_on_src_port"
   end
