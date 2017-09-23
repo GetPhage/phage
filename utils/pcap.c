@@ -171,8 +171,8 @@ int main(int argc, char **argv) {
     inet_ntop(AF_INET, &iph->ip_dst, ip_dst, INET_ADDRSTRLEN);
 
     printf("{ \"time\": %lu,\n", packet_header.ts.tv_sec);
-    printf(" \"ether_src\": \"%s\"", ether_to_s(eph->ether_shost));
-    printf(" \"ether_dst\": \"%s\"", ether_to_s(eph->ether_dhost));
+    printf(" \"ether_src\": \"%s\",", ether_to_s(eph->ether_shost));
+    printf(" \"ether_dst\": \"%s\",", ether_to_s(eph->ether_dhost));
     printf(" \"src_ip\": \"%s\",\n", ip_src);
     printf(" \"dst_ip\": \"%s\",\n", ip_dst);
     printf(" \"src_port\": %u,\n", ntohs(tcph->th_sport));
