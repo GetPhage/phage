@@ -16,7 +16,7 @@ class PartialFlow < ApplicationRecord
                                      is_syn: pkt[:syn],
                                      is_fin: pkt[:fin],
                                      is_rst: pkt[:rst],
-                                     mac_address: '01:02:03:04:05:06',
+                                     mac_address: pkt[:ether_src],
                                      timestamp: Time.at(pkt[:time]).to_datetime
       end
     end
