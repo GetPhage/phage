@@ -6,6 +6,7 @@
 # Edit these variables to your liking
 
 RAILS_ENV=production
+RACK_ENV=$RAILS_ENV
 USER=phage
 APP_DIR=/home/phage/phage/current
 SHARED_DIR=/home/phage/phage/shared
