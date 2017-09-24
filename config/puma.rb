@@ -9,15 +9,15 @@ if ENV["RACK_ENV"] == "production"
 
   WORKER_COUNT=4
   environment 'production'
-  bind 'unix://#{SHARED_DIR}/tmp/sockets/puma.sock'
+  bind "unix://#{SHARED_DIR}/tmp/sockets/puma.sock"
 
   preload_app!
-  ActiveSupport.on_load(:active_record) do
-    ActiveRecord::Base.establish_connection
-  end
-  before_fork do
-    ActiveRecord::Base.connection_pool.disconnect!
-  end
+#  ActiveSupport.on_load(:active_record) do
+#    ActiveRecord::Base.establish_connection
+#  end
+#  before_fork do
+#    ActiveRecord::Base.connection_pool.disconnect!
+#  end
 else
   HOME_DIR = '/home/phage/phage'
   CURRENT_DIR = HOME_DIR
@@ -28,7 +28,6 @@ else
   port 3000
 end
 
-prune_bundler
 workers WORKER_COUNT
 
 directory CURRENT_DIR
