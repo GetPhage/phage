@@ -5,67 +5,45 @@ class Flow < ApplicationRecord
     ActiveRecord::Base.logger.silence do
       puts "Got so many", PartialFlow.where(is_fin: true).count
 
-      PartialFlow.where(is_fin: true).each do |pflow|
+      PartialFlow.where(is_fin: true).each do |fin_pkt|
+#        byebug
+
         # only consider fin from the remote host
-        unless self.is_local?(pflow.dst_ip)
-          next
-        end
+        next unless self.is_local?(fin_pkt.dst_ip)
 
-        possibles = PartialFlow.where(is_syn: true,
-                                      src_ip: pflow.dst_ip,
-                                      dst_ip: pflow.src_ip,
-                                      src_port: pflow.dst_port,
-                                      dst_port: pflow.src_port
-                                     ).where("timestamp <= ?", pflow.timestamp)
+        syn_pkt = self.find_syn_pkt fin_pkt
+        puts "syn_pkt fail" unless syn_pkt
+        next unless syn_pkt
 
-        if possibles.all.count > 1
-          puts 'TOO MANY DICKS ON THE DANCE FLOOR'
-          pp pflow
-          puts '>> MATCHES'
-          pp possibles.all
-        end
+        dst_syn_pkt = self.find_dst_syn_pkt fin_pkt
+        puts "dst_syn_pkt fail" unless dst_syn_pkt
+        next unless dst_syn_pkt
 
-        match = possibles.first
-        next unless match
+        puts "already_processed fail" if self.is_already_processed? syn_pkt
+        next if self.is_already_processed? syn_pkt
 
-        d = Device.where("? = ANY(ipv4)", match.src_ip.to_s).first || Device.where("? = ANY(ipv4)", match.dst_ip.to_s).first
+        d = Device.where("? = ANY(ipv4)", syn_pkt.src_ip.to_s).first || Device.where("? = ANY(ipv4)", syn_pkt.dst_ip.to_s).first
         unless d
-          d = Device.create mac_address: pflow.mac_address,
-                            ipv4: [ match.src_ip ],
+          d = Device.create mac_address: fin_pkt.mac_address,
+                            ipv4: [ syn_pkt.src_ip ],
                             kind: '',
                             last_seen: Time.now
         end
 
-        local_fin = PartialFlow.where(is_fin: true,
-                                      src_ip: pflow.dst_ip,
-                                      dst_ip: pflow.src_ip,
-                                      src_port: pflow.dst_port,
-                                      dst_port: pflow.src_port
-                                     ).where("timestamp <= ?", pflow.timestamp).first
-        remote_syn =  PartialFlow.where(is_syn: true,
-                                        src_ip: pflow.src_ip,
-                                        dst_ip: pflow.dst_ip,
-                                        src_port: pflow.dst_port,
-                                        dst_port: pflow.src_port
-                                       ).where("timestamp <= ?", pflow.timestamp).first
+        # we sub 2 from the bytes sent to account for SYN and FIN
+        bytes_sent = fin_pkt.src_ack - syn_pkt.src_seq - 2
+        bytes_received = fin_pkt.src_seq - dst_syn_pkt.src_seq - 2
 
-
-        if local_fin && remote_syn
-          bytes_received = local_fin.src_ack - remote_syn.src_seq - 2
-        else
-          bytes_received = 0
-        end
-
-          # we sub 2 from the bytes sent to account for SYN and FIN
-        Flow.create src_ip: match.src_ip,
-                    dst_ip: match.dst_ip,
-                    src_port: match.src_port,
-                    dst_port: match.dst_port,
-                    bytes_sent: pflow.src_ack - match.src_seq - 2,
+        Flow.create src_ip: syn_pkt.src_ip,
+                    dst_ip: syn_pkt.dst_ip,
+                    src_port: syn_pkt.src_port,
+                    dst_port: syn_pkt.dst_port,
+                    bytes_sent: bytes_sent,
                     bytes_received: bytes_received,
-                    duration: pflow.timestamp - match.timestamp,
-                    mac_address: pflow.mac_address,
-                    device: d
+                    duration: fin_pkt.timestamp - syn_pkt.timestamp,
+                    mac_address: fin_pkt.mac_address,
+                    device: d,
+                    timestamp: syn_pkt.timestamp
       end
     end
   end
@@ -73,5 +51,33 @@ class Flow < ApplicationRecord
   protected
   def self.is_local?(ip)
     ip.to_s.match /^10\./
+  end
+
+  def self.is_already_processed?(syn_pkt)
+    ! Flow.where(src_ip: syn_pkt.src_ip,
+                 dst_ip: syn_pkt.dst_ip,
+                 src_port: syn_pkt.src_port,
+                 dst_port: syn_pkt.dst_port,
+                 ).first.nil?
+#               ).where("timestamp > ? AND timestamp < ?", syn_pkt.timestamp - 10.seconds, syn_pkt.timestamp + 10.seconds).first.nil?
+  end
+
+  def self.find_syn_pkt(fin_pkt)
+     PartialFlow.where(is_syn: true,
+                       src_ip: fin_pkt.dst_ip,
+                       dst_ip: fin_pkt.src_ip,
+                       src_port: fin_pkt.dst_port,
+                       dst_port: fin_pkt.src_port
+                       ).where("timestamp <= ?", fin_pkt.timestamp).first
+  end
+
+  def self.find_dst_syn_pkt(fin_pkt)
+     PartialFlow.where(is_syn: true,
+                       src_ip: fin_pkt.src_ip,
+                       dst_ip: fin_pkt.dst_ip,
+                       src_port: fin_pkt.src_port,
+                       dst_port: fin_pkt.dst_port
+                       ).first
+#                       ).where("timestamp <= ?", fin_pkt.timestamp).first
   end
 end
