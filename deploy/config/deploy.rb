@@ -28,6 +28,6 @@ task :restart_workers do
   end
 end
 
-after 'deploy:finished', 'restart_app'
-after 'deploy:finished', 'restart_workers'
+after 'deploy:finishing', 'restart_app'
+after 'deploy:finishing', 'restart_workers'
 
