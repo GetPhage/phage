@@ -6,7 +6,6 @@
 # Edit these variables to your liking
 
 RAILS_ENV=production
-RACK_ENV=production
 USER=phage
 APP_DIR=/home/phage/phage/current
 SHARED_DIR=/home/phage/phage/shared
@@ -29,7 +28,7 @@ backburner_is_running() {
 
 stop_backburner() {
   if backburner_is_running ; then
-    /bin/su - $USER -c "cd $APP_DIR && RAILS_ENV=$RAILS_ENV bundle exec backburner -k -P $BACKBURNER_PID_FILE"
+    /bin/su - $USER -c "cd $APP_DIR && RACK_ENV=$RAILS_ENV RAILS_ENV=$RAILS_ENV bundle exec backburner -k -P $BACKBURNER_PID_FILE"
   fi
 }
 
