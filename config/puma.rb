@@ -8,10 +8,10 @@ if ENV["RACK_ENV"] == "production"
   SHARED_DIR = "#{HOME_DIR}/shared"
 
   WORKER_COUNT=4
+
   environment 'production'
   bind "unix://#{SHARED_DIR}/tmp/sockets/puma.sock"
 
-  preload_app!
 #  ActiveSupport.on_load(:active_record) do
 #    ActiveRecord::Base.establish_connection
 #  end
@@ -24,6 +24,10 @@ else
   SHARED_DIR = "/home/phage/shared"
 
   WORKER_COUNT=0
+
+  directory CURRENT_DIR
+  rackup "#{CURRENT_DIR}/config.ru"
+
   environment 'development'
   port 3000
 end
@@ -57,5 +61,7 @@ on_restart do
   puts 'Refreshing Gemfile'
   ENV["BUNDLE_GEMFILE"] = "#{CURRENT_DIR}/Gemfile"
 end
+
+preload_app!
 
 plugin :tmp_restart

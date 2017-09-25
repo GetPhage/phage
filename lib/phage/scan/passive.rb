@@ -39,34 +39,9 @@ module Phage
         @collection.each do |item|
           d = Device.find_by mac_address: item[:mac_address]
           if d
-            unless d.active?
-              d.last_seen = Time.now
-              d.active = true
-              d.save
+            ScanDiff.create( { extra: { active: true }, device: d, status: :up, scan: scan, kind: 'passive' } ) unless d.active?
 
-              ScanDiff.create( { extra: { active: true }, device: d, status: :up, scan: scan, kind: 'passive' } )
-            end
-
-            unless d.has_ipv4?(item[:ipv4])
-              puts "different ip"
-              puts d[:ipv4], item[:ipv4]
-
-              d[:ipv4].push item[:ipv4]
-              d.save
-
-              ScanDiff.create( { ipv4: item[:ipv4], device: d, status: :change, scan: scan, kind: "passive" } )
-            end
-
-            if item[:name] != '' && !d.has_name?(item[:name]) then
-              puts "different name"
-              puts "'#{d[:name]}', '#{item[:name]}'"
-
-              d[:name] ||= []
-              d[:name].push item[:name]
-              d.save
-
-              ScanDiff.create( { extra: { active: false }, name: item[:name], device: d, status: :down, scan: scan, kind: "passive" } )
-            end
+            d.update_attributes(last_seen: Time.now, active: true)
           else
             puts "create device"
             d = Device.create mac_address: item[:mac_address], ipv4: [ item[:ipv4] ], kind: '', last_seen: Time.now, active: true
@@ -76,21 +51,38 @@ module Phage
 
             SendNewDeviceEmailJob.perform_later(d.id)
           end
+
+          unless d.has_ipv4?(item[:ipv4])
+            puts "different ip"
+            puts d[:ipv4], item[:ipv4]
+
+            d[:ipv4].push item[:ipv4]
+            d.save
+
+            ScanDiff.create( { ipv4: item[:ipv4], device: d, status: :change, scan: scan, kind: "passive" } )
+          end
+
+          if item[:name] != '' && !d.has_name?(item[:name]) then
+            puts "different name"
+            puts "'#{d[:name]}', '#{item[:name]}'"
+
+            d[:name] ||= []
+            d[:name].push item[:name]
+            d.save
+
+            ScanDiff.create( { extra: { active: false }, name: item[:name], device: d, status: :down, scan: scan, kind: "passive" } )
+          end
         end
 
         Device.all.each do |device|
           if @collection.select { |item| item[:mac_address] == device[:mac_address] }.empty?
-            next unless device.active
+            next if device.active && device.last_seen < Time.now - 10.seconds
 
-            device.active = false
-            device.save
+            device.update_attributes(active: false)
             ScanDiff.create( { extra: { active: false }, device: device, status: :down, scan: scan, kind: "passive" } )
           end
         end
-
       end
-
-
     end
   end
 end
