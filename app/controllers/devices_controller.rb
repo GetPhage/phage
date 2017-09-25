@@ -5,7 +5,7 @@ class DevicesController < ApplicationController
   # GET /devices
   # GET /devices.json
   def index
-    @devices = Device.per_user(current_user).order(updated_at: :asc).paginate(:page => params[:page], per_page: 100)
+    @devices = Device.per_user(current_user).order(updated_at: :desc).paginate(:page => params[:page], per_page: 100)
   end
 
   # GET /devices/1
