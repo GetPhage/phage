@@ -40,10 +40,10 @@ case "$1" in
 
     if [ -e $PUMA_CONFIG_FILE ] ; then
       echo "cd $APP_DIR && RAILS_ENV=$RAILS_ENV bundle exec puma -C $PUMA_CONFIG_FILE"
-      /bin/su - $USER -c "cd $APP_DIR && RAILS_ENV=$RAILS_ENV bundle exec puma -C $PUMA_CONFIG_FILE"
+      /bin/su - $USER -c "cd $APP_DIR && RACK_ENV=$RAILS_ENV RAILS_ENV=$RAILS_ENV bundle exec puma -C $PUMA_CONFIG_FILE"
     else
       echo "No config file found"
-      /bin/su - $USER -c "cd $APP_DIR && RAILS_ENV=$RAILS_ENV bundle exec puma --daemon --bind unix://$PUMA_SOCKET --pidfile $PUMA_PID_FILE"
+      /bin/su - $USER -c "cd $APP_DIR && RACK_ENV=$RAILS_ENV RAILS_ENV=$RAILS_ENV bundle exec puma --daemon --bind unix://$PUMA_SOCKET --pidfile $PUMA_PID_FILE"
     fi
 
     echo "done"
