@@ -7,9 +7,9 @@ class Device < ApplicationRecord
     end
   end
 
-  belongs_to :oui
-  belongs_to :product
-  belongs_to :network
+  belongs_to :oui, optional: true
+  belongs_to :product, optional: true
+  belongs_to :network, optional: true
   has_many :scan_diff, dependent: :destroy
   has_many :flow
 

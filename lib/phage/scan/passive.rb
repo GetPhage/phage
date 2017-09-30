@@ -41,7 +41,11 @@ module Phage
           if d
             ScanDiff.create( { extra: { active: true }, device: d, status: :up, scan: scan, kind: 'passive' } ) unless d.active?
 
-            d.update_attributes(last_seen: Time.now, active: true)
+            unless d.update_attributes(last_seen: Time.now, active: true)
+              puts "update_attributes on device #{d.id} #{d.friendly_name} fails!"
+              puts d.errors.full_messages
+              puts Device.errors.full_messages
+            end
           else
             puts "create device"
             d = Device.create mac_address: item[:mac_address], ipv4: [ item[:ipv4] ], kind: '', last_seen: Time.now, active: true
