@@ -49,9 +49,9 @@
 </p>
 
 <% require 'pp' ; pp @size_data_received %>
-<%= column_chart({ received: @size_data_received , sent: @size_data_sent }) %>
+<%= column_chart  [{ name: 'Received', data: @size_data_received },  { name: 'Sent', data: @size_data_sent } ] %>
 
-<%= column_chart( { received: @time_data_received, sent: @time_data_sent }) %>
+<%= column_chart  [{ name: 'Received', data: @time_data_received },  { name: 'Sent', data: @time_data_sent } ] %>
 
 <%= link_to 'Edit', edit_device_path(@device) %> | <%= link_to 'Back', devices_path %>
 
