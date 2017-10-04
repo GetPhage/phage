@@ -59,4 +59,6 @@ Rails.application.configure do
 
   # Show the logging configuration on STDOUT
   config.show_log_configuration = true
+
+  config.public_file_server.enabled = true
 end

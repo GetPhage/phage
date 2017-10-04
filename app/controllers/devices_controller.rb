@@ -11,6 +11,32 @@ class DevicesController < ApplicationController
   # GET /devices/1
   # GET /devices/1.json
   def show
+    @flows = Flow.where(device: @device).limit(10).order(id: :desc)
+
+#  (bins, freq) = Flow.where(device: @device).pluck(:bytes_sent).histogram([0, 10, 100, 1000, 10000, 100000, 1000000]) 
+    bytes_sent = Flow.where(device: @device).pluck(:bytes_sent)
+    bytes_received = Flow.where(device: @device).pluck(:bytes_received)
+    (bins, sent_freq) = bytes_sent.histogram(20, other_sets: [ bytes_received ])
+    (bins, rcvd_freq) = bytes_received.histogram(20, other_sets: [ bytes_sent ])
+
+#    str_bins = bins.map do |bin| number_with_precision(bin, :precision => 0, :delimiter => ',') end
+    str_bins = bins
+    require 'pp'
+
+    @size_data_sent = Hash[str_bins.zip(sent_freq)]
+    puts 'sent'
+    pp @size_data_sent
+    
+    @size_data_received = Hash[str_bins.zip(rcvd_freq)]
+    pp @size_data_received
+
+    most_recent = Flow.where(device: @device).last
+    samples = Flow.where(device: @device).where("timestamp < ?", most_recent.timestamp - 1.day)
+    sent = samples.pluck(:bytes_sent)
+    received = samples.pluck(:bytes_received)
+    timestamps = samples.pluck(:timestamp)
+    @time_data_sent = Hash[timestamps.zip(sent)]
+    @time_data_received = Hash[timestamps.zip(received)]
   end
 
   # GET /devices/new

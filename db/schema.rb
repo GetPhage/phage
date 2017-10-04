@@ -10,11 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170919164627) do
+ActiveRecord::Schema.define(version: 20170924020034) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-  enable_extension "hstore"
 
   create_table "cves", id: :serial, force: :cascade do |t|
     t.string "name"
@@ -28,11 +27,6 @@ ActiveRecord::Schema.define(version: 20170919164627) do
     t.index ["desc"], name: "index_cves_on_desc"
     t.index ["name"], name: "index_cves_on_name"
     t.index ["seq"], name: "index_cves_on_seq"
-  end
-
-  create_table "dashboards", id: :serial, force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "devices", id: :serial, force: :cascade do |t|
@@ -93,6 +87,7 @@ ActiveRecord::Schema.define(version: 20170919164627) do
     t.integer "duration", default: 0, null: false
     t.bigint "bytes_sent", default: 0, null: false
     t.bigint "bytes_received", default: 0, null: false
+    t.datetime "timestamp", null: false
     t.index ["bytes_received"], name: "index_flows_on_bytes_received"
     t.index ["device_id"], name: "index_flows_on_device_id"
     t.index ["dst_ip"], name: "index_flows_on_dst_ip"
@@ -101,6 +96,7 @@ ActiveRecord::Schema.define(version: 20170919164627) do
     t.index ["hostname"], name: "index_flows_on_hostname"
     t.index ["src_ip"], name: "index_flows_on_src_ip"
     t.index ["src_port"], name: "index_flows_on_src_port"
+    t.index ["timestamp"], name: "index_flows_on_timestamp"
   end
 
   create_table "histories", id: :serial, force: :cascade do |t|
