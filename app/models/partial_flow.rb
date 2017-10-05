@@ -2,6 +2,7 @@ require 'pp'
 
 class PartialFlow < ApplicationRecord
   belongs_to :device
+  belongs_to :flow, optional: true
 
   def self.import(file)
     ActiveRecord::Base.logger.silence do

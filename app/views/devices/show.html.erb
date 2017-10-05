@@ -20,10 +20,9 @@
   </ul>
 
 
-
   <%= @device.tcpv4.join(', ') %>
- 
 
+<% if @flows.count > 0 %>
   <h2>Flows</h2>
 <p>
   <ul>
@@ -48,10 +47,12 @@
   </ul>
 </p>
 
-<% require 'pp' ; pp @size_data_received %>
-<%= column_chart  [{ name: 'Received', data: @size_data_received },  { name: 'Sent', data: @size_data_sent } ] %>
+  <%= column_chart  [{ name: 'Received', data: @size_data_received },  { name: 'Sent', data: @size_data_sent } ] %>
 
-<%= column_chart  [{ name: 'Received', data: @time_data_received },  { name: 'Sent', data: @time_data_sent } ] %>
+  <%= column_chart  [{ name: 'Received', data: @time_data_received },  { name: 'Sent', data: @time_data_sent } ] %>
+<% else %>
+  <h2>No flows</h2>  
+<% end %>
 
 <%= link_to 'Edit', edit_device_path(@device) %> | <%= link_to 'Back', devices_path %>
 

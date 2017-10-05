@@ -12,6 +12,15 @@ namespace :flow do
     Flow.identify
   end
 
+  desc 'Associate flows with pcaps'
+  task :mark_flows => [:environment] do
+    dev_null = Logger.new("/dev/null")
+    Rails.logger = dev_null
+    ActiveRecord::Base.logger = dev_null
+
+    Flow.mark_flows
+  end
+
   desc 'Remove flow entries'
   task :clean => [:environment] do
     Flow.delete_all

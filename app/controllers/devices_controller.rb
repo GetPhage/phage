@@ -27,12 +27,17 @@ class DevicesController < ApplicationController
     @size_data_received = Hash[str_bins.zip(rcvd_freq)]
 
     most_recent = Flow.where(device: @device).last
-    samples = Flow.where(device: @device).where("timestamp < ?", most_recent.timestamp - 1.day)
-    sent = samples.pluck(:bytes_sent)
-    received = samples.pluck(:bytes_received)
-    timestamps = samples.pluck(:timestamp)
-    @time_data_sent = Hash[timestamps.zip(sent)]
-    @time_data_received = Hash[timestamps.zip(received)]
+    if most_recent
+      samples = Flow.where(device: @device).where("timestamp < ?", most_recent.timestamp - 1.day)
+      sent = samples.pluck(:bytes_sent)
+      received = samples.pluck(:bytes_received)
+      timestamps = samples.pluck(:timestamp)
+      @time_data_sent = Hash[timestamps.zip(sent)]
+      @time_data_received = Hash[timestamps.zip(received)]
+    else
+      @time_data_sent = {}
+      @time_data_received = {}
+    end
   end
 
   # GET /devices/new
@@ -92,6 +97,6 @@ class DevicesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def device_params
-      params.require(:device).permit(:mac_address, :ipv4, :ipv6, :kind, :last_seen, :extra)
+      params.require(:device).permit(:mac_address, :ipv4, :ipv6, :kind, :last_seen, :extra, :given_name)
     end
 end

@@ -34,17 +34,44 @@ class Flow < ApplicationRecord
         bytes_sent = fin_pkt.src_ack - syn_pkt.src_seq - 2
         bytes_received = fin_pkt.src_seq - dst_syn_pkt.src_seq - 2
 
-        Flow.create src_ip: syn_pkt.src_ip,
-                    dst_ip: syn_pkt.dst_ip,
-                    src_port: syn_pkt.src_port,
-                    dst_port: syn_pkt.dst_port,
-                    bytes_sent: bytes_sent,
-                    bytes_received: bytes_received,
-                    duration: fin_pkt.timestamp - syn_pkt.timestamp,
-                    mac_address: fin_pkt.mac_address,
-                    device: d,
-                    timestamp: syn_pkt.timestamp
+        flow = Flow.create src_ip: syn_pkt.src_ip,
+                           dst_ip: syn_pkt.dst_ip,
+                           src_port: syn_pkt.src_port,
+                           dst_port: syn_pkt.dst_port,
+                           bytes_sent: bytes_sent,
+                           bytes_received: bytes_received,
+                           duration: fin_pkt.timestamp - syn_pkt.timestamp,
+                           mac_address: fin_pkt.mac_address,
+                           device: d,
+                           timestamp: syn_pkt.timestamp
+
+        fin_pkt.update_attributes(flow: flow)
+        syn_pkt.update_attributes(flow: flow)
+        dst_syn_pkt.update_attributes(flow: flow)
       end
+    end
+  end
+
+  def self.mark_flows
+    PartialFlow.where(is_fin: true).each do |fin_pkt|
+      next unless self.is_local?(fin_pkt.dst_ip)
+
+      syn_pkt = self.find_syn_pkt fin_pkt
+      next unless syn_pkt
+        
+      dst_syn_pkt = self.find_dst_syn_pkt fin_pkt
+      next unless dst_syn_pkt
+
+      next if self.is_already_processed? syn_pkt
+
+      flow = Flow.find src_ip: syn_pkt.src_ip,
+                       dst_ip: syn_pkt.dst_ip,
+                       src_port: syn_pkt.src_port,
+                       dst_port: syn_pkt.dst_port
+
+      fin_pkt.update_attributes(flow: flow)
+      syn_pkt.update_attributes(flow: flow)
+      dst_syn_pkt.update_attributes(flow: flow)
     end
   end
 
