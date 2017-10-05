@@ -25,3 +25,6 @@ utils/pcap
 *.nmap
 *.gnmap
 *.log
+
+*.pcap
+*.dump
