@@ -1,9 +1,16 @@
-version: '2'
+version: '3'
 services:
-  postgres:
+  phage-rabbitmq:
+    image: rabbitmq
+    networks: 
+      - phage-net 
+
+  phage-postgres:
     image: postgres:9.6.5
     ports:
       - "5432:5432"
+    networks: 
+      - phage-net 
 
   web:
     build: .
@@ -12,8 +19,28 @@ services:
     ports:
       - "127.0.0.1:3000:3000"
     links:
-      - postgres
+      - phage-postgres
+      - phage-rabbitmq
+      - visualizer
     volumes:
       - .:/app
     environment:
       RAILS_ENV: development
+    env_file: .env 
+    networks: 
+      - phage-net 
+
+  visualizer:
+    image: dockersamples/visualizer:stable
+    ports:
+      - "8080:8080"
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    deploy:
+      placement:
+        constraints: [node.role == manager]
+    networks:
+      - phage-net
+
+networks:
+  phage-net:
