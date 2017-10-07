@@ -1,19 +1,20 @@
 FROM ubuntu:14.04
 
 FROM ruby:2.3.5
-MAINTAINER romkey@romkey.com
 RUN apt-get update && apt-get install -y \ 
   build-essential \ 
   nodejs \
-  mdns-scan
+  mdns-scan \
+  avahi-daemon avahi-utils libavahi-client-dev libavahi-client3 libavahi-common-dev libavahi-compat-libdnssd-dev
 
 RUN mkdir -p /app 
 WORKDIR /app
 
 COPY . /app
-#COPY Gemfile Gemfile.lock ./ 
+COPY Gemfile Gemfile.lock ./ 
 
-RUN gem install bundler --pre && bundle install --jobs 20 --retry 5
+RUN gem install bundler --pre
+RUN bundle install --jobs 20 --retry 5
 
 EXPOSE 3000
 
