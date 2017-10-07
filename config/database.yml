@@ -25,3 +25,6 @@ test:
 production:
   <<: *default
   database: phage_production
+  hostname: localhost
+  username: <%= ENV['DB_USERNAME'] %>
+  password: <%= ENV['DB_PASSWORD'] %>
