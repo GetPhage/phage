@@ -47,6 +47,13 @@
   </ul>
 </p>
 
+<h2>Unique Destinations</h2>
+<ul>
+<% @destinations.each do |dest| %>
+  <li><%= dest %> - <%= Hostname.find_by(ipv4: dest).try(:best_name) %></li>
+<% end %>
+</ul>
+
   <%= column_chart  [{ name: 'Received', data: @size_data_received },  { name: 'Sent', data: @size_data_sent } ] %>
 
   <%= column_chart  [{ name: 'Received', data: @time_data_received },  { name: 'Sent', data: @time_data_sent } ] %>

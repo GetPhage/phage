@@ -36,6 +36,23 @@ namespace :flow do
     end
   end
 
+  desc 'hostnames'
+  task :hostnames => [:environment] do
+    ip_addresses = Flow.all.pluck(:dst_ip).uniq
+    puts "Have #{ip_addresses.length} addresses"
+    puts "Have #{Hostname.all.count} hostnames"
+    ip_addresses.each do |ip|
+      hostname = Hostname.find_by ipv4: ip.to_s
+      next if hostname
+
+      dns_result = Reversed.lookup(ip.to_s)
+      if dns_result
+        puts "#{ip} -> #{dns_result}"
+        Hostname.create ipv4: ip, names: [ { hostname: dns_result, source: :dns, timestamp: Time.now } ]
+      end
+    end
+  end
+
   desc 'report'
   task :report => [:environment] do
     ActiveRecord::Base.logger.silence do

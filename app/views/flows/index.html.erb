@@ -1,7 +1,9 @@
 <% if @device %>
-<%= @device.friendly_name %>
+<h2>Device</h2>
+<%= link_to @device.friendly_name, @device %>
 <% end %>
 
+<h2>Flows</h2>
 <table class='table'>
   <tr>
     <th>When</th>

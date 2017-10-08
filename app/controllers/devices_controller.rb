@@ -38,6 +38,8 @@ class DevicesController < ApplicationController
       @time_data_sent = {}
       @time_data_received = {}
     end
+
+    @destinations = Flow.where(device: @device).pluck(:dst_ip).uniq.sort
   end
 
   # GET /devices/new

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171005141737) do
+ActiveRecord::Schema.define(version: 20171008153356) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -115,6 +115,13 @@ ActiveRecord::Schema.define(version: 20171005141737) do
     t.index ["message"], name: "index_histories_on_message"
     t.index ["scan_diff_id"], name: "index_histories_on_scan_diff_id"
     t.index ["user_id"], name: "index_histories_on_user_id"
+  end
+
+  create_table "hostnames", force: :cascade do |t|
+    t.inet "ipv4", null: false
+    t.hstore "names", default: [], array: true
+    t.index ["ipv4"], name: "index_hostnames_on_ipv4"
+    t.index ["names"], name: "index_hostnames_on_names"
   end
 
   create_table "manufacturers", id: :serial, force: :cascade do |t|

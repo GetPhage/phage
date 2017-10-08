@@ -81,3 +81,4 @@ gem 'bugsnag'
 gem 'backup'
 
 gem 'histogram'
+gem 'reversed'

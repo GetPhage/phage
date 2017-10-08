@@ -12,6 +12,9 @@ services:
     networks: 
       - phage-net 
 
+# docker-compose run -p 127.0.0.1:3000:3000 phage-web
+# for some reason "ports" in here hasn't been enough and we still need
+# thte command line option
   phage-web:
     build: .
     command: bundle exec rails server
