@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+#FROM ubuntu:14.04
 
 FROM ruby:2.3.5
 RUN apt-get update && apt-get install -y \ 
@@ -10,12 +10,8 @@ RUN apt-get update && apt-get install -y \
 RUN mkdir -p /app 
 WORKDIR /app
 
-COPY . /app
-COPY Gemfile Gemfile.lock ./ 
-
+ADD Gemfile* /app/
 RUN gem install bundler --pre
-RUN bundle install --jobs 20 --retry 5
+RUN bundle install
 
-EXPOSE 3000
-
-#ADD . $APP_HOME
+ADD . /app

@@ -12,12 +12,11 @@ services:
     networks: 
       - phage-net 
 
-  web:
+  phage-web:
     build: .
-    command: bundle exec rails server --port 3000 --binding 0.0.0.0 -C /app/config/puma-docker.rb
-#   command: bundle exec rails s -b 0.0.0.0 -p 6000 -C config/puma-docker.rb 
+    command: bundle exec rails server
     ports:
-      - "127.0.0.1:3000:3000"
+      - "3000:3000"
     links:
       - phage-postgres
       - phage-rabbitmq
@@ -25,6 +24,7 @@ services:
     volumes:
       - .:/app
     environment:
+      DOCKER: docker
       RAILS_ENV: development
     env_file: .env 
     networks: 
@@ -36,9 +36,6 @@ services:
       - "8080:8080"
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock"
-    deploy:
-      placement:
-        constraints: [node.role == manager]
     networks:
       - phage-net
 

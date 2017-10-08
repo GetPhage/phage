@@ -6,7 +6,7 @@ default: &default
   pool: 5 
 #  username: <%= ENV['DB_USERNAME'] %>
 #  password: <%= ENV['DB_PASSWORD'] %>
-  host: postgres 
+  host: phage-postgres
   username: postgres 
   password: 
 
