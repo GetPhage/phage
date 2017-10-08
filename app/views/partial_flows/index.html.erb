@@ -1,0 +1,78 @@
+<% if @flow %>
+<ul>
+  <li><%= @flow.timestamp %></li>
+  <li>bytes sent <%= @flow.bytes_sent %></li>
+  <li>bytes received <%= @flow.bytes_received %></li>
+  <li>duration <%= @flow.duration %> seconds</li>
+</ul>
+<% end %>
+<table class='table'>
+  <tr>
+    <th>When</th>
+    <th>Between</th>
+    <th>Seq</th>
+    <th>Ack</th>
+    <th>TCP Flags</th>
+  </tr>
+  <% @partial_flows.each do |pflow| %>
+    <tr>
+      <td><%= pflow.timestamp %></td>
+      <td><%= pflow.src_ip %>:<%= pflow.src_port %> -> <%= pflow.dst_ip %>:<%= pflow.dst_port %></td>
+      <td><%= pflow.src_seq %></td>
+      <td><%= pflow.src_ack %></td>
+      <td>
+	<% if pflow.is_syn %>
+	SYN 
+	<% end %>
+	<% if pflow.is_fin %>
+	FIN
+	<% end %>
+	<% if pflow.is_rst %>
+	RST 
+	<% end %>
+      </td>
+    </tr>
+  <% end %>
+<% if @partial_flows.count > 2 %>
+  <tr>
+    <td></td>
+    <td></td>
+    <td><%= @partial_flows[2].src_seq- @partial_flows[1].src_seq - 2 %></td>
+    <td><%= @partial_flows[2].src_ack- @partial_flows[1].src_ack - 2 %></td>
+  </tr>
+<% end %>
+</table>
+
+<h2>Similar Packets</h2>
+
+<table class='table'>
+  <tr>
+    <th>When</th>
+    <th>Between</th>
+    <th>Seq</th>
+    <th>Ack</th>
+    <th>TCP Flags</th>
+  </tr>
+  <% @similar.each do |pflow| %>
+    <tr>
+      <td><%= pflow.timestamp %></td>
+      <td><%= pflow.src_ip %>:<%= pflow.src_port %> -> <%= pflow.dst_ip %>:<%= pflow.dst_port %></td>
+      <td><%= pflow.src_seq %></td>
+      <td><%= pflow.src_ack %></td>
+      <td>
+	<% if pflow.is_syn %>
+	SYN 
+	<% end %>
+	<% if pflow.is_fin %>
+	FIN
+	<% end %>
+	<% if pflow.is_rst %>
+	RST 
+	<% end %>
+      </td>
+    </tr>
+  <% end %>
+</table>
+
+
+<%= will_paginate @partial_flows %>

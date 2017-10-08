@@ -1,0 +1,24 @@
+<% if @device %>
+<%= @device.friendly_name %>
+<% end %>
+
+<table class='table'>
+  <tr>
+    <th>When</th>
+    <th>Between</th>
+    <th>Received</th>
+    <th>Sent</th>
+    <th>Partials</th>
+  </tr>
+  <% @flows.each do |flow| %>
+    <tr>
+      <td><%= flow.timestamp %></td>
+      <td><%= flow.src_ip %>:<%= flow.src_port %> -> <%= flow.dst_ip %>:<%= flow.dst_port %></td>
+      <td><%= flow.bytes_received %> bytes received</td>
+      <td><%= flow.bytes_sent %> bytes sent</td>
+      <td><%= link_to PartialFlow.where(flow: flow).count, "/partial_flows?flow_id=#{flow.id}" %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= will_paginate @flows %>

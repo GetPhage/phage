@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   resources :services
   resources :cves
   resources :manufacturers
+  resources :partial_flows
+  resources :flows
   resources :mdns
   resources :upnps
   resources :ouis
