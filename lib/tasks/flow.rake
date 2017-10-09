@@ -45,10 +45,16 @@ namespace :flow do
       hostname = Hostname.find_by ipv4: ip.to_s
       next if hostname
 
-      dns_result = Reversed.lookup(ip.to_s)
-      if dns_result
-        puts "#{ip} -> #{dns_result}"
-        Hostname.create ipv4: ip, names: [ { hostname: dns_result, source: :dns, timestamp: Time.now } ]
+      begin
+        dns_result = Reversed.lookup(ip.to_s)
+        if dns_result
+          puts "#{ip} -> #{dns_result}"
+          Hostname.create ipv4: ip, names: [ { hostname: dns_result, source: :dns, timestamp: Time.now } ]
+        end
+      rescue => error
+        puts "error inverse resolving #{ip}"
+        puts $!.message
+        puts $!.backtrace
       end
     end
   end
