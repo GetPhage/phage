@@ -38,10 +38,15 @@
           dst_port = Socket.getservbyport(flow.dst_port)
         rescue
           dst_port = flow.dst_port.to_s
-               end
-	       %>
+        end
 
-      <%= flow.src_ip %>:<%= src_port %> -> <%= flow.dst_ip %>:<%=dst_port %><br/> <%= flow.bytes_sent %> bytes sent, <%= flow.bytes_received %> received in <%= flow.duration %> seconds
+	loc = flow.country 
+       %>
+
+      <%= flow.src_ip %>:<%= src_port %> -> <%= flow.dst_ip %>:<%=dst_port %><br/> <%= flow.bytes_sent %> bytes sent, <%= flow.bytes_received %> received in <%= flow.duration %> seconds <%= loc.try(:country) %>
+      <% if loc %>
+      <%= image_tag "country-4x3/#{loc.country_code.downcase}.svg", width: 32, alt: loc.country_code %>
+      <% end %>
     </li>
     <% end %>
   </ul>
@@ -50,7 +55,19 @@
 <h2>Unique Destinations</h2>
 <ul>
 <% @destinations.each do |dest| %>
-  <li><%= dest %> - <%= Hostname.find_by(ipv4: dest).try(:best_name) %></li>
+  <li>
+    <%= dest %> - <%= Hostname.find_by(ipv4: dest).try(:best_name) %>
+
+    <% 
+       geo_ip = GeoIp.where("ipaddr >>= inet ?", dest.to_s).first
+       loc = geo_ip.try(:geo_location)
+
+       if loc
+     %>
+       <%= loc.country %>
+      <%= image_tag "country-4x3/#{loc.country_code.downcase}.svg", width: 32, alt: loc.country_code %>
+    <% end %>
+  </li>
 <% end %>
 </ul>
 

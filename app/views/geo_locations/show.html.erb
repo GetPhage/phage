@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Geoname:</strong>
+  <%= @geo_location.geoname_id %>
+</p>
+
+<p>
+  <strong>Continent:</strong>
+  <%= @geo_location.continent %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @geo_location.country %>
+</p>
+
+<%= link_to 'Edit', edit_geo_location_path(@geo_location) %> |
+<%= link_to 'Back', geo_locations_path %>

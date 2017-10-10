@@ -1,0 +1,27 @@
+<%= form_with(model: geo_ip, local: true) do |form| %>
+  <% if geo_ip.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(geo_ip.errors.count, "error") %> prohibited this geo_ip from being saved:</h2>
+
+      <ul>
+      <% geo_ip.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :ipaddr %>
+    <%= form.text_field :ipaddr, id: :geo_ip_ipaddr %>
+  </div>
+
+  <div class="field">
+    <%= form.label :geo_location_id %>
+    <%= form.text_field :geo_location_id, id: :geo_ip_geo_location_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

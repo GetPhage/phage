@@ -82,3 +82,6 @@ gem 'backup'
 
 gem 'histogram'
 gem 'reversed'
+gem 'i18n_data'
+gem 'svg-flags-rails', '>= 1.0.0-beta'
+gem 'countries'

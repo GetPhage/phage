@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Geo Ips</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ipaddr</th>
+      <th>Geo location</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @geo_ips.each do |geo_ip| %>
+      <tr>
+        <td><%= geo_ip.ipaddr %></td>
+        <td><%= geo_ip.geo_location %></td>
+        <td><%= link_to 'Show', geo_ip %></td>
+        <td><%= link_to 'Edit', edit_geo_ip_path(geo_ip) %></td>
+        <td><%= link_to 'Destroy', geo_ip, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Geo Ip', new_geo_ip_path %>

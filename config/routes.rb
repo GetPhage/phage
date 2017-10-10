@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :geo_ips
+  resources :geo_locations
   resources :histories
   devise_for :users, controllers: { omniauth_callbacks: "callbacks" }
 

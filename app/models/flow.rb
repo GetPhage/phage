@@ -1,6 +1,12 @@
 class Flow < ApplicationRecord
   belongs_to :device
 
+  def country
+    puts dst_ip.to_s
+    geo_ip = GeoIp.where("ipaddr >>= inet ?", dst_ip.to_s).first
+    geo_ip.try(:geo_location)
+  end
+
   def self.identify
     ActiveRecord::Base.logger.silence do
       puts "Got so many", PartialFlow.where(is_fin: true).count

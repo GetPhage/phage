@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ipaddr:</strong>
+  <%= @geo_ip.ipaddr %>
+</p>
+
+<p>
+  <strong>Geo location:</strong>
+  <%= @geo_ip.geo_location %>
+</p>
+
+<%= link_to 'Edit', edit_geo_ip_path(@geo_ip) %> |
+<%= link_to 'Back', geo_ips_path %>

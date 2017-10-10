@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  geoname_id: 1
+  continent: MyString
+  country: MyString
+
+two:
+  geoname_id: 1
+  continent: MyString
+  country: MyString

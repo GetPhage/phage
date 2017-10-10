@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171008153356) do
+ActiveRecord::Schema.define(version: 20171010041354) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -104,6 +104,25 @@ ActiveRecord::Schema.define(version: 20171008153356) do
     t.index ["src_ip"], name: "index_flows_on_src_ip"
     t.index ["src_port"], name: "index_flows_on_src_port"
     t.index ["timestamp"], name: "index_flows_on_timestamp"
+  end
+
+  create_table "geo_ips", force: :cascade do |t|
+    t.inet "ipaddr", null: false
+    t.bigint "geo_location_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["geo_location_id"], name: "index_geo_ips_on_geo_location_id"
+    t.index ["ipaddr"], name: "index_geo_ips_on_ipaddr"
+  end
+
+  create_table "geo_locations", force: :cascade do |t|
+    t.integer "geoname_id", null: false
+    t.string "continent", null: false
+    t.string "country", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "country_code", null: false
+    t.index ["geoname_id"], name: "index_geo_locations_on_geoname_id"
   end
 
   create_table "histories", id: :serial, force: :cascade do |t|
@@ -328,6 +347,7 @@ ActiveRecord::Schema.define(version: 20171008153356) do
   add_foreign_key "devices", "networks"
   add_foreign_key "devices", "ouis"
   add_foreign_key "devices", "products"
+  add_foreign_key "geo_ips", "geo_locations"
   add_foreign_key "histories", "scan_diffs"
   add_foreign_key "histories", "users"
   add_foreign_key "mdns", "devices"
