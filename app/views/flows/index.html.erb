@@ -10,6 +10,7 @@
     <th>Between</th>
     <th>Received</th>
     <th>Sent</th>
+    <th>State</th>
     <th>Partials</th>
   </tr>
   <% @flows.each do |flow| %>
@@ -18,6 +19,7 @@
       <td><%= flow.src_ip %>:<%= flow.src_port %> -> <%= flow.dst_ip %>:<%= flow.dst_port %></td>
       <td><%= flow.bytes_received %> bytes received</td>
       <td><%= flow.bytes_sent %> bytes sent</td>
+      <td><%= flow.state %></td>
       <td><%= link_to PartialFlow.where(flow: flow).count, "/partial_flows?flow_id=#{flow.id}" %></td>
     </tr>
   <% end %>

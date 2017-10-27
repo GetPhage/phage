@@ -10,7 +10,6 @@
       <th>Name</th>
       <th>Mac address</th>
       <th>Ipv4</th>
-      <th>Ipv6</th>
       <th>Flows</th>
       <th>Last seen</th>
     </tr>
@@ -22,7 +21,6 @@
 	<td><%= link_to device.friendly_name, device %></td>
         <td><%= device.mac_address %><br/><%= device.oui && device.oui.manufacturer %></td>
         <td><%= device.ipv4 && device.ipv4.join(', ') %></td>
-        <td><%= device.ipv6 && device.ipv6.join(', ')  %></td>
 <% if Flow.where(device: device).count > 0 %>
 	<td><%= link_to Flow.where(device: device).count, "/flows?device_id=#{device.id}" %></td>
 <% else %>
@@ -30,7 +28,7 @@
 <% end %>
         <td><%= Time.now - device.last_seen < 60 ? 'now' : distance_of_time_in_words(device.last_seen, Time.now, include_seconds: true) %></td>
         <td><%= link_to 'Edit', edit_device_path(device) %></td>
-        <td><%= link_to 'Destroy', device, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Delete', device, method: :delete, data: { confirm: 'Irrevocably remove device and associated data (flows, UPNP, mDNS) - are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

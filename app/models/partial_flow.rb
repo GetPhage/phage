@@ -4,9 +4,11 @@ class PartialFlow < ApplicationRecord
   belongs_to :device
   belongs_to :flow, optional: true
 
-  def self.import(file)
+  enum state: [ :unmatched, :matched, :ignored, :syn1, :syn2, :rst, :duplicate, :fin1, :fin2 ]
+
+  def self.import(data)
     ActiveRecord::Base.logger.silence do
-      packets = JSON.parse(File.read(file), symbolize_names: true)
+      packets = JSON.parse(data, symbolize_names: true)
       packets.each do |pkt|
         PartialFlow.create  src_ip: pkt[:src_ip],
                                      dst_ip: pkt[:dst_ip],

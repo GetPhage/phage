@@ -23,6 +23,7 @@ namespace :flow do
 
   desc 'Remove flow entries'
   task :clean => [:environment] do
+    PartialFlow.update_all(flow_id: nil)
     Flow.delete_all
   end
 

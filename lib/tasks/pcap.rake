@@ -4,10 +4,16 @@ ActiveRecord::Base.logger = dev_null
 
 namespace :pcap do
   desc 'Import pcap files'
-  task :import => [:environment] do
+  task :import_file => [:environment] do
     filename = 'packets.json'
-    puts filename
-    PartialFlow::import(filename)
+    data = File.read('packets.json')
+    PartialFlow::import(data)
+  end
+
+  desc 'Import pcap from STDIN'
+  task :import_stdin => [:environment] do
+    data = STDIN.read
+    PartialFlow::import(data)
   end
 
   desc 'Remove pcap entries'

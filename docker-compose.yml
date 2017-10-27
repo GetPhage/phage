@@ -19,7 +19,7 @@ services:
     build: .
     command: bundle exec rails server
     ports:
-      - "3000:3000"
+      - "127.0.0.1:3000:3000"
     links:
       - phage-postgres
       - phage-rabbitmq

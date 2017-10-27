@@ -7,8 +7,8 @@ class PartialFlowsController < ApplicationController
     @partial_flows = PartialFlow.all.order(timestamp: :asc).paginate(:page => params[:page], per_page: 20)
     if params[:flow_id]
       @flow = Flow.find params[:flow_id]
-      @partial_flows = @partial_flows.where(flow: @flow)
-      @similar = PartialFlow.where(src_ip: @flow.src_ip, dst_ip: @flow.dst_ip, src_port: @flow.src_port, dst_port: @flow.dst_port).or(PartialFlow.where(src_ip: @flow.dst_ip, dst_ip: @flow.src_ip, src_port: @flow.dst_port, dst_port: @flow.src_port)).order(timestamp: :asc)
+      @partial_flows = @partial_flows.where(flow: @flow).order(timestamp: :asc, id: :asc)
+      @similar = PartialFlow.where(src_ip: @flow.src_ip, dst_ip: @flow.dst_ip, src_port: @flow.src_port, dst_port: @flow.dst_port).or(PartialFlow.where(src_ip: @flow.dst_ip, dst_ip: @flow.src_ip, src_port: @flow.dst_port, dst_port: @flow.src_port)).order(timestamp: :asc, id: :asc)
     end
   end
 

@@ -47,14 +47,17 @@
 
 <table class='table'>
   <tr>
+    <th>ID</th>
     <th>When</th>
     <th>Between</th>
     <th>Seq</th>
     <th>Ack</th>
     <th>TCP Flags</th>
+    <th>State</th>
   </tr>
   <% @similar.each do |pflow| %>
     <tr>
+      <td><%= pflow.id %></td>
       <td><%= pflow.timestamp %></td>
       <td><%= pflow.src_ip %>:<%= pflow.src_port %> -> <%= pflow.dst_ip %>:<%= pflow.dst_port %></td>
       <td><%= pflow.src_seq %></td>
@@ -70,6 +73,7 @@
 	RST 
 	<% end %>
       </td>
+      <td><%= pflow.state %></td>
     </tr>
   <% end %>
 </table>

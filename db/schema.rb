@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171010041354) do
+ActiveRecord::Schema.define(version: 20171023030615) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -95,6 +95,7 @@ ActiveRecord::Schema.define(version: 20171010041354) do
     t.bigint "bytes_received", default: 0, null: false
     t.bigint "bytes_sent", default: 0, null: false
     t.datetime "timestamp", null: false
+    t.integer "state", default: 1, null: false
     t.index ["device_id"], name: "index_flows_on_device_id"
     t.index ["dst_ip"], name: "index_flows_on_dst_ip"
     t.index ["dst_port"], name: "index_flows_on_dst_port"
@@ -103,6 +104,7 @@ ActiveRecord::Schema.define(version: 20171010041354) do
     t.index ["partial"], name: "index_flows_on_partial"
     t.index ["src_ip"], name: "index_flows_on_src_ip"
     t.index ["src_port"], name: "index_flows_on_src_port"
+    t.index ["state"], name: "index_flows_on_state"
     t.index ["timestamp"], name: "index_flows_on_timestamp"
   end
 
@@ -212,6 +214,7 @@ ActiveRecord::Schema.define(version: 20171010041354) do
     t.boolean "is_rst", default: false, null: false
     t.datetime "timestamp", null: false
     t.bigint "flow_id"
+    t.integer "state", default: 1, null: false
     t.index ["device_id"], name: "index_partial_flows_on_device_id"
     t.index ["flow_id"], name: "index_partial_flows_on_flow_id"
     t.index ["is_fin", "src_ip", "dst_ip", "src_port", "dst_port", "timestamp"], name: "partial_flow_fin_hosts_index"
@@ -219,6 +222,7 @@ ActiveRecord::Schema.define(version: 20171010041354) do
     t.index ["is_syn", "src_ip", "dst_ip", "src_port", "dst_port", "timestamp"], name: "partial_flow_syn_hosts_index"
     t.index ["is_syn"], name: "index_partial_flows_on_is_syn"
     t.index ["src_ip", "dst_ip", "src_port", "dst_port"], name: "partial_flow_index"
+    t.index ["state", "timestamp", "src_ip", "src_port", "dst_ip", "dst_port"], name: "partial_flows_important_index"
   end
 
   create_table "product_categories", id: :serial, force: :cascade do |t|
