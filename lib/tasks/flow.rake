@@ -63,7 +63,7 @@ namespace :flow do
   desc 'Mark old, incomplete partial flows'
   task :mark_old => [:environment] do
     most_recent_flow = Flow.order(timestamp: :desc).first
-    PartialFlow.where("timestamp < ?", most_recent_flow.timestamp - 120.minutes).update(state: :ignored)
+    PartialFlow.where(state: :unmatched).where("timestamp < ?", most_recent_flow.timestamp - 120.minutes).update(state: :ignored)
   end
 
   desc 'report'
