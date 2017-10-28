@@ -1,28 +1,40 @@
 <h1>Phage Dashboard</h1>
 
-<h2>Devices</h2>
-<ul>
+<div class='card'>
+  <div class='card-block'>
+<h2 class='card-title'>Devices</h2>
+<ul class="list-group list-group-flush">
   <li><%= @devices_count %> devices seen</li>
   <li><%= @devices_present_count %> devices present</li>
 </ul>
+  </div>
+  </div>
 
-<h2>Flows</h2>
+<div class='card'>
+  <div class='card-block'>
+<h2 class='card-title'>Flows</h2>
 <% if @most_recent_flow %>
 <p>Most recent flow processed <%= distance_of_time_in_words(@most_recent_flow.timestamp) %> ago (<%= @most_recent_flow.timestamp %>)</p>
 
-<ul>
-  <li><%= @complete_flow_count %> Complete</li>
-  <li><%= @incomplete_flow_count %> Incomplete</li>
-  <li><%= @reset_flow_count %> Reset</li>
+<ul class="list-group list-group-flush">
+  <li><%= number_with_delimiter @complete_flow_count %> Complete</li>
+  <li><%= number_with_delimiter @incomplete_flow_count %> Incomplete</li>
+  <li><%= number_with_delimiter @reset_flow_count %> Reset</li>
 </ul>
 <% else %>
 No flows
 <% end %>
+  </div>
+  </div>
 
-<h2>Partial Flows</h2>
-<ul>
-  <li><%= @matched_partial_flow_count %> Matched</li>
-  <li><%= @unmatched_partial_flow_count %> Unmatched</li>
-  <li><%= @ignored_partial_flow_count %> Ignored</li>
+<div class='card'>
+  <div class='card-block'>
+<h2 class='card-title'>Partial Flows</h2>
+<ul class="list-group list-group-flush">
+  <li><%= number_with_delimiter @matched_partial_flow_count %> Matched</li>
+  <li><%= number_with_delimiter @unmatched_partial_flow_count %> Unmatched</li>
+  <li><%= number_with_delimiter @ignored_partial_flow_count %> Ignored</li>
 </ul>
 
+  </div>
+  </div>
