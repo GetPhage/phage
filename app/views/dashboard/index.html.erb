@@ -7,11 +7,17 @@
 </ul>
 
 <h2>Flows</h2>
+<% if @most_recent_flow %>
+<p>Most recent flow processed <%= distance_of_time_in_words(@most_recent_flow.timestamp) %> ago (<%= @most_recent_flow.timestamp %>)</p>
+
 <ul>
   <li><%= @complete_flow_count %> Complete</li>
   <li><%= @incomplete_flow_count %> Incomplete</li>
   <li><%= @reset_flow_count %> Reset</li>
 </ul>
+<% else %>
+No flows
+<% end %>
 
 <h2>Partial Flows</h2>
 <ul>

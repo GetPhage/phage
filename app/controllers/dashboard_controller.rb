@@ -10,5 +10,7 @@ class DashboardController < ApplicationController
     @matched_partial_flow_count = PartialFlow.where(state: :matched).count
     @unmatched_partial_flow_count = PartialFlow.where(state: :unmatched).count
     @ignored_partial_flow_count = PartialFlow.where(state: :ignored).count
+
+    @most_recent_flow = Flow.order(timestamp: :desc).first
   end
 end
