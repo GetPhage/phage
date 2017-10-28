@@ -46,6 +46,12 @@ class IdentifyFlows
 
   def categorize_packets
     @packets.order(timestamp: :asc, id: :asc).each do |pkt|
+      if too_old?(pkt) then
+#        puts '>>>>>>> TOO FUCKING OLD <<<<<<<<'
+#        pp pkt
+        return
+      end
+
       if pkt.is_rst?
         if is_retransmit?(pkt, @rst_packets) || !has_reset?
           @rst_packets.push pkt
@@ -87,6 +93,7 @@ class IdentifyFlows
     syn_ack_pkt = @syn_ack_packets.first
     fin_pkt = @fin_packets.first
 
+if false
     puts ">>> SYN"
     pp @syn_packets
 
@@ -101,6 +108,7 @@ class IdentifyFlows
 
     puts ">>> RST"
     pp @rst_packets
+end
 
     unless @device
       @device = Device.create mac_address: fin_pkt.mac_address,
@@ -186,4 +194,19 @@ class IdentifyFlows
   def has_reset?
     !@rst_packets.empty?
   end
+
+  def too_old?(pkt)
+    ages = Array.new
+    ages.push @syn_packets.max_by { |pkt| pkt.timestamp }
+    ages.push @syn_ack_packets.max_by { |pkt| pkt.timestamp }
+    ages.push @fin_packets.max_by { |pkt| pkt.timestamp }
+    ages.push @fin_ack_packets.max_by { |pkt| pkt.timestamp }
+    ages.push @rst_packets.max_by { |pkt| pkt.timestamp }
+
+    most_recent = ages.max_by { |pkt| if pkt then pkt.timestamp else Time.at(0).to_datetime end }
+
+#    pp pkt.timestamp, most_recent.timestamp, most_recent.timestamp + 30.minutes
+    pkt.timestamp > most_recent.timestamp + 30.minutes
+  end
+
 end
