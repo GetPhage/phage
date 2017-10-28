@@ -14,8 +14,8 @@ class DevicesController < ApplicationController
     @flows = Flow.where(device: @device).limit(10).order(id: :desc)
 
 #  (bins, freq) = Flow.where(device: @device).pluck(:bytes_sent).histogram([0, 10, 100, 1000, 10000, 100000, 1000000]) 
-    bytes_sent = Flow.where(device: @device).pluck(:bytes_sent).select { |x| x >= 0 }
-    bytes_received = Flow.where(device: @device).pluck(:bytes_received).select { |x| x >= 0 }
+    bytes_sent = Flow.where(device: @device, state: :complete).pluck(:bytes_sent).select { |x| x >= 0 }
+    bytes_received = Flow.where(device: @device, state: :complete).pluck(:bytes_received).select { |x| x >= 0 }
     (bins, sent_freq) = bytes_sent.histogram(20, other_sets: [ bytes_received ])
     (bins, rcvd_freq) = bytes_received.histogram(bins)
 
@@ -26,7 +26,7 @@ class DevicesController < ApplicationController
     
     @size_data_received = Hash[str_bins.zip(rcvd_freq)]
 
-    most_recent = Flow.where(device: @device).last
+    most_recent = Flow.where(device: @device, state: :complete).last
     if most_recent
       samples = Flow.where(device: @device).where("timestamp < ?", most_recent.timestamp - 1.day)
       sent = samples.pluck(:bytes_sent)

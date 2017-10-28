@@ -1,8 +1,21 @@
-<p id="notice"><%= notice %></p>
-
 <h1>Phage Dashboard</h1>
 
+<h2>Devices</h2>
 <ul>
   <li><%= @devices_count %> devices seen</li>
   <li><%= @devices_present_count %> devices present</li>
 </ul>
+
+<h2>Flows</h2>
+<ul>
+  <li><%= @complete_flow_count %> Complete</li>
+  <li><%= @incomplete_flow_count %> Incomplete</li>
+  <li><%= @reset_flow_count %> Reset</li>
+</ul>
+
+<h2>Partial Flows</h2>
+<ul>
+  <li><%= @matched_partial_flow_count %> Matched</li>
+  <li><%= @unmatched_partial_flow_count %> Unmatched</li>
+</ul>
+
