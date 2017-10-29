@@ -14,7 +14,7 @@
   <div class='card-block'>
 <h2 class='card-title'>Flows</h2>
 <% if @most_recent_flow %>
-<p>Most recent flow processed <%= distance_of_time_in_words(@most_recent_flow.timestamp) %> ago (<%= @most_recent_flow.timestamp %>)</p>
+<p>Most recent flow processed <%= distance_of_time_in_words(Time.now, @most_recent_flow.timestamp) %> ago (<%= @most_recent_flow.timestamp %>)</p>
 
 <ul class="list-group list-group-flush">
   <li><%= number_with_delimiter @complete_flow_count %> Complete</li>
@@ -31,7 +31,7 @@ No flows
   <div class='card-block'>
 <h2 class='card-title'>Partial Flows</h2>
 <% if @most_recent_flow %>
-<p>Most recent partial flow <%= distance_of_time_in_words(@most_recent_partial_flow.timestamp) %> ago (<%= @most_recent_partial_flow.timestamp %>)</p>
+<p>Most recent partial flow <%= distance_of_time_in_words(Time.now, @most_recent_partial_flow.timestamp) %> ago (<%= @most_recent_partial_flow.timestamp %>)</p>
 
 <ul class="list-group list-group-flush">
   <li><%= number_with_delimiter @matched_partial_flow_count %> Matched</li>
