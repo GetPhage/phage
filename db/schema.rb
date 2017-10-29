@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171029040306) do
+ActiveRecord::Schema.define(version: 20171029041709) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -220,6 +220,7 @@ ActiveRecord::Schema.define(version: 20171029040306) do
     t.index ["flow_id"], name: "index_partial_flows_on_flow_id"
     t.index ["is_fin", "src_ip", "dst_ip", "src_port", "dst_port", "timestamp"], name: "partial_flow_fin_hosts_index"
     t.index ["is_fin"], name: "index_partial_flows_on_is_fin"
+    t.index ["is_syn", "src_ack", "state"], name: "index_partial_flows_on_is_syn_and_src_ack_and_state"
     t.index ["is_syn", "src_ip", "dst_ip", "src_port", "dst_port", "timestamp"], name: "partial_flow_syn_hosts_index"
     t.index ["is_syn", "state"], name: "index_partial_flows_on_is_syn_and_state"
     t.index ["is_syn"], name: "index_partial_flows_on_is_syn"
