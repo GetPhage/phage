@@ -22,7 +22,11 @@
         <td><%= device.mac_address %><br/><%= device.oui && device.oui.manufacturer %></td>
         <td><%= device.ipv4 && device.ipv4.join(', ') %></td>
 <% if Flow.where(device: device).count > 0 %>
-	<td><%= link_to Flow.where(device: device).count, "/flows?device_id=#{device.id}" %></td>
+	<td>
+	  <%= link_to Flow.where(device: device, state: :complete).count, "/flows?device_id=#{device.id}" %> /
+	  <%= link_to Flow.where(device: device, state: :incomplete).count, "/flows?device_id=#{device.id}" %> /
+	  <%= link_to Flow.where(device: device, state: :reset).count, "/flows?device_id=#{device.id}" %>
+	</td>
 <% else %>
 	<td>0</td>
 <% end %>
