@@ -30,11 +30,17 @@ No flows
 <div class='card'>
   <div class='card-block'>
 <h2 class='card-title'>Partial Flows</h2>
+<% if @most_recent_flow %>
+<p>Most recent partial flow <%= distance_of_time_in_words(@most_recent_partial_flow.timestamp) %> ago (<%= @most_recent_partial_flow.timestamp %>)</p>
+
 <ul class="list-group list-group-flush">
   <li><%= number_with_delimiter @matched_partial_flow_count %> Matched</li>
   <li><%= number_with_delimiter @unmatched_partial_flow_count %> Unmatched</li>
   <li><%= number_with_delimiter @ignored_partial_flow_count %> Ignored</li>
 </ul>
 
+<% else %>
+No partial flows
+<% end %>
   </div>
   </div>

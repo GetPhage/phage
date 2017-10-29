@@ -12,5 +12,6 @@ class DashboardController < ApplicationController
     @ignored_partial_flow_count = PartialFlow.where(state: :ignored).count
 
     @most_recent_flow = Flow.order(timestamp: :desc).first
+    @most_recent_partial_flow = PartialFlow.order(timestamp: :desc).first
   end
 end
