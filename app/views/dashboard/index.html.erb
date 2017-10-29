@@ -1,18 +1,22 @@
 <h1>Phage Dashboard</h1>
 
 <div class='card'>
+  <div class='card-header'>
+    <h2 class='card-title'>Devices</h2>
+  </div>
   <div class='card-block'>
-<h2 class='card-title'>Devices</h2>
-<ul class="list-group list-group-flush">
-  <li><%= @devices_count %> devices seen</li>
-  <li><%= @devices_present_count %> devices present</li>
-</ul>
+    <ul class="list-group list-group-flush">
+      <li><%= @devices_count %> devices seen</li>
+      <li><%= @devices_present_count %> devices present</li>
+    </ul>
   </div>
-  </div>
+</div>
 
 <div class='card'>
+  <div class='card-header'>
+    <h2 class='card-title'>Flows</h2>
+  </div>
   <div class='card-block'>
-<h2 class='card-title'>Flows</h2>
 <% if @most_recent_flow %>
 <p>Most recent flow processed <%= distance_of_time_in_words(Time.now, @most_recent_flow.timestamp) %> ago (<%= @most_recent_flow.timestamp %>)</p>
 
@@ -28,8 +32,10 @@ No flows
   </div>
 
 <div class='card'>
+  <div class='card-header'>
+    <h2 class='card-title'>Partial Flows</h2>
+  </div>
   <div class='card-block'>
-<h2 class='card-title'>Partial Flows</h2>
 <% if @most_recent_flow %>
 <p>Most recent partial flow <%= distance_of_time_in_words(Time.now, @most_recent_partial_flow.timestamp) %> ago (<%= @most_recent_partial_flow.timestamp %>)</p>
 
