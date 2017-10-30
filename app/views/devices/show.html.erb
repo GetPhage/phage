@@ -73,8 +73,16 @@
   </li>
 <% end %>
 </ul>
+<%
+formatted_size_data_received = @size_data_received.map { |size, count| [ number_with_precision(size, precision: 0, separator: '.', delimiter: ','),  number_with_precision(count, precision: 0) ] } 
+formatted_size_data_sent = @size_data_sent.map { |size, count| [ number_with_precision(size, precision: 0, separator: '.', delimiter: ','),  number_with_precision(count, precision: 0) ] } 
+%>
+<pre>
+<% @size_data_received.pretty_inspect %>
+<% formatted_size_data_received.pretty_inspect %>
+</pre>
 
-  <%= column_chart  [{ name: 'Received', data: @size_data_received },  { name: 'Sent', data: @size_data_sent } ] %>
+  <%= column_chart  [{ name: 'Received', data: formatted_size_data_received },  { name: 'Sent', data: formatted_size_data_sent } ] %>
 
   <%= column_chart  [{ name: 'Received', data: @time_data_received },  { name: 'Sent', data: @time_data_sent } ] %>
 <% else %>
