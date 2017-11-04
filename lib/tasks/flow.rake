@@ -9,7 +9,7 @@ namespace :flow do
     Rails.logger = dev_null
     ActiveRecord::Base.logger = dev_null
 
-    Flow.identify
+    Flow.identify(1000)
   end
 
   desc 'Associate flows with pcaps'

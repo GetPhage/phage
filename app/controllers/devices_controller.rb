@@ -28,7 +28,7 @@ class DevicesController < ApplicationController
 
     most_recent = Flow.where(device: @device, state: :complete).last
     if most_recent
-      samples = Flow.where(device: @device).where("timestamp < ?", most_recent.timestamp - 1.day)
+      samples = Flow.where(device: @device, state: :complete).where("timestamp < ?", most_recent.timestamp - 1.day)
       sent = samples.pluck(:bytes_sent)
       received = samples.pluck(:bytes_received)
       timestamps = samples.pluck(:timestamp)

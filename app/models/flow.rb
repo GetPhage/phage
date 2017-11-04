@@ -10,37 +10,21 @@ class Flow < ApplicationRecord
   end
 
 
-  def self.identify
+  def self.identify(max_work = 0)
     ActiveRecord::Base.logger.silence do
       puts "Got so many", PartialFlow.where(is_syn: true, state: :unmatched).count
       
-      PartialFlow.where(is_syn: true, src_ack: 0, state: :unmatched).order(timestamp: :asc).each do |syn_pkt|
+      processed = 0
+      PartialFlow.where(is_syn: true, src_ack: 0, state: :unmatched).order(id: :asc).find_each do |syn_pkt|
         identifier = IdentifyFlows.new syn_pkt
         identifier.work
+
+        if max_work > 0 && processed > max_work
+          return
+        end
+
+        processed +=1 
       end
-    end
-  end
-
-  def self.mark_flows
-    PartialFlow.where(is_fin: true).each do |fin_pkt|
-      next unless self.is_local?(fin_pkt.dst_ip)
-
-      syn_pkt = self.find_syn_pkt fin_pkt
-      next unless syn_pkt
-        
-      dst_syn_pkt = self.find_dst_syn_pkt fin_pkt
-      next unless dst_syn_pkt
-
-      next if self.is_already_processed? syn_pkt
-
-      flow = Flow.find src_ip: syn_pkt.src_ip,
-                       dst_ip: syn_pkt.dst_ip,
-                       src_port: syn_pkt.src_port,
-                       dst_port: syn_pkt.dst_port
-
-      fin_pkt.update_attributes(flow: flow)
-      syn_pkt.update_attributes(flow: flow)
-      dst_syn_pkt.update_attributes(flow: flow)
     end
   end
 

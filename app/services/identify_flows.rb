@@ -41,11 +41,11 @@ class IdentifyFlows
                                      dst_port: syn_pkt.src_port,
                                      state: :unmatched)
                  )
-                 .order(timestamp: :asc)
+                 .order(id: :asc)
   end
 
   def categorize_packets
-    @packets.order(timestamp: :asc, id: :asc).each do |pkt|
+    @packets.each do |pkt|
       if too_old?(pkt) then
 #        puts '>>>>>>> TOO FUCKING OLD <<<<<<<<'
 #        pp pkt
