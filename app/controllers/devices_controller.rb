@@ -5,7 +5,17 @@ class DevicesController < ApplicationController
   # GET /devices
   # GET /devices.json
   def index
-    @devices = Device.per_user(current_user).order(updated_at: :desc).paginate(:page => params[:page], per_page: 100)
+#    @devices = Device.per_user(current_user).order(updated_at: :desc).paginate(:page => params[:page], per_page: 100)
+    @devices = Device.per_user(current_user).order(last_seen: :desc).paginate(:page => params[:page], per_page: 100)
+
+    if params[:q]
+      q = params[:q]
+      @devices = Device.per_user(current_user).where("given_name LIKE '%#{q}%'")
+    else
+      @devices = Device.per_user(current_user)
+    end
+
+    @devices = @devices.order(last_seen: :desc).paginate(:page => params[:page], per_page: 100)
   end
 
   # GET /devices/1

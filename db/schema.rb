@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171029041709) do
+ActiveRecord::Schema.define(version: 20171104171531) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,7 +41,6 @@ ActiveRecord::Schema.define(version: 20171029041709) do
     t.inet "ipv6", array: true
     t.string "kind", null: false
     t.datetime "last_seen", null: false
-    t.jsonb "extra", default: {}, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "name", default: [], null: false, array: true
@@ -62,7 +61,6 @@ ActiveRecord::Schema.define(version: 20171029041709) do
     t.boolean "is_mobile", default: false, null: false
     t.boolean "is_thing", default: false, null: false
     t.string "given_name", default: "", null: false
-    t.index ["extra"], name: "index_devices_on_extra", using: :gin
     t.index ["firmware_version"], name: "index_devices_on_firmware_version"
     t.index ["given_name"], name: "index_devices_on_given_name"
     t.index ["ipv4"], name: "index_devices_on_ipv4"
