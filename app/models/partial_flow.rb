@@ -20,7 +20,8 @@ class PartialFlow < ApplicationRecord
                                      is_fin: pkt[:fin],
                                      is_rst: pkt[:rst],
                                      mac_address: pkt[:ether_src],
-                                     timestamp: Time.at(pkt[:time]).to_datetime
+                                     timestamp: Time.at(pkt[:time]).to_datetime,
+                                     state: :unmatched
       end
     end
   end

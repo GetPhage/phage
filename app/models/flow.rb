@@ -17,9 +17,11 @@ class Flow < ApplicationRecord
       processed = 0
       PartialFlow.where(is_syn: true, src_ack: 0, state: :unmatched).order(id: :asc).find_each do |syn_pkt|
         identifier = IdentifyFlows.new syn_pkt
-        identifier.work
+        flow = identifier.work
 
-        if max_work > 0 && processed > max_work
+        if false && max_work > 0 && processed > max_work
+          last_done = Flow.order(timestamp: :desc).first
+          PartialFlow.where(state: :unmatched).where("timestamp < ?", last_done.timestamp).update_all(state: :ignored)
           return
         end
 

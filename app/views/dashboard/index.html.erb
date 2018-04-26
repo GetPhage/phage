@@ -6,8 +6,8 @@
   </div>
   <div class='card-block'>
     <ul class="list-group list-group-flush">
-      <li><%= @devices_count %> devices seen</li>
-      <li><%= @devices_present_count %> devices present</li>
+      <li class='list-group-item'><%= @devices_count %> devices seen</li>
+      <li class='list-group-item'><%= @devices_present_count %> devices present</li>
     </ul>
   </div>
 </div>
@@ -21,9 +21,9 @@
 <p>Most recent flow processed <%= distance_of_time_in_words(Time.now, @most_recent_flow.timestamp) %> ago (<%= @most_recent_flow.timestamp %>)</p>
 
 <ul class="list-group list-group-flush">
-  <li><%= number_with_delimiter @complete_flow_count %> Complete</li>
-  <li><%= number_with_delimiter @incomplete_flow_count %> Incomplete</li>
-  <li><%= number_with_delimiter @reset_flow_count %> Reset</li>
+  <li class='list-group-item'><%= number_with_delimiter @complete_flow_count %> Complete</li>
+  <li class='list-group-item'><%= number_with_delimiter @incomplete_flow_count %> Incomplete</li>
+  <li class='list-group-item'><%= number_with_delimiter @reset_flow_count %> Reset</li>
 </ul>
 <% else %>
 No flows
@@ -40,9 +40,9 @@ No flows
 <p>Most recent partial flow <%= distance_of_time_in_words(Time.now, @most_recent_partial_flow.timestamp) %> ago (<%= @most_recent_partial_flow.timestamp %>)</p>
 
 <ul class="list-group list-group-flush">
-  <li><%= number_with_delimiter @matched_partial_flow_count %> Matched</li>
-  <li><%= number_with_delimiter @unmatched_partial_flow_count %> Unmatched</li>
-  <li><%= number_with_delimiter @ignored_partial_flow_count %> Ignored</li>
+  <li class='list-group-item'><%= number_with_delimiter @matched_partial_flow_count %> Matched</li>
+  <li class='list-group-item'><%= number_with_delimiter @unmatched_partial_flow_count %> Unmatched</li>
+  <li class='list-group-item'><%= number_with_delimiter @ignored_partial_flow_count %> Ignored</li>
 </ul>
 
 <% else %>

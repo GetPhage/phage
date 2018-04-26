@@ -33,15 +33,15 @@ class IdentifyFlows
                                  dst_ip: syn_pkt.dst_ip,
                                  src_port: syn_pkt.src_port,
                                  dst_port: syn_pkt.dst_port,
-                                 state: :unmatched)
-                 .or(
+                                 state: :unmatched).
+                 or(
                    PartialFlow.where(src_ip: syn_pkt.dst_ip,
                                      dst_ip: syn_pkt.src_ip,
                                      src_port: syn_pkt.dst_port,
                                      dst_port: syn_pkt.src_port,
                                      state: :unmatched)
-                 )
-                 .order(id: :asc)
+                 ).
+                 order(id: :asc)
   end
 
   def categorize_packets
@@ -111,7 +111,7 @@ if false
 end
 
     unless @device
-      @device = Device.create mac_address: fin_pkt.mac_address,
+      @device = Device.create mac_address: syn_pkt.mac_address,
                               ipv4: [ syn_pkt.src_ip ],
                               kind: '',
                               last_seen: Time.now
@@ -152,6 +152,8 @@ end
     @fin_packets.each do |pkt| pkt.update_attributes(flow: @flow, state: :matched, device: @device) end
     @fin_ack_packets.each do |pkt| pkt.update_attributes(flow: @flow, state: :matched, device: @device) end
     @rst_packets.each do |pkt| pkt.update_attributes(flow: @flow, state: :matched, device: @device) end
+
+    @flow
   end
 
   
