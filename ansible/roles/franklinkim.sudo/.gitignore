@@ -1,5 +1,4 @@
-.*
-*~
-!.git*
-!.travis.yml
-!.editorconfig
+*.log
+.DS_Store
+.vagrant
+tests/*.retry

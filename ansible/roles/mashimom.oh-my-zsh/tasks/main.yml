@@ -1,26 +1,73 @@
 ---
 # tasks file for oh-my-zsh
-- apt: name={{ item }}
+- name: install dependecies
+  apt:
+    name: "{{ item }}"
+    install_recommends: yes
+    update_cache: yes
+    cache_valid_time: 3600
+    autoclean: yes
+    autoremove: yes
+  with_items:
+    - zsh
+    - git
+  become: yes
   when: ansible_pkg_mgr == 'apt'
-  become: yes
+
+- name: install dependecies
+  yum:
+    name: "{{ item }}"
   with_items:
     - zsh
     - git
-  notify: clean apt cache
-
-- yum: name={{ item }}
+  become: yes
   when: ansible_pkg_mgr == 'yum'
-  become: yes
+
+- name: enable alpine edge
+  command: echo http://nl.alpinelinux.org/alpine/edge/testing >> /etc/apk/repositories
+  when: ansible_pkg_mgr == 'apk'
+  become: true
+
+- name: install alpine shadow
+  apk:
+    name: shadow
+    update_cache: yes
+  become: true
+  when: ansible_pkg_mgr == 'apk'
+
+- name: install dependecies
+  apk:
+    name: "{{ item }}"
+    update_cache: yes
   with_items:
     - zsh
     - git
-  notify: clean yum cache
+  become: yes
+  when: ansible_pkg_mgr == 'apk'
 
-- git: repo=https://github.com/robbyrussell/oh-my-zsh.git dest=~/.oh-my-zsh accept_hostkey=true update=no
+- name: fetch oh-my-zsh
+  git:
+    repo: https://github.com/robbyrussell/oh-my-zsh.git
+    dest: "~{{ OHMYZSH_USER }}/.oh-my-zsh"
+    accept_hostkey: true
+    update: yes
+  become: yes
+  become_user: "{{ OHMYZSH_USER }}"
+  tags:
+  - skip_ansible_lint
 
-- template: src=.zshrc.j2 dest=~/.zshrc backup=yes
+- name: create a default .zshrc
+  template:
+    src: .zshrc.j2
+    dest: "~{{ OHMYZSH_USER }}/.zshrc"
+    backup: yes
+    owner: "{{ OHMYZSH_USER }}"
+    group: "{{ OHMYZSH_USER }}"
+  become: yes
+
+- name: set user's default shell to zsh
+  user:
+    name: "{{ OHMYZSH_USER }}"
+    shell: /bin/zsh
   become: true
-  become_user: "{{ ohmyzsh_user }}"
-
-- user: name={{ ohmyzsh_user }} shell=/bin/zsh
-  become: true
+  # when: ansible_distribution != "Alpine"

@@ -17,12 +17,9 @@
         - owner: phage
           src: files/ssh-keys/phage_authorized_keys.pub
 
-    - name: ANXS.monit
-      tags: monit
-
     - name: ANXS.postgresql
       tags: postgresql
-      postgresql_version: 9.6
+      postgresql_version: 10
       postgresql_databases:
         - name: "{{ database_name }}"
           owner: phage
@@ -37,8 +34,12 @@
           encrypted: no
           priv: "ALL"
 
+    - name: geerlingguy.nodejs
+      tags: node
 
-    - geerlingguy.nginx          
+    - geerlingguy.nginx
+      tags: nginx
+
     - name: zzet.rbenv
       tags: ruby
       env: user
@@ -57,12 +58,12 @@
             version: "v1.0.0" }
       rbenv_users: [ "phage", "romkey" ]
 
-    - name:  aelogica.puma
-      puma_user: phage
-      puma_shared: /home/phage/phage/shared
-      puma_root: /home/phage/phage
+#    - name:  aelogica.puma
+#      puma_user: phage
+#      puma_shared: /home/phage/phage/shared
+#      puma_root: /home/phage/phage
 
-    - jasonj.beanstalkd
+#    - jasonj.beanstalkd
 
     - name: pwelch.avahi 
       avahi_useipv6:  yes 

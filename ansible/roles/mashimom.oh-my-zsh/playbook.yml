@@ -1,0 +1,15 @@
+---
+- hosts: all
+  pre_tasks:
+    - name: enable alpine edge
+      command: echo http://nl.alpinelinux.org/alpine/edge/testing >> /etc/apk/repositories
+      when: ansible_pkg_mgr == 'apk'
+      become: true
+    - name: install alpine shadow
+      apk:
+        name: shadow
+        update_cache: yes
+      become: true
+      when: ansible_pkg_mgr == 'apk'
+  roles:
+    - role: ohmyzsh

@@ -32,7 +32,7 @@ $ git clone https://github.com/weareinteractive/ansible-sudo.git franklinkim.sud
 
 ## Dependencies
 
-* Ansible >= 1.9
+* Ansible >= 2.4
 
 ## Variables
 
@@ -58,6 +58,10 @@ sudo_package: sudo
 sudo_users: []
 # list of username or %groupname and their defaults
 sudo_defaults: []
+# default sudoers file
+sudo_sudoers_file: ansible
+# delete other files in /etc/sudoers.d/
+purge_other_sudoers_files: no
 
 ```
 
@@ -70,7 +74,7 @@ This is an example playbook:
 ---
 
 - hosts: all
-  sudo: yes
+  become: yes
   roles:
     - franklinkim.sudo
   vars:
@@ -91,19 +95,22 @@ This is an example playbook:
         commands: '/bin/ls'
       - name: '%group3'
         users: 'user1,user2'
+        groups: 'group1,group2'
+    purge_other_sudoers_files: no
 
 ```
+
 
 ## Testing
 
 ```shell
 $ git clone https://github.com/weareinteractive/ansible-sudo.git
 $ cd ansible-sudo
-$ vagrant up
+$ make test
 ```
 
 ## Contributing
-In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests and examples for any new or changed functionality.
+In lieu of a formal style guide, take care to maintain the existing coding style. Add unit tests and examples for any new or changed functionality.
 
 1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)

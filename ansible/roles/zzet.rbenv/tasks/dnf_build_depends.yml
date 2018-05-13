@@ -2,16 +2,11 @@
 - name: install build depends
   dnf: name={{ item }} state=present
   with_items:
-    - gcc
-    - openssl-devel
-    - libyaml-devel
-    - readline-devel
-    - zlib-devel
-    - libffi-devel
-    - git
+  - "{{ rbenv_dnf_packages }}"
   become: true
 
 - name: install build depends
   dnf: name={{ item }} state=present
-  with_items: '{{ rbenv_extra_depends }}'
+  with_items:
+  - "{{ rbenv_extra_depends }}"
   become: true
