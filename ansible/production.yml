@@ -17,27 +17,10 @@
         - owner: phage
           src: files/ssh-keys/phage_authorized_keys.pub
 
-    - name: ANXS.postgresql
-      tags: postgresql
-      postgresql_version: 10
-      postgresql_databases:
-        - name: "{{ database_name }}"
-          owner: phage
-          hstore: yes
-      postgresql_users:
-        - name: phage
-          db: phage
-          pass: "{{ database_user_password }}"
-          encrypted: no
-        - name: postgresql
-          pass: "{{ database_admin_password }}"
-          encrypted: no
-          priv: "ALL"
-
     - name: geerlingguy.nodejs
       tags: node
 
-    - geerlingguy.nginx
+    - name: geerlingguy.nginx
       tags: nginx
 
     - name: zzet.rbenv
@@ -71,3 +54,20 @@
 
     - name: env
       tags: env
+
+    - name: ANXS.postgresql
+      tags: postgresql
+      postgresql_version: 10
+      postgresql_databases:
+        - name: "{{ database_name }}"
+          owner: phage
+          hstore: yes
+      postgresql_users:
+        - name: phage
+          db: phage
+          pass: "{{ database_user_password_encrypted }}"
+          encrypted: yes
+        - name: postgresql
+          pass: "{{ database_admin_password_encrypted }}"
+          encrypted: yes
+          priv: "ALL"
