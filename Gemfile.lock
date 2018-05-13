@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/sinatra/sinatra
-  revision: dbc70b416df5400cbcb1b5a62e04a4b74a9a0c4a
+  revision: 5149dc9e0b0e281231b91223c6a414c905ad3a96
   specs:
     rack-protection (2.0.1)
       rack
@@ -65,7 +65,7 @@ GEM
       nokogiri
     arel (8.0.0)
     arp (0.0.1)
-    autoprefixer-rails (8.3.0.1)
+    autoprefixer-rails (8.4.1)
       execjs
     backburner (1.4.1)
       beaneater (~> 1.0)
@@ -132,7 +132,7 @@ GEM
     em-synchrony (1.0.6)
       eventmachine (>= 1.0.0.beta.1)
     erubi (1.7.1)
-    eventmachine (1.2.5)
+    eventmachine (1.2.7)
     execjs (2.7.0)
     faraday (0.12.2)
       multipart-post (>= 1.2, < 3)
@@ -141,7 +141,7 @@ GEM
       railties (>= 3.2, < 6.0)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
-    groupdate (4.0.0)
+    groupdate (4.0.1)
       activesupport (>= 4.2)
     gyoku (1.3.1)
       builder (>= 2.1.2)
@@ -202,7 +202,7 @@ GEM
     mini_mime (1.0.0)
     mini_portile2 (2.3.0)
     minitest (5.11.3)
-    money (6.11.0)
+    money (6.11.3)
       i18n (>= 0.6.4, < 1.1)
     multi_json (1.13.1)
     multi_xml (0.6.0)
@@ -211,7 +211,7 @@ GEM
     nested_form (0.3.2)
     net-dns (0.8.0)
     net-ping (2.0.4)
-    nio4r (2.3.0)
+    nio4r (2.3.1)
     nokogiri (1.8.2)
       mini_portile2 (~> 2.3.0)
     nori (2.6.0)
@@ -363,7 +363,7 @@ GEM
     wasabi (3.5.0)
       httpi (~> 2.0)
       nokogiri (>= 1.4.2)
-    web-console (3.6.1)
+    web-console (3.6.2)
       actionview (>= 5.0)
       activemodel (>= 5.0)
       bindex (>= 0.4.0)
