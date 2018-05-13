@@ -13,21 +13,3 @@ set :bugsnag_api_key, ENV['BUGSNAG_API_KEY']
 ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 append :linked_files, '.env'
-
-task :restart_app do
-  on roles(:web) do
-    puts "monit a"
-    execute '/home/phage/phage/current/scripts/puma.sh restart'
-  end
-end
-
-task :restart_workers do
-  on roles(:web) do
-    puts "monit w"
-    execute '/home/phage/phage/current/scripts/backburner.sh restart'
-  end
-end
-
-after 'deploy:finishing', 'restart_app'
-after 'deploy:finishing', 'restart_workers'
-
