@@ -9,3 +9,5 @@
     - sqlite3
     - libsqlite3-dev
     - libxml2
+    - libavahi-compat-libdnssd1
+    - libavahi-compat-libdnssd-dev

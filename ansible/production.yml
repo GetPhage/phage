@@ -5,6 +5,25 @@
   become_user: root
   vars:
     database_name: phage_production
+    rbenv: 
+      env: user
+      version: v1.1.1
+      default_ruby: 2.5.1
+      rubies:
+        - version: 2.5.1
+    rbenv_users:  [ romkey, phage ]
+    default_gems_file: files/default_gems
+    rbenv_plugins:
+      - { name: "rbenv-vars",
+        repo: "https://github.com/rbenv/rbenv-vars.git",
+        version: "v1.2.0" }
+      - { name: "ruby-build",
+          repo: "https://github.com/rbenv/ruby-build.git",
+          version: "master" }
+      - { name: "rbenv-default-gems",
+          repo: "https://github.com/rbenv/rbenv-default-gems.git",
+          version: "v1.0.0" }
+
   roles:
     - basics
     - bennojoy.ntp
@@ -25,20 +44,6 @@
 
     - name: zzet.rbenv
       tags: ruby
-      env: user
-      default_ruby: "{{ ruby_version }}"
-      rubies:
-        - version: "{{ ruby_version }}"
-      rbenv_plugins:
-        - { name: "rbenv-vars",
-            repo: "https://github.com/rbenv/rbenv-vars.git",
-            version: "v1.2.0" }
-        - { name: "ruby-build",
-            repo: "https://github.com/rbenv/ruby-build.git",
-            version: "master" }
-        - { name: "rbenv-default-gems",
-            repo: "https://github.com/rbenv/rbenv-default-gems.git",
-            version: "v1.0.0" }
       rbenv_users: [ "phage", "romkey" ]
 
 #    - name:  aelogica.puma
