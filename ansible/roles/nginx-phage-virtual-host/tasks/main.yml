@@ -1,0 +1,24 @@
+- name: create Phage nginx virtual host
+  become: yes 
+  become_user: root 
+  copy:
+    src: files/phage.conf 
+    dest: /etc/nginx/sites-available/phage.conf
+    owner: root
+    group: root
+    mode:  0644
+
+- name: enable Phage virtual host 
+  become: yes 
+  become_user: root 
+  file:
+    src: /etc/nginx/sites-available/phage.conf
+    dest: /etc/nginx/sites-enabled/phage.conf
+    state: link
+
+- name: reload nginx
+  become: yes 
+  become_user: root 
+  service:
+    name: nginx
+    state: reloaded
