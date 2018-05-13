@@ -1,77 +1,34 @@
 #!/usr/bin/env puma
 
-# some ideas taken from https://gist.github.com/sudara/8653130
+directory '/home/phage/phage/current'
+rackup "/home/phage/phage/current/config.ru"
+environment 'production'
 
-if ENV['DOCKER'] == 'docker'
-  threads_count = ENV.fetch("RAILS_MAX_THREADS") { 5 }
-  threads threads_count, threads_count
-  port ENV.fetch("PORT") { 3000 }
+tag ''
 
-  environment ENV.fetch("RAILS_ENV") { "development" }
-  plugin :tmp_restart
-else
-  if ENV["RACK_ENV"] == "production"
-    HOME_DIR = '/home/phage/phage'
-    CURRENT_DIR = "#{HOME_DIR}/current"
-    SHARED_DIR = "#{HOME_DIR}/shared"
+pidfile "/home/phage/phage/shared/tmp/pids/puma.pid"
+state_path "/home/phage/phage/shared/tmp/pids/puma.state"
+stdout_redirect '/home/phage/phage/shared/log/puma_access.log', '/home/phage/phage/shared/log/puma_error.log', true
 
-    WORKER_COUNT=4
 
-    environment 'production'
-    bind "unix://#{SHARED_DIR}/tmp/sockets/puma.sock"
+threads 0,16
 
-  #  ActiveSupport.on_load(:active_record) do
-  #    ActiveRecord::Base.establish_connection
-  #  end
-  #  before_fork do
-  #    ActiveRecord::Base.connection_pool.disconnect!
-  #  end
-  else
-    HOME_DIR = '/home/phage/phage'
-    CURRENT_DIR = HOME_DIR
-    SHARED_DIR = "/home/phage/shared"
 
-    WORKER_COUNT=0
 
-    directory CURRENT_DIR
-    rackup "#{CURRENT_DIR}/config.ru"
+bind 'unix:///home/phage/phage/shared/tmp/sockets/puma.sock'
 
-    environment 'development'
-    port 3000
-  end
+workers 0
 
-  workers WORKER_COUNT
 
-  directory CURRENT_DIR
-  rackup "#{CURRENT_DIR}/config.ru"
 
-  tag ''
 
-  pidfile "#{SHARED_DIR}/tmp/pids/puma.pid"
-  state_path "#{SHARED_DIR}/tmp/puma.state"
-  stdout_redirect "#{SHARED_DIR}/log/puma_access.log", "#{SHARED_DIR}/log/puma_error.log", true
 
-  threads 0,16
+prune_bundler
 
-  on_worker_boot do |worker_index|
-    # write worker pid
-    File.open("#{SHARED_DIR}/tmp/pids/puma_worker_#{worker_index}.pid", "w") { |f| f.puts Process.pid }
 
-    # reconnect to redis
-    #  Redis.current.client.reconnect
-
-    ActiveSupport.on_load(:active_record) do
-      ActiveRecord::Base.establish_connection
-    end
-  end
-
-  on_restart do
-    puts 'Refreshing Gemfile'
-    ENV["BUNDLE_GEMFILE"] = "#{CURRENT_DIR}/Gemfile"
-  end
-
-  preload_app!
-
-  plugin :tmp_restart
-  
+on_restart do
+  puts 'Refreshing Gemfile'
+  ENV["BUNDLE_GEMFILE"] = ""
 end
+
+
