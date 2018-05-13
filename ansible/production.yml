@@ -24,6 +24,34 @@
           repo: "https://github.com/rbenv/rbenv-default-gems.git",
           version: "v1.0.0" }
 
+    rabbitmq_enabled: yes
+    rabbitmq_plugins:                       # Ensure the plugins is installed
+      - rabbitmq_management
+      - rabbitmq_mqtt
+      - rabbitmq_tracing 
+      - rabbitmq_top
+      - rabbitmq_web_mqtt
+    rabbitmq_users:                         # Ensure the users added
+      - user: admin
+        password: "{{ rabbitmq_admin_password }}"
+        vhost: /
+        configure_priv: .*
+        read_priv: .*
+        write_priv: .*
+      - user: phage
+        password: "{{ rabbitmq_phage_password }}"
+        vhost: phage
+        read_priv: .*
+        write_priv: .*
+      - user: phage_jobs
+        password: "{{ rabbitmq_phage_jobs_password }}"
+        vhost: phage_jobs
+        read_priv: .*
+        write_priv: .*
+    rabbitmq_vhosts: [ phage, phage_jobs ]                     # Ensure the vhosts are exists
+    rabbitmq_users_remove:                  # Ensure the users removed
+      - guest
+          
   roles:
     - basics
     - bennojoy.ntp
@@ -60,7 +88,7 @@
     - name: env
       tags: env
 
-    - name: ANXS.postgresql
+    - name: ANXS.postgresql 
       tags: postgresql
       postgresql_version: 10
       postgresql_databases:
@@ -76,3 +104,6 @@
           pass: "{{ database_admin_password_encrypted }}"
           encrypted: yes
           priv: "ALL"
+
+    - name: Stouts.rabbitmq
+      tags: rabbitmq

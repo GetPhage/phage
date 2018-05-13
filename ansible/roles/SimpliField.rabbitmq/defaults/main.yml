@@ -1,5 +1,0 @@
----
-rabbitmq_vhosts: []
-rabbitmq_users: []
-rabbitmq_erlang_cookie:
-rabbitmq_erlang_cookie_path: "/var/lib/rabbitmq/.erlang.cookie"

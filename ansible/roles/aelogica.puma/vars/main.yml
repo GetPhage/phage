@@ -1,9 +1,0 @@
----
-shared: "/var/www/shared"
-
-puma_config: "{{ shared }}/puma.rb"
-puma_init: "/usr/local/bin/puma-init"
-puma_logrotate_path: "/etc/logrotate.d"
-puma_root: "/var/www/current"
-puma_systemd_path: "/lib/systemd/system"
-puma_user: deploy

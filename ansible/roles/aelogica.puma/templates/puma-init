@@ -1,3 +1,0 @@
-#!/bin/bash
-
-chruby-exec {{ ruby_engine }}-{{ ruby_version }} pumactl -F /var/www/shared/puma.rb $1
