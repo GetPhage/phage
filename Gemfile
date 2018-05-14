@@ -37,7 +37,7 @@ gem 'therubyracer'
 gem 'rails_admin'
 gem 'dotenv-rails'
 
-gem 'backburner'
+gem 'sneakers'
 
 group :workers do
   gem 'arp'
@@ -51,8 +51,6 @@ group :workers do
   #gem 'wemo', github: 'jordanbyron/wemo.git', branch: 'master'
   #gem 'hue'
 end
-
-gem 'beanstalkd_view'
 
 # temporary fix for Sinatra dependency issue
 gem 'sinatra', git: 'https://github.com/sinatra/sinatra'
