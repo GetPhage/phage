@@ -37,9 +37,10 @@ module Phage
         scan = ::Scan.create scan_type: "passive", start: start, end: complete
 
         @collection.each do |item|
-          d = Device.find_or_create_by(mac_address: item[:mac_address]) do
+          d = Device.find_or_create_by(mac_address: item[:mac_address]) do |d|
             puts "create device"
-            d = Device.create mac_address: item[:mac_address], ipv4: [ item[:ipv4] ], kind: '', last_seen: Time.now, active: true
+            d.update_attributes(mac_address: item[:mac_address], ipv4: [ item[:ipv4] ], kind: '', last_seen: Time.now, active: true)
+            d.save
             pp d
 
             sd = ScanDiff.create( { mac_address: item[:mac_address], ipv4: item[:ipv4], device: d, status: :add, scan: scan, kind: "passive" } )
