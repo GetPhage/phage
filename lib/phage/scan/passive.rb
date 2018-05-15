@@ -37,16 +37,7 @@ module Phage
         scan = ::Scan.create scan_type: "passive", start: start, end: complete
 
         @collection.each do |item|
-          d = Device.find_by mac_address: item[:mac_address]
-          if d
-            ScanDiff.create( { extra: { active: true }, device: d, status: :up, scan: scan, kind: 'passive' } ) unless d.active?
-
-            unless d.update_attributes(last_seen: Time.now, active: true)
-              puts "update_attributes on device #{d.id} #{d.friendly_name} fails!"
-              puts d.errors.full_messages
-              puts Device.errors.full_messages
-            end
-          else
+          d = Device.find_or_create_by(mac_address: item[:mac_address]) do
             puts "create device"
             d = Device.create mac_address: item[:mac_address], ipv4: [ item[:ipv4] ], kind: '', last_seen: Time.now, active: true
             pp d
@@ -54,6 +45,15 @@ module Phage
             ScanDiff.create( { mac_address: item[:mac_address], ipv4: item[:ipv4], device: d, status: :add, scan: scan, kind: "passive" } )
 
             SendNewDeviceEmailJob.perform_later(d.id)
+            next
+          end
+          
+          ScanDiff.create( { extra: { active: true }, device: d, status: :up, scan: scan, kind: 'passive' } ) unless d.active?
+
+          unless d.update_attributes(last_seen: Time.now, active: true)
+            puts "update_attributes on device #{d.id} #{d.friendly_name} fails!"
+            puts d.errors.full_messages
+            puts Device.errors.full_messages
           end
 
           unless d.has_ipv4?(item[:ipv4])
