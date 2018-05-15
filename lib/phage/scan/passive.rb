@@ -43,7 +43,7 @@ module Phage
             pp d
 
             sd = ScanDiff.create( { mac_address: item[:mac_address], ipv4: item[:ipv4], device: d, status: :add, scan: scan, kind: "passive" } )
-            History.create message: "New host #{d.friendly_name} - #{item[:ipv4]} - #{item[:mac_address]}", scan_diff: sd, d: device
+            History.create message: "New host #{d.friendly_name} - #{item[:ipv4]} - #{item[:mac_address]}", scan_diff: sd, device: d
 
             SendNewDeviceEmailJob.perform_later(d.id)
             next
@@ -65,7 +65,7 @@ module Phage
             d.save
 
             ScanDiff.create( { ipv4: item[:ipv4], device: d, status: :change, scan: scan, kind: "passive" } )
-            History.create "IP address changed on #{d.friendly_name} to #{item[:ipv4]}", scan_diff: sd, d: device
+            History.create "IP address changed on #{d.friendly_name} to #{item[:ipv4]}", scan_diff: sd, device: d
           end
 
           if item[:name] != '' && !d.has_name?(item[:name]) then
@@ -77,7 +77,7 @@ module Phage
             d.save
 
             ScanDiff.create( { extra: { active: false }, name: item[:name], device: d, status: :down, scan: scan, kind: "passive" } )
-            History.create "Name on device #{d.id} -  #{d.friendly_name} changed to #{item[:name]}", scan_diff: sd, d: device
+            History.create "Name on device #{d.id} -  #{d.friendly_name} changed to #{item[:name]}", scan_diff: sd, device: d
           end
         end
 
