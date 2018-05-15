@@ -5,6 +5,8 @@ require 'playful/ssdp'
 require 'net/http'
 require 'pp'
 
+require 'upnp-fix'
+
 # fetch /description.xml and use it to learn about the device
 module Phage
   class Scan
