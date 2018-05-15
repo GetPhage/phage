@@ -49,7 +49,7 @@ module Phage
             next
           end
           
-          ScanDiff.create( { extra: { active: true }, device: d, status: :up, scan: scan, kind: 'passive' } ) unless d.active?
+          sd = ScanDiff.create( { extra: { active: true }, device: d, status: :up, scan: scan, kind: 'passive' } ) unless d.active?
 
           unless d.update_attributes(last_seen: Time.now, active: true)
             puts "update_attributes on device #{d.id} #{d.friendly_name} fails!"
@@ -64,7 +64,7 @@ module Phage
             d[:ipv4].push item[:ipv4]
             d.save
 
-            ScanDiff.create( { ipv4: item[:ipv4], device: d, status: :change, scan: scan, kind: "passive" } )
+            sd = ScanDiff.create( { ipv4: item[:ipv4], device: d, status: :change, scan: scan, kind: "passive" } )
             History.create "IP address changed on #{d.friendly_name} to #{item[:ipv4]}", scan_diff: sd, device: d
           end
 
@@ -76,7 +76,7 @@ module Phage
             d[:name].push item[:name]
             d.save
 
-            ScanDiff.create( { extra: { active: false }, name: item[:name], device: d, status: :down, scan: scan, kind: "passive" } )
+            sd = ScanDiff.create( { extra: { active: false }, name: item[:name], device: d, status: :down, scan: scan, kind: "passive" } )
             History.create "Name on device #{d.id} -  #{d.friendly_name} changed to #{item[:name]}", scan_diff: sd, device: d
           end
         end
@@ -86,7 +86,7 @@ module Phage
             next if device.active && device.last_seen < Time.now - 10.seconds
 
             device.update_attributes(active: false)
-            ScanDiff.create( { extra: { active: false }, device: device, status: :down, scan: scan, kind: "passive" } )
+            sd = ScanDiff.create( { extra: { active: false }, device: device, status: :down, scan: scan, kind: "passive" } )
           end
         end
       end
