@@ -66,7 +66,7 @@ module Phage
             d.save
 
             sd = ScanDiff.create( { ipv4: item[:ipv4], device: d, status: :change, scan: scan, kind: "passive" } )
-            History.create "IP address changed on #{d.friendly_name} to #{item[:ipv4]}", scan_diff: sd, device: d
+            History.create message: "IP address changed on #{d.friendly_name} to #{item[:ipv4]}", scan_diff: sd, device: d
           end
 
           if item[:name] != '' && !d.has_name?(item[:name]) then
@@ -78,7 +78,7 @@ module Phage
             d.save
 
             sd = ScanDiff.create( { extra: { active: false }, name: item[:name], device: d, status: :down, scan: scan, kind: "passive" } )
-            History.create "Name on device #{d.id} -  #{d.friendly_name} changed to #{item[:name]}", scan_diff: sd, device: d
+            History.create message: "Name on device #{d.id} -  #{d.friendly_name} changed to #{item[:name]}", scan_diff: sd, device: d
           end
         end
 
