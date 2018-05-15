@@ -51,17 +51,10 @@ module Phage
         str.each_line do |line|
           line.chomp!
 
+          # sometimes we get illegal UTF-8 characters; get rid of them
           line.encode!('UTF-8', 'binary', invalid: :replace, undef: :replace, replace: '')
 
           if line.match /^\+/
-            next
-          end
-
-          begin
-            if line.match /^\+/
-              next
-            end
-          rescue
             next
           end
 
