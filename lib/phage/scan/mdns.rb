@@ -51,7 +51,14 @@ module Phage
         str.each_line do |line|
           line.chomp!
 
-          next if line.match /^\+/
+          begin
+            if line.match /^\+/
+              next
+            end
+          rescue
+            next
+          end
+
           next if !line.match /^\=/
           
 #          m = line.match /\=;\S+;IPv(?<ip_version>[4|6]);(?<service_name>\S+);(?<service>\S+);(?<domain>\S+);(?<hostname>\S+);(?<ip_address>\S+);(<?<port>\d+)/
