@@ -11,6 +11,7 @@ class Device < ApplicationRecord
   belongs_to :product, optional: true
   belongs_to :network, optional: true
   has_many :scan_diff, dependent: :destroy
+  has_many :history, dependent: :destroy
   has_many :flow
 
   scope :per_user, -> user { where(network: Network.per_user(user).first) }
