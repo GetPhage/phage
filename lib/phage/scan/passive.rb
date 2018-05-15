@@ -74,11 +74,14 @@ module Phage
             puts "'#{d[:name]}', '#{item[:name]}'"
 
             d[:name] ||= []
+            old_name = d[:name].first
+            old_name ||= "not set"
+
             d[:name].push item[:name]
             d.save
 
             sd = ScanDiff.create( { extra: { active: false }, name: item[:name], device: d, status: :down, scan: scan, kind: "passive" } )
-            History.create message: "Name on device #{d.id} -  #{d.friendly_name} changed to #{item[:name]}", scan_diff: sd, device: d
+            History.create message: "Name on device #{d.id} -  #{old_name} changed to #{item[:name]}", scan_diff: sd, device: d
           end
         end
 
