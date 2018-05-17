@@ -36,9 +36,17 @@ module Phage
 
             device = Phage::Scan::Upnp::get_device(dev)
 
-            ::Upnp.first_or_create(device: device,
-                                   description: description.pretty_inspect,
-                                   services: dev.all_services)
+            if device
+              upnp = ::Upnp.where(device: device).first_or_create do |upnp|
+                upnp.description = description.pretty_inspect,
+                upnp.services = dev.all_services
+              end
+            else
+              upnp = ::Upnp::create(description: description.pretty_inspect,
+                            services: dev.all_services)
+            end
+
+            puts "wrote upnp #{upnp.id}"
           rescue => error
             puts "FAIL"
             puts error
