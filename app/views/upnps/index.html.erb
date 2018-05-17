@@ -16,7 +16,7 @@
     <% @upnps.each do |upnp| %>
       <tr>
         <td><%= upnp.device ? link_to(upnp.device.friendy_name, upnp.device) : '' %></td>
-        <td><pre><%= upnp.description %></pre></td>
+        <td><pre><%= upnp.description.gsub("\n", "<br/>") %></pre></td>
         <td><%= upnp.services.join('<br>') %></td>
         <td><%= link_to 'Show', upnp %></td>
         <td><%= link_to 'Edit', edit_upnp_path(upnp) %></td>

@@ -10,9 +10,9 @@ class UpnpScanJob < ApplicationJob
       scanner = Phage::Scan::Upnp.new
       complete = Time.now
 
-      puts "SCANNER"
-      pp scanner
-      scanner.diff(start, complete)
+#      puts "SCANNER"
+#      pp scanner
+#      scanner.diff(start, complete)
     rescue => exception
       puts "UpnpScanJob"
       puts exception.backtrace

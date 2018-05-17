@@ -22,7 +22,6 @@ module Phage
 
         searcher = EasyUpnp::SsdpSearcher.new
 
-        puts "init"
         all_devices = []
         res = searcher.search 'ssdp:all'
         all_devices += res if res
