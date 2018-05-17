@@ -46,7 +46,7 @@ module Phage
 
         complete = Time.now
 
-        ScanDiff.create scan_type: 'upnp', start: start, end: complete
+        # ScanDiff.create scan_type: 'upnp', start: start, end: complete
 
         all_devices.length
       end
