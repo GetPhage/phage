@@ -46,7 +46,7 @@ module Phage
             sd = ScanDiff.create( { mac_address: item[:mac_address], ipv4: item[:ipv4], device: d, status: :add, scan: scan, kind: "passive" } )
             History.create message: "New host #{d.friendly_name} - #{item[:ipv4]} - #{item[:mac_address]}", scan_diff: sd, device: d
 
-            SendNewDeviceEmailJob.perform_later(d.id)
+#            SendNewDeviceEmailJob.perform_later(d.id)
             next
           end
           

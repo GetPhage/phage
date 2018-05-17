@@ -16,6 +16,12 @@ class Device < ApplicationRecord
   has_one :upnp
 
   scope :per_user, -> user { where(network: Network.per_user(user).first) }
+
+  def really_delete
+    self.history.delete_all
+    self.scan_diff.delete_all
+    self.delete
+  end
   
   def add_name(name)
     unless has_name? name
