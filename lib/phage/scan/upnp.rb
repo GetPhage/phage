@@ -32,13 +32,13 @@ module Phage
 
         puts "found #{all_devices.length} UPNP devices"
         all_devices.each do |dev|
-          info = dev.description
-
-          device = Phage::Scan::Upnp::get_device(dev)
-
           begin
+            info = dev.description
+
+            device = Phage::Scan::Upnp::get_device(dev)
+
             ::Upnp.first_or_create(device: device,
-                                   description: dev.description,
+                                   description: description.pretty_inspect,
                                    services: dev.all_services)
           rescue
           end
