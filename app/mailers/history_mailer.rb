@@ -5,6 +5,6 @@ class HistoryMailer < ApplicationMailer
 #    @user = params[:user]
     #    @url  = 'http://example.com/login'
     @history = params[:history]
-    mail(to: 'romkey@romkey.com', subject: 'Phage activity')
+    mail(to: 'romkey@romkey.com', subject: 'Phage activity', from: 'phage@romkey.com')
   end
 end
