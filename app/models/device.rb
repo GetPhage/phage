@@ -17,6 +17,10 @@ class Device < ApplicationRecord
 
   scope :per_user, -> user { where(network: Network.per_user(user).first) }
   
+  after_create do
+    HistoryMailer.with(history: self).activity_email.deliver_later
+  end
+
   def add_name(name)
     unless has_name? name
       self.name.push name
