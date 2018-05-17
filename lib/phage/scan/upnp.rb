@@ -36,9 +36,12 @@ module Phage
 
           device = Phage::Scan::Upnp::get_device(dev)
 
-          ::Upnp.first_or_create(device: device,
-                                 description: dev.description,
-                                 services: dev.all_services)
+          begin
+            ::Upnp.first_or_create(device: device,
+                                   description: dev.description,
+                                   services: dev.all_services)
+          rescue
+          end
         end
 
         complete = Time.now
