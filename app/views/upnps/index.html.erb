@@ -16,7 +16,13 @@
     <% @upnps.each do |upnp| %>
       <tr>
         <td><%= upnp.device ? link_to(upnp.device.friendy_name, upnp.device) : '' %></td>
-        <td><pre><%= upnp.description.gsub("\n", "<br/>") %></pre></td>
+        <td>
+	  <pre>
+	    <% upnp.description.split("\n").each do |line| %>
+	      <%= line %><br />
+	    <% end %>
+	  </pre>
+	</td>
         <td>
 	  <%  upnp.services.each do |service| %>
 	    <%= service %>

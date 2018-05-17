@@ -32,7 +32,7 @@ module Phage
         puts "found #{all_devices.length} UPNP devices"
         all_devices.each do |dev|
           begin
-            info = dev.description
+            description = dev.description
 
             device = Phage::Scan::Upnp::get_device(dev)
 
