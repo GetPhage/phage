@@ -39,7 +39,9 @@ module Phage
             ::Upnp.first_or_create(device: device,
                                    description: description.pretty_inspect,
                                    services: dev.all_services)
-          rescue
+          rescue => error
+            puts "FAIL"
+            puts error
           end
         end
 
