@@ -51,8 +51,6 @@ GEM
       i18n (>= 0.7, < 2)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
-    addressable (2.5.2)
-      public_suffix (>= 2.0.2, < 4.0)
     akami (1.3.1)
       gyoku (>= 0.4.0)
       nokogiri
@@ -86,7 +84,6 @@ GEM
       execjs
     coffee-script-source (1.12.2)
     concurrent-ruby (1.0.5)
-    cookiejar (0.3.3)
     countries (2.1.4)
       i18n_data (~> 0.8.0)
       money (~> 6.9)
@@ -99,23 +96,17 @@ GEM
       railties (>= 4.1.0, < 6.0)
       responders
       warden (~> 1.2.3)
-    dnssd (3.0.1)
     dotenv (2.4.0)
     dotenv-rails (2.4.0)
       dotenv (= 2.4.0)
       railties (>= 3.2, < 6.0)
-    em-http-request (1.1.5)
-      addressable (>= 2.3.4)
-      cookiejar (!= 0.3.1)
-      em-socksify (>= 0.3)
-      eventmachine (>= 1.0.3)
-      http_parser.rb (>= 0.6.0)
-    em-socksify (0.3.2)
-      eventmachine (>= 1.0.0.beta.4)
-    em-synchrony (1.0.6)
-      eventmachine (>= 1.0.0.beta.1)
+    easy_upnp (1.2.2)
+      nokogiri (~> 1.8)
+      nori (~> 2.6)
+      rake
+      rubyntlm (~> 0.3)
+      savon (~> 2.11)
     erubi (1.7.1)
-    eventmachine (1.2.7)
     execjs (2.7.0)
     faraday (0.12.2)
       multipart-post (>= 1.2, < 3)
@@ -133,7 +124,6 @@ GEM
       tilt
     hashie (3.5.7)
     histogram (0.2.4.1)
-    http_parser.rb (0.6.0)
     httpi (2.4.3)
       rack
       socksify
@@ -168,7 +158,6 @@ GEM
       rb-inotify (~> 0.9, >= 0.9.7)
       ruby_dep (~> 1.2)
     little-plugger (1.1.4)
-    log_switch (0.4.0)
     logger (1.2.8)
     logging (2.2.2)
       little-plugger (~> 1.1)
@@ -214,15 +203,7 @@ GEM
     open4 (1.3.4)
     orm_adapter (0.5.0)
     pg (1.0.0)
-    playful (0.1.0.alpha.1)
-      em-http-request (>= 1.0.2)
-      em-synchrony
-      eventmachine (>= 1.0.0)
-      log_switch (>= 0.4.0)
-      nori (>= 2.0.2)
-      savon (~> 2.0)
     popper_js (1.12.9)
-    public_suffix (3.0.2)
     puma (3.11.4)
     rack (2.0.5)
     rack-pjax (1.0.0)
@@ -287,6 +268,7 @@ GEM
     reversed (0.2.1)
       net-dns
     ruby_dep (1.5.0)
+    rubyntlm (0.6.2)
     sass (3.5.6)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
@@ -379,21 +361,19 @@ DEPENDENCIES
   coffee-rails
   countries
   devise
-  dnssd
   dotenv-rails
+  easy_upnp
   groupdate
   histogram
   i18n_data
   jbuilder (~> 2.5)
   jquery-rails
   listen
-  log_switch (~> 0.4.0)
   logger
   logging-rails
   net-ping
   omniauth-slack
   pg
-  playful
   puma (~> 3.4)
   rails (~> 5.1.4)
   rails-assets-datetimepicker!

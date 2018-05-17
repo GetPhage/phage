@@ -8,9 +8,9 @@ every 15.minutes do
   rbenv_rake "mdns:scan"
 end
 
-#every 5.minutes do
-#  rake "upnp:scan"
-#end
+every 2.hours do
+  rake "upnp:scan"
+end
 
 #every 120.minutes do
 #  rake "port:scan"

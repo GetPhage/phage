@@ -44,9 +44,9 @@ group :workers do
   gem 'snmp'
   gem 'xml-simple'
   gem 'net-ping'
-  gem 'dnssd'
-  gem 'log_switch', '~> 0.4.0'
-  gem 'playful'
+#  gem 'dnssd'
+#  gem 'log_switch', '~> 0.4.0'
+  gem 'easy_upnp'
 
   #gem 'wemo', github: 'jordanbyron/wemo.git', branch: 'master'
   #gem 'hue'

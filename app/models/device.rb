@@ -13,6 +13,7 @@ class Device < ApplicationRecord
   has_many :scan_diff, dependent: :destroy
   has_many :history, dependent: :destroy
   has_many :flow
+  has_one :upnp
 
   scope :per_user, -> user { where(network: Network.per_user(user).first) }
   
