@@ -96,6 +96,7 @@ GEM
       railties (>= 4.1.0, < 6.0)
       responders
       warden (~> 1.2.3)
+    dnssd (3.0.1)
     dotenv (2.4.0)
     dotenv-rails (2.4.0)
       dotenv (= 2.4.0)
@@ -361,6 +362,7 @@ DEPENDENCIES
   coffee-rails
   countries
   devise
+  dnssd
   dotenv-rails
   easy_upnp
   groupdate
