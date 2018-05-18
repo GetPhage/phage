@@ -6,6 +6,6 @@ class History < ApplicationRecord
   scope :per_user, -> (user) { where(user: user) }
 
   after_create do
-    HistoryMailer.with(history: self).activity_email.deliver_later
+    HistoryMailer.with(history: self).activity_email.deliver_now
   end
 end
