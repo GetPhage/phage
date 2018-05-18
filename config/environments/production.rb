@@ -67,7 +67,7 @@ Rails.application.configure do
     user_name: ENV.fetch("SMTP_USERNAME"),
     password: ENV.fetch("SMTP_PASSWORD"),
     enable_starttls_auto: true,
-    port: 587,
+    port: 587
   }
 
   config.action_mailer.default_url_options = "x.getphage.org"
