@@ -1,6 +1,6 @@
 job_type :rbenv_rake, %Q{export PATH=/home/phage/.rbenv/shims:/home/phage/.rbenv/bin:/usr/bin:$PATH; eval "$(rbenv init -)";  cd :path && :environment_variable=:environment :bundle_command rake :task --silent :output }
 
-every 1.hours do
+every 10.minutes do
   rbenv_rake "passive:scan"
 end
 
