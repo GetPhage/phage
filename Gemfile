@@ -76,8 +76,6 @@ gem 'logging-rails', :require => 'logging/rails'
 
 gem 'bugsnag'
 
-gem 'backup'
-
 gem 'histogram'
 gem 'reversed'
 gem 'i18n_data'
