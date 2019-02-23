@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '2.6.1'
+
 gem 'rails', '~> 5.1.4'
 gem 'puma', '~> 3.4'
 gem 'listen'
