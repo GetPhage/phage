@@ -71,7 +71,7 @@ GEM
     bunny (2.14.1)
       amq-protocol (~> 2.3, >= 2.3.0)
     byebug (11.0.1)
-    chartkick (3.0.2)
+    chartkick (3.2.0)
     chronic (0.10.2)
     coffee-rails (4.2.2)
       coffee-script (>= 2.2.0)
@@ -358,7 +358,7 @@ DEPENDENCIES
   bootstrap (>= 4.3.1)
   bugsnag
   byebug
-  chartkick
+  chartkick (~> 3.2.0)
   coffee-rails
   countries
   devise
