@@ -70,7 +70,7 @@ gem 'chartkick', '~> 3.2.0'
 gem 'groupdate'
 
 #users
-gem 'devise'
+gem 'devise', '>= 4.7.1'
 gem 'omniauth-slack'
 
 gem 'whenever'
