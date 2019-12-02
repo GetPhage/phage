@@ -66,7 +66,7 @@ gem 'will_paginate'
 gem 'will_paginate-bootstrap4'
 
 # charts
-gem 'chartkick', '~> 3.2.0'
+gem 'chartkick', '~> 3.3.0'
 gem 'groupdate'
 
 #users
