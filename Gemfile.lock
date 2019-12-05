@@ -200,7 +200,7 @@ GEM
     orm_adapter (0.5.0)
     pg (1.1.4)
     popper_js (1.14.5)
-    puma (3.12.1)
+    puma (3.12.2)
     rack (2.0.6)
     rack-pjax (1.0.0)
       nokogiri (~> 1.5)
@@ -377,7 +377,7 @@ DEPENDENCIES
   net-ping
   omniauth-slack
   pg
-  puma (~> 3.4)
+  puma (~> 3.12)
   rails (~> 5.1.4)
   rails-assets-datetimepicker!
   rails-assets-tether!
