@@ -1,13 +1,14 @@
 source 'https://rubygems.org'
 
-ruby '2.6.1'
+ruby '2.6.2'
 
-gem 'rails', '~> 5.1.4'
-gem 'puma', '~> 3.4'
+gem 'rails', '~> 5.2.4.2'
+gem 'puma', '~> 4.1'
 gem 'listen'
 gem 'sass-rails'
 gem 'uglifier'
 gem 'coffee-rails'
+gem "actionview", ">= 5.2.4.2"
 
 gem 'jquery-rails'
 gem 'turbolinks'
