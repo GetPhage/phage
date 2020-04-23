@@ -2,8 +2,10 @@ source 'https://rubygems.org'
 
 ruby '2.6.2'
 
+
 gem 'rails', '~> 5.2.4.2'
 gem 'puma', '~> 4.1'
+
 gem 'listen'
 gem 'sass-rails'
 gem 'uglifier'
@@ -67,7 +69,7 @@ gem 'will_paginate'
 gem 'will_paginate-bootstrap4'
 
 # charts
-gem 'chartkick', '~> 3.2.0'
+gem 'chartkick', '~> 3.3.0'
 gem 'groupdate'
 
 #users
