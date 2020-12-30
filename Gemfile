@@ -75,6 +75,7 @@ gem 'groupdate'
 #users
 gem 'devise', '>= 4.7.1'
 gem 'omniauth-slack'
+gem 'omniauth-rails_csrf_protection', '~> 0.1'
 
 gem 'whenever'
 gem 'logging-rails', :require => 'logging/rails'
