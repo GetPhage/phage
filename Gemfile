@@ -38,7 +38,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'logger'
 
-gem 'mini_racer'
 gem 'rails_admin'
 gem 'dotenv-rails'
 
