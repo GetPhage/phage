@@ -395,7 +395,7 @@ DEPENDENCIES
   omniauth-rails_csrf_protection (~> 0.1)
   omniauth-slack
   pg
-  puma (~> 4.1)
+  puma (~> 4.3)
   rails (~> 5.2.4.2)
   rails-assets-datetimepicker!
   rails-assets-tether!
