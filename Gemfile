@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 ruby '2.7.5'
 
 
-gem 'rails', '~> 5.2.6.2'
+gem 'rails', '~> 7.0.2.4'
 gem 'puma', '~> 4.3'
 
 gem 'listen'
