@@ -88,4 +88,4 @@ gem 'i18n_data'
 gem 'svg-flags-rails', '>= 1.0.0-beta'
 gem 'countries'
 
-gem 'nokogiri', '~> 1.13.4'
+gem 'nokogiri', '~> 1.13.6'
