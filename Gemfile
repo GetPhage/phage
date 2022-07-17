@@ -3,21 +3,17 @@ source 'https://rubygems.org'
 ruby '2.7.5'
 
 
-gem 'rails', '~> 5.2.7.1'
+gem 'rails', '~> 5.2.8.1'
 gem 'puma', '~> 4.3'
 
 gem 'listen'
 gem 'sass-rails'
 gem 'uglifier'
 gem 'coffee-rails'
-#gem 'actionview', '~> 5.2.7.1'
-#gem 'actionpack', '~> 5.2.7.1'
 
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.5'
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
