@@ -389,7 +389,7 @@ DEPENDENCIES
   logger
   logging-rails
   net-ping
-  nokogiri (~> 1.13.6)
+  nokogiri (~> 1.13.9)
   omniauth-rails_csrf_protection (~> 0.1)
   omniauth-slack
   pg
