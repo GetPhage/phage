@@ -3,9 +3,9 @@ source 'https://rubygems.org'
 ruby '2.7.5'
 
 
-gem 'rails', '~> 5.2.8.1'
-gem 'activerecord', '~> 5.2.8.1'
-gem 'activesupport', '~> 5.2.8.1'
+gem 'rails', '~> 7.0.7'
+gem 'activerecord', '~> 7.0.7'
+gem 'activesupport', '~> 7.0.7'
 
 gem 'puma', '~> 4.3'
 
